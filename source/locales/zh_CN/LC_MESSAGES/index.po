@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../index.rst:2
+msgid "Pillow"
+msgstr "Pillow"
+
+#: ../../index.rst:4
+msgid ""
+"Pillow is the friendly PIL fork by `Alex Clark and Contributors "
+"<https://github.com/python-pillow/Pillow/graphs/contributors>`_. PIL is "
+"the Python Imaging Library by Fredrik Lundh and Contributors."
+msgstr "枕头是用 `亚历克斯·克拉克和贡献者 <https://github.com/python-pillow/Pillow/graphs/contributors>`_ 友好PIL叉.PIL是由Fredrik Lundh开发和提供者的Python图像库。"
+
+#: ../../index.rst:6
+msgid ""
+"Pillow for enterprise is available via the Tidelift Subscription. `Learn "
+"more <https://tidelift.com/subscription/pkg/pypi-"
+"pillow?utm_source=pillow&utm_medium=referral&utm_campaign=docs>`_."
+msgstr "枕头的企业是通过Tidelift订阅。 `学到更多 <https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pillow&utm_medium=referral&utm_campaign=docs>`_."
+
+#: ../../index.rst:51
+msgid "Indices and tables"
+msgstr "Indices and tables"
+
+#: ../../index.rst:53
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:54
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:55
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
+

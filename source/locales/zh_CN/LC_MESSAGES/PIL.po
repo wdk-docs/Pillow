@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../PIL.rst:2
+msgid "PIL Package (autodoc of remaining modules)"
+msgstr "PIL Package (autodoc of remaining modules)"
+
+#: ../../PIL.rst:4
+msgid ""
+"Reference for modules whose documentation has not yet been ported or "
+"written can be found here."
+msgstr "Reference for modules whose documentation has not yet been ported or written can be found here."
+
+#: ../../PIL.rst:8
+msgid ":mod:`BdfFontFile` Module"
+msgstr ":mod:`BdfFontFile` Module"
+
+#: PIL.BdfFontFile.BdfFontFile:1 PIL.PcfFontFile.PcfFontFile:1 of
+msgid "基类：:class:`PIL.FontFile.FontFile`"
+msgstr "基类：:class:`PIL.FontFile.FontFile`"
+
+#: ../../PIL.rst:16
+msgid ":mod:`ContainerIO` Module"
+msgstr ":mod:`ContainerIO` Module"
+
+#: PIL.ContainerIO.ContainerIO:1 PIL.FontFile.FontFile:1
+#: PIL.GimpGradientFile.GradientFile:1 PIL.GimpPaletteFile.GimpPaletteFile:1
+#: PIL.ImageDraw2.Brush:1 PIL.ImageDraw2.Draw:1 PIL.ImageDraw2.Font:1
+#: PIL.ImageDraw2.Pen:1 PIL.ImageShow.Viewer:1 PIL.PaletteFile.PaletteFile:1
+#: PIL.PngImagePlugin.PngInfo:1 of
+msgid "基类：:class:`object`"
+msgstr "基类：:class:`object`"
+
+#: PIL.ContainerIO.ContainerIO.read:1 of
+msgid "Read data."
+msgstr "Read data."
+
+#: ../../PIL.rst PIL.ContainerIO.ContainerIO.read
+#: PIL.ContainerIO.ContainerIO.seek PIL.GdImageFile.open PIL.ImageShow.show
+#: PIL.ImageTransform.AffineTransform PIL.ImageTransform.ExtentTransform
+#: PIL.ImageTransform.MeshTransform PIL.ImageTransform.QuadTransform
+#: PIL.PngImagePlugin.PngInfo.add PIL.PngImagePlugin.PngInfo.add_itxt
+#: PIL.PngImagePlugin.PngInfo.add_text PIL.WalImageFile.open PIL._binary.i16le
+#: PIL._binary.i32le PIL._binary.si16le PIL._binary.si32le of
+msgid "参数"
+msgstr "参数"
+
+#: PIL.ContainerIO.ContainerIO.read:3 of
+msgid "Number of bytes to read. If omitted or zero, read until end of region."
+msgstr "Number of bytes to read. If omitted or zero, read until end of region."
+
+#: PIL.ContainerIO.ContainerIO.read PIL.ContainerIO.ContainerIO.readline
+#: PIL.ContainerIO.ContainerIO.readlines PIL.ContainerIO.ContainerIO.tell
+#: PIL.GdImageFile.open PIL.ImageShow.show PIL.WalImageFile.open of
+msgid "返回"
+msgstr "返回"
+
+#: PIL.ContainerIO.ContainerIO.read:5 PIL.ContainerIO.ContainerIO.readline:3 of
+msgid "An 8-bit string."
+msgstr "An 8-bit string."
+
+#: PIL.ContainerIO.ContainerIO.readline:1 of
+msgid "Read a line of text."
+msgstr "Read a line of text."
+
+#: PIL.ContainerIO.ContainerIO.readlines:1 of
+msgid "Read multiple lines of text."
+msgstr "Read multiple lines of text."
+
+#: PIL.ContainerIO.ContainerIO.readlines:3 of
+msgid "A list of 8-bit strings."
+msgstr "A list of 8-bit strings."
+
+#: PIL.ContainerIO.ContainerIO.seek:1 of
+msgid "Move file pointer."
+msgstr "Move file pointer."
+
+#: PIL.ContainerIO.ContainerIO.seek:3 of
+msgid "Offset in bytes."
+msgstr "Offset in bytes."
+
+#: PIL.ContainerIO.ContainerIO.seek:4 of
+msgid ""
+"Starting position. Use 0 for beginning of region, 1 for current offset, "
+"and 2 for end of region.  You cannot move the pointer outside the defined"
+" region."
+msgstr ""
+
+#: PIL.ContainerIO.ContainerIO.tell:1 of
+msgid "Get current file pointer."
+msgstr "Get current file pointer."
+
+#: PIL.ContainerIO.ContainerIO.tell:3 of
+msgid "Offset from start of region, in bytes."
+msgstr "Offset from start of region, in bytes."
+
+#: ../../PIL.rst:24
+msgid ":mod:`FontFile` Module"
+msgstr ":mod:`FontFile` Module"
+
+#: PIL.FontFile.FontFile.compile:1 of
+msgid "Create metrics and bitmap"
+msgstr "Create metrics and bitmap"
+
+#: PIL.FontFile.FontFile.save:1 of
+msgid "Save font"
+msgstr "Save font"
+
+#: ../../PIL.rst:32
+msgid ":mod:`GdImageFile` Module"
+msgstr ":mod:`GdImageFile` Module"
+
+#: PIL.GdImageFile.GdImageFile:1 of
+msgid "基类：:class:`PIL.ImageFile.ImageFile`"
+msgstr "基类：:class:`PIL.ImageFile.ImageFile`"
+
+#: PIL.GdImageFile.open:1 of
+msgid "Load texture from a GD image file."
+msgstr "Load texture from a GD image file."
+
+#: PIL.GdImageFile.open:3 of
+msgid "GD file name, or an opened file handle."
+msgstr "GD file name, or an opened file handle."
+
+#: PIL.GdImageFile.open:4 of
+msgid ""
+"Optional mode.  In this version, if the mode argument is given, it must "
+"be \"r\"."
+msgstr "Optional mode.  In this version, if the mode argument is given, it must be \"r\"."
+
+#: PIL.GdImageFile.open:6 PIL.WalImageFile.open:7 of
+msgid "An image instance."
+msgstr "An image instance."
+
+#: PIL.GdImageFile.open of
+msgid "引发"
+msgstr "引发"
+
+#: PIL.GdImageFile.open:7 of
+msgid "If the image could not be read."
+msgstr "If the image could not be read."
+
+#: ../../PIL.rst:40
+msgid ":mod:`GimpGradientFile` Module"
+msgstr ":mod:`GimpGradientFile` Module"
+
+#: PIL.GimpGradientFile.GimpGradientFile:1 of
+msgid "基类：:class:`PIL.GimpGradientFile.GradientFile`"
+msgstr "基类：:class:`PIL.GimpGradientFile.GradientFile`"
+
+#: ../../PIL.rst:48
+msgid ":mod:`GimpPaletteFile` Module"
+msgstr ":mod:`GimpPaletteFile` Module"
+
+#: ../../PIL.rst:58
+msgid ":mod:`ImageDraw2` Module"
+msgstr ":mod:`ImageDraw2` Module"
+
+#: ../../PIL.rst:66
+msgid ":mod:`ImageShow` Module"
+msgstr ":mod:`ImageShow` Module"
+
+#: PIL.ImageShow.MacViewer:1 of
+msgid "基类：:class:`PIL.ImageShow.Viewer`"
+msgstr "基类：:class:`PIL.ImageShow.Viewer`"
+
+#: PIL.ImageShow.MacViewer.show_file:1 PIL.ImageShow.Viewer.show_file:1 of
+msgid "Display given file"
+msgstr "Display given file"
+
+#: PIL.ImageShow.Viewer:1 of
+msgid "Base class for viewers."
+msgstr "Base class for viewers."
+
+#: PIL.ImageShow.Viewer.get_format:1 of
+msgid "Return format name, or None to save as PGM/PPM"
+msgstr "Return format name, or None to save as PGM/PPM"
+
+#: PIL.ImageShow.Viewer.save_image:1 of
+msgid "Save to temporary file, and return filename"
+msgstr "Save to temporary file, and return filename"
+
+#: PIL.ImageShow.Viewer.show_image:1 of
+msgid "Display given image"
+msgstr "Display given image"
+
+#: PIL.ImageShow.show:1 of
+msgid "Display a given image."
+msgstr "Display a given image."
+
+#: PIL.ImageShow.show:3 of
+msgid "An image object."
+msgstr "An image object."
+
+#: PIL.ImageShow.show:4 of
+msgid "Optional title.  Not all viewers can display the title."
+msgstr "Optional title.  Not all viewers can display the title."
+
+#: PIL.ImageShow.show:5 of
+msgid "Additional viewer options."
+msgstr "Additional viewer options."
+
+#: PIL.ImageShow.show:6 of
+msgid "True if a suitable viewer was found, false otherwise."
+msgstr "True if a suitable viewer was found, false otherwise."
+
+#: ../../PIL.rst:74
+msgid ":mod:`ImageTransform` Module"
+msgstr ":mod:`ImageTransform` Module"
+
+#: PIL.ImageTransform.AffineTransform:1 PIL.ImageTransform.ExtentTransform:1
+#: PIL.ImageTransform.MeshTransform:1 PIL.ImageTransform.QuadTransform:1 of
+msgid "基类：:class:`PIL.ImageTransform.Transform`"
+msgstr "基类：:class:`PIL.ImageTransform.Transform`"
+
+#: PIL.ImageTransform.AffineTransform:1 of
+msgid "Define an affine image transform."
+msgstr "Define an affine image transform."
+
+#: PIL.ImageTransform.AffineTransform:3 of
+msgid ""
+"This function takes a 6-tuple (a, b, c, d, e, f) which contain the first "
+"two rows from an affine transform matrix. For each pixel (x, y) in the "
+"output image, the new value is taken from a position (a x + b y + c, d x "
+"+ e y + f) in the input image, rounded to nearest pixel."
+msgstr ""
+
+#: PIL.ImageTransform.AffineTransform:8 of
+msgid ""
+"This function can be used to scale, translate, rotate, and shear the "
+"original image."
+msgstr "This function can be used to scale, translate, rotate, and shear the original image."
+
+#: PIL.ImageTransform.AffineTransform:11 PIL.ImageTransform.ExtentTransform:12
+#: PIL.ImageTransform.MeshTransform:4 PIL.ImageTransform.QuadTransform:6 of
+msgid "See :py:meth:`~PIL.Image.Image.transform`"
+msgstr "See :py:meth:`~PIL.Image.Image.transform`"
+
+#: PIL.ImageTransform.AffineTransform:13 of
+msgid ""
+"A 6-tuple (a, b, c, d, e, f) containing the first two rows from an affine"
+" transform matrix."
+msgstr "A 6-tuple (a, b, c, d, e, f) containing the first two rows from an affine transform matrix."
+
+#: PIL.ImageTransform.ExtentTransform:1 of
+msgid "Define a transform to extract a subregion from an image."
+msgstr "Define a transform to extract a subregion from an image."
+
+#: PIL.ImageTransform.ExtentTransform:3 of
+msgid ""
+"Maps a rectangle (defined by two corners) from the image to a rectangle "
+"of the given size. The resulting image will contain data sampled from "
+"between the corners, such that (x0, y0) in the input image will end up at"
+" (0,0) in the output image, and (x1, y1) at size."
+msgstr ""
+
+#: PIL.ImageTransform.ExtentTransform:8 of
+msgid ""
+"This method can be used to crop, stretch, shrink, or mirror an arbitrary "
+"rectangle in the current image. It is slightly slower than crop, but "
+"about as fast as a corresponding resize operation."
+msgstr ""
+
+#: PIL.ImageTransform.ExtentTransform:14 of
+msgid ""
+"A 4-tuple (x0, y0, x1, y1) which specifies two points in the input "
+"image's coordinate system. See :ref:`coordinate-system`."
+msgstr "A 4-tuple (x0, y0, x1, y1) which specifies two points in the input image's coordinate system. See :ref:`coordinate-system`."
+
+#: PIL.ImageTransform.MeshTransform:1 of
+msgid ""
+"Define a mesh image transform.  A mesh transform consists of one or more "
+"individual quad transforms."
+msgstr "Define a mesh image transform.  A mesh transform consists of one or more individual quad transforms."
+
+#: PIL.ImageTransform.MeshTransform:6 of
+msgid "A list of (bbox, quad) tuples."
+msgstr "A list of (bbox, quad) tuples."
+
+#: PIL.ImageTransform.QuadTransform:1 of
+msgid "Define a quad image transform."
+msgstr "Define a quad image transform."
+
+#: PIL.ImageTransform.QuadTransform:3 of
+msgid ""
+"Maps a quadrilateral (a region defined by four corners) from the image to"
+" a rectangle of the given size."
+msgstr "Maps a quadrilateral (a region defined by four corners) from the image to a rectangle of the given size."
+
+#: PIL.ImageTransform.QuadTransform:8 of
+msgid ""
+"An 8-tuple (x0, y0, x1, y1, x2, y2, x3, y3) which contain the upper left,"
+" lower left, lower right, and upper right corner of the source "
+"quadrilateral."
+msgstr ""
+
+#: PIL.ImageTransform.Transform:1 of
+msgid "基类：:class:`PIL.Image.ImageTransformHandler`"
+msgstr "基类：:class:`PIL.Image.ImageTransformHandler`"
+
+#: ../../PIL.rst:82
+msgid ":mod:`JpegPresets` Module"
+msgstr ":mod:`JpegPresets` Module"
+
+#: PIL.JpegPresets:1 of
+msgid "JPEG quality settings equivalent to the Photoshop settings."
+msgstr "JPEG quality settings equivalent to the Photoshop settings."
+
+#: PIL.JpegPresets:3 of
+msgid "More presets can be added to the presets dict if needed."
+msgstr "More presets can be added to the presets dict if needed."
+
+#: PIL.JpegPresets:5 of
+msgid "Can be use when saving JPEG file."
+msgstr "Can be use when saving JPEG file."
+
+#: PIL.JpegPresets:7 of
+msgid "To apply the preset, specify::"
+msgstr "To apply the preset, specify::"
+
+#: PIL.JpegPresets:11 of
+msgid "To apply only the quantization table::"
+msgstr "To apply only the quantization table::"
+
+#: PIL.JpegPresets:15 of
+msgid "To apply only the subsampling setting::"
+msgstr "To apply only the subsampling setting::"
+
+#: PIL.JpegPresets:19 of
+msgid "Example::"
+msgstr "Example::"
+
+#: PIL.JpegPresets:25 of
+msgid "Subsampling"
+msgstr "Subsampling"
+
+#: PIL.JpegPresets:27 of
+msgid ""
+"Subsampling is the practice of encoding images by implementing less "
+"resolution for chroma information than for luma information. (ref.: "
+"https://en.wikipedia.org/wiki/Chroma_subsampling)"
+msgstr ""
+
+#: PIL.JpegPresets:31 of
+msgid ""
+"Possible subsampling values are 0, 1 and 2 that correspond to 4:4:4, "
+"4:2:2 and 4:2:0."
+msgstr "Possible subsampling values are 0, 1 and 2 that correspond to 4:4:4, 4:2:2 and 4:2:0."
+
+#: PIL.JpegPresets:34 of
+msgid ""
+"You can get the subsampling of a JPEG with the "
+"`JpegImagePlugin.get_sampling(im)` function."
+msgstr "You can get the subsampling of a JPEG with the `JpegImagePlugin.get_sampling(im)` function."
+
+#: PIL.JpegPresets:37 of
+msgid ""
+"In JPEG compressed data a JPEG marker is used instead of an EXIF tag. "
+"(ref.: https://www.exiv2.org/tags.html)"
+msgstr "In JPEG compressed data a JPEG marker is used instead of an EXIF tag. (ref.: https://www.exiv2.org/tags.html)"
+
+#: PIL.JpegPresets:42 of
+msgid "Quantization tables"
+msgstr "Quantization tables"
+
+#: PIL.JpegPresets:44 of
+msgid ""
+"They are values use by the DCT (Discrete cosine transform) to remove "
+"*unnecessary* information from the image (the lossy part of the "
+"compression). (ref.: "
+"https://en.wikipedia.org/wiki/Quantization_matrix#Quantization_matrices, "
+"https://en.wikipedia.org/wiki/JPEG#Quantization)"
+msgstr ""
+
+#: PIL.JpegPresets:49 of
+msgid "You can get the quantization tables of a JPEG with::"
+msgstr "You can get the quantization tables of a JPEG with::"
+
+#: PIL.JpegPresets:53 of
+msgid ""
+"This will return a dict with a number of arrays. You can pass this dict "
+"directly as the qtables argument when saving a JPEG."
+msgstr "This will return a dict with a number of arrays. You can pass this dict directly as the qtables argument when saving a JPEG."
+
+#: PIL.JpegPresets:56 of
+msgid ""
+"The tables format between im.quantization and quantization in presets "
+"differ in 3 ways:"
+msgstr "The tables format between im.quantization and quantization in presets differ in 3 ways:"
+
+#: PIL.JpegPresets:59 of
+msgid ""
+"The base container of the preset is a list with sublists instead of dict."
+" dict[0] -> list[0], dict[1] -> list[1], ..."
+msgstr "The base container of the preset is a list with sublists instead of dict. dict[0] -> list[0], dict[1] -> list[1], ..."
+
+#: PIL.JpegPresets:61 of
+msgid "Each table in a preset is a list instead of an array."
+msgstr "Each table in a preset is a list instead of an array."
+
+#: PIL.JpegPresets:62 of
+msgid "The zigzag order is remove in the preset (needed by libjpeg >= 6a)."
+msgstr "The zigzag order is remove in the preset (needed by libjpeg >= 6a)."
+
+#: PIL.JpegPresets:64 of
+msgid ""
+"You can convert the dict format to the preset format with the "
+"`JpegImagePlugin.convert_dict_qtables(dict_qtables)` function."
+msgstr "You can convert the dict format to the preset format with the `JpegImagePlugin.convert_dict_qtables(dict_qtables)` function."
+
+#: PIL.JpegPresets:67 of
+msgid ""
+"Libjpeg ref.: "
+"https://web.archive.org/web/20120328125543/http://www.jpegcameras.com/libjpeg/libjpeg-3.html"
+msgstr "Libjpeg ref.: https://web.archive.org/web/20120328125543/http://www.jpegcameras.com/libjpeg/libjpeg-3.html"
+
+#: ../../PIL.rst:90
+msgid ":mod:`PaletteFile` Module"
+msgstr ":mod:`PaletteFile` Module"
+
+#: ../../PIL.rst:98
+msgid ":mod:`PcfFontFile` Module"
+msgstr ":mod:`PcfFontFile` Module"
+
+#: ../../PIL.rst:106
+msgid ":class:`PngImagePlugin.iTXt` Class"
+msgstr ":class:`PngImagePlugin.iTXt` Class"
+
+#: PIL.PngImagePlugin.iTXt:1 of
+msgid "基类：:class:`str`"
+msgstr "基类：:class:`str`"
+
+#: PIL.PngImagePlugin.iTXt:1 of
+msgid ""
+"Subclass of string to allow iTXt chunks to look like strings while "
+"keeping their extra information"
+msgstr "Subclass of string to allow iTXt chunks to look like strings while keeping their extra information"
+
+#: ../../PIL.rst:115 PIL.PngImagePlugin.PngInfo.add_itxt:4 of
+msgid "value for this key"
+msgstr "value for this key"
+
+#: ../../PIL.rst:116 PIL.PngImagePlugin.PngInfo.add_itxt:5 of
+msgid "language code"
+msgstr "language code"
+
+#: ../../PIL.rst:117 PIL.PngImagePlugin.PngInfo.add_itxt:6 of
+msgid "UTF-8 version of the key name"
+msgstr "UTF-8 version of the key name"
+
+#: ../../PIL.rst:120
+msgid ":class:`PngImagePlugin.PngInfo` Class"
+msgstr ":class:`PngImagePlugin.PngInfo` Class"
+
+#: PIL.PngImagePlugin.PngInfo:1 of
+msgid "PNG chunk container (for use with save(pnginfo=))"
+msgstr "PNG chunk container (for use with save(pnginfo=))"
+
+#: PIL.PngImagePlugin.PngInfo.add:1 of
+msgid "Appends an arbitrary chunk. Use with caution."
+msgstr "Appends an arbitrary chunk. Use with caution."
+
+#: PIL.PngImagePlugin.PngInfo.add:3 of
+msgid "a byte string, 4 bytes long."
+msgstr "a byte string, 4 bytes long."
+
+#: PIL.PngImagePlugin.PngInfo.add:4 of
+msgid "a byte string of the encoded data"
+msgstr "a byte string of the encoded data"
+
+#: PIL.PngImagePlugin.PngInfo.add_itxt:1 of
+msgid "Appends an iTXt chunk."
+msgstr "Appends an iTXt chunk."
+
+#: PIL.PngImagePlugin.PngInfo.add_itxt:3 PIL.PngImagePlugin.PngInfo.add_text:3
+#: of
+msgid "latin-1 encodable text key name"
+msgstr "latin-1 encodable text key name"
+
+#: PIL.PngImagePlugin.PngInfo.add_itxt:7 PIL.PngImagePlugin.PngInfo.add_text:6
+#: of
+msgid "compression flag"
+msgstr "compression flag"
+
+#: PIL.PngImagePlugin.PngInfo.add_text:1 of
+msgid "Appends a text chunk."
+msgstr "Appends a text chunk."
+
+#: PIL.PngImagePlugin.PngInfo.add_text:4 of
+msgid ""
+"value for this key, text or an :py:class:`PIL.PngImagePlugin.iTXt` "
+"instance"
+msgstr "value for this key, text or an :py:class:`PIL.PngImagePlugin.iTXt` instance"
+
+#: ../../PIL.rst:129
+msgid ":mod:`TarIO` Module"
+msgstr ":mod:`TarIO` Module"
+
+#: PIL.TarIO.TarIO:1 of
+msgid "基类：:class:`PIL.ContainerIO.ContainerIO`"
+msgstr "基类：:class:`PIL.ContainerIO.ContainerIO`"
+
+#: ../../PIL.rst:137
+msgid ":mod:`WalImageFile` Module"
+msgstr ":mod:`WalImageFile` Module"
+
+#: PIL.WalImageFile.open:1 of
+msgid "Load texture from a Quake2 WAL texture file."
+msgstr "Load texture from a Quake2 WAL texture file."
+
+#: PIL.WalImageFile.open:3 of
+msgid ""
+"By default, a Quake2 standard palette is attached to the texture. To "
+"override the palette, use the <b>putpalette</b> method."
+msgstr "By default, a Quake2 standard palette is attached to the texture. To override the palette, use the <b>putpalette</b> method."
+
+#: PIL.WalImageFile.open:6 of
+msgid "WAL file name, or an opened file handle."
+msgstr "WAL file name, or an opened file handle."
+
+#: ../../PIL.rst:145
+msgid ":mod:`_binary` Module"
+msgstr ":mod:`_binary` Module"
+
+#: PIL._binary.i16le:1 of
+msgid "Converts a 2-bytes (16 bits) string to an unsigned integer."
+msgstr "Converts a 2-bytes (16 bits) string to an unsigned integer."
+
+#: PIL._binary.i16le:3 PIL._binary.i32le:3 PIL._binary.si16le:3
+#: PIL._binary.si32le:3 of
+msgid "string containing bytes to convert"
+msgstr "string containing bytes to convert"
+
+#: PIL._binary.i16le:4 PIL._binary.i32le:4 PIL._binary.si16le:4
+#: PIL._binary.si32le:4 of
+msgid "offset of bytes to convert in string"
+msgstr "offset of bytes to convert in string"
+
+#: PIL._binary.i32le:1 of
+msgid "Converts a 4-bytes (32 bits) string to an unsigned integer."
+msgstr "Converts a 4-bytes (32 bits) string to an unsigned integer."
+
+#: PIL._binary.si16le:1 of
+msgid "Converts a 2-bytes (16 bits) string to a signed integer."
+msgstr "Converts a 2-bytes (16 bits) string to a signed integer."
+
+#: PIL._binary.si32le:1 of
+msgid "Converts a 4-bytes (32 bits) string to a signed integer."
+msgstr "Converts a 4-bytes (32 bits) string to a signed integer."
+

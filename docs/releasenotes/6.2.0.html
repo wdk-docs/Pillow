@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.2.0 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/script.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="6.1.0" href="6.1.0.html" />
+    <link rel="prev" title="6.2.1" href="6.2.1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-additions">API Additions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#text-stroking">Text stroking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imagegrab-on-multi-monitor-windows">ImageGrab on multi-monitor Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#api-changes">API Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#image-getexif">Image.getexif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deprecations">Deprecations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#removed-bdist-wininst-exe-installers">Removed bdist_wininst .exe installers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flags-for-libwebp-in-wheels">Flags for libwebp in wheels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="6.1.0.html">6.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.0.0.html">6.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4.1.html">5.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3.0.html">4.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2.1.html">4.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2.0.html">4.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.1.1.html">4.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.1.0.html">4.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.0.0.html">4.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4.0.html">3.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3.2.html">3.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3.0.html">3.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.0.html">3.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.2.html">3.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.1.html">3.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.0.html">3.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.0.0.html">3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8.0.html">2.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7.0.html">2.7.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecations.html">Deprecations and removals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Release Notes</a> &raquo;</li>
+        
+      <li>6.2.0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/releasenotes/6.2.0.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>6.2.0<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="api-additions">
+<h2>API Additions<a class="headerlink" href="#api-additions" title="永久链接至标题">¶</a></h2>
+<div class="section" id="text-stroking">
+<h3>Text stroking<a class="headerlink" href="#text-stroking" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">stroke_width</span></code> and <code class="docutils literal notranslate"><span class="pre">stroke_fill</span></code> arguments have been added to text drawing
+operations. They allow text to be outlined, setting the width of the stroke and
+and the color respectively. If not provided, <code class="docutils literal notranslate"><span class="pre">stroke_fill</span></code> will default to
+the <code class="docutils literal notranslate"><span class="pre">fill</span></code> parameter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+
+<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s2">&quot;Tests/fonts/FreeMono.ttf&quot;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">font</span><span class="o">.</span><span class="n">getsize_multiline</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">font</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s2">&quot;ABC</span><span class="se">\n</span><span class="s2">Aaaa&quot;</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">textsize</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">multiline_textsize</span><span class="p">(</span><span class="s2">&quot;ABC</span><span class="se">\n</span><span class="s2">Aaaa&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;#f00&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stroke_fill</span><span class="o">=</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">multiline_text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;A</span><span class="se">\n</span><span class="s2">B&quot;</span><span class="p">,</span> <span class="s2">&quot;#f00&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span>
+                    <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stroke_fill</span><span class="o">=</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+
+<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">130</span><span class="p">))</span>
+<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s2">&quot;Tests/fonts/FreeMono.ttf&quot;</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;#f00&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stroke_fill</span><span class="o">=</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>creates the following image:</p>
+<img alt="../_images/imagedraw_stroke_different.png" src="../_images/imagedraw_stroke_different.png" />
+</div>
+<div class="section" id="imagegrab-on-multi-monitor-windows">
+<h3>ImageGrab on multi-monitor Windows<a class="headerlink" href="#imagegrab-on-multi-monitor-windows" title="永久链接至标题">¶</a></h3>
+<p>An <code class="docutils literal notranslate"><span class="pre">all_screens</span></code> argument has been added to <code class="docutils literal notranslate"><span class="pre">ImageGrab.grab</span></code>. If <code class="docutils literal notranslate"><span class="pre">True</span></code>,
+all monitors will be included in the created image.</p>
+</div>
+</div>
+<div class="section" id="api-changes">
+<h2>API Changes<a class="headerlink" href="#api-changes" title="永久链接至标题">¶</a></h2>
+<div class="section" id="image-getexif">
+<h3>Image.getexif<a class="headerlink" href="#image-getexif" title="永久链接至标题">¶</a></h3>
+<p>To allow for lazy loading of Exif data, <code class="docutils literal notranslate"><span class="pre">Image.getexif()</span></code> now returns a
+shared instance of <code class="docutils literal notranslate"><span class="pre">Image.Exif</span></code>.</p>
+</div>
+<div class="section" id="deprecations">
+<h3>Deprecations<a class="headerlink" href="#deprecations" title="永久链接至标题">¶</a></h3>
+<div class="section" id="image-frombuffer">
+<h4>Image.frombuffer<a class="headerlink" href="#image-frombuffer" title="永久链接至标题">¶</a></h4>
+<p>There has been a longstanding warning that the defaults of <code class="docutils literal notranslate"><span class="pre">Image.frombuffer</span></code>
+may change in the future for the “raw” decoder. The change will now take place
+in Pillow 7.0.</p>
+</div>
+</div>
+</div>
+<div class="section" id="security">
+<h2>Security<a class="headerlink" href="#security" title="永久链接至标题">¶</a></h2>
+<p>This release catches several buffer overruns, as well as addressing
+CVE-2019-16865. The CVE is regarding DOS problems, such as consuming large
+amounts of memory, or taking a large amount of time to process an image.</p>
+<p>In RawDecode.c, an error is now thrown if skip is calculated to be less than
+zero. It is intended to skip padding between lines, not to go backwards.</p>
+<p>In PsdImagePlugin, if the combined sizes of the individual parts is larger than
+the declared size of the extra data field, then it looked for the next layer by
+seeking backwards. This is now corrected by seeking to (the start of the layer
++ the size of the extra data field) instead of (the read parts of the layer +
+the rest of the layer).</p>
+<p>Decompression bomb checks have been added to GIF and ICO formats.</p>
+<p>An error is now raised if a TIFF dimension is a string, rather than trying to
+perform operations on it.</p>
+</div>
+<div class="section" id="other-changes">
+<h2>Other Changes<a class="headerlink" href="#other-changes" title="永久链接至标题">¶</a></h2>
+<div class="section" id="removed-bdist-wininst-exe-installers">
+<h3>Removed bdist_wininst .exe installers<a class="headerlink" href="#removed-bdist-wininst-exe-installers" title="永久链接至标题">¶</a></h3>
+<p>.exe installers fell out of favour with PEP 527, and will be deprecated in
+Python 3.8. Pillow will no longer be distributing them. Wheels should be used
+instead.</p>
+</div>
+<div class="section" id="flags-for-libwebp-in-wheels">
+<h3>Flags for libwebp in wheels<a class="headerlink" href="#flags-for-libwebp-in-wheels" title="永久链接至标题">¶</a></h3>
+<p>When building libwebp for inclusion in wheels, Pillow now adds the -O3 and
+-DNDEBUG CFLAGS. These flags would be used by default if building libwebp
+without debugging, and using them fixes a significant decrease in speed when
+a wheel-installed copy of Pillow performs libwebp operations.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="6.1.0.html" class="btn btn-neutral float-right" title="6.1.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="6.2.1.html" class="btn btn-neutral float-left" title="6.2.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

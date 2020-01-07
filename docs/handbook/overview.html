@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>概观 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/script.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="教程" href="tutorial.html" />
+    <link rel="prev" title="手册" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">手册</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">概观</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image-archives">图片档案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-display">图像显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-processing">图像处理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">教程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html">概念</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html">附录</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../porting.html">Porting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecations.html">Deprecations and removals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">手册</a> &raquo;</li>
+        
+      <li>概观</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/handbook/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>概观<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>的Python图像库**增加了图像处理功能，您的Python解释器。</p>
+<p>This library provides extensive file format support, an efficient internal
+representation, and fairly powerful image processing capabilities.</p>
+<p>The core image library is designed for fast access to data stored in a few
+basic pixel formats. It should provide a solid foundation for a general image
+processing tool.</p>
+<p>让我们看看这个库的几个可能的用途。</p>
+<div class="section" id="image-archives">
+<h2>图片档案<a class="headerlink" href="#image-archives" title="永久链接至标题">¶</a></h2>
+<p>The Python Imaging Library is ideal for image archival and batch processing
+applications. You can use the library to create thumbnails, convert between
+file formats, print images, etc.</p>
+<p>The current version identifies and reads a large number of formats. Write
+support is intentionally restricted to the most commonly used interchange and
+presentation formats.</p>
+</div>
+<div class="section" id="image-display">
+<h2>图像显示<a class="headerlink" href="#image-display" title="永久链接至标题">¶</a></h2>
+<p>The current release includes Tk <a class="reference internal" href="../reference/ImageTk.html#PIL.ImageTk.PhotoImage" title="PIL.ImageTk.PhotoImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhotoImage</span></code></a> and
+<a class="reference internal" href="../reference/ImageTk.html#PIL.ImageTk.BitmapImage" title="PIL.ImageTk.BitmapImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitmapImage</span></code></a> interfaces, as well as a <a class="reference internal" href="../reference/ImageWin.html#module-PIL.ImageWin" title="PIL.ImageWin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Windows</span>
+<span class="pre">DIB</span> <span class="pre">interface</span></code></a> that can be used with PythonWin and other
+Windows-based toolkits. Many other GUI toolkits come with some kind of PIL
+support.</p>
+<p>出于调试，还有一个：PY：甲基：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.show`方法，其保存图像到磁盘，并且调用外部显示效用。</p>
+</div>
+<div class="section" id="image-processing">
+<h2>图像处理<a class="headerlink" href="#image-processing" title="永久链接至标题">¶</a></h2>
+<p>The library contains basic image processing functionality, including point operations, filtering with a set of built-in convolution kernels, and colour space conversions.</p>
+<p>该库还支持图像缩放，旋转和任意仿射变换。</p>
+<p>There’s a histogram method allowing you to pull some statistics out of an image. This can be used for automatic contrast enhancement, and for global statistical analysis.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="教程" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="手册" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

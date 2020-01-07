@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.7.0 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/script.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Deprecations and removals" href="../deprecations.html" />
+    <link rel="prev" title="2.8.0" href="2.8.0.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.0.html">6.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.1.0.html">6.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.0.0.html">6.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4.1.html">5.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4.0.html">5.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3.0.html">5.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2.0.html">5.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1.0.html">5.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.0.0.html">5.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3.0.html">4.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2.1.html">4.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2.0.html">4.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.1.1.html">4.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.1.0.html">4.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.0.0.html">4.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4.0.html">3.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3.2.html">3.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3.0.html">3.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.0.html">3.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.2.html">3.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.1.html">3.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.0.html">3.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.0.0.html">3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8.0.html">2.8.0</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.7.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sane-plugin">Sane Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#png-text-chunk-size-limits">PNG文本块大小限制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-resizing-filters">图片大小的过滤器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bicubic-and-bilinear-downscaling">双三次和双线性缩小</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#antialias-renamed-to-lanczos">抗锯齿更名为兰索斯</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lanczos-upscaling-quality">兰克泽斯像素提升质量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bicubic-upscaling-quality">双三次倍增质量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resize-performance">调整大小的性能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-filter-for-thumbnails">为缩略图默认过滤器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#image-transposition">图片换位</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gaussian-blur-and-unsharp-mask">高斯模糊和不清晰的面纱</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blur-radius">模糊半径</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blur-performance">Blur performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blur-quality">模糊质量</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tiff-parameter-changes">TIFF参数变化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecations.html">Deprecations and removals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Release Notes</a> &raquo;</li>
+        
+      <li>2.7.0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/releasenotes/2.7.0.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>2.7.0<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="sane-plugin">
+<h2>Sane Plugin<a class="headerlink" href="#sane-plugin" title="永久链接至标题">¶</a></h2>
+<p>现在理智的插件已经被拆分成自身回购: <a class="reference external" href="https://github.com/python-pillow/Sane">https://github.com/python-pillow/Sane</a> .</p>
+</div>
+<div class="section" id="png-text-chunk-size-limits">
+<h2>PNG文本块大小限制<a class="headerlink" href="#png-text-chunk-size-limits" title="永久链接至标题">¶</a></h2>
+<p>To prevent potential denial of service attacks using compressed text
+chunks, there are now limits to the decompressed size of text chunks
+decoded from PNG images. If the limits are exceeded when opening a PNG
+image a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> will be raised.</p>
+<p>Individual text chunks are limited to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.PngImagePlugin.MAX_TEXT_CHUNK</span></code>, set to 1MB by
+default. The total decompressed size of all text chunks is limited to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.PngImagePlugin.MAX_TEXT_MEMORY</span></code>, which defaults to
+64MB. These values can be changed prior to opening PNG images if you
+know that there are large text blocks that are desired.</p>
+</div>
+<div class="section" id="image-resizing-filters">
+<h2>图片大小的过滤器<a class="headerlink" href="#image-resizing-filters" title="永久链接至标题">¶</a></h2>
+<p>Image resizing methods <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.resize" title="PIL.Image.Image.resize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resize()</span></code></a> and
+<a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a> take a <code class="docutils literal notranslate"><span class="pre">resample</span></code> argument, which tells
+which filter should be used for resampling. Possible values are:
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.NEAREST</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.BILINEAR</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.BICUBIC</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.ANTIALIAS</span></code>.
+Almost all of them were changed in this version.</p>
+<div class="section" id="bicubic-and-bilinear-downscaling">
+<h3>双三次和双线性缩小<a class="headerlink" href="#bicubic-and-bilinear-downscaling" title="永久链接至标题">¶</a></h3>
+<p>From the beginning <code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> filters were based on affine transformations
+and used a fixed number of pixels from the source image for every destination
+pixel (2x2 pixels for <code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> and 4x4 for
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code>). This gave an unsatisfactory result for
+downscaling. At the same time, a high quality convolutions-based algorithm with
+flexible kernel was used for <code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code> filter.</p>
+<p>从枕头2.7.0开始，基于卷积高品质的算法用于这三个过滤器。</p>
+<p>If you have previously used any tricks to maintain quality when downscaling with
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> filters
+(for example, reducing within several steps), they are unnecessary now.</p>
+</div>
+<div class="section" id="antialias-renamed-to-lanczos">
+<h3>抗锯齿更名为兰索斯<a class="headerlink" href="#antialias-renamed-to-lanczos" title="永久链接至标题">¶</a></h3>
+<p>A new <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.LANCZOS</span></code> constant was added instead of
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code>.</p>
+<p>When <code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code> was initially added, it was the only
+high-quality filter based on convolutions. It’s name was supposed to reflect
+this. Starting from Pillow 2.7.0 all resize method are based on convolutions.
+All of them are antialias from now on. And the real name of the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code> filter is Lanczos filter.</p>
+<p>的：吡啶：ATTR：<cite>〜PIL.Image.ANTIALIAS`恒定留给向后兼容性，并且是一个别名：PY：ATTR：</cite>〜PIL.Image.LANCZOS`。</p>
+</div>
+<div class="section" id="lanczos-upscaling-quality">
+<h3>兰克泽斯像素提升质量<a class="headerlink" href="#lanczos-upscaling-quality" title="永久链接至标题">¶</a></h3>
+<p>The image upscaling quality with <code class="xref py py-attr docutils literal notranslate"><span class="pre">LANCZOS</span></code> filter was
+almost the same as <code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> due to bug. This has been fixed.</p>
+</div>
+<div class="section" id="bicubic-upscaling-quality">
+<h3>双三次倍增质量<a class="headerlink" href="#bicubic-upscaling-quality" title="永久链接至标题">¶</a></h3>
+<p>The <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> filter for affine transformations produced
+sharp, slightly pixelated image for upscaling. Bicubic for convolutions is
+more soft.</p>
+</div>
+<div class="section" id="resize-performance">
+<h3>调整大小的性能<a class="headerlink" href="#resize-performance" title="永久链接至标题">¶</a></h3>
+<p>In most cases, convolution is more a expensive algorithm for downscaling
+because it takes into account all the pixels of source image. Therefore
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> filters’
+performance can be lower than before. On the other hand the quality of
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> was close to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST</span></code>. So if such quality is suitable for your tasks
+you can switch to <code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST</span></code> filter for downscaling,
+which will give a huge improvement in performance.</p>
+<p>At the same time performance of convolution resampling for downscaling has been
+improved by around a factor of two compared to the previous version.
+The upscaling performance of the <code class="xref py py-attr docutils literal notranslate"><span class="pre">LANCZOS</span></code> filter has
+remained the same. For <code class="xref py py-attr docutils literal notranslate"><span class="pre">BILINEAR</span></code> filter it has improved by
+1.5 times and for <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code> by four times.</p>
+</div>
+<div class="section" id="default-filter-for-thumbnails">
+<h3>为缩略图默认过滤器<a class="headerlink" href="#default-filter-for-thumbnails" title="永久链接至标题">¶</a></h3>
+<p>In Pillow 2.5 the default filter for <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a> was
+changed from <code class="xref py py-attr docutils literal notranslate"><span class="pre">NEAREST</span></code> to <code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code>.
+Antialias was chosen because all the other filters gave poor quality for
+reduction. Starting from Pillow 2.7.0, <code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code> has been
+replaced with <code class="xref py py-attr docutils literal notranslate"><span class="pre">BICUBIC</span></code>, because it’s faster and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ANTIALIAS</span></code> doesn’t give any advantages after
+downscaling with libjpeg, which uses supersampling internally, not convolutions.</p>
+</div>
+</div>
+<div class="section" id="image-transposition">
+<h2>图片换位<a class="headerlink" href="#image-transposition" title="永久链接至标题">¶</a></h2>
+<p>A new method <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.TRANSPOSE</span></code> has been added for the
+<a class="reference internal" href="../reference/Image.html#PIL.Image.Image.transpose" title="PIL.Image.Image.transpose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">transpose()</span></code></a> operation in addition to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">FLIP_LEFT_RIGHT</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">FLIP_TOP_BOTTOM</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ROTATE_90</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">ROTATE_180</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ROTATE_270</span></code>. <code class="xref py py-attr docutils literal notranslate"><span class="pre">TRANSPOSE</span></code> is an algebra
+transpose, with an image reflected across its main diagonal.</p>
+<p>The speed of <code class="xref py py-attr docutils literal notranslate"><span class="pre">ROTATE_90</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">ROTATE_270</span></code>
+and <code class="xref py py-attr docutils literal notranslate"><span class="pre">TRANSPOSE</span></code> has been significantly improved for large
+images which don’t fit in the processor cache.</p>
+</div>
+<div class="section" id="gaussian-blur-and-unsharp-mask">
+<h2>高斯模糊和不清晰的面纱<a class="headerlink" href="#gaussian-blur-and-unsharp-mask" title="永久链接至标题">¶</a></h2>
+<p>The <a class="reference internal" href="../reference/ImageFilter.html#PIL.ImageFilter.GaussianBlur" title="PIL.ImageFilter.GaussianBlur"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GaussianBlur()</span></code></a> implementation has been replaced
+with a sequential application of box filters. The new implementation is based on
+“Theoretical foundations of Gaussian convolution by extended box filtering” from
+the Mathematical Image Analysis Group. As <a class="reference internal" href="../reference/ImageFilter.html#PIL.ImageFilter.UnsharpMask" title="PIL.ImageFilter.UnsharpMask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">UnsharpMask()</span></code></a>
+implementations use Gaussian blur internally, all changes from this chapter
+are also applicable to it.</p>
+<div class="section" id="blur-radius">
+<h3>模糊半径<a class="headerlink" href="#blur-radius" title="永久链接至标题">¶</a></h3>
+<p>There was an error in the previous version of Pillow, where blur radius (the
+standard deviation of Gaussian) actually meant blur diameter. For example, to
+blur an image with actual radius 5 you were forced to use value 10. This has
+been fixed. Now the meaning of the radius is the same as in other software.</p>
+<p>如果您使用高斯模糊，半径的一些值，则需要除以2这个值。</p>
+</div>
+<div class="section" id="blur-performance">
+<h3>Blur performance<a class="headerlink" href="#blur-performance" title="永久链接至标题">¶</a></h3>
+<p>Box filter computation time is constant relative to the radius and depends
+on source image size only. Because the new Gaussian blur implementation
+is based on box filter, its computation time also doesn’t depend on the blur
+radius.</p>
+<p>For example, previously, if the execution time for a given test image was 1
+second for radius 1, 3.6 seconds for radius 10 and 17 seconds for 50, now blur
+with any radius on same image is executed for 0.2 seconds.</p>
+</div>
+<div class="section" id="blur-quality">
+<h3>模糊质量<a class="headerlink" href="#blur-quality" title="永久链接至标题">¶</a></h3>
+<p>The previous implementation takes into account only source pixels within
+2 * standard deviation radius for every destination pixel. This was not enough,
+so the quality was worse compared to other Gaussian blur software.</p>
+<p>新的实现没有这个缺点。</p>
+</div>
+</div>
+<div class="section" id="tiff-parameter-changes">
+<h2>TIFF参数变化<a class="headerlink" href="#tiff-parameter-changes" title="永久链接至标题">¶</a></h2>
+<p>Several kwarg parameters for saving TIFF images were previously
+specified as strings with included spaces (e.g. ‘x resolution’). This
+was difficult to use as kwargs without constructing and passing a
+dictionary. These parameters now use the underscore character instead
+of space. (e.g. ‘x_resolution’)</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../deprecations.html" class="btn btn-neutral float-right" title="Deprecations and removals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2.8.0.html" class="btn btn-neutral float-left" title="2.8.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

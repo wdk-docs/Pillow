@@ -1,0 +1,3103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../releasenotes/2.7.0.rst:2
+msgid "2.7.0"
+msgstr "2.7.0"
+
+#: ../../releasenotes/2.7.0.rst:5
+msgid "Sane Plugin"
+msgstr "Sane Plugin"
+
+#: ../../releasenotes/2.7.0.rst:7
+msgid ""
+"The Sane plugin has now been split into its own repo: https://github.com"
+"/python-pillow/Sane ."
+msgstr "现在理智的插件已经被拆分成自身回购: https://github.com/python-pillow/Sane ."
+
+#: ../../releasenotes/2.7.0.rst:12
+msgid "Png text chunk size limits"
+msgstr "PNG文本块大小限制"
+
+#: ../../releasenotes/2.7.0.rst:14
+msgid ""
+"To prevent potential denial of service attacks using compressed text "
+"chunks, there are now limits to the decompressed size of text chunks "
+"decoded from PNG images. If the limits are exceeded when opening a PNG "
+"image a ``ValueError`` will be raised."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:19
+msgid ""
+"Individual text chunks are limited to "
+":py:attr:`PIL.PngImagePlugin.MAX_TEXT_CHUNK`, set to 1MB by default. The "
+"total decompressed size of all text chunks is limited to "
+":py:attr:`PIL.PngImagePlugin.MAX_TEXT_MEMORY`, which defaults to 64MB. "
+"These values can be changed prior to opening PNG images if you know that "
+"there are large text blocks that are desired."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:27
+msgid "Image resizing filters"
+msgstr "图片大小的过滤器"
+
+#: ../../releasenotes/2.7.0.rst:29
+msgid ""
+"Image resizing methods :py:meth:`~PIL.Image.Image.resize` and "
+":py:meth:`~PIL.Image.Image.thumbnail` take a ``resample`` argument, which"
+" tells which filter should be used for resampling. Possible values are: "
+":py:attr:`PIL.Image.NEAREST`, :py:attr:`PIL.Image.BILINEAR`, "
+":py:attr:`PIL.Image.BICUBIC` and :py:attr:`PIL.Image.ANTIALIAS`. Almost "
+"all of them were changed in this version."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:37
+msgid "Bicubic and bilinear downscaling"
+msgstr "双三次和双线性缩小"
+
+#: ../../releasenotes/2.7.0.rst:39
+msgid ""
+"From the beginning :py:attr:`~PIL.Image.BILINEAR` and "
+":py:attr:`~PIL.Image.BICUBIC` filters were based on affine "
+"transformations and used a fixed number of pixels from the source image "
+"for every destination pixel (2x2 pixels for "
+":py:attr:`~PIL.Image.BILINEAR` and 4x4 for "
+":py:attr:`~PIL.Image.BICUBIC`). This gave an unsatisfactory result for "
+"downscaling. At the same time, a high quality convolutions-based "
+"algorithm with flexible kernel was used for "
+":py:attr:`~PIL.Image.ANTIALIAS` filter."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:47
+msgid ""
+"Starting from Pillow 2.7.0, a high quality convolutions-based algorithm "
+"is used for all of these three filters."
+msgstr "从枕头2.7.0开始，基于卷积高品质的算法用于这三个过滤器。"
+
+#: ../../releasenotes/2.7.0.rst:50
+msgid ""
+"If you have previously used any tricks to maintain quality when "
+"downscaling with :py:attr:`~PIL.Image.BILINEAR` and "
+":py:attr:`~PIL.Image.BICUBIC` filters (for example, reducing within "
+"several steps), they are unnecessary now."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:55
+msgid "Antialias renamed to Lanczos"
+msgstr "抗锯齿更名为兰索斯"
+
+#: ../../releasenotes/2.7.0.rst:57
+msgid ""
+"A new :py:attr:`PIL.Image.LANCZOS` constant was added instead of "
+":py:attr:`~PIL.Image.ANTIALIAS`."
+msgstr "A new :py:attr:`PIL.Image.LANCZOS` constant was added instead of :py:attr:`~PIL.Image.ANTIALIAS`."
+
+#: ../../releasenotes/2.7.0.rst:60
+msgid ""
+"When :py:attr:`~PIL.Image.ANTIALIAS` was initially added, it was the only"
+" high-quality filter based on convolutions. It's name was supposed to "
+"reflect this. Starting from Pillow 2.7.0 all resize method are based on "
+"convolutions. All of them are antialias from now on. And the real name of"
+" the :py:attr:`~PIL.Image.ANTIALIAS` filter is Lanczos filter."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:66
+msgid ""
+"The :py:attr:`~PIL.Image.ANTIALIAS` constant is left for backward "
+"compatibility and is an alias for :py:attr:`~PIL.Image.LANCZOS`."
+msgstr "的：吡啶：ATTR：`〜PIL.Image.ANTIALIAS`恒定留给向后兼容性，并且是一个别名：PY：ATTR：`〜PIL.Image.LANCZOS`。"
+
+#: ../../releasenotes/2.7.0.rst:70
+msgid "Lanczos upscaling quality"
+msgstr "兰克泽斯像素提升质量"
+
+#: ../../releasenotes/2.7.0.rst:72
+msgid ""
+"The image upscaling quality with :py:attr:`~PIL.Image.LANCZOS` filter was"
+" almost the same as :py:attr:`~PIL.Image.BILINEAR` due to bug. This has "
+"been fixed."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:76
+msgid "Bicubic upscaling quality"
+msgstr "双三次倍增质量"
+
+#: ../../releasenotes/2.7.0.rst:78
+msgid ""
+"The :py:attr:`~PIL.Image.BICUBIC` filter for affine transformations "
+"produced sharp, slightly pixelated image for upscaling. Bicubic for "
+"convolutions is more soft."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:83
+msgid "Resize performance"
+msgstr "调整大小的性能"
+
+#: ../../releasenotes/2.7.0.rst:85
+msgid ""
+"In most cases, convolution is more a expensive algorithm for downscaling "
+"because it takes into account all the pixels of source image. Therefore "
+":py:attr:`~PIL.Image.BILINEAR` and :py:attr:`~PIL.Image.BICUBIC` filters'"
+" performance can be lower than before. On the other hand the quality of "
+":py:attr:`~PIL.Image.BILINEAR` and :py:attr:`~PIL.Image.BICUBIC` was "
+"close to :py:attr:`~PIL.Image.NEAREST`. So if such quality is suitable "
+"for your tasks you can switch to :py:attr:`~PIL.Image.NEAREST` filter for"
+" downscaling, which will give a huge improvement in performance."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:94
+msgid ""
+"At the same time performance of convolution resampling for downscaling "
+"has been improved by around a factor of two compared to the previous "
+"version. The upscaling performance of the :py:attr:`~PIL.Image.LANCZOS` "
+"filter has remained the same. For :py:attr:`~PIL.Image.BILINEAR` filter "
+"it has improved by 1.5 times and for :py:attr:`~PIL.Image.BICUBIC` by "
+"four times."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:101
+msgid "Default filter for thumbnails"
+msgstr "为缩略图默认过滤器"
+
+#: ../../releasenotes/2.7.0.rst:103
+msgid ""
+"In Pillow 2.5 the default filter for "
+":py:meth:`~PIL.Image.Image.thumbnail` was changed from "
+":py:attr:`~PIL.Image.NEAREST` to :py:attr:`~PIL.Image.ANTIALIAS`. "
+"Antialias was chosen because all the other filters gave poor quality for "
+"reduction. Starting from Pillow 2.7.0, :py:attr:`~PIL.Image.ANTIALIAS` "
+"has been replaced with :py:attr:`~PIL.Image.BICUBIC`, because it's faster"
+" and :py:attr:`~PIL.Image.ANTIALIAS` doesn't give any advantages after "
+"downscaling with libjpeg, which uses supersampling internally, not "
+"convolutions."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:112
+msgid "Image transposition"
+msgstr "图片换位"
+
+#: ../../releasenotes/2.7.0.rst:114
+msgid ""
+"A new method :py:attr:`PIL.Image.TRANSPOSE` has been added for the "
+":py:meth:`~PIL.Image.Image.transpose` operation in addition to "
+":py:attr:`~PIL.Image.FLIP_LEFT_RIGHT`, "
+":py:attr:`~PIL.Image.FLIP_TOP_BOTTOM`, :py:attr:`~PIL.Image.ROTATE_90`, "
+":py:attr:`~PIL.Image.ROTATE_180`, :py:attr:`~PIL.Image.ROTATE_270`. "
+":py:attr:`~PIL.Image.TRANSPOSE` is an algebra transpose, with an image "
+"reflected across its main diagonal."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:121
+msgid ""
+"The speed of :py:attr:`~PIL.Image.ROTATE_90`, "
+":py:attr:`~PIL.Image.ROTATE_270` and :py:attr:`~PIL.Image.TRANSPOSE` has "
+"been significantly improved for large images which don't fit in the "
+"processor cache."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:126
+msgid "Gaussian blur and unsharp mask"
+msgstr "高斯模糊和不清晰的面纱"
+
+#: ../../releasenotes/2.7.0.rst:128
+msgid ""
+"The :py:meth:`~PIL.ImageFilter.GaussianBlur` implementation has been "
+"replaced with a sequential application of box filters. The new "
+"implementation is based on \"Theoretical foundations of Gaussian "
+"convolution by extended box filtering\" from the Mathematical Image "
+"Analysis Group. As :py:meth:`~PIL.ImageFilter.UnsharpMask` "
+"implementations use Gaussian blur internally, all changes from this "
+"chapter are also applicable to it."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:136
+msgid "Blur radius"
+msgstr "模糊半径"
+
+#: ../../releasenotes/2.7.0.rst:138
+msgid ""
+"There was an error in the previous version of Pillow, where blur radius "
+"(the standard deviation of Gaussian) actually meant blur diameter. For "
+"example, to blur an image with actual radius 5 you were forced to use "
+"value 10. This has been fixed. Now the meaning of the radius is the same "
+"as in other software."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:143
+msgid ""
+"If you used a Gaussian blur with some radius value, you need to divide "
+"this value by two."
+msgstr "如果您使用高斯模糊，半径的一些值，则需要除以2这个值。"
+
+#: ../../releasenotes/2.7.0.rst:147
+msgid "Blur performance"
+msgstr "Blur performance"
+
+#: ../../releasenotes/2.7.0.rst:149
+msgid ""
+"Box filter computation time is constant relative to the radius and "
+"depends on source image size only. Because the new Gaussian blur "
+"implementation is based on box filter, its computation time also doesn't "
+"depend on the blur radius."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:154
+msgid ""
+"For example, previously, if the execution time for a given test image was"
+" 1 second for radius 1, 3.6 seconds for radius 10 and 17 seconds for 50, "
+"now blur with any radius on same image is executed for 0.2 seconds."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:159
+msgid "Blur quality"
+msgstr "模糊质量"
+
+#: ../../releasenotes/2.7.0.rst:161
+msgid ""
+"The previous implementation takes into account only source pixels within "
+"2 * standard deviation radius for every destination pixel. This was not "
+"enough, so the quality was worse compared to other Gaussian blur "
+"software."
+msgstr ""
+
+#: ../../releasenotes/2.7.0.rst:165
+msgid "The new implementation does not have this drawback."
+msgstr "新的实现没有这个缺点。"
+
+#: ../../releasenotes/2.7.0.rst:168
+msgid "TIFF Parameter Changes"
+msgstr "TIFF参数变化"
+
+#: ../../releasenotes/2.7.0.rst:170
+msgid ""
+"Several kwarg parameters for saving TIFF images were previously specified"
+" as strings with included spaces (e.g. 'x resolution'). This was "
+"difficult to use as kwargs without constructing and passing a dictionary."
+" These parameters now use the underscore character instead of space. "
+"(e.g. 'x_resolution')"
+msgstr ""
+
+#: ../../releasenotes/2.8.0.rst:2
+msgid "2.8.0"
+msgstr "2.8.0"
+
+#: ../../releasenotes/2.8.0.rst:5
+msgid "Open HTTP response objects with Image.open"
+msgstr "Open HTTP response objects with Image.open"
+
+#: ../../releasenotes/2.8.0.rst:7
+msgid ""
+"HTTP response objects returned from ``urllib2.urlopen(url)`` or "
+"``requests.get(url, stream=True).raw`` are 'file-like' but do not support"
+" ``.seek()`` operations. As a result PIL was unable to open them as "
+"images, requiring a wrap in ``cStringIO`` or ``BytesIO``."
+msgstr ""
+
+#: ../../releasenotes/2.8.0.rst:12
+msgid ""
+"Now new functionality has been added to ``Image.open()`` by way of an "
+"``.seek(0)`` check and catch on exception ``AttributeError`` or "
+"``io.UnsupportedOperation``. If this is caught we attempt to wrap the "
+"object using ``io.BytesIO`` (which will only work on buffer-file-like "
+"objects)."
+msgstr ""
+
+#: ../../releasenotes/2.8.0.rst:17
+msgid ""
+"This allows opening of files using both ``urllib2`` and ``requests``, "
+"e.g.::"
+msgstr "This allows opening of files using both ``urllib2`` and ``requests``, e.g.::"
+
+#: ../../releasenotes/2.8.0.rst:22
+msgid ""
+"If the response uses content-encoding (compression, either gzip or "
+"deflate) then this will fail as both the urllib2 and requests raw file "
+"object will produce compressed data in that case. Using Content-Encoding "
+"on images is rather non-sensical as most images are already compressed, "
+"but it can still happen."
+msgstr ""
+
+#: ../../releasenotes/2.8.0.rst:27
+msgid ""
+"For requests the work-around is to set the decode_content attribute on "
+"the raw object to True::"
+msgstr "For requests the work-around is to set the decode_content attribute on the raw object to True::"
+
+#: ../../releasenotes/3.0.0.rst:3
+msgid "3.0.0"
+msgstr "3.0.0"
+
+#: ../../releasenotes/3.0.0.rst:6
+msgid "Saving Multipage Images"
+msgstr "Saving Multipage Images"
+
+#: ../../releasenotes/3.0.0.rst:8
+msgid ""
+"There is now support for saving multipage images in the ``GIF`` and "
+"``PDF`` formats. To enable this functionality, pass in ``save_all=True`` "
+"as a keyword argument to the save::"
+msgstr ""
+
+#: ../../releasenotes/3.0.0.rst:15
+msgid "Tiff ImageFileDirectory Rewrite"
+msgstr "Tiff ImageFileDirectory Rewrite"
+
+#: ../../releasenotes/3.0.0.rst:17
+msgid ""
+"The Tiff ImageFileDirectory metadata code has been rewritten. Where "
+"previously it returned a somewhat arbitrary set of values and tuples, it "
+"now returns bare values where appropriate and tuples when the metadata "
+"item is a sequence or collection."
+msgstr ""
+
+#: ../../releasenotes/3.0.0.rst:22
+msgid ""
+"The original metadata is still available in the TiffImage.tags, the new "
+"values are available in the TiffImage.tags_v2 member. The old structures "
+"will be deprecated at some point in the future.  When saving Tiff "
+"metadata, new code should use the TiffImagePlugin.ImageFileDirectory_v2 "
+"class."
+msgstr ""
+
+#: ../../releasenotes/3.0.0.rst:29
+msgid "Deprecated Methods"
+msgstr "Deprecated Methods"
+
+#: ../../releasenotes/3.0.0.rst:31
+msgid ""
+"Several methods that have been marked as deprecated for many releases "
+"have been removed in this release::"
+msgstr "Several methods that have been marked as deprecated for many releases have been removed in this release::"
+
+#: ../../releasenotes/3.0.0.rst:46
+msgid "LibJpeg and Zlib are Required by Default"
+msgstr "LibJpeg and Zlib are Required by Default"
+
+#: ../../releasenotes/3.0.0.rst:48
+msgid ""
+"The external dependencies on libjpeg and zlib are now required by "
+"default. If the headers or libraries are not found, then installation "
+"will abort with an error. This behaviour can be disabled with the "
+"``--disable-libjpeg`` and ``--disable-zlib`` flags."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:3
+msgid "3.1.0"
+msgstr "3.1.0"
+
+#: ../../releasenotes/3.1.0.rst:6
+msgid "ImageDraw arc, chord and pieslice can now use floats"
+msgstr "ImageDraw arc, chord and pieslice can now use floats"
+
+#: ../../releasenotes/3.1.0.rst:8
+msgid ""
+"There is no longer a need to ensure that the start and end arguments for "
+"``arc``, ``chord`` and ``pieslice`` are integers."
+msgstr "There is no longer a need to ensure that the start and end arguments for ``arc``, ``chord`` and ``pieslice`` are integers."
+
+#: ../../releasenotes/3.1.0.rst:11
+msgid ""
+"Note that these numbers are not simply rounded internally, but are "
+"actually utilised in the drawing process."
+msgstr "Note that these numbers are not simply rounded internally, but are actually utilised in the drawing process."
+
+#: ../../releasenotes/3.1.0.rst:15
+msgid "Consistent multiline text spacing"
+msgstr "Consistent multiline text spacing"
+
+#: ../../releasenotes/3.1.0.rst:17
+msgid ""
+"When using the ``ImageDraw`` multiline methods, the spacing between lines"
+" was inconsistent, based on the combination on ascenders and descenders."
+msgstr "When using the ``ImageDraw`` multiline methods, the spacing between lines was inconsistent, based on the combination on ascenders and descenders."
+
+#: ../../releasenotes/3.1.0.rst:21
+msgid ""
+"This has now been fixed, so that lines are offset by their baselines, not"
+" the absolute height of each line."
+msgstr "This has now been fixed, so that lines are offset by their baselines, not the absolute height of each line."
+
+#: ../../releasenotes/3.1.0.rst:24
+msgid "There is also now a default spacing of 4px between lines."
+msgstr "There is also now a default spacing of 4px between lines."
+
+#: ../../releasenotes/3.1.0.rst:27
+msgid "Exif, Jpeg and Tiff Metadata"
+msgstr "Exif, Jpeg and Tiff Metadata"
+
+#: ../../releasenotes/3.1.0.rst:29
+msgid ""
+"There were major changes in the TIFF ImageFileDirectory support in Pillow"
+" 3.0 that led to a number of regressions. Some of them have been fixed in"
+" Pillow 3.1, and some of them have been extended to have different "
+"behavior."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:35
+msgid "TiffImagePlugin.IFDRational"
+msgstr "TiffImagePlugin.IFDRational"
+
+#: ../../releasenotes/3.1.0.rst:37
+msgid ""
+"Pillow 3.0 changed rational metadata to use a float. In Pillow 3.1, this "
+"has changed to allow the expression of 0/0 as a valid piece of rational "
+"metadata to reflect usage in the wild."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:41
+msgid ""
+"Rational metadata is now encapsulated in an ``IFDRational`` instance. "
+"This class extends the Rational class to allow a denominator of 0. It "
+"compares as a float or a number, but does allow access to the raw "
+"numerator and denominator values through attributes."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:46
+msgid ""
+"When used in a ``ImageFileDirectory_v1``, a 2 item tuple is returned of "
+"the numerator and denominator, as was done previously."
+msgstr "When used in a ``ImageFileDirectory_v1``, a 2 item tuple is returned of the numerator and denominator, as was done previously."
+
+#: ../../releasenotes/3.1.0.rst:49
+msgid ""
+"This class should be used when adding a rational value to an "
+"ImageFileDirectory for saving to image metadata."
+msgstr "This class should be used when adding a rational value to an ImageFileDirectory for saving to image metadata."
+
+#: ../../releasenotes/3.1.0.rst:53
+msgid "JpegImagePlugin._getexif"
+msgstr "JpegImagePlugin._getexif"
+
+#: ../../releasenotes/3.1.0.rst:55
+msgid ""
+"In Pillow 3.0, the dictionary returned from the private, experimental, "
+"but generally widely used ``_getexif`` function changed to reflect the "
+"ImageFileDirectory_v2 format, without a fallback to the previous format."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:59
+msgid ""
+"In Pillow 3.1, ``_getexif`` now returns a dictionary compatible with "
+"Pillow 2.9 and earlier, built with ``ImageFileDirectory_v1`` instances. "
+"Additionally, any single item tuples have been unwrapped and return a "
+"bare element."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:64
+msgid ""
+"The format returned by Pillow 3.0 has been abandoned. A more fully "
+"featured interface for EXIF is anticipated in a future release."
+msgstr "The format returned by Pillow 3.0 has been abandoned. A more fully featured interface for EXIF is anticipated in a future release."
+
+#: ../../releasenotes/3.1.0.rst:68
+msgid "Out of Spec Metadata"
+msgstr "Out of Spec Metadata"
+
+#: ../../releasenotes/3.1.0.rst:70
+msgid ""
+"In Pillow 3.0 and 3.1, images that contain metadata that is internally "
+"consistent, but not in agreement with the TIFF spec, may cause an "
+"exception when reading the metadata.  This can happen when a tag that is "
+"specified to have a single value is stored with an array of values."
+msgstr ""
+
+#: ../../releasenotes/3.1.0.rst:75
+msgid "It is anticipated that this behavior will change in future releases."
+msgstr "It is anticipated that this behavior will change in future releases."
+
+#: ../../releasenotes/3.1.1.rst:3
+msgid "3.1.1"
+msgstr "3.1.1"
+
+#: ../../releasenotes/3.1.1.rst:6
+msgid "CVE-2016-0740 -- Buffer overflow in TiffDecode.c"
+msgstr "CVE-2016-0740 -- Buffer overflow in TiffDecode.c"
+
+#: ../../releasenotes/3.1.1.rst:8
+msgid ""
+"Pillow 3.1.0 and earlier when linked against libtiff >= 4.0.0 on x64 may "
+"overflow a buffer when reading a specially crafted tiff file."
+msgstr "Pillow 3.1.0 and earlier when linked against libtiff >= 4.0.0 on x64 may overflow a buffer when reading a specially crafted tiff file."
+
+#: ../../releasenotes/3.1.1.rst:11
+msgid ""
+"Specifically, libtiff >= 4.0.0 changed the return type of "
+"``TIFFScanlineSize`` from ``int32`` to machine dependent ``int32|64``. If"
+" the scanline is sized so that it overflows an ``int32``, it may be "
+"interpreted as a negative number, which will then pass the size check in "
+"``TiffDecode.c`` line 236. To do this, the logical scanline size has to "
+"be > 2gb, and for the test file, the allocated buffer size is 64k against"
+" a roughly 4gb scan line size. Any image data over 64k is written over "
+"the heap, causing a segfault."
+msgstr ""
+
+#: ../../releasenotes/3.1.1.rst:20
+msgid "This issue was found by security researcher FourOne."
+msgstr "This issue was found by security researcher FourOne."
+
+#: ../../releasenotes/3.1.1.rst:24
+msgid "CVE-2016-0775 -- Buffer overflow in FliDecode.c"
+msgstr "CVE-2016-0775 -- Buffer overflow in FliDecode.c"
+
+#: ../../releasenotes/3.1.1.rst:26
+msgid ""
+"In all versions of Pillow, dating back at least to the last PIL 1.1.7 "
+"release, FliDecode.c has a buffer overflow error."
+msgstr "In all versions of Pillow, dating back at least to the last PIL 1.1.7 release, FliDecode.c has a buffer overflow error."
+
+#: ../../releasenotes/3.1.1.rst:29
+msgid "Around line 192::"
+msgstr "Around line 192::"
+
+#: ../../releasenotes/3.1.1.rst:41
+msgid ""
+"The memcpy has error where ``x`` is added to the target buffer address. "
+"``X`` is used in several internal temporary variable roles, but can take "
+"a value up to the width of the image.  ``Im->image[y]`` is a set of row "
+"pointers to segments of memory that are the size of the row.  At the max "
+"``y``, this will write the contents of the line off the end of the memory"
+" buffer, causing a segfault."
+msgstr ""
+
+#: ../../releasenotes/3.1.1.rst:48
+msgid "This issue was found by Alyssa Besseling at Atlassian"
+msgstr "This issue was found by Alyssa Besseling at Atlassian"
+
+#: ../../releasenotes/3.1.1.rst:51
+msgid "CVE-2016-2533 -- Buffer overflow in PcdDecode.c"
+msgstr "CVE-2016-2533 -- Buffer overflow in PcdDecode.c"
+
+#: ../../releasenotes/3.1.1.rst:53
+msgid ""
+"In all versions of Pillow, dating back at least to the last PIL 1.1.7 "
+"release, ``PcdDecode.c`` has a buffer overflow error."
+msgstr "In all versions of Pillow, dating back at least to the last PIL 1.1.7 release, ``PcdDecode.c`` has a buffer overflow error."
+
+#: ../../releasenotes/3.1.1.rst:56
+msgid ""
+"The ``state.buffer`` for ``PcdDecode.c`` is allocated based on a 3 bytes "
+"per pixel sizing, where ``PcdDecode.c`` wrote into the buffer assuming 4 "
+"bytes per pixel. This writes 768 bytes beyond the end of the buffer into "
+"other Python object storage. In some cases, this causes a segfault, in "
+"others an internal Python malloc error."
+msgstr ""
+
+#: ../../releasenotes/3.1.1.rst:63
+msgid "Integer overflow in Resample.c"
+msgstr "Integer overflow in Resample.c"
+
+#: ../../releasenotes/3.1.1.rst:65
+msgid ""
+"If a large value was passed into the new size for an image, it is "
+"possible to overflow an int32 value passed into malloc."
+msgstr "If a large value was passed into the new size for an image, it is possible to overflow an int32 value passed into malloc."
+
+#: ../../releasenotes/3.1.1.rst:68
+msgid ""
+"kk = malloc(xsize * kmax * sizeof(float)); ... xbounds = malloc(xsize * 2"
+" * sizeof(int));"
+msgstr "kk = malloc(xsize * kmax * sizeof(float)); ... xbounds = malloc(xsize * 2 * sizeof(int));"
+
+#: ../../releasenotes/3.1.1.rst:72
+msgid ""
+"``xsize`` is trusted user input. These multiplications can overflow, "
+"leading the malloc'd buffer to be undersized. These allocations are "
+"followed by a loop that writes out of bounds. This can lead to corruption"
+" on the heap of the Python process with attacker controlled float data."
+msgstr ""
+
+#: ../../releasenotes/3.1.1.rst:78
+msgid "This issue was found by Ned Williamson."
+msgstr "This issue was found by Ned Williamson."
+
+#: ../../releasenotes/3.1.2.rst:3
+msgid "3.1.2"
+msgstr "3.1.2"
+
+#: ../../releasenotes/3.1.2.rst:6
+msgid "CVE-2016-3076 -- Buffer overflow in Jpeg2KEncode.c"
+msgstr "CVE-2016-3076 -- Buffer overflow in Jpeg2KEncode.c"
+
+#: ../../releasenotes/3.1.2.rst:8
+msgid ""
+"Pillow between 2.5.0 and 3.1.1 may overflow a buffer when writing large "
+"Jpeg2000 files, allowing for code execution or other memory corruption."
+msgstr "Pillow between 2.5.0 and 3.1.1 may overflow a buffer when writing large Jpeg2000 files, allowing for code execution or other memory corruption."
+
+#: ../../releasenotes/3.1.2.rst:12
+msgid ""
+"This occurs specifically in the function ``j2k_encode_entry``, at the "
+"line::"
+msgstr "This occurs specifically in the function ``j2k_encode_entry``, at the line::"
+
+#: ../../releasenotes/3.1.2.rst:17
+msgid ""
+"This vulnerability requires a particular value for ``height * width`` "
+"such that ``height * width * components * precision`` overflows, at which"
+" point the malloc will be for a smaller value than expected. The buffer "
+"that is allocated will be ``((height * width * components * precision) "
+"mod (2^31) / 8)``, where components is 1-4 and precision is either 8 or "
+"16. Common values would be 4 components at precision 8 for a standard "
+"``RGBA`` image."
+msgstr ""
+
+#: ../../releasenotes/3.1.2.rst:26
+msgid "The unpackers then split an image that is laid out::"
+msgstr "The unpackers then split an image that is laid out::"
+
+#: ../../releasenotes/3.1.2.rst:30
+msgid "into::"
+msgstr "into::"
+
+#: ../../releasenotes/3.1.2.rst:39
+msgid ""
+"If this buffer is smaller than expected, the jpeg2k unpacker functions "
+"will write outside the allocation and onto the heap, corrupting memory."
+msgstr "If this buffer is smaller than expected, the jpeg2k unpacker functions will write outside the allocation and onto the heap, corrupting memory."
+
+#: ../../releasenotes/3.1.2.rst:43
+msgid "This issue was found by Alyssa Besseling at Atlassian."
+msgstr "This issue was found by Alyssa Besseling at Atlassian."
+
+#: ../../releasenotes/3.2.0.rst:3
+msgid "3.2.0"
+msgstr "3.2.0"
+
+#: ../../releasenotes/3.2.0.rst:6
+msgid "New DDS and FTEX Image Plugins"
+msgstr "New DDS and FTEX Image Plugins"
+
+#: ../../releasenotes/3.2.0.rst:8
+msgid ""
+"The ``DdsImagePlugin`` reading DXT1 and DXT5 encoded ``.dds`` images was "
+"added. DXT3 images are not currently supported."
+msgstr "The ``DdsImagePlugin`` reading DXT1 and DXT5 encoded ``.dds`` images was added. DXT3 images are not currently supported."
+
+#: ../../releasenotes/3.2.0.rst:11
+msgid ""
+"The ``FtexImagePlugin`` reads textures used for 3D objects in "
+"Independence War 2: Edge Of Chaos. The plugin reads a single texture per "
+"file, in the ``.ftc`` (compressed) and ``.ftu`` (uncompressed) formats."
+msgstr ""
+
+#: ../../releasenotes/3.2.0.rst:17
+msgid "Updates to the GbrImagePlugin"
+msgstr "Updates to the GbrImagePlugin"
+
+#: ../../releasenotes/3.2.0.rst:19
+msgid ""
+"The ``GbrImagePlugin`` (GIMP brush format) has been updated to fix "
+"support for version 1 files and add support for version 2 files."
+msgstr "The ``GbrImagePlugin`` (GIMP brush format) has been updated to fix support for version 1 files and add support for version 2 files."
+
+#: ../../releasenotes/3.2.0.rst:23
+msgid "Passthrough Parameters for ImageDraw.text"
+msgstr "Passthrough Parameters for ImageDraw.text"
+
+#: ../../releasenotes/3.2.0.rst:25
+msgid ""
+"``ImageDraw.multiline_text`` and ``ImageDraw.multiline_size`` take extra "
+"spacing parameters above what are used in ``ImageDraw.text`` and "
+"``ImageDraw.size``. These parameters can now be passed into "
+"``ImageDraw.text`` and ``ImageDraw.size`` and they will be passed through"
+" to the corresponding multiline functions."
+msgstr ""
+
+#: ../../releasenotes/3.2.0.rst:32
+msgid "ImageSequence.Iterator changes"
+msgstr "ImageSequence.Iterator changes"
+
+#: ../../releasenotes/3.2.0.rst:34
+msgid ""
+"``ImageSequence.Iterator`` is now an actual iterator implementing the "
+"Iterator protocol.  It is also now possible to seek to the first image of"
+" the file when using direct indexing."
+msgstr ""
+
+#: ../../releasenotes/3.3.0.rst:2
+msgid "3.3.0"
+msgstr "3.3.0"
+
+#: ../../releasenotes/3.3.0.rst:5
+msgid "Libimagequant support"
+msgstr "Libimagequant support"
+
+#: ../../releasenotes/3.3.0.rst:7
+msgid ""
+"There is now support for using libimagequant as a higher quality "
+"quantization option in ``Image.quantize()`` on Unix-like platforms. This "
+"support requires building Pillow from source against libimagequant. We "
+"cannot distribute binaries due to licensing differences."
+msgstr ""
+
+#: ../../releasenotes/3.3.0.rst:15
+msgid "New Setup.py options"
+msgstr "New Setup.py options"
+
+#: ../../releasenotes/3.3.0.rst:17
+msgid ""
+"There are two new options to control the ``build_ext`` task in "
+"``setup.py``:"
+msgstr "There are two new options to control the ``build_ext`` task in ``setup.py``:"
+
+#: ../../releasenotes/3.3.0.rst:19
+msgid ""
+"``--debug`` dumps all of the directories and files that are checked when "
+"searching for libraries or headers when building the extensions."
+msgstr "``--debug`` dumps all of the directories and files that are checked when searching for libraries or headers when building the extensions."
+
+#: ../../releasenotes/3.3.0.rst:22
+msgid ""
+"``--disable-platform-guessing`` removes many of the directories that are "
+"checked for libraries and headers for build systems or cross compilers "
+"that specify that information in via environment variables."
+msgstr ""
+
+#: ../../releasenotes/3.3.0.rst:29
+msgid "Resizing"
+msgstr "Resizing"
+
+#: ../../releasenotes/3.3.0.rst:31
+#, python-format
+msgid ""
+"Image resampling for 8-bit per channel images was rewritten using only "
+"integer computings. This is faster on most platforms and doesn't "
+"introduce precision errors on the wide range of scales. With other "
+"performance improvements, this makes resampling 60% faster on average."
+msgstr ""
+
+#: ../../releasenotes/3.3.0.rst:36
+msgid ""
+"Color calculation for images in the ``LA`` mode on semitransparent pixels"
+" was fixed."
+msgstr "Color calculation for images in the ``LA`` mode on semitransparent pixels was fixed."
+
+#: ../../releasenotes/3.3.0.rst:41
+msgid "Rotation"
+msgstr "Rotation"
+
+#: ../../releasenotes/3.3.0.rst:43
+msgid ""
+"Rotation for angles divisible by 90 degrees now always uses "
+"transposition. This greatly improves both quality and performance in this"
+" case. Also, the bug with wrong image size calculation when rotating by "
+"90 degrees was fixed."
+msgstr ""
+
+#: ../../releasenotes/3.3.0.rst:50
+msgid "Image Metadata"
+msgstr "Image Metadata"
+
+#: ../../releasenotes/3.3.0.rst:52
+msgid ""
+"The return type for binary data in version 2 Exif and Tiff metadata has "
+"been changed from a tuple of integers to bytes. This is a change from the"
+" behavior since ``3.0.0``."
+msgstr ""
+
+#: ../../releasenotes/3.3.2.rst:3
+msgid "3.3.2"
+msgstr "3.3.2"
+
+#: ../../releasenotes/3.3.2.rst:6
+msgid "Integer overflow in Map.c"
+msgstr "Integer overflow in Map.c"
+
+#: ../../releasenotes/3.3.2.rst:8
+msgid ""
+"Pillow prior to 3.3.2 may experience integer overflow errors in map.c "
+"when reading specially crafted image files. This may lead to memory "
+"disclosure or corruption."
+msgstr ""
+
+#: ../../releasenotes/3.3.2.rst:12
+msgid ""
+"Specifically, when parameters from the image are passed into "
+"``Image.core.map_buffer``, the size of the image was calculated with "
+"``xsize`` * ``ysize`` * ``bytes_per_pixel``. This will overflow if the "
+"result is larger than SIZE_MAX. This is possible on a 32-bit system."
+msgstr ""
+
+#: ../../releasenotes/3.3.2.rst:17
+msgid ""
+"Furthermore this ``size`` value was added to a potentially attacker "
+"provided ``offset`` value and compared to the size of the buffer without "
+"checking for overflow or negative values."
+msgstr ""
+
+#: ../../releasenotes/3.3.2.rst:21
+msgid ""
+"These values were then used for creating pointers, at which point Pillow "
+"could read the memory and include it in other images. The image was "
+"marked readonly, so Pillow would not ordinarily write to that memory "
+"without duplicating the image first."
+msgstr ""
+
+#: ../../releasenotes/3.3.2.rst:26 ../../releasenotes/3.3.2.rst:36
+msgid "This issue was found by Cris Neckar at Divergent Security."
+msgstr "This issue was found by Cris Neckar at Divergent Security."
+
+#: ../../releasenotes/3.3.2.rst:29
+msgid "Sign Extension in Storage.c"
+msgstr "Sign Extension in Storage.c"
+
+#: ../../releasenotes/3.3.2.rst:31
+msgid ""
+"Pillow prior to 3.3.2 and PIL 1.1.7 (at least) do not check for negative "
+"image sizes in ``ImagingNew`` in ``Storage.c``. A negative image size can"
+" lead to a smaller allocation than expected, leading to arbitrary writes."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:3
+msgid "3.4.0"
+msgstr "3.4.0"
+
+#: ../../releasenotes/3.4.0.rst:6
+msgid "New resizing filters"
+msgstr "New resizing filters"
+
+#: ../../releasenotes/3.4.0.rst:8
+msgid ""
+"Two new filters available for ``Image.resize()`` and "
+"``Image.thumbnail()`` functions: ``BOX`` and ``HAMMING``. ``BOX`` is the "
+"high-performance filter with two times shorter window than ``BILINEAR``. "
+"It can be used for image reduction 3 and more times and produces a "
+"sharper result than ``BILINEAR``."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:13
+msgid ""
+"``HAMMING`` filter has the same performance as ``BILINEAR`` filter while "
+"providing the image downscaling quality comparable to ``BICUBIC``. Both "
+"new filters don't show good quality for the image upscaling."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:18
+msgid "Deprecation Warning when Saving JPEGs"
+msgstr "Deprecation Warning when Saving JPEGs"
+
+#: ../../releasenotes/3.4.0.rst:20
+msgid ""
+"JPEG images cannot contain an alpha channel. Pillow prior to 3.4.0 "
+"silently drops the alpha channel. With this release Pillow will now issue"
+" a ``DeprecationWarning`` when attempting to save a ``RGBA`` mode image "
+"as a JPEG. This will become an error in Pillow 4.2."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:26
+msgid "New DDS Decoders"
+msgstr "New DDS Decoders"
+
+#: ../../releasenotes/3.4.0.rst:28
+msgid ""
+"Pillow can now decode DXT3 images, as well as the previously supported "
+"DXT1 and DXT5 formats. All three formats are now decoded in C code for "
+"better performance."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:33
+msgid "Append images to GIF"
+msgstr "Append images to GIF"
+
+#: ../../releasenotes/3.4.0.rst:35
+msgid ""
+"Additional frames can now be appended when saving a GIF file, through the"
+" ``append_images`` argument. The new frames are passed in as a list of "
+"images, which may be have multiple frames themselves."
+msgstr ""
+
+#: ../../releasenotes/3.4.0.rst:39
+msgid ""
+"Note that the ``append_images`` argument is only used if ``save_all`` is "
+"also in effect, e.g.::"
+msgstr "Note that the ``append_images`` argument is only used if ``save_all`` is also in effect, e.g.::"
+
+#: ../../releasenotes/3.4.0.rst:45
+msgid "Save multiple frame TIFF"
+msgstr "Save multiple frame TIFF"
+
+#: ../../releasenotes/3.4.0.rst:47
+msgid ""
+"Multiple frames can now be saved in a TIFF file by using the ``save_all``"
+" option. e.g.::"
+msgstr "Multiple frames can now be saved in a TIFF file by using the ``save_all`` option. e.g.::"
+
+#: ../../releasenotes/3.4.0.rst:53
+msgid "Image.core.open_ppm removed"
+msgstr "Image.core.open_ppm removed"
+
+#: ../../releasenotes/3.4.0.rst:55
+msgid ""
+"The nominally private/debugging function ``Image.core.open_ppm`` has been"
+" removed. If you were using this function, please use ``Image.open`` "
+"instead."
+msgstr ""
+
+#: ../../releasenotes/4.0.0.rst:2
+msgid "4.0.0"
+msgstr "4.0.0"
+
+#: ../../releasenotes/4.0.0.rst:5
+msgid "Python 2.6 and 3.2 Dropped"
+msgstr "Python 2.6 and 3.2 Dropped"
+
+#: ../../releasenotes/4.0.0.rst:7
+msgid ""
+"Pillow 4.0 no longer supports Python 2.6 and 3.2. We will not be creating"
+" binaries, testing, or retaining compatibility with these releases. This "
+"release removes some workarounds for those Python releases, so the final "
+"working version of Pillow on 2.6 or 3.2 is 3.4.2."
+msgstr ""
+
+#: ../../releasenotes/4.0.0.rst:13
+msgid "Support added for Python 3.6"
+msgstr "Support added for Python 3.6"
+
+#: ../../releasenotes/4.0.0.rst:15
+msgid "Pillow 4.0 supports Python 3.6."
+msgstr "Pillow 4.0 supports Python 3.6."
+
+#: ../../releasenotes/4.0.0.rst:18 ../../releasenotes/5.0.0.rst:38
+msgid "OleFileIO.py"
+msgstr "OleFileIO.py"
+
+#: ../../releasenotes/4.0.0.rst:20
+msgid ""
+"OleFileIO.py has been removed as a vendored file and is now installed "
+"from the upstream olefile pypi package. All internal dependencies are "
+"redirected to the olefile package. Direct accesses to ``PIL.OlefileIO`` "
+"raises a deprecation warning, then patches the upstream olefile into "
+"``sys.modules`` in its place."
+msgstr ""
+
+#: ../../releasenotes/4.0.0.rst:27
+msgid "SGI image save"
+msgstr "SGI image save"
+
+#: ../../releasenotes/4.0.0.rst:29
+msgid ""
+"It is now possible to save images in modes ``L``, ``RGB``, and ``RGBA`` "
+"to the uncompressed SGI image format."
+msgstr "It is now possible to save images in modes ``L``, ``RGB``, and ``RGBA`` to the uncompressed SGI image format."
+
+#: ../../releasenotes/4.0.0.rst:33
+msgid "Zero sized images"
+msgstr "Zero sized images"
+
+#: ../../releasenotes/4.0.0.rst:35
+msgid ""
+"Pillow 3.4.0 removed support for creating images with (0,0) size. This "
+"has been reenabled, restoring pre 3.4 behavior."
+msgstr "Pillow 3.4.0 removed support for creating images with (0,0) size. This has been reenabled, restoring pre 3.4 behavior."
+
+#: ../../releasenotes/4.0.0.rst:39
+msgid "Internal handles_eof flag"
+msgstr "Internal handles_eof flag"
+
+#: ../../releasenotes/4.0.0.rst:41
+msgid ""
+"The ``handles_eof flag`` for decoding images has been removed, as there "
+"were no internal users of the flag. Anyone maintaining image decoders "
+"outside of the Pillow source tree should consider using the cleanup "
+"function pointers instead."
+msgstr ""
+
+#: ../../releasenotes/4.0.0.rst:47
+msgid "Image.core.stretch removed"
+msgstr "Image.core.stretch removed"
+
+#: ../../releasenotes/4.0.0.rst:49
+msgid ""
+"The stretch function on the core image object has been removed. This used"
+" to be for enlarging the image, but has been aliased to resize recently."
+msgstr "The stretch function on the core image object has been removed. This used to be for enlarging the image, but has been aliased to resize recently."
+
+#: ../../releasenotes/4.1.0.rst:2
+msgid "4.1.0"
+msgstr "4.1.0"
+
+#: ../../releasenotes/4.1.0.rst:5 ../../releasenotes/4.2.0.rst:33
+msgid "Removed Deprecated Items"
+msgstr "Removed Deprecated Items"
+
+#: ../../releasenotes/4.1.0.rst:7 ../../releasenotes/4.2.0.rst:35
+msgid "Several deprecated items have been removed."
+msgstr "Several deprecated items have been removed."
+
+#: ../../releasenotes/4.1.0.rst:9
+msgid ""
+"Support for spaces in tiff kwargs in the parameters for 'x resolution', "
+"'y resolution', 'resolution unit', and 'date time' has been removed. "
+"Underscores should be used instead."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:13
+msgid ""
+"The methods :py:meth:`PIL.ImageDraw.ImageDraw.setink`, "
+":py:meth:`PIL.ImageDraw.ImageDraw.setfill`, and "
+":py:meth:`PIL.ImageDraw.ImageDraw.setfont` have been removed."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:19
+msgid "Closing Files When Opening Images"
+msgstr "Closing Files When Opening Images"
+
+#: ../../releasenotes/4.1.0.rst:21
+msgid ""
+"The file handling when opening images has been overhauled. Previously, "
+"Pillow would attempt to close some, but not all image formats after "
+"loading the image data. Now, the following behavior is specified:"
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:26
+msgid ""
+"For images where an open file is passed in, it is the responsibility of "
+"the calling code to close the file."
+msgstr "For images where an open file is passed in, it is the responsibility of the calling code to close the file."
+
+#: ../../releasenotes/4.1.0.rst:29
+msgid ""
+"For images where Pillow opens the file and the file is known to have only"
+" one frame, the file is closed after loading."
+msgstr "For images where Pillow opens the file and the file is known to have only one frame, the file is closed after loading."
+
+#: ../../releasenotes/4.1.0.rst:32
+msgid ""
+"If the file has more than one frame, or if it can't be determined, then "
+"the file is left open to permit seeking to subsequent frames. It will be "
+"closed, eventually, in the ``close`` or ``__del__`` methods."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:37
+msgid ""
+"If the image is memory mapped, then we can't close the mapping to the "
+"underlying file until we are done with the image. The mapping will be "
+"closed in the ``close`` or ``__del__`` method."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:43
+msgid "Changes to GIF Handling When Saving"
+msgstr "Changes to GIF Handling When Saving"
+
+#: ../../releasenotes/4.1.0.rst:45
+msgid ""
+"The :py:class:`PIL.GifImagePlugin` code has been refactored to fix the "
+"flow when saving images. There are two external changes that arise from "
+"this:"
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:48
+msgid ""
+"An :py:class:`PIL.ImagePalette.ImagePalette` object is now accepted as a "
+"specified palette argument in :py:meth:`PIL.Image.Image.save()`."
+msgstr "An :py:class:`PIL.ImagePalette.ImagePalette` object is now accepted as a specified palette argument in :py:meth:`PIL.Image.Image.save()`."
+
+#: ../../releasenotes/4.1.0.rst:51
+msgid ""
+"The image to be saved is no longer modified in place by any of the "
+"operations of the save function. Previously it was modified when "
+"optimizing the image palette."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:55
+msgid ""
+"This refactor fixed some bugs with palette handling when saving multiple "
+"frame GIFs."
+msgstr "This refactor fixed some bugs with palette handling when saving multiple frame GIFs."
+
+#: ../../releasenotes/4.1.0.rst:59
+msgid "New Method: Image.remap_palette"
+msgstr "New Method: Image.remap_palette"
+
+#: ../../releasenotes/4.1.0.rst:61
+msgid ""
+"The method :py:meth:`PIL.Image.Image.remap_palette()` has been added. "
+"This method was hoisted from the GifImagePlugin code used to optimize the"
+" palette."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:66
+msgid "Added Decoder Registry and Support for Python Based Decoders"
+msgstr "Added Decoder Registry and Support for Python Based Decoders"
+
+#: ../../releasenotes/4.1.0.rst:68
+msgid ""
+"There is now a decoder registry similar to the image plugin registries. "
+"Image plugins can register a decoder, and it will be called when the "
+"decoding is requested. This allows for the creation of pure Python "
+"decoders. While the Python decoders will not be as fast as their C based "
+"counterparts, they may be easier and quicker to develop or safer to run."
+msgstr ""
+
+#: ../../releasenotes/4.1.0.rst:76
+msgid "Tests"
+msgstr "Tests"
+
+#: ../../releasenotes/4.1.0.rst:78
+msgid ""
+"Many tests have been added, including correctness tests for image formats"
+" that have been previously untested."
+msgstr "Many tests have been added, including correctness tests for image formats that have been previously untested."
+
+#: ../../releasenotes/4.1.0.rst:81
+msgid ""
+"We are now running automated tests in Docker containers against more "
+"Linux versions than are provided on Travis CI, which is currently Ubuntu "
+"14.04 x64. This Pillow release is tested on 64-bit Alpine, Arch, Ubuntu "
+"12.04 and 16.04, and 32-bit Debian Stretch and Ubuntu 14.04. This also "
+"covers a wider range of dependency versions than are provided on Travis "
+"natively."
+msgstr ""
+
+#: ../../releasenotes/4.1.1.rst:2
+msgid "4.1.1"
+msgstr "4.1.1"
+
+#: ../../releasenotes/4.1.1.rst:5
+msgid "Fix Regression with reading DPI from EXIF data"
+msgstr "Fix Regression with reading DPI from EXIF data"
+
+#: ../../releasenotes/4.1.1.rst:7
+msgid ""
+"Some JPEG images don't contain DPI information in the image metadata, but"
+" do contain it in the EXIF data. A patch was added in 4.1.0 to read from "
+"the EXIF data, but it did not accept all possible types that could be "
+"included there.  This fix adds the ability to read ints as well as "
+"rational values."
+msgstr ""
+
+#: ../../releasenotes/4.1.1.rst:15
+msgid "Incompatibility between 3.6.0 and 3.6.1"
+msgstr "Incompatibility between 3.6.0 and 3.6.1"
+
+#: ../../releasenotes/4.1.1.rst:17
+msgid ""
+"CPython 3.6.1 added a new symbol, PySlice_GetIndicesEx, which was not "
+"present in 3.6.0. This had the effect of causing binaries compiled on "
+"CPython 3.6.1 to not work on installations of C-Python 3.6.0. This fix "
+"undefines PySlice_GetIndicesEx if it exists to restore compatibility with"
+" both 3.6.0 and 3.6.1. See https://bugs.python.org/issue29943 for more "
+"details."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:2
+msgid "4.2.0"
+msgstr "4.2.0"
+
+#: ../../releasenotes/4.2.0.rst:5
+msgid "Added Complex Text Rendering"
+msgstr "Added Complex Text Rendering"
+
+#: ../../releasenotes/4.2.0.rst:7
+msgid ""
+"Pillow now supports complex text rendering for scripts requiring glyph "
+"composition and bidirectional flow. This optional feature adds three "
+"dependencies: harfbuzz, fribidi, and raqm. See the `install documentation"
+" <../installation.html>`_  for further details. This feature is tested "
+"and works on Unix and Mac, but has not yet been built on Windows "
+"platforms."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:15
+msgid "New Optional Parameters"
+msgstr "New Optional Parameters"
+
+#: ../../releasenotes/4.2.0.rst:17
+msgid ""
+":py:meth:`PIL.ImageDraw.floodfill` has a new optional parameter: "
+"threshold. This specifies a tolerance for the color to replace with the "
+"flood fill."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:21
+msgid ""
+"The TIFF and PDF image writers now support the ``append_images`` optional"
+" parameter for specifying additional images to create multipage outputs."
+msgstr "The TIFF and PDF image writers now support the ``append_images`` optional parameter for specifying additional images to create multipage outputs."
+
+#: ../../releasenotes/4.2.0.rst:26
+msgid "New DecompressionBomb Warning"
+msgstr "New DecompressionBomb Warning"
+
+#: ../../releasenotes/4.2.0.rst:28
+msgid ""
+":py:meth:`PIL.Image.Image.crop` now may raise a DecompressionBomb warning"
+" if the crop region enlarges the image over the threshold specified by "
+":py:attr:`PIL.Image.MAX_PIXELS`."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:37
+msgid ""
+"The methods :py:meth:`PIL.ImageWin.Dib.fromstring`, "
+":py:meth:`PIL.ImageWin.Dib.tostring` and "
+":py:meth:`PIL.TiffImagePlugin.ImageFileDirectory_v2.as_dict` have been "
+"removed."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:42
+msgid ""
+"Before Pillow 4.2.0, attempting to save an RGBA image as JPEG would "
+"discard the alpha channel. From Pillow 3.4.0, a deprecation warning was "
+"shown. From Pillow 4.2.0, the deprecation warning is removed and an "
+":py:exc:`IOError` is raised."
+msgstr ""
+
+#: ../../releasenotes/4.2.0.rst:48
+msgid "Removed Core Image Function"
+msgstr "Removed Core Image Function"
+
+#: ../../releasenotes/4.2.0.rst:50
+msgid ""
+"The unused function ``Image.core.new_array`` was removed. This is an "
+"internal function that should not have been used by user code, but it was"
+" accessible from the python layer."
+msgstr ""
+
+#: ../../releasenotes/4.2.1.rst:2
+msgid "4.2.1"
+msgstr "4.2.1"
+
+#: ../../releasenotes/4.2.1.rst:4
+msgid "There are no functional changes in this release."
+msgstr "There are no functional changes in this release."
+
+#: ../../releasenotes/4.2.1.rst:7
+msgid "Fixed Windows PyPy Build"
+msgstr "Fixed Windows PyPy Build"
+
+#: ../../releasenotes/4.2.1.rst:9
+msgid ""
+"A change in the 4.2.0 cycle broke the Windows PyPy build. This has been "
+"fixed, and PyPy is now part of the Windows CI matrix."
+msgstr "A change in the 4.2.0 cycle broke the Windows PyPy build. This has been fixed, and PyPy is now part of the Windows CI matrix."
+
+#: ../../releasenotes/4.3.0.rst:2
+msgid "4.3.0"
+msgstr "4.3.0"
+
+#: ../../releasenotes/4.3.0.rst:5 ../../releasenotes/5.0.0.rst:35
+#: ../../releasenotes/5.1.0.rst:14 ../../releasenotes/5.2.0.rst:5
+#: ../../releasenotes/5.3.0.rst:5 ../../releasenotes/5.4.0.rst:5
+#: ../../releasenotes/6.0.0.rst:36 ../../releasenotes/6.2.0.rst:54
+#: ../../releasenotes/6.2.1.rst:5
+msgid "API Changes"
+msgstr "API Changes"
+
+#: ../../releasenotes/4.3.0.rst:8 ../../releasenotes/5.2.0.rst:8
+#: ../../releasenotes/6.0.0.rst:39 ../../releasenotes/6.1.0.rst:5
+#: ../../releasenotes/6.2.0.rst:63 ../../releasenotes/6.2.1.rst:8
+msgid "Deprecations"
+msgstr "Deprecations"
+
+#: ../../releasenotes/4.3.0.rst:10
+msgid ""
+"Several undocumented functions in ImageOps have been deprecated: "
+"``gaussian_blur``, ``gblur``, ``unsharp_mask``, ``usm`` and ``box_blur``."
+" Use the equivalent operations in ``ImageFilter`` instead. These "
+"functions will be removed in a future release."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:16
+msgid "TIFF Metadata Changes"
+msgstr "TIFF Metadata Changes"
+
+#: ../../releasenotes/4.3.0.rst:18
+msgid ""
+"TIFF tags with unknown type/quantity now default to being bare values if "
+"they are 1 element, where previously they would be a single element "
+"tuple. This is only with the new api, not the legacy api. This normalizes"
+" the handling of fields, so that the metadata with inferred or image "
+"specified counts are handled the same as metadata with count specified in"
+" the TIFF spec."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:24
+msgid ""
+"The ``PhotoshopInfo``, ``XMP``, and ``JPEGTables`` tags now have a "
+"defined type (bytes) and a count of 1."
+msgstr "The ``PhotoshopInfo``, ``XMP``, and ``JPEGTables`` tags now have a defined type (bytes) and a count of 1."
+
+#: ../../releasenotes/4.3.0.rst:26
+msgid ""
+"The ``ImageJMetaDataByteCounts`` tag now has an arbitrary number of "
+"items, as there can be multiple items, one for UTF-8, and one for UTF-16."
+msgstr "The ``ImageJMetaDataByteCounts`` tag now has an arbitrary number of items, as there can be multiple items, one for UTF-8, and one for UTF-16."
+
+#: ../../releasenotes/4.3.0.rst:31
+msgid "Core Image API Changes"
+msgstr "Core Image API Changes"
+
+#: ../../releasenotes/4.3.0.rst:33
+msgid ""
+"These are internal functions that should not have been used by user code,"
+" but they were accessible from the python layer."
+msgstr "These are internal functions that should not have been used by user code, but they were accessible from the python layer."
+
+#: ../../releasenotes/4.3.0.rst:36
+msgid ""
+"Debugging code within ``Image.core.grabclipboard`` was removed. It had "
+"been marked as ``will be removed in future versions`` since PIL. When "
+"enabled, it identified the format of the clipboard data."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:40
+msgid ""
+"The ``PIL.Image.core.copy`` and ``PIL.Image.Image.im.copy2`` methods have"
+" been removed."
+msgstr "The ``PIL.Image.core.copy`` and ``PIL.Image.Image.im.copy2`` methods have been removed."
+
+#: ../../releasenotes/4.3.0.rst:43
+msgid ""
+"The ``PIL.Image.core.getcount`` methods have been removed, use "
+"``PIL.Image.core.get_stats()['new_count']`` property instead."
+msgstr "The ``PIL.Image.core.getcount`` methods have been removed, use ``PIL.Image.core.get_stats()['new_count']`` property instead."
+
+#: ../../releasenotes/4.3.0.rst:48 ../../releasenotes/5.0.0.rst:58
+#: ../../releasenotes/5.2.0.rst:21 ../../releasenotes/5.3.0.rst:23
+#: ../../releasenotes/6.0.0.rst:141 ../../releasenotes/6.1.0.rst:31
+#: ../../releasenotes/6.2.0.rst:5 ../../releasenotes/7.0.0.rst:82
+msgid "API Additions"
+msgstr "API Additions"
+
+#: ../../releasenotes/4.3.0.rst:51
+msgid "Get One Channel From Image"
+msgstr "Get One Channel From Image"
+
+#: ../../releasenotes/4.3.0.rst:53
+msgid ""
+"A new method :py:meth:`PIL.Image.Image.getchannel` has been added to "
+"return a single channel by index or name. For example, "
+"``image.getchannel(\"A\")`` will return alpha channel as separate image. "
+"``getchannel`` should work up to 6 times faster than ``image.split()[0]``"
+" in previous Pillow versions."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:60
+msgid "Box Blur"
+msgstr "Box Blur"
+
+#: ../../releasenotes/4.3.0.rst:62
+msgid ""
+"A new filter, :py:class:`PIL.ImageFilter.BoxBlur`, has been added. This "
+"is a filter with similar results to a Gaussian blur, but is much faster."
+msgstr "A new filter, :py:class:`PIL.ImageFilter.BoxBlur`, has been added. This is a filter with similar results to a Gaussian blur, but is much faster."
+
+#: ../../releasenotes/4.3.0.rst:67
+msgid "Partial Resampling"
+msgstr "Partial Resampling"
+
+#: ../../releasenotes/4.3.0.rst:69
+msgid ""
+"Added new argument ``box`` for :py:meth:`PIL.Image.Image.resize`. This "
+"argument defines a source rectangle from within the source image to be "
+"resized.  This is very similar to the ``image.crop(box).resize(size)`` "
+"sequence except that ``box`` can be specified with subpixel accuracy."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:75
+msgid "New Transpose Operation"
+msgstr "New Transpose Operation"
+
+#: ../../releasenotes/4.3.0.rst:77
+msgid ""
+"The ``Image.TRANSVERSE`` operation has been added to "
+":py:meth:`PIL.Image.Image.transpose`. This is equivalent to a transpose "
+"operation about the opposite diagonal."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:82
+msgid "Multiband Filters"
+msgstr "Multiband Filters"
+
+#: ../../releasenotes/4.3.0.rst:84
+msgid ""
+"There is a new :py:class:`PIL.ImageFilter.MultibandFilter` base class for"
+" image filters that can run on all channels of an image in one operation."
+" The original :py:class:`PIL.ImageFilter.Filter` class remains for image "
+"filters that can process only single band images, or require splitting of"
+" channels prior to filtering."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:91 ../../releasenotes/5.0.0.rst:75
+#: ../../releasenotes/5.1.0.rst:31 ../../releasenotes/5.2.0.rst:79
+#: ../../releasenotes/5.3.0.rst:62 ../../releasenotes/5.4.0.rst:59
+#: ../../releasenotes/6.0.0.rst:190 ../../releasenotes/6.1.0.rst:69
+#: ../../releasenotes/6.2.0.rst:94 ../../releasenotes/6.2.1.rst:19
+#: ../../releasenotes/7.0.0.rst:130
+msgid "Other Changes"
+msgstr "Other Changes"
+
+#: ../../releasenotes/4.3.0.rst:94
+msgid "Loading 16-bit TIFF Images"
+msgstr "Loading 16-bit TIFF Images"
+
+#: ../../releasenotes/4.3.0.rst:96
+msgid ""
+"Pillow now can read 16-bit multichannel TIFF files including files with "
+"alpha transparency. The image data is truncated to 8-bit precision."
+msgstr "Pillow now can read 16-bit multichannel TIFF files including files with alpha transparency. The image data is truncated to 8-bit precision."
+
+#: ../../releasenotes/4.3.0.rst:100
+msgid ""
+"Pillow now can read 16-bit signed integer single channel TIFF files. The "
+"image data is promoted to 32-bit for storage and processing."
+msgstr "Pillow now can read 16-bit signed integer single channel TIFF files. The image data is promoted to 32-bit for storage and processing."
+
+#: ../../releasenotes/4.3.0.rst:105
+msgid "SGI Images"
+msgstr "SGI Images"
+
+#: ../../releasenotes/4.3.0.rst:107
+msgid ""
+"Pillow can now read and write uncompressed 16-bit multichannel SGI images"
+" to and from RGB and RGBA formats. The image data is truncated to 8-bit "
+"precision."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:111
+msgid "Pillow can now read RLE encoded SGI images in both 8 and 16-bit precision."
+msgstr "Pillow can now read RLE encoded SGI images in both 8 and 16-bit precision."
+
+#: ../../releasenotes/4.3.0.rst:115
+msgid "Performance"
+msgstr "Performance"
+
+#: ../../releasenotes/4.3.0.rst:117
+msgid "This release contains several performance improvements:"
+msgstr "This release contains several performance improvements:"
+
+#: ../../releasenotes/4.3.0.rst:119
+msgid ""
+"Many memory bandwidth-bounded operations such as crop, image allocation, "
+"conversion, split into bands and merging from bands are up to 2x faster."
+msgstr "Many memory bandwidth-bounded operations such as crop, image allocation, conversion, split into bands and merging from bands are up to 2x faster."
+
+#: ../../releasenotes/4.3.0.rst:121
+msgid "Upscaling of multichannel images (such as RGB) is accelerated by 5-10%"
+msgstr "Upscaling of multichannel images (such as RGB) is accelerated by 5-10%"
+
+#: ../../releasenotes/4.3.0.rst:122
+msgid ""
+"JPEG loading is accelerated up to 15% and JPEG saving up to 20% when "
+"using a recent version of libjpeg-turbo."
+msgstr "JPEG loading is accelerated up to 15% and JPEG saving up to 20% when using a recent version of libjpeg-turbo."
+
+#: ../../releasenotes/4.3.0.rst:124
+#, python-format
+msgid ""
+"``Image.transpose`` has been accelerated 15% or more by using a cache "
+"friendly algorithm."
+msgstr "``Image.transpose`` has been accelerated 15% or more by using a cache friendly algorithm."
+
+#: ../../releasenotes/4.3.0.rst:126
+msgid ""
+"ImageFilters based on Kernel convolution are significantly faster due to "
+"the new MultibandFilter feature."
+msgstr "ImageFilters based on Kernel convolution are significantly faster due to the new MultibandFilter feature."
+
+#: ../../releasenotes/4.3.0.rst:128
+msgid ""
+"All memory allocation for images is now done in blocks, rather than "
+"falling back to an allocation for each scan line for images larger than "
+"the block size."
+msgstr ""
+
+#: ../../releasenotes/4.3.0.rst:133
+msgid "CMYK Conversion"
+msgstr "CMYK Conversion"
+
+#: ../../releasenotes/4.3.0.rst:135
+msgid ""
+"The basic CMYK->RGB conversion has been tweaked to match the formula from"
+" Google Chrome. This produces an image that is generally lighter than the"
+" previous formula, and more in line with what color managed applications "
+"produce."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:2
+msgid "5.0.0"
+msgstr "5.0.0"
+
+#: ../../releasenotes/5.0.0.rst:5 ../../releasenotes/6.0.0.rst:5
+#: ../../releasenotes/7.0.0.rst:5
+msgid "Backwards Incompatible Changes"
+msgstr "Backwards Incompatible Changes"
+
+#: ../../releasenotes/5.0.0.rst:8
+msgid "Python 3.3 Dropped"
+msgstr "Python 3.3 Dropped"
+
+#: ../../releasenotes/5.0.0.rst:10
+msgid ""
+"Python 3.3 is EOL and no longer supported due to moving testing from "
+"nose, which is deprecated, to pytest, which doesn't support Python 3.3. "
+"We will not be creating binaries, testing, or retaining compatibility "
+"with this version. The final version of Pillow for Python 3.3 is 4.3.0."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:16
+msgid "Decompression Bombs now raise Exceptions"
+msgstr "Decompression Bombs now raise Exceptions"
+
+#: ../../releasenotes/5.0.0.rst:18
+msgid ""
+"Pillow has previously emitted warnings for images that are unexpectedly "
+"large and may be a denial of service. These warnings are now upgraded to "
+"``DecompressionBombError``\\s for images that are twice the size of "
+"images that trigger the ``DecompressionBombWarning``. The default "
+"threshold is 128Mpx, or 0.5GB for an ``RGB`` or ``RGBA`` image. This can "
+"be disabled or changed by setting ``Image.MAX_IMAGE_PIXELS = None``."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:27
+msgid "Scripts"
+msgstr "Scripts"
+
+#: ../../releasenotes/5.0.0.rst:29
+msgid ""
+"The scripts formerly installed by Pillow have been split into a separate "
+"package, pillow-scripts, living at https://github.com/python-pillow"
+"/pillow-scripts ."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:40
+msgid ""
+"The olefile module is no longer a required dependency when installing "
+"Pillow. Support for plugins requiring olefile will not be loaded if it is"
+" not installed. This allows library consumers to avoid installing this "
+"dependency if they choose. Some library consumers have little interest in"
+" the format support and would like to keep dependencies to a minimum."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:46
+msgid ""
+"Further, the vendored version was removed in Pillow 4.0.0 and replaced "
+"with a deprecation warning that PIL.OleFileIO would be removed in a "
+"future version. This warning has been upgraded to an import error pending"
+" future removal."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:51
+msgid "Check parameter on _save"
+msgstr "Check parameter on _save"
+
+#: ../../releasenotes/5.0.0.rst:53
+msgid ""
+"Several image plugins supported a named ``check`` parameter on their "
+"nominally private ``_save`` method to preflight if the image could be "
+"saved in that format. That parameter has been removed."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:61
+msgid "Image.transform"
+msgstr "Image.transform"
+
+#: ../../releasenotes/5.0.0.rst:63
+msgid ""
+"A new named parameter, ``fillcolor``, has been added to "
+"``Image.transform``. This color specifies the background color to use in "
+"the area outside the transformed area in the output image. This parameter"
+" takes the same color specifications as used in ``Image.new``."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:69
+msgid "GIF Disposal"
+msgstr "GIF Disposal"
+
+#: ../../releasenotes/5.0.0.rst:71
+msgid ""
+"Multiframe GIF images now take an optional disposal parameter to specify "
+"the disposal option for changed pixels."
+msgstr "Multiframe GIF images now take an optional disposal parameter to specify the disposal option for changed pixels."
+
+#: ../../releasenotes/5.0.0.rst:78
+msgid "Compressed TIFF Images"
+msgstr "Compressed TIFF Images"
+
+#: ../../releasenotes/5.0.0.rst:80
+msgid ""
+"Previously, there were some compression modes (JPEG, Packbits, and LZW) "
+"that were supported with Pillow's internal TIFF decoder. All compressed "
+"TIFFs are now read using the ``libtiff`` decoder, as it implements the "
+"compression schemes more correctly."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:86
+msgid "Libraqm is now Dynamically Linked"
+msgstr "Libraqm is now Dynamically Linked"
+
+#: ../../releasenotes/5.0.0.rst:88
+msgid ""
+"The libraqm dependency for complex text scripts is now linked dynamically"
+" at runtime rather than at packaging time. This allows us to release "
+"binaries with support for libraqm if it is installed on the user's "
+"machine."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:94
+msgid "Source Layout Changes"
+msgstr "Source Layout Changes"
+
+#: ../../releasenotes/5.0.0.rst:96
+msgid ""
+"The Pillow source is now stored within the ``src`` directory of the "
+"distribution. This prevents accidental imports of the PIL directory when "
+"running Python from the project directory."
+msgstr ""
+
+#: ../../releasenotes/5.0.0.rst:101
+msgid "Setup.py Changes"
+msgstr "Setup.py Changes"
+
+#: ../../releasenotes/5.0.0.rst:103
+msgid ""
+"Multiarch support on Linux should be more robust, especially on Debian "
+"derivatives on ARM platforms. Debian's multiarch platform configuration "
+"is run in preference to the sniffing of machine platform and "
+"architecture."
+msgstr ""
+
+#: ../../releasenotes/5.1.0.rst:2
+msgid "5.1.0"
+msgstr "5.1.0"
+
+#: ../../releasenotes/5.1.0.rst:5
+msgid "New File Format"
+msgstr "New File Format"
+
+#: ../../releasenotes/5.1.0.rst:8
+msgid "BLP File Format"
+msgstr "BLP File Format"
+
+#: ../../releasenotes/5.1.0.rst:10
+msgid ""
+"Pillow now supports reading the BLP \"Blizzard Mipmap\" file format used "
+"for tiles in Blizzard's engine."
+msgstr "Pillow now supports reading the BLP \"Blizzard Mipmap\" file format used for tiles in Blizzard's engine."
+
+#: ../../releasenotes/5.1.0.rst:17
+msgid "Optional channels for TIFF files"
+msgstr "Optional channels for TIFF files"
+
+#: ../../releasenotes/5.1.0.rst:19
+msgid ""
+"Pillow can now open TIFF files with base modes of ``RGB``, ``YCbCr``, and"
+" ``CMYK`` with up to 6 8-bit channels, discarding any extra channels if "
+"the content is tagged as UNSPECIFIED.  Pillow still does not store more "
+"than 4 8-bit channels of image data."
+msgstr ""
+
+#: ../../releasenotes/5.1.0.rst:25
+msgid "Append to PDF Files"
+msgstr "Append to PDF Files"
+
+#: ../../releasenotes/5.1.0.rst:27
+msgid ""
+"Images can now be appended to PDF files in place by passing in "
+"``append=True`` when saving the image."
+msgstr "Images can now be appended to PDF files in place by passing in ``append=True`` when saving the image."
+
+#: ../../releasenotes/5.1.0.rst:34
+msgid "WebP memory leak"
+msgstr "WebP memory leak"
+
+#: ../../releasenotes/5.1.0.rst:36
+msgid "A memory leak when opening ``WebP`` files has been fixed."
+msgstr "A memory leak when opening ``WebP`` files has been fixed."
+
+#: ../../releasenotes/5.2.0.rst:2
+msgid "5.2.0"
+msgstr "5.2.0"
+
+#: ../../releasenotes/5.2.0.rst:10
+msgid ""
+"These version constants have been deprecated. ``VERSION`` will be removed"
+" in Pillow 6.0.0, and ``PILLOW_VERSION`` will be removed after that."
+msgstr "These version constants have been deprecated. ``VERSION`` will be removed in Pillow 6.0.0, and ``PILLOW_VERSION`` will be removed after that."
+
+#: ../../releasenotes/5.2.0.rst:13
+msgid "``PIL.VERSION`` (old PIL version 1.1.7)"
+msgstr "``PIL.VERSION`` (old PIL version 1.1.7)"
+
+#: ../../releasenotes/5.2.0.rst:14
+msgid "``PIL.PILLOW_VERSION``"
+msgstr "``PIL.PILLOW_VERSION``"
+
+#: ../../releasenotes/5.2.0.rst:15
+msgid "``PIL.Image.VERSION``"
+msgstr "``PIL.Image.VERSION``"
+
+#: ../../releasenotes/5.2.0.rst:16
+msgid "``PIL.Image.PILLOW_VERSION``"
+msgstr "``PIL.Image.PILLOW_VERSION``"
+
+#: ../../releasenotes/5.2.0.rst:18 ../../releasenotes/6.0.0.rst:100
+msgid "Use ``PIL.__version__`` instead."
+msgstr "Use ``PIL.__version__`` instead."
+
+#: ../../releasenotes/5.2.0.rst:24
+msgid "3D color lookup tables"
+msgstr "3D color lookup tables"
+
+#: ../../releasenotes/5.2.0.rst:26
+msgid "Support for 3D color lookup table transformations has been added."
+msgstr "Support for 3D color lookup table transformations has been added."
+
+#: ../../releasenotes/5.2.0.rst:28
+msgid "https://en.wikipedia.org/wiki/3D_lookup_table"
+msgstr "https://en.wikipedia.org/wiki/3D_lookup_table"
+
+#: ../../releasenotes/5.2.0.rst:30
+msgid ""
+"``Color3DLUT.generate`` transforms 3-channel pixels using the values of "
+"the channels as coordinates in the 3D lookup table and interpolating the "
+"nearest elements."
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:34
+msgid ""
+"It allows you to apply almost any color transformation in constant time "
+"by using pre-calculated decimated tables."
+msgstr "It allows you to apply almost any color transformation in constant time by using pre-calculated decimated tables."
+
+#: ../../releasenotes/5.2.0.rst:37
+msgid "``Color3DLUT.transform()`` allows altering table values with a callback."
+msgstr "``Color3DLUT.transform()`` allows altering table values with a callback."
+
+#: ../../releasenotes/5.2.0.rst:39
+msgid ""
+"If NumPy is installed, the performance of argument conversion is "
+"dramatically improved when a source table supports buffer interface "
+"(NumPy && arrays in Python >= 3)."
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:44
+msgid "ImageColor.getrgb"
+msgstr "ImageColor.getrgb"
+
+#: ../../releasenotes/5.2.0.rst:46
+msgid ""
+"Previously ``Image.rotate`` only supported HSL color strings. Now HSB and"
+" HSV strings are also supported, as well as float values. For example, "
+"``ImageColor.getrgb(\"hsv(180,100%,99.5%)\")``."
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:51
+msgid "ImageFile.get_format_mimetype"
+msgstr "ImageFile.get_format_mimetype"
+
+#: ../../releasenotes/5.2.0.rst:53
+msgid ""
+"``ImageFile.get_format_mimetype`` has been added to return the MIME type "
+"of an image file, where available. For example, "
+"``Image.open(\"hopper.jpg\").get_format_mimetype()`` returns "
+"``\"image/jpeg\"``."
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:58
+msgid "ImageFont.getsize_multiline"
+msgstr "ImageFont.getsize_multiline"
+
+#: ../../releasenotes/5.2.0.rst:60
+msgid ""
+"A new method to return the size of multiline text, for example "
+"``font.getsize_multiline(\"ABC\\nAaaa\")``"
+msgstr "A new method to return the size of multiline text, for example ``font.getsize_multiline(\"ABC\\nAaaa\")``"
+
+#: ../../releasenotes/5.2.0.rst:64
+msgid "Image.rotate"
+msgstr "Image.rotate"
+
+#: ../../releasenotes/5.2.0.rst:66
+msgid ""
+"A new named parameter, ``fillcolor``, has been added to ``Image.rotate``."
+" This color specifies the background color to use in the area outside the"
+" rotated image. This parameter takes the same color specifications as "
+"used in ``Image.new``."
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:73
+msgid "TGA file format"
+msgstr "TGA file format"
+
+#: ../../releasenotes/5.2.0.rst:75
+msgid ""
+"Pillow can now read and write LA data (in addition to L, P, RGB and "
+"RGBA), and write RLE data (in addition to uncompressed)."
+msgstr "Pillow can now read and write LA data (in addition to L, P, RGB and RGBA), and write RLE data (in addition to uncompressed)."
+
+#: ../../releasenotes/5.2.0.rst:82
+msgid "Support added for Python 3.7"
+msgstr "Support added for Python 3.7"
+
+#: ../../releasenotes/5.2.0.rst:84
+msgid "Pillow 5.2 supports Python 3.7."
+msgstr "Pillow 5.2 supports Python 3.7."
+
+#: ../../releasenotes/5.2.0.rst:87
+msgid "Build macOS wheels with Xcode 6.4, supporting older macOS versions"
+msgstr "Build macOS wheels with Xcode 6.4, supporting older macOS versions"
+
+#: ../../releasenotes/5.2.0.rst:89
+msgid ""
+"The macOS wheels for Pillow 5.1.0 were built with Xcode 9.2, meaning "
+"10.12 Sierra was the lowest supported version."
+msgstr "The macOS wheels for Pillow 5.1.0 were built with Xcode 9.2, meaning 10.12 Sierra was the lowest supported version."
+
+#: ../../releasenotes/5.2.0.rst:92
+msgid "Prior to Pillow 5.1.0, Xcode 8 was used, supporting El Capitan 10.11."
+msgstr "Prior to Pillow 5.1.0, Xcode 8 was used, supporting El Capitan 10.11."
+
+#: ../../releasenotes/5.2.0.rst:94
+msgid ""
+"Instead, Pillow 5.2.0 is built with the oldest available Xcode 6.4 to "
+"support at least 10.10 Yosemite."
+msgstr "Instead, Pillow 5.2.0 is built with the oldest available Xcode 6.4 to support at least 10.10 Yosemite."
+
+#: ../../releasenotes/5.2.0.rst:98
+msgid "Fix _i2f compilation with some GCC versions"
+msgstr "Fix _i2f compilation with some GCC versions"
+
+#: ../../releasenotes/5.2.0.rst:100
+msgid "For example, this allows compilation with GCC 4.8 on NetBSD."
+msgstr "For example, this allows compilation with GCC 4.8 on NetBSD."
+
+#: ../../releasenotes/5.2.0.rst:103
+msgid "Resolve confusion getting PIL / Pillow version string"
+msgstr "Resolve confusion getting PIL / Pillow version string"
+
+#: ../../releasenotes/5.2.0.rst:105
+msgid ""
+"Re: \"version constants deprecated\" listed above, as user gnbl notes in "
+"#3082:"
+msgstr "Re: \"version constants deprecated\" listed above, as user gnbl notes in #3082:"
+
+#: ../../releasenotes/5.2.0.rst:107
+msgid ""
+"it's confusing that PIL.VERSION returns the version string of the former "
+"PIL instead of Pillow's"
+msgstr "it's confusing that PIL.VERSION returns the version string of the former PIL instead of Pillow's"
+
+#: ../../releasenotes/5.2.0.rst:108
+msgid ""
+"there does not seem to be documentation on this version number (why this,"
+" will it ever change, ..) e.g. at "
+"https://pillow.readthedocs.io/en/5.1.x/about.html#why-a-fork"
+msgstr ""
+
+#: ../../releasenotes/5.2.0.rst:109
+msgid ""
+"it's confusing that PIL.version is a module and does not return the "
+"version information directly or hints on how to get it"
+msgstr "it's confusing that PIL.version is a module and does not return the version information directly or hints on how to get it"
+
+#: ../../releasenotes/5.2.0.rst:110
+msgid ""
+"the package information header is essentially useless (placeholder, does "
+"not even mention Pillow, nor the version)"
+msgstr "the package information header is essentially useless (placeholder, does not even mention Pillow, nor the version)"
+
+#: ../../releasenotes/5.2.0.rst:111
+msgid ""
+"PIL._version module documentation comment could explain how to access the"
+" version information"
+msgstr "PIL._version module documentation comment could explain how to access the version information"
+
+#: ../../releasenotes/5.2.0.rst:113
+msgid "We have attempted to resolve these issues in #3083, #3090 and #3218."
+msgstr "We have attempted to resolve these issues in #3083, #3090 and #3218."
+
+#: ../../releasenotes/5.3.0.rst:2
+msgid "5.3.0"
+msgstr "5.3.0"
+
+#: ../../releasenotes/5.3.0.rst:8
+msgid "Image size"
+msgstr "Image size"
+
+#: ../../releasenotes/5.3.0.rst:10
+msgid ""
+"If you attempt to set the size of an image directly, e.g. ``im.size = "
+"(100, 100)``, you will now receive an ``AttributeError``. This is not "
+"about removing existing functionality, but instead about raising an "
+"explicit error to prevent later consequences. The ``resize`` method is "
+"the correct way to change an image's size."
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:16
+msgid "The exceptions to this are:"
+msgstr "The exceptions to this are:"
+
+#: ../../releasenotes/5.3.0.rst:18
+msgid ""
+"The ICO and ICNS image formats, which use ``im.size = (100, 100)`` to "
+"select a subimage."
+msgstr "The ICO and ICNS image formats, which use ``im.size = (100, 100)`` to select a subimage."
+
+#: ../../releasenotes/5.3.0.rst:19
+msgid ""
+"The TIFF image format, which now has a ``DeprecationWarning`` for this "
+"action, as direct image size setting was previously necessary to work "
+"around an issue with tile extents."
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:26
+msgid "Added line width parameter to rectangle and ellipse-based shapes"
+msgstr "Added line width parameter to rectangle and ellipse-based shapes"
+
+#: ../../releasenotes/5.3.0.rst:28
+msgid ""
+"An optional line ``width`` parameter has been added to "
+"``ImageDraw.Draw.arc``, ``chord``, ``ellipse``, ``pieslice`` and "
+"``rectangle``."
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:32
+msgid "Curved joints for line sequences"
+msgstr "Curved joints for line sequences"
+
+#: ../../releasenotes/5.3.0.rst:34
+msgid ""
+"``ImageDraw.Draw.line`` draws a line, or lines, between points. "
+"Previously, when multiple points are given, for a larger ``width``, the "
+"joints between these lines looked unsightly. There is now an additional "
+"optional argument, ``joint``, defaulting to ``None``. When it is set to "
+"``curved``, the joints between the lines will become rounded."
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:41
+msgid "ImageOps.colorize"
+msgstr "ImageOps.colorize"
+
+#: ../../releasenotes/5.3.0.rst:43
+msgid ""
+"Previously ``ImageOps.colorize`` only supported two-color mapping with "
+"``black`` and ``white`` arguments being mapped to 0 and 255 respectively."
+" Now it supports three-color mapping with the optional ``mid`` parameter,"
+" and the positions for all three color arguments can each be optionally "
+"specified (``blackpoint``, ``whitepoint`` and ``midpoint``). For example,"
+" with all optional arguments::"
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:54
+msgid "ImageOps.pad"
+msgstr "ImageOps.pad"
+
+#: ../../releasenotes/5.3.0.rst:56
+msgid ""
+"While ``ImageOps.fit`` allows users to crop images to a requested aspect "
+"ratio and size, new method ``ImageOps.pad`` pads images to fill a "
+"requested aspect ratio and size, filling new space with a provided "
+"``color`` and positioning the image within the new area through a "
+"``centering`` argument."
+msgstr ""
+
+#: ../../releasenotes/5.3.0.rst:64
+msgid ""
+"Added support for reading tiled TIFF images through LibTIFF. Compressed "
+"TIFF images are now read through LibTIFF."
+msgstr "Added support for reading tiled TIFF images through LibTIFF. Compressed TIFF images are now read through LibTIFF."
+
+#: ../../releasenotes/5.3.0.rst:67
+msgid "RGB WebP images are now read as RGB mode, rather than RGBX."
+msgstr "RGB WebP images are now read as RGB mode, rather than RGBX."
+
+#: ../../releasenotes/5.4.0.rst:2
+msgid "5.4.0"
+msgstr "5.4.0"
+
+#: ../../releasenotes/5.4.0.rst:8
+msgid "APNG extension to PNG plugin"
+msgstr "APNG extension to PNG plugin"
+
+#: ../../releasenotes/5.4.0.rst:10
+msgid ""
+"Animated Portable Network Graphics (APNG) images are not fully supported "
+"but can be opened via the PNG plugin to get some basic info::"
+msgstr "Animated Portable Network Graphics (APNG) images are not fully supported but can be opened via the PNG plugin to get some basic info::"
+
+#: ../../releasenotes/5.4.0.rst:19
+msgid "Check for libjpeg-turbo"
+msgstr "Check for libjpeg-turbo"
+
+#: ../../releasenotes/5.4.0.rst:21
+msgid ""
+"You can check if Pillow has been built against the libjpeg-turbo version "
+"of the libjpeg library::"
+msgstr "You can check if Pillow has been built against the libjpeg-turbo version of the libjpeg library::"
+
+#: ../../releasenotes/5.4.0.rst:28
+msgid "Negative indexes in pixel access"
+msgstr "Negative indexes in pixel access"
+
+#: ../../releasenotes/5.4.0.rst:30
+msgid ""
+"When accessing individual image pixels, negative indexes are now also "
+"accepted. For example, to get or set the farthest pixel in the lower "
+"right of an image::"
+msgstr ""
+
+#: ../../releasenotes/5.4.0.rst:39
+msgid "New custom TIFF tags"
+msgstr "New custom TIFF tags"
+
+#: ../../releasenotes/5.4.0.rst:41
+msgid ""
+"TIFF images can now be saved with custom integer, float and string TIFF "
+"tags::"
+msgstr "TIFF images can now be saved with custom integer, float and string TIFF tags::"
+
+#: ../../releasenotes/5.4.0.rst:62
+msgid "ImageOps.fit"
+msgstr "ImageOps.fit"
+
+#: ../../releasenotes/5.4.0.rst:64
+msgid ""
+"Now uses one resize operation with ``box`` parameter internally instead "
+"of a crop and scale operations sequence. This improves the performance "
+"and accuracy of cropping since the ``box`` parameter accepts float "
+"values."
+msgstr ""
+
+#: ../../releasenotes/5.4.1.rst:2
+msgid "5.4.1"
+msgstr "5.4.1"
+
+#: ../../releasenotes/5.4.1.rst:4
+msgid "This release fixes regressions in 5.4.0."
+msgstr "This release fixes regressions in 5.4.0."
+
+#: ../../releasenotes/5.4.1.rst:7
+msgid "Installation on Termux"
+msgstr "Installation on Termux"
+
+#: ../../releasenotes/5.4.1.rst:9
+msgid ""
+"A change to the way Pillow detects libraries during installed prevented "
+"installation on Termux, which does not have ``/sbin/ldconfig``. This is "
+"now fixed."
+msgstr ""
+
+#: ../../releasenotes/5.4.1.rst:14
+msgid "PNG: Handle IDAT chunks after image end"
+msgstr "PNG: Handle IDAT chunks after image end"
+
+#: ../../releasenotes/5.4.1.rst:16
+msgid ""
+"Some PNG images have multiple IDAT chunks. In some cases, Pillow will "
+"stop reading image data before the IDAT chunks finish. A regression "
+"caused an ``EOFError`` exception when previously there was none. This is "
+"now fixed, and file reading continues in case there are subsequent text "
+"chunks."
+msgstr ""
+
+#: ../../releasenotes/5.4.1.rst:22
+msgid "PNG: MIME type"
+msgstr "PNG: MIME type"
+
+#: ../../releasenotes/5.4.1.rst:24
+msgid ""
+"The addition of limited APNG support to the PNG plugin also overwrote the"
+" MIME type for PNG files, causing \"image/apng\" to be returned as the "
+"MIME type of both APNG and PNG files. This has been fixed so the MIME "
+"type of PNG files is \"image/png\"."
+msgstr ""
+
+#: ../../releasenotes/5.4.1.rst:30
+msgid "File closing"
+msgstr "File closing"
+
+#: ../../releasenotes/5.4.1.rst:32
+msgid ""
+"A regression caused an unsupported image file to report a ``ValueError: "
+"seek of closed file`` exception instead of an ``OSError``. This has been "
+"fixed by ensuring that image plugins only close their internal ``__fp`` "
+"if they are not the same as ``ImageFile``'s ``fp``, allowing each to "
+"manage their own file pointers."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:2
+msgid "6.0.0"
+msgstr "6.0.0"
+
+#: ../../releasenotes/6.0.0.rst:8
+msgid "Python 3.4 dropped"
+msgstr "Python 3.4 dropped"
+
+#: ../../releasenotes/6.0.0.rst:10
+msgid ""
+"Python 3.4 is EOL since 2019-03-16 and no longer supported. We will not "
+"be creating binaries, testing, or retaining compatibility with this "
+"version. The final version of Pillow for Python 3.4 is 5.4.1."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:15
+msgid "Removed deprecated PIL.OleFileIO"
+msgstr "Removed deprecated PIL.OleFileIO"
+
+#: ../../releasenotes/6.0.0.rst:17
+msgid ""
+"PIL.OleFileIO was removed as a vendored file and in Pillow 4.0.0 "
+"(2017-01) in favour of the upstream olefile Python package, and replaced "
+"with an ``ImportError``. The deprecated file has now been removed from "
+"Pillow. If needed, install from PyPI (eg. ``pip install olefile``)."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:23
+msgid "Removed deprecated ImageOps functions"
+msgstr "Removed deprecated ImageOps functions"
+
+#: ../../releasenotes/6.0.0.rst:25
+msgid ""
+"Several undocumented functions in ``ImageOps`` were deprecated in Pillow "
+"4.3.0 (2017-10) and have now been removed: ``gaussian_blur``, ``gblur``, "
+"``unsharp_mask``, ``usm`` and ``box_blur``. Use the equivalent operations"
+" in ``ImageFilter`` instead."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:30
+msgid "Removed deprecated VERSION"
+msgstr "Removed deprecated VERSION"
+
+#: ../../releasenotes/6.0.0.rst:32
+msgid ""
+"``VERSION`` (the old PIL version, always 1.1.7) has been removed. Use "
+"``__version__`` instead."
+msgstr "``VERSION`` (the old PIL version, always 1.1.7) has been removed. Use ``__version__`` instead."
+
+#: ../../releasenotes/6.0.0.rst:42 ../../releasenotes/6.2.1.rst:11
+#: ../../releasenotes/7.0.0.rst:8
+msgid "Python 2.7"
+msgstr "Python 2.7"
+
+#: ../../releasenotes/6.0.0.rst:44 ../../releasenotes/6.2.1.rst:13
+msgid "Python 2.7 reaches end-of-life on 2020-01-01."
+msgstr "Python 2.7 reaches end-of-life on 2020-01-01."
+
+#: ../../releasenotes/6.0.0.rst:46
+msgid ""
+"Pillow 7.0.0 will be released on 2020-01-01 and will drop support for "
+"Python 2.7, making Pillow 6.x the last series to support Python 2."
+msgstr "Pillow 7.0.0 will be released on 2020-01-01 and will drop support for Python 2.7, making Pillow 6.x the last series to support Python 2."
+
+#: ../../releasenotes/6.0.0.rst:50 ../../releasenotes/7.0.0.rst:41
+msgid "PyQt4 and PySide"
+msgstr "PyQt4 and PySide"
+
+#: ../../releasenotes/6.0.0.rst:52 ../../releasenotes/7.0.0.rst:43
+msgid ""
+"Qt 4 reached end-of-life on 2015-12-19. Its Python bindings are also EOL:"
+" PyQt4 since 2018-08-31 and PySide since 2015-10-14."
+msgstr "Qt 4 reached end-of-life on 2015-12-19. Its Python bindings are also EOL: PyQt4 since 2018-08-31 and PySide since 2015-10-14."
+
+#: ../../releasenotes/6.0.0.rst:55
+msgid ""
+"Support for PyQt4 and PySide has been deprecated from ``ImageQt`` and "
+"will be removed in a future version. Please upgrade to PyQt5 or PySide2."
+msgstr "Support for PyQt4 and PySide has been deprecated from ``ImageQt`` and will be removed in a future version. Please upgrade to PyQt5 or PySide2."
+
+#: ../../releasenotes/6.0.0.rst:59 ../../releasenotes/7.0.0.rst:18
+msgid "PIL.*ImagePlugin.__version__ attributes"
+msgstr "PIL.*ImagePlugin.__version__ attributes"
+
+#: ../../releasenotes/6.0.0.rst:61
+msgid ""
+"These version constants have been deprecated and will be removed in a "
+"future version."
+msgstr "These version constants have been deprecated and will be removed in a future version."
+
+#: ../../releasenotes/6.0.0.rst:64 ../../releasenotes/7.0.0.rst:26
+msgid "``BmpImagePlugin.__version__``"
+msgstr "``BmpImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:65 ../../releasenotes/7.0.0.rst:27
+msgid "``CurImagePlugin.__version__``"
+msgstr "``CurImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:66 ../../releasenotes/7.0.0.rst:28
+msgid "``DcxImagePlugin.__version__``"
+msgstr "``DcxImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:67 ../../releasenotes/7.0.0.rst:29
+msgid "``EpsImagePlugin.__version__``"
+msgstr "``EpsImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:68 ../../releasenotes/7.0.0.rst:30
+msgid "``FliImagePlugin.__version__``"
+msgstr "``FliImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:69 ../../releasenotes/7.0.0.rst:31
+msgid "``FpxImagePlugin.__version__``"
+msgstr "``FpxImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:70 ../../releasenotes/7.0.0.rst:32
+msgid "``GdImageFile.__version__``"
+msgstr "``GdImageFile.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:71 ../../releasenotes/7.0.0.rst:33
+msgid "``GifImagePlugin.__version__``"
+msgstr "``GifImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:72 ../../releasenotes/7.0.0.rst:34
+msgid "``IcoImagePlugin.__version__``"
+msgstr "``IcoImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:73 ../../releasenotes/7.0.0.rst:35
+msgid "``ImImagePlugin.__version__``"
+msgstr "``ImImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:74 ../../releasenotes/7.0.0.rst:36
+msgid "``ImtImagePlugin.__version__``"
+msgstr "``ImtImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:75 ../../releasenotes/7.0.0.rst:37
+msgid "``IptcImagePlugin.__version__``"
+msgstr "``IptcImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:76 ../../releasenotes/7.0.0.rst:26
+msgid "``Jpeg2KImagePlugin.__version__``"
+msgstr "``Jpeg2KImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:77 ../../releasenotes/7.0.0.rst:27
+msgid "``JpegImagePlugin.__version__``"
+msgstr "``JpegImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:78 ../../releasenotes/7.0.0.rst:28
+msgid "``McIdasImagePlugin.__version__``"
+msgstr "``McIdasImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:79 ../../releasenotes/7.0.0.rst:29
+msgid "``MicImagePlugin.__version__``"
+msgstr "``MicImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:80 ../../releasenotes/7.0.0.rst:30
+msgid "``MpegImagePlugin.__version__``"
+msgstr "``MpegImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:81 ../../releasenotes/7.0.0.rst:31
+msgid "``MpoImagePlugin.__version__``"
+msgstr "``MpoImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:82 ../../releasenotes/7.0.0.rst:32
+msgid "``MspImagePlugin.__version__``"
+msgstr "``MspImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:83 ../../releasenotes/7.0.0.rst:33
+msgid "``PalmImagePlugin.__version__``"
+msgstr "``PalmImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:84 ../../releasenotes/7.0.0.rst:34
+msgid "``PcdImagePlugin.__version__``"
+msgstr "``PcdImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:85 ../../releasenotes/7.0.0.rst:35
+msgid "``PcxImagePlugin.__version__``"
+msgstr "``PcxImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:86 ../../releasenotes/7.0.0.rst:36
+msgid "``PdfImagePlugin.__version__``"
+msgstr "``PdfImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:87 ../../releasenotes/7.0.0.rst:37
+msgid "``PixarImagePlugin.__version__``"
+msgstr "``PixarImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:88 ../../releasenotes/7.0.0.rst:26
+msgid "``PngImagePlugin.__version__``"
+msgstr "``PngImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:89 ../../releasenotes/7.0.0.rst:27
+msgid "``PpmImagePlugin.__version__``"
+msgstr "``PpmImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:90 ../../releasenotes/7.0.0.rst:28
+msgid "``PsdImagePlugin.__version__``"
+msgstr "``PsdImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:91 ../../releasenotes/7.0.0.rst:29
+msgid "``SgiImagePlugin.__version__``"
+msgstr "``SgiImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:92 ../../releasenotes/7.0.0.rst:30
+msgid "``SunImagePlugin.__version__``"
+msgstr "``SunImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:93 ../../releasenotes/7.0.0.rst:31
+msgid "``TgaImagePlugin.__version__``"
+msgstr "``TgaImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:94 ../../releasenotes/7.0.0.rst:32
+msgid "``TiffImagePlugin.__version__``"
+msgstr "``TiffImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:95 ../../releasenotes/7.0.0.rst:33
+msgid "``WmfImagePlugin.__version__``"
+msgstr "``WmfImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:96 ../../releasenotes/7.0.0.rst:34
+msgid "``XbmImagePlugin.__version__``"
+msgstr "``XbmImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:97 ../../releasenotes/7.0.0.rst:35
+msgid "``XpmImagePlugin.__version__``"
+msgstr "``XpmImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:98 ../../releasenotes/7.0.0.rst:36
+msgid "``XVThumbImagePlugin.__version__``"
+msgstr "``XVThumbImagePlugin.__version__``"
+
+#: ../../releasenotes/6.0.0.rst:103
+msgid "ImageCms.CmsProfile attributes"
+msgstr "ImageCms.CmsProfile attributes"
+
+#: ../../releasenotes/6.0.0.rst:105
+msgid ""
+"Some attributes in ``ImageCms.CmsProfile`` have been deprecated since "
+"Pillow 3.2.0. From 6.0.0, they issue a ``DeprecationWarning``:"
+msgstr "Some attributes in ``ImageCms.CmsProfile`` have been deprecated since Pillow 3.2.0. From 6.0.0, they issue a ``DeprecationWarning``:"
+
+#: ../../releasenotes/6.0.0.rst:109
+msgid "Deprecated"
+msgstr "Deprecated"
+
+#: ../../releasenotes/6.0.0.rst:109
+msgid "Use instead"
+msgstr "Use instead"
+
+#: ../../releasenotes/6.0.0.rst:111
+msgid "``color_space``"
+msgstr "``color_space``"
+
+#: ../../releasenotes/6.0.0.rst:111
+msgid "Padded ``xcolor_space``"
+msgstr "Padded ``xcolor_space``"
+
+#: ../../releasenotes/6.0.0.rst:112
+msgid "``pcs``"
+msgstr "``pcs``"
+
+#: ../../releasenotes/6.0.0.rst:112
+msgid "Padded ``connection_space``"
+msgstr "Padded ``connection_space``"
+
+#: ../../releasenotes/6.0.0.rst:113
+msgid "``product_copyright``"
+msgstr "``product_copyright``"
+
+#: ../../releasenotes/6.0.0.rst:113
+msgid "Unicode ``copyright``"
+msgstr "Unicode ``copyright``"
+
+#: ../../releasenotes/6.0.0.rst:114
+msgid "``product_desc``"
+msgstr "``product_desc``"
+
+#: ../../releasenotes/6.0.0.rst:114 ../../releasenotes/6.0.0.rst:115
+msgid "Unicode ``profile_description``"
+msgstr "Unicode ``profile_description``"
+
+#: ../../releasenotes/6.0.0.rst:115
+msgid "``product_description``"
+msgstr "``product_description``"
+
+#: ../../releasenotes/6.0.0.rst:116
+msgid "``product_manufacturer``"
+msgstr "``product_manufacturer``"
+
+#: ../../releasenotes/6.0.0.rst:116
+msgid "Unicode ``manufacturer``"
+msgstr "Unicode ``manufacturer``"
+
+#: ../../releasenotes/6.0.0.rst:117
+msgid "``product_model``"
+msgstr "``product_model``"
+
+#: ../../releasenotes/6.0.0.rst:117
+msgid "Unicode ``model``"
+msgstr "Unicode ``model``"
+
+#: ../../releasenotes/6.0.0.rst:121
+msgid "MIME type improvements"
+msgstr "MIME type improvements"
+
+#: ../../releasenotes/6.0.0.rst:123
+msgid ""
+"Previously, all JPEG2000 images had the MIME type \"image/jpx\". This has"
+" now been corrected. After the file format drivers have been loaded, "
+"``Image.MIME[\"JPEG2000\"]`` will return \"image/jp2\". "
+"``ImageFile.get_format_mimetype`` will return \"image/jpx\" if a JPX "
+"profile is present, or \"image/jp2\" otherwise."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:128
+msgid ""
+"Previously, all SGI images had the MIME type \"image/rgb\". This has now "
+"been corrected. After the file format drivers have been loaded, "
+"``Image.MIME[\"SGI\"]`` will return \"image/sgi\". "
+"``ImageFile.get_format_mimetype`` will return \"image/rgb\" if RGB image "
+"data is present, or \"image/sgi\" otherwise."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:133
+msgid ""
+"MIME types have been added to the PPM format. After the file format "
+"drivers have been loaded, ``Image.MIME[\"PPM\"]`` will now return the "
+"generic \"image/x-portable-anymap\". ``ImageFile.get_format_mimetype`` "
+"will return a MIME type specific to the color type."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:137
+msgid ""
+"The TGA, PCX and ICO formats also now have MIME types: \"image/x-tga\", "
+"\"image/x-pcx\" and \"image/x-icon\" respectively."
+msgstr "The TGA, PCX and ICO formats also now have MIME types: \"image/x-tga\", \"image/x-pcx\" and \"image/x-icon\" respectively."
+
+#: ../../releasenotes/6.0.0.rst:144
+msgid "DIB file format"
+msgstr "DIB file format"
+
+#: ../../releasenotes/6.0.0.rst:146
+msgid ""
+"Pillow now supports reading and writing the Device Independent Bitmap "
+"file format."
+msgstr "Pillow now supports reading and writing the Device Independent Bitmap file format."
+
+#: ../../releasenotes/6.0.0.rst:149
+msgid "Image.quantize"
+msgstr "Image.quantize"
+
+#: ../../releasenotes/6.0.0.rst:151
+msgid ""
+"The ``dither`` option is now a customisable parameter (was previously "
+"hardcoded to ``1``). This parameter takes the same values used in "
+":py:meth:`~PIL.Image.Image.convert`."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:155
+msgid "New language parameter"
+msgstr "New language parameter"
+
+#: ../../releasenotes/6.0.0.rst:157
+msgid ""
+"These text-rendering functions now accept a ``language`` parameter to "
+"request language-specific glyphs and ligatures from the font:"
+msgstr "These text-rendering functions now accept a ``language`` parameter to request language-specific glyphs and ligatures from the font:"
+
+#: ../../releasenotes/6.0.0.rst:160
+msgid "``ImageDraw.ImageDraw.multiline_text()``"
+msgstr "``ImageDraw.ImageDraw.multiline_text()``"
+
+#: ../../releasenotes/6.0.0.rst:161
+msgid "``ImageDraw.ImageDraw.multiline_textsize()``"
+msgstr "``ImageDraw.ImageDraw.multiline_textsize()``"
+
+#: ../../releasenotes/6.0.0.rst:162
+msgid "``ImageDraw.ImageDraw.text()``"
+msgstr "``ImageDraw.ImageDraw.text()``"
+
+#: ../../releasenotes/6.0.0.rst:163
+msgid "``ImageDraw.ImageDraw.textsize()``"
+msgstr "``ImageDraw.ImageDraw.textsize()``"
+
+#: ../../releasenotes/6.0.0.rst:164
+msgid "``ImageFont.ImageFont.getmask()``"
+msgstr "``ImageFont.ImageFont.getmask()``"
+
+#: ../../releasenotes/6.0.0.rst:165
+msgid "``ImageFont.ImageFont.getsize_multiline()``"
+msgstr "``ImageFont.ImageFont.getsize_multiline()``"
+
+#: ../../releasenotes/6.0.0.rst:166
+msgid "``ImageFont.ImageFont.getsize()``"
+msgstr "``ImageFont.ImageFont.getsize()``"
+
+#: ../../releasenotes/6.0.0.rst:169
+msgid "Added EXIF class"
+msgstr "Added EXIF class"
+
+#: ../../releasenotes/6.0.0.rst:171
+msgid ""
+":py:meth:`~PIL.Image.Image.getexif` has been added, which returns an "
+":py:class:`~PIL.Image.Exif` instance. Values can be retrieved and set "
+"like a dictionary. When saving JPEG, PNG or WEBP, the instance can be "
+"passed as an ``exif`` argument to include any changes in the output "
+"image."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:177
+msgid "Added ImageOps.exif_transpose"
+msgstr "Added ImageOps.exif_transpose"
+
+#: ../../releasenotes/6.0.0.rst:179
+msgid ""
+":py:meth:`~PIL.ImageOps.exif_transpose` returns a copy of an image, "
+"transposed according to its EXIF Orientation tag."
+msgstr ":py:meth:`~PIL.ImageOps.exif_transpose` returns a copy of an image, transposed according to its EXIF Orientation tag."
+
+#: ../../releasenotes/6.0.0.rst:183
+msgid "PNG EXIF data"
+msgstr "PNG EXIF data"
+
+#: ../../releasenotes/6.0.0.rst:185
+msgid ""
+"EXIF data can now be read from and saved to PNG images. However, unlike "
+"other image formats, EXIF data is not guaranteed to be present in "
+":py:attr:`~PIL.Image.Image.info` until :py:meth:`~PIL.Image.Image.load` "
+"has been called."
+msgstr ""
+
+#: ../../releasenotes/6.0.0.rst:193
+msgid "Reading new DDS image format"
+msgstr "Reading new DDS image format"
+
+#: ../../releasenotes/6.0.0.rst:195
+msgid "Pillow can now read uncompressed RGB data from DDS images."
+msgstr "Pillow can now read uncompressed RGB data from DDS images."
+
+#: ../../releasenotes/6.0.0.rst:198
+msgid "Reading TIFF with old-style JPEG compression"
+msgstr "Reading TIFF with old-style JPEG compression"
+
+#: ../../releasenotes/6.0.0.rst:200
+msgid ""
+"Added support reading TIFF files with old-style JPEG compression through "
+"LibTIFF. All YCbCr TIFF images are now always read as RGB."
+msgstr "Added support reading TIFF files with old-style JPEG compression through LibTIFF. All YCbCr TIFF images are now always read as RGB."
+
+#: ../../releasenotes/6.0.0.rst:204
+msgid "TIFF compression codecs"
+msgstr "TIFF compression codecs"
+
+#: ../../releasenotes/6.0.0.rst:206
+msgid ""
+"Support has been added for the LZMA, Zstd and WebP TIFF compression "
+"codecs."
+msgstr "Support has been added for the LZMA, Zstd and WebP TIFF compression codecs."
+
+#: ../../releasenotes/6.0.0.rst:209
+msgid "Improved support for transposing I;16 images"
+msgstr "Improved support for transposing I;16 images"
+
+#: ../../releasenotes/6.0.0.rst:211
+msgid ""
+"I;16, I;16L and I;16B are now supported image modes for all "
+":py:meth:`~PIL.Image.Image.transpose` operations."
+msgstr "I;16, I;16L and I;16B are now supported image modes for all :py:meth:`~PIL.Image.Image.transpose` operations."
+
+#: ../../releasenotes/6.1.0.rst:2
+msgid "6.1.0"
+msgstr "6.1.0"
+
+#: ../../releasenotes/6.1.0.rst:8 ../../releasenotes/7.0.0.rst:133
+msgid "Image.__del__"
+msgstr "Image.__del__"
+
+#: ../../releasenotes/6.1.0.rst:12
+msgid ""
+"Implicitly closing the image's underlying file in ``Image.__del__`` has "
+"been deprecated. Use a context manager or call ``Image.close()`` instead "
+"to close the file in a deterministic way."
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:16
+msgid "Deprecated:"
+msgstr "Deprecated:"
+
+#: ../../releasenotes/6.1.0.rst:23 ../../releasenotes/7.0.0.rst:146
+msgid "Use instead:"
+msgstr "Use instead:"
+
+#: ../../releasenotes/6.1.0.rst:34
+msgid "Image.entropy"
+msgstr "Image.entropy"
+
+#: ../../releasenotes/6.1.0.rst:35
+msgid ""
+"Calculates and returns the entropy for the image. A bilevel image (mode "
+"\"1\") is treated as a greyscale (\"L\") image by this method.  If a mask"
+" is provided, the method employs the histogram for those parts of the "
+"image where the mask image is non-zero. The mask image must have the same"
+" size as the image, and be either a bi-level image (mode \"1\") or a "
+"greyscale image (\"L\")."
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:42
+msgid "ImageGrab.grab"
+msgstr "ImageGrab.grab"
+
+#: ../../releasenotes/6.1.0.rst:44
+msgid ""
+"An optional ``include_layered_windows`` parameter has been added to "
+"``ImageGrab.grab``, defaulting to ``False``. If true, layered windows "
+"will be included in the resulting image on Windows."
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:49
+msgid "ImageSequence.all_frames"
+msgstr "ImageSequence.all_frames"
+
+#: ../../releasenotes/6.1.0.rst:51
+msgid ""
+"A new method to facilitate applying a given function to all frames in an "
+"image, or to all frames in a list of images. The frames are returned as a"
+" list of separate images. For example, ``ImageSequence.all_frames(im, "
+"lambda im_frame: im_frame.rotate(90))`` could be used to return all "
+"frames from an image, each rotated 90 degrees."
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:57
+msgid "Variation fonts"
+msgstr "Variation fonts"
+
+#: ../../releasenotes/6.1.0.rst:59
+msgid ""
+"Variation fonts are now supported, allowing for different styles from the"
+" same font file. ``ImageFont.FreeTypeFont`` has four new methods, "
+":py:meth:`PIL.ImageFont.FreeTypeFont.get_variation_names` and "
+":py:meth:`PIL.ImageFont.FreeTypeFont.set_variation_by_name` for using "
+"named styles, and "
+":py:meth:`PIL.ImageFont.FreeTypeFont.get_variation_axes` and "
+":py:meth:`PIL.ImageFont.FreeTypeFont.set_variation_by_axes` for using "
+"font axes instead. An ``IOError`` will be raised if the font is not a "
+"variation font. FreeType 2.9.1 or greater is required."
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:72
+msgid "ImageTk.getimage"
+msgstr "ImageTk.getimage"
+
+#: ../../releasenotes/6.1.0.rst:74
+msgid ""
+"This function is now supported. It returns the contents of an "
+"``ImageTk.PhotoImage`` as an RGBA ``Image.Image`` instance."
+msgstr "This function is now supported. It returns the contents of an ``ImageTk.PhotoImage`` as an RGBA ``Image.Image`` instance."
+
+#: ../../releasenotes/6.1.0.rst:78
+msgid "Image quality for JPEG compressed TIFF"
+msgstr "Image quality for JPEG compressed TIFF"
+
+#: ../../releasenotes/6.1.0.rst:80
+msgid ""
+"The TIFF encoder accepts a ``quality`` parameter for ``jpeg`` compressed "
+"TIFF files. A value from 0 (worst) to 100 (best) controls the image "
+"quality, similar to the JPEG encoder. The default is 75. For example:"
+msgstr ""
+
+#: ../../releasenotes/6.1.0.rst:89
+msgid "Improve encoding of TIFF tags"
+msgstr "Improve encoding of TIFF tags"
+
+#: ../../releasenotes/6.1.0.rst:91
+msgid ""
+"The TIFF encoder supports more types, especially arrays. This is required"
+" for the GeoTIFF format which encodes geospatial information."
+msgstr "The TIFF encoder supports more types, especially arrays. This is required for the GeoTIFF format which encodes geospatial information."
+
+#: ../../releasenotes/6.1.0.rst:94
+msgid ""
+"Pass ``tagtype`` from v2 directory to libtiff encoder, instead of "
+"autodetecting type."
+msgstr "Pass ``tagtype`` from v2 directory to libtiff encoder, instead of autodetecting type."
+
+#: ../../releasenotes/6.1.0.rst:95
+msgid ""
+"Use explicit types eg. ``uint32_t`` for ``TIFF_LONG`` to fix issues on "
+"platforms with 64-bit longs."
+msgstr "Use explicit types eg. ``uint32_t`` for ``TIFF_LONG`` to fix issues on platforms with 64-bit longs."
+
+#: ../../releasenotes/6.1.0.rst:97
+msgid ""
+"Add support for multiple values (arrays). Requires type in v2 directory "
+"and values must be passed as a tuple."
+msgstr "Add support for multiple values (arrays). Requires type in v2 directory and values must be passed as a tuple."
+
+#: ../../releasenotes/6.1.0.rst:99
+msgid "Add support for signed types eg. ``TIFFTypes.TIFF_SIGNED_SHORT``."
+msgstr "Add support for signed types eg. ``TIFFTypes.TIFF_SIGNED_SHORT``."
+
+#: ../../releasenotes/6.1.0.rst:102
+msgid "Respect PKG_CONFIG environment variable when building"
+msgstr "Respect PKG_CONFIG environment variable when building"
+
+#: ../../releasenotes/6.1.0.rst:104
+msgid ""
+"This variable is commonly used by other build systems and using it can "
+"help with cross-compiling. Falls back to ``pkg-config`` as before."
+msgstr "This variable is commonly used by other build systems and using it can help with cross-compiling. Falls back to ``pkg-config`` as before."
+
+#: ../../releasenotes/6.1.0.rst:108
+msgid "Top-to-bottom complex text rendering"
+msgstr "Top-to-bottom complex text rendering"
+
+#: ../../releasenotes/6.1.0.rst:110
+msgid ""
+"Drawing text in the 'ttb' direction with ``ImageFont`` has been "
+"significantly improved and requires Raqm 0.7 or greater."
+msgstr "Drawing text in the 'ttb' direction with ``ImageFont`` has been significantly improved and requires Raqm 0.7 or greater."
+
+#: ../../releasenotes/6.2.0.rst:2
+msgid "6.2.0"
+msgstr "6.2.0"
+
+#: ../../releasenotes/6.2.0.rst:8
+msgid "Text stroking"
+msgstr "Text stroking"
+
+#: ../../releasenotes/6.2.0.rst:10
+msgid ""
+"``stroke_width`` and ``stroke_fill`` arguments have been added to text "
+"drawing operations. They allow text to be outlined, setting the width of "
+"the stroke and and the color respectively. If not provided, "
+"``stroke_fill`` will default to the ``fill`` parameter."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:31
+msgid "For example,"
+msgstr "For example,"
+
+#: ../../releasenotes/6.2.0.rst:43
+msgid "creates the following image:"
+msgstr "creates the following image:"
+
+#: ../../releasenotes/6.2.0.rst:48
+msgid "ImageGrab on multi-monitor Windows"
+msgstr "ImageGrab on multi-monitor Windows"
+
+#: ../../releasenotes/6.2.0.rst:50
+msgid ""
+"An ``all_screens`` argument has been added to ``ImageGrab.grab``. If "
+"``True``, all monitors will be included in the created image."
+msgstr "An ``all_screens`` argument has been added to ``ImageGrab.grab``. If ``True``, all monitors will be included in the created image."
+
+#: ../../releasenotes/6.2.0.rst:57
+msgid "Image.getexif"
+msgstr "Image.getexif"
+
+#: ../../releasenotes/6.2.0.rst:59
+msgid ""
+"To allow for lazy loading of Exif data, ``Image.getexif()`` now returns a"
+" shared instance of ``Image.Exif``."
+msgstr "To allow for lazy loading of Exif data, ``Image.getexif()`` now returns a shared instance of ``Image.Exif``."
+
+#: ../../releasenotes/6.2.0.rst:66
+msgid "Image.frombuffer"
+msgstr "Image.frombuffer"
+
+#: ../../releasenotes/6.2.0.rst:68
+msgid ""
+"There has been a longstanding warning that the defaults of "
+"``Image.frombuffer`` may change in the future for the \"raw\" decoder. "
+"The change will now take place in Pillow 7.0."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:73 ../../releasenotes/6.2.2.rst:5
+msgid "Security"
+msgstr "Security"
+
+#: ../../releasenotes/6.2.0.rst:75
+msgid ""
+"This release catches several buffer overruns, as well as addressing "
+"CVE-2019-16865. The CVE is regarding DOS problems, such as consuming "
+"large amounts of memory, or taking a large amount of time to process an "
+"image."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:79
+msgid ""
+"In RawDecode.c, an error is now thrown if skip is calculated to be less "
+"than zero. It is intended to skip padding between lines, not to go "
+"backwards."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:82
+msgid ""
+"In PsdImagePlugin, if the combined sizes of the individual parts is "
+"larger than the declared size of the extra data field, then it looked for"
+" the next layer by seeking backwards. This is now corrected by seeking to"
+" (the start of the layer + the size of the extra data field) instead of "
+"(the read parts of the layer + the rest of the layer)."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:88
+msgid "Decompression bomb checks have been added to GIF and ICO formats."
+msgstr "Decompression bomb checks have been added to GIF and ICO formats."
+
+#: ../../releasenotes/6.2.0.rst:90
+msgid ""
+"An error is now raised if a TIFF dimension is a string, rather than "
+"trying to perform operations on it."
+msgstr "An error is now raised if a TIFF dimension is a string, rather than trying to perform operations on it."
+
+#: ../../releasenotes/6.2.0.rst:97
+msgid "Removed bdist_wininst .exe installers"
+msgstr "Removed bdist_wininst .exe installers"
+
+#: ../../releasenotes/6.2.0.rst:99
+msgid ""
+".exe installers fell out of favour with PEP 527, and will be deprecated "
+"in Python 3.8. Pillow will no longer be distributing them. Wheels should "
+"be used instead."
+msgstr ""
+
+#: ../../releasenotes/6.2.0.rst:104
+msgid "Flags for libwebp in wheels"
+msgstr "Flags for libwebp in wheels"
+
+#: ../../releasenotes/6.2.0.rst:106
+msgid ""
+"When building libwebp for inclusion in wheels, Pillow now adds the -O3 "
+"and -DNDEBUG CFLAGS. These flags would be used by default if building "
+"libwebp without debugging, and using them fixes a significant decrease in"
+" speed when a wheel-installed copy of Pillow performs libwebp operations."
+msgstr ""
+
+#: ../../releasenotes/6.2.1.rst:2
+msgid "6.2.1"
+msgstr "6.2.1"
+
+#: ../../releasenotes/6.2.1.rst:15
+msgid ""
+"Pillow 7.0.0 will be released on 2020-01-01 and will drop support for "
+"Python 2.7, making Pillow 6.2.x the last release series to support Python"
+" 2."
+msgstr ""
+
+#: ../../releasenotes/6.2.1.rst:24
+msgid "Support added for Python 3.8"
+msgstr "Support added for Python 3.8"
+
+#: ../../releasenotes/6.2.1.rst:26
+msgid "Pillow 6.2.1 supports Python 3.8."
+msgstr "Pillow 6.2.1 supports Python 3.8."
+
+#: ../../releasenotes/6.2.2.rst:2
+msgid "6.2.2"
+msgstr "6.2.2"
+
+#: ../../releasenotes/6.2.2.rst:7
+msgid "This release addresses several security problems."
+msgstr "This release addresses several security problems."
+
+#: ../../releasenotes/6.2.2.rst:9
+msgid ""
+"CVE-2019-19911 is regarding FPX images. If an image reports that it has a"
+" large number of bands, a large amount of resources will be used when "
+"trying to process the image. This is fixed by limiting the number of "
+"bands to those usable by Pillow."
+msgstr ""
+
+#: ../../releasenotes/6.2.2.rst:13
+msgid ""
+"Buffer overruns were found when processing an SGI (CVE-2020-5311), PCX "
+"(CVE-2020-5312) or FLI image (CVE-2020-5313). Checks have been added to "
+"prevent this."
+msgstr ""
+
+#: ../../releasenotes/6.2.2.rst:16
+msgid ""
+"CVE-2020-5310: Overflow checks have been added when calculating the size "
+"of a memory block to be reallocated in the processing of a TIFF image."
+msgstr "CVE-2020-5310: Overflow checks have been added when calculating the size of a memory block to be reallocated in the processing of a TIFF image."
+
+#: ../../releasenotes/7.0.0.rst:2
+msgid "7.0.0"
+msgstr "7.0.0"
+
+#: ../../releasenotes/7.0.0.rst:10
+msgid ""
+"Pillow has dropped support for Python 2.7, which reached end-of-life on "
+"2020-01-01."
+msgstr "Pillow has dropped support for Python 2.7, which reached end-of-life on 2020-01-01."
+
+#: ../../releasenotes/7.0.0.rst:13
+msgid "PILLOW_VERSION constant"
+msgstr "PILLOW_VERSION constant"
+
+#: ../../releasenotes/7.0.0.rst:15
+msgid "``PILLOW_VERSION`` has been removed. Use ``__version__`` instead."
+msgstr "``PILLOW_VERSION`` has been removed. Use ``__version__`` instead."
+
+#: ../../releasenotes/7.0.0.rst:20
+msgid ""
+"The version constants of individual plugins have been removed. Use "
+"``PIL.__version__`` instead."
+msgstr "The version constants of individual plugins have been removed. Use ``PIL.__version__`` instead."
+
+#: ../../releasenotes/7.0.0.rst:24
+msgid "Removed"
+msgstr "Removed"
+
+#: ../../releasenotes/7.0.0.rst:46
+msgid ""
+"Support for PyQt4 and PySide has been removed from ``ImageQt``. Please "
+"upgrade to PyQt5 or PySide2."
+msgstr "Support for PyQt4 and PySide has been removed from ``ImageQt``. Please upgrade to PyQt5 or PySide2."
+
+#: ../../releasenotes/7.0.0.rst:50
+msgid "Setting the size of TIFF images"
+msgstr "Setting the size of TIFF images"
+
+#: ../../releasenotes/7.0.0.rst:52
+msgid ""
+"Setting the size of a TIFF image directly (eg. ``im.size = (256, 256)``) "
+"throws an error. Use ``Image.resize`` instead."
+msgstr "Setting the size of a TIFF image directly (eg. ``im.size = (256, 256)``) throws an error. Use ``Image.resize`` instead."
+
+#: ../../releasenotes/7.0.0.rst:56
+msgid "Default resampling filter"
+msgstr "Default resampling filter"
+
+#: ../../releasenotes/7.0.0.rst:58
+msgid ""
+"The default resampling filter has been changed to the high-quality "
+"convolution ``Image.BICUBIC`` instead of ``Image.NEAREST``, for the "
+":py:meth:`~PIL.Image.Image.resize` method and the "
+":py:meth:`~PIL.ImageOps.pad`, :py:meth:`~PIL.ImageOps.scale` and "
+":py:meth:`~PIL.ImageOps.fit` functions. ``Image.NEAREST`` is still always"
+" used for images in \"P\" and \"1\" modes. See :ref:`concept-filters` to "
+"learn the difference. In short, ``Image.NEAREST`` is a very fast filter, "
+"but simple and low-quality."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:67
+msgid "Image.draft() return value"
+msgstr "Image.draft() return value"
+
+#: ../../releasenotes/7.0.0.rst:69
+msgid ""
+"If the :py:meth:`~PIL.Image.Image.draft` method has no effect, it returns"
+" ``None``. If it does have an effect, then it previously returned the "
+"image itself. However, unlike other `chain methods`_, "
+":py:meth:`~PIL.Image.Image.draft` does not return a modified version of "
+"the image, but modifies it in-place. So instead, if "
+":py:meth:`~PIL.Image.Image.draft` has an effect, Pillow will now return a"
+" tuple of the image mode and a co-ordinate box. The box is the original "
+"coordinates in the bounds of resulting image. This may be useful in a "
+"subsequent :py:meth:`~PIL.Image.Image.resize` call."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:85
+msgid "Custom unidentified image error"
+msgstr "Custom unidentified image error"
+
+#: ../../releasenotes/7.0.0.rst:87
+msgid ""
+"Pillow will now throw a custom ``UnidentifiedImageError`` when an image "
+"cannot be identified. For backwards compatibility, this will inherit from"
+" ``IOError``."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:91
+msgid ""
+"New argument ``reducing_gap`` for Image.resize() and Image.thumbnail() "
+"methods"
+msgstr "New argument ``reducing_gap`` for Image.resize() and Image.thumbnail() methods"
+
+#: ../../releasenotes/7.0.0.rst:93
+msgid ""
+"Speeds up resizing by resizing the image in two steps. The bigger "
+"``reducing_gap``, the closer the result to the fair resampling. The "
+"smaller ``reducing_gap``, the faster resizing. With ``reducing_gap`` "
+"greater or equal to 3.0, the result is indistinguishable from fair "
+"resampling."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:98
+msgid ""
+"The default value for :py:meth:`~PIL.Image.Image.resize` is ``None``, "
+"which means that the optimization is turned off by default."
+msgstr "The default value for :py:meth:`~PIL.Image.Image.resize` is ``None``, which means that the optimization is turned off by default."
+
+#: ../../releasenotes/7.0.0.rst:101
+msgid ""
+"The default value for :py:meth:`~PIL.Image.Image.thumbnail` is 2.0, which"
+" is very close to fair resampling while still being faster in many cases."
+" In addition, the same gap is applied when "
+":py:meth:`~PIL.Image.Image.thumbnail` calls "
+":py:meth:`~PIL.Image.Image.draft`, which may greatly improve the quality "
+"of JPEG thumbnails. As a result, :py:meth:`~PIL.Image.Image.thumbnail` in"
+" the new version provides equally high speed and high quality from any "
+"source (JPEG or arbitrary images)."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:110
+msgid "New Image.reduce() method"
+msgstr "New Image.reduce() method"
+
+#: ../../releasenotes/7.0.0.rst:112
+msgid ""
+":py:meth:`~PIL.Image.Image.reduce` is a highly efficient operation to "
+"reduce an image by integer times. Normally, it shouldn't be used "
+"directly. Used internally by :py:meth:`~PIL.Image.Image.resize` and "
+":py:meth:`~PIL.Image.Image.thumbnail` methods to speed up resize when a "
+"new argument ``reducing_gap`` is set."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:118
+msgid "Loading WMF images at a given DPI"
+msgstr "Loading WMF images at a given DPI"
+
+#: ../../releasenotes/7.0.0.rst:120
+msgid ""
+"On Windows, Pillow can read WMF files, with a default DPI of 72. An image"
+" can now also be loaded at another resolution:"
+msgstr "On Windows, Pillow can read WMF files, with a default DPI of 72. An image can now also be loaded at another resolution:"
+
+#: ../../releasenotes/7.0.0.rst:135
+msgid ""
+"Implicitly closing the image's underlying file in ``Image.__del__`` has "
+"been removed. Use a context manager or call "
+":py:meth:`~PIL.Image.Image.close` instead to close the file in a "
+"deterministic way."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:139
+msgid "Previous method:"
+msgstr "Previous method:"
+
+#: ../../releasenotes/7.0.0.rst:154
+msgid "Better thumbnail geometry"
+msgstr "Better thumbnail geometry"
+
+#: ../../releasenotes/7.0.0.rst:156
+msgid ""
+"When calculating the new dimensions in "
+":py:meth:`~PIL.Image.Image.thumbnail`, round to the nearest integer, "
+"instead of always rounding down. This better preserves the original "
+"aspect ratio."
+msgstr ""
+
+#: ../../releasenotes/7.0.0.rst:160
+msgid ""
+"When the image width or height is not divisible by 8 the last row and "
+"column in the image get the correct weight after JPEG DCT scaling."
+msgstr "When the image width or height is not divisible by 8 the last row and column in the image get the correct weight after JPEG DCT scaling."
+
+#: ../../releasenotes/index.rst:2
+msgid "Release Notes"
+msgstr "Release Notes"
+
+#: ../../releasenotes/index.rst:4
+msgid ""
+"Contributors please include release notes as needed or appropriate with "
+"your bug fixes, feature additions and tests."
+msgstr "Contributors please include release notes as needed or appropriate with your bug fixes, feature additions and tests."
+

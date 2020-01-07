@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ImageFont Module &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/script.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="ImageGrab Module (macOS and Windows only)" href="ImageGrab.html" />
+    <link rel="prev" title="ImageFilter Module" href="ImageFilter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">手册</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">参考</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Image.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Image</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageChops.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageChops</span></code> (“Channel Operations”) Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageColor.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageColor</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageCms.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageCms</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageDraw.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageDraw</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageEnhance.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageEnhance</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageFile.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFile</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageFilter.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFilter</span></code> Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFont</span></code> Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ImageGrab.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageGrab</span></code> Module (macOS and Windows only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageMath.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageMath</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageMorph.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageMorph</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageOps.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageOps</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImagePalette.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImagePalette</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImagePath.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImagePath</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageQt.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageQt</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageSequence.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageSequence</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageStat.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageStat</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageTk.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageTk</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ImageWin.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageWin</span></code> Module (Windows-only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ExifTags.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ExifTags</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TiffTags.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">TiffTags</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PSDraw.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PSDraw</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugin reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internal_design.html">内部参考文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../porting.html">Porting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecations.html">Deprecations and removals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">参考</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFont</span></code> Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/ImageFont.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-PIL.ImageFont"></span><div class="section" id="imagefont-module">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFont</span></code> Module<a class="headerlink" href="#imagefont-module" title="永久链接至标题">¶</a></h1>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFont</span></code> module defines a class with the same name. Instances of
+this class store bitmap fonts, and are used with the
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.ImageDraw.Draw.text()</span></code> method.</p>
+<p>PIL uses its own font file format to store bitmap fonts. You can use the
+<strong class="command">pilfont</strong> utility to convert BDF and PCF font descriptors (X window
+font formats) to this format.</p>
+<p>Starting with version 1.1.4, PIL can be configured to support TrueType and
+OpenType fonts (as well as other font formats supported by the FreeType
+library). For earlier versions, TrueType support is only available as part of
+the imToolkit package</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageFont</span><span class="p">,</span> <span class="n">ImageDraw</span>
+
+<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+<span class="c1"># use a bitmap font</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;arial.pil&quot;</span><span class="p">)</span>
+
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+
+<span class="c1"># use a truetype font</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="s2">&quot;arial.ttf&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="PIL.ImageFont.load">
+<code class="descclassname">PIL.ImageFont.</code><code class="descname">load</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.load" title="永久链接至目标">¶</a></dt>
+<dd><p>Load a font file.  This function loads a font object from the given
+bitmap font file, and returns the corresponding font object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>filename</strong> – Name of font file.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A font object.</p>
+</dd>
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – If the file could not be read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="PIL.ImageFont.load_path">
+<code class="descclassname">PIL.ImageFont.</code><code class="descname">load_path</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#load_path"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.load_path" title="永久链接至目标">¶</a></dt>
+<dd><p>Load font file. Same as <a class="reference internal" href="#PIL.ImageFont.load" title="PIL.ImageFont.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a>, but searches for a
+bitmap font along the Python path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>filename</strong> – Name of font file.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A font object.</p>
+</dd>
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – If the file could not be read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="PIL.ImageFont.truetype">
+<code class="descclassname">PIL.ImageFont.</code><code class="descname">truetype</code><span class="sig-paren">(</span><em>font=None</em>, <em>size=10</em>, <em>index=0</em>, <em>encoding=''</em>, <em>layout_engine=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#truetype"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.truetype" title="永久链接至目标">¶</a></dt>
+<dd><p>Load a TrueType or OpenType font from a file or file-like object,
+and create a font object.
+This function loads a font object from the given file or file-like
+object, and creates a font object for a font of the given size.</p>
+<p>Pillow uses FreeType to open font files. If you are opening many fonts
+simultaneously on Windows, be aware that Windows limits the number of files
+that can be open in C at once to 512. If you approach that limit, an
+<code class="docutils literal notranslate"><span class="pre">OSError</span></code> may be thrown, reporting that FreeType “cannot open resource”.</p>
+<p>This function requires the _imagingft service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>font</strong> – A filename or file-like object containing a TrueType font.
+If the file is not found in this filename, the loader may also
+search in other directories, such as the <code class="file docutils literal notranslate"><span class="pre">fonts/</span></code>
+directory on Windows or <code class="file docutils literal notranslate"><span class="pre">/Library/Fonts/</span></code>,
+<code class="file docutils literal notranslate"><span class="pre">/System/Library/Fonts/</span></code> and <code class="file docutils literal notranslate"><span class="pre">~/Library/Fonts/</span></code> on
+macOS.</p></li>
+<li><p><strong>size</strong> – The requested size, in points.</p></li>
+<li><p><strong>index</strong> – Which font face to load (default is first available face).</p></li>
+<li><p><strong>encoding</strong> – <p>Which font encoding to use (default is Unicode). Possible
+encodings include (see the FreeType documentation for more
+information):</p>
+<ul>
+<li><p>”unic” (Unicode)</p></li>
+<li><p>”symb” (Microsoft Symbol)</p></li>
+<li><p>”ADOB” (Adobe Standard)</p></li>
+<li><p>”ADBE” (Adobe Expert)</p></li>
+<li><p>”ADBC” (Adobe Custom)</p></li>
+<li><p>”armn” (Apple Roman)</p></li>
+<li><p>”sjis” (Shift JIS)</p></li>
+<li><p>”gb  ” (PRC)</p></li>
+<li><p>”big5”</p></li>
+<li><p>”wans” (Extended Wansung)</p></li>
+<li><p>”joha” (Johab)</p></li>
+<li><p>”lat1” (Latin-1)</p></li>
+</ul>
+<p>This specifies the character set to use. It does not alter the
+encoding of any text provided in subsequent operations.</p>
+</p></li>
+<li><p><strong>layout_engine</strong> – Which layout engine to use, if available:
+<cite>ImageFont.LAYOUT_BASIC</cite> or <cite>ImageFont.LAYOUT_RAQM</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A font object.</p>
+</dd>
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – If the file could not be read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="PIL.ImageFont.load_default">
+<code class="descclassname">PIL.ImageFont.</code><code class="descname">load_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#load_default"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.load_default" title="永久链接至目标">¶</a></dt>
+<dd><p>Load a “better than nothing” default font.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.1.4 新版功能.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A font object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="永久链接至标题">¶</a></h2>
+<dl class="class">
+<dt id="PIL.ImageFont.ImageFont">
+<em class="property">class </em><code class="descclassname">PIL.ImageFont.</code><code class="descname">ImageFont</code><a class="reference internal" href="../_modules/PIL/ImageFont.html#ImageFont"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.ImageFont" title="永久链接至目标">¶</a></dt>
+<dd><p>PIL font wrapper</p>
+<dl class="method">
+<dt id="PIL.ImageFont.ImageFont.getmask">
+<code class="descname">getmask</code><span class="sig-paren">(</span><em>text</em>, <em>mode=''</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#ImageFont.getmask"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.ImageFont.getmask" title="永久链接至目标">¶</a></dt>
+<dd><p>Create a bitmap for the text.</p>
+<p>If the font uses antialiasing, the bitmap should have mode <code class="docutils literal notranslate"><span class="pre">L</span></code> and use a
+maximum value of 255. Otherwise, it should have mode <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to render.</p></li>
+<li><p><strong>mode</strong> – <p>Used by some graphics drivers to indicate what mode the
+driver prefers; if empty, the renderer may return either
+mode. Note that the mode is always a string, to simplify
+C-level implementations.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.1.5 新版功能.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>An internal PIL storage memory instance as defined by the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.Image.core</span></code> interface module.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.ImageFont.getsize">
+<code class="descname">getsize</code><span class="sig-paren">(</span><em>text</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#ImageFont.getsize"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.ImageFont.getsize" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns width and height (in pixels) of given text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>text</strong> – Text to measure.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>(width, height)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PIL.ImageFont.FreeTypeFont">
+<em class="property">class </em><code class="descclassname">PIL.ImageFont.</code><code class="descname">FreeTypeFont</code><span class="sig-paren">(</span><em>font=None</em>, <em>size=10</em>, <em>index=0</em>, <em>encoding=''</em>, <em>layout_engine=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont" title="永久链接至目标">¶</a></dt>
+<dd><p>FreeType font wrapper (requires _imagingft service)</p>
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.font_variant">
+<code class="descname">font_variant</code><span class="sig-paren">(</span><em>font=None</em>, <em>size=None</em>, <em>index=None</em>, <em>encoding=None</em>, <em>layout_engine=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.font_variant"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.font_variant" title="永久链接至目标">¶</a></dt>
+<dd><p>Create a copy of this FreeTypeFont object,
+using any specified arguments to override the settings.</p>
+<p>Parameters are identical to the parameters used to initialize this
+object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A FreeTypeFont object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.get_variation_axes">
+<code class="descname">get_variation_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.get_variation_axes"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.get_variation_axes" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A list of the axes in a variation font.</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>IOError</strong> – If the font is not a variation font.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.get_variation_names">
+<code class="descname">get_variation_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.get_variation_names"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.get_variation_names" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A list of the named styles in a variation font.</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>IOError</strong> – If the font is not a variation font.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getmask">
+<code class="descname">getmask</code><span class="sig-paren">(</span><em>text</em>, <em>mode=''</em>, <em>direction=None</em>, <em>features=None</em>, <em>language=None</em>, <em>stroke_width=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getmask"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getmask" title="永久链接至目标">¶</a></dt>
+<dd><p>Create a bitmap for the text.</p>
+<p>If the font uses antialiasing, the bitmap should have mode <code class="docutils literal notranslate"><span class="pre">L</span></code> and use a
+maximum value of 255. Otherwise, it should have mode <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to render.</p></li>
+<li><p><strong>mode</strong> – <p>Used by some graphics drivers to indicate what mode the
+driver prefers; if empty, the renderer may return either
+mode. Note that the mode is always a string, to simplify
+C-level implementations.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.1.5 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>direction</strong> – <p>Direction of the text. It can be ‘rtl’ (right to
+left), ‘ltr’ (left to right) or ‘ttb’ (top to bottom).
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>features</strong> – <p>A list of OpenType font features to be used during text
+layout. This is usually used to turn on optional
+font features that are not enabled by default,
+for example ‘dlig’ or ‘ss01’, but can be also
+used to turn off default font features for
+example ‘-liga’ to disable ligatures or ‘-kern’
+to disable kerning.  To get all supported
+features, see
+<a class="reference external" href="https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist">https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist</a>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>language</strong> – <p>Language of the text. Different languages may use
+different glyph shapes or ligatures. This parameter tells
+the font which language the text is in, and to apply the
+correct substitutions as appropriate, if available.
+It should be a <cite>BCP 47 language code
+&lt;https://www.w3.org/International/articles/language-tags/&gt;</cite>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.0.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>stroke_width</strong> – <p>The width of the text stroke.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.2.0 新版功能.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>An internal PIL storage memory instance as defined by the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.Image.core</span></code> interface module.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getmask2">
+<code class="descname">getmask2</code><span class="sig-paren">(</span><em>text</em>, <em>mode=''</em>, <em>fill=&lt;built-in function fill&gt;</em>, <em>direction=None</em>, <em>features=None</em>, <em>language=None</em>, <em>stroke_width=0</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getmask2"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getmask2" title="永久链接至目标">¶</a></dt>
+<dd><p>Create a bitmap for the text.</p>
+<p>If the font uses antialiasing, the bitmap should have mode <code class="docutils literal notranslate"><span class="pre">L</span></code> and use a
+maximum value of 255. Otherwise, it should have mode <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to render.</p></li>
+<li><p><strong>mode</strong> – <p>Used by some graphics drivers to indicate what mode the
+driver prefers; if empty, the renderer may return either
+mode. Note that the mode is always a string, to simplify
+C-level implementations.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.1.5 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>direction</strong> – <p>Direction of the text. It can be ‘rtl’ (right to
+left), ‘ltr’ (left to right) or ‘ttb’ (top to bottom).
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>features</strong> – <p>A list of OpenType font features to be used during text
+layout. This is usually used to turn on optional
+font features that are not enabled by default,
+for example ‘dlig’ or ‘ss01’, but can be also
+used to turn off default font features for
+example ‘-liga’ to disable ligatures or ‘-kern’
+to disable kerning.  To get all supported
+features, see
+<a class="reference external" href="https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist">https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist</a>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>language</strong> – <p>Language of the text. Different languages may use
+different glyph shapes or ligatures. This parameter tells
+the font which language the text is in, and to apply the
+correct substitutions as appropriate, if available.
+It should be a <cite>BCP 47 language code
+&lt;https://www.w3.org/International/articles/language-tags/&gt;</cite>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.0.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>stroke_width</strong> – <p>The width of the text stroke.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.2.0 新版功能.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A tuple of an internal PIL storage memory instance as defined by the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">PIL.Image.core</span></code> interface module, and the text offset, the
+gap between the starting coordinate and the first marking</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getmetrics">
+<code class="descname">getmetrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getmetrics"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getmetrics" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A tuple of the font ascent (the distance from the baseline to
+the highest outline point) and descent (the distance from the
+baseline to the lowest outline point, a negative value)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getname">
+<code class="descname">getname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getname"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getname" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>A tuple of the font family (e.g. Helvetica) and the font style
+(e.g. Bold)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getoffset">
+<code class="descname">getoffset</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getoffset"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getoffset" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns the offset of given text. This is the gap between the
+starting coordinate and the first marking. Note that this gap is
+included in the result of <a class="reference internal" href="#PIL.ImageFont.FreeTypeFont.getsize" title="PIL.ImageFont.FreeTypeFont.getsize"><code class="xref py py-func docutils literal notranslate"><span class="pre">getsize()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>text</strong> – Text to measure.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A tuple of the x and y offset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getsize">
+<code class="descname">getsize</code><span class="sig-paren">(</span><em>text</em>, <em>direction=None</em>, <em>features=None</em>, <em>language=None</em>, <em>stroke_width=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getsize"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getsize" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns width and height (in pixels) of given text if rendered in font with
+provided direction, features, and language.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to measure.</p></li>
+<li><p><strong>direction</strong> – <p>Direction of the text. It can be ‘rtl’ (right to
+left), ‘ltr’ (left to right) or ‘ttb’ (top to bottom).
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>features</strong> – <p>A list of OpenType font features to be used during text
+layout. This is usually used to turn on optional
+font features that are not enabled by default,
+for example ‘dlig’ or ‘ss01’, but can be also
+used to turn off default font features for
+example ‘-liga’ to disable ligatures or ‘-kern’
+to disable kerning.  To get all supported
+features, see
+<a class="reference external" href="https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist">https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist</a>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">4.2.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>language</strong> – <p>Language of the text. Different languages may use
+different glyph shapes or ligatures. This parameter tells
+the font which language the text is in, and to apply the
+correct substitutions as appropriate, if available.
+It should be a <cite>BCP 47 language code
+&lt;https://www.w3.org/International/articles/language-tags/&gt;</cite>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.0.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>stroke_width</strong> – <p>The width of the text stroke.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.2.0 新版功能.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>(width, height)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.getsize_multiline">
+<code class="descname">getsize_multiline</code><span class="sig-paren">(</span><em>text</em>, <em>direction=None</em>, <em>spacing=4</em>, <em>features=None</em>, <em>language=None</em>, <em>stroke_width=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.getsize_multiline"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.getsize_multiline" title="永久链接至目标">¶</a></dt>
+<dd><p>Returns width and height (in pixels) of given text if rendered in font
+with provided direction, features, and language, while respecting
+newline characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to measure.</p></li>
+<li><p><strong>direction</strong> – Direction of the text. It can be ‘rtl’ (right to
+left), ‘ltr’ (left to right) or ‘ttb’ (top to bottom).
+Requires libraqm.</p></li>
+<li><p><strong>spacing</strong> – The vertical gap between lines, defaulting to 4 pixels.</p></li>
+<li><p><strong>features</strong> – A list of OpenType font features to be used during text
+layout. This is usually used to turn on optional
+font features that are not enabled by default,
+for example ‘dlig’ or ‘ss01’, but can be also
+used to turn off default font features for
+example ‘-liga’ to disable ligatures or ‘-kern’
+to disable kerning.  To get all supported
+features, see
+<a class="reference external" href="https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist">https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist</a>
+Requires libraqm.</p></li>
+<li><p><strong>language</strong> – <p>Language of the text. Different languages may use
+different glyph shapes or ligatures. This parameter tells
+the font which language the text is in, and to apply the
+correct substitutions as appropriate, if available.
+It should be a <cite>BCP 47 language code
+&lt;https://www.w3.org/International/articles/language-tags/&gt;</cite>
+Requires libraqm.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.0.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>stroke_width</strong> – <p>The width of the text stroke.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">6.2.0 新版功能.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>(width, height)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.set_variation_by_axes">
+<code class="descname">set_variation_by_axes</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.set_variation_by_axes"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.set_variation_by_axes" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>axes</strong> – A list of values for each axis.</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>IOError</strong> – If the font is not a variation font.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="PIL.ImageFont.FreeTypeFont.set_variation_by_name">
+<code class="descname">set_variation_by_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#FreeTypeFont.set_variation_by_name"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.FreeTypeFont.set_variation_by_name" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>name</strong> – The name of the style.</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>IOError</strong> – If the font is not a variation font.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PIL.ImageFont.TransposedFont">
+<em class="property">class </em><code class="descclassname">PIL.ImageFont.</code><code class="descname">TransposedFont</code><span class="sig-paren">(</span><em>font</em>, <em>orientation=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageFont.html#TransposedFont"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageFont.TransposedFont" title="永久链接至目标">¶</a></dt>
+<dd><p>Wrapper for writing rotated or mirrored text</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ImageGrab.html" class="btn btn-neutral float-right" title="ImageGrab Module (macOS and Windows only)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ImageFilter.html" class="btn btn-neutral float-left" title="ImageFilter Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

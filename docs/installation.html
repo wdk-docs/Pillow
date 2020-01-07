@@ -1,0 +1,957 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>安装 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/js/script.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="about.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Handbook" href="handbook/index.html" />
+    <link rel="prev" title="Pillow" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">安装</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#warnings">警告</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">笔记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-installation">基本安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows-installation">Windows 安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos-installation">MacOS的安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux-installation">Linux安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freebsd-installation">FreeBSD的安装</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-from-source">编译源</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#external-libraries">外部库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-options">构建选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-on-macos">建立在MacOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-on-windows">建立在Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-on-freebsd">建立在FreeBSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-on-linux">建立在Linux上</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-on-android">在Android上构建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#platform-support">平台支持</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-integration-targets">持续集成的目标</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-platforms">其他平台</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#old-versions">老版本</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="handbook/index.html">Handbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="porting.html">Porting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasenotes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecations.html">Deprecations and removals</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>安装</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>安装<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h1>
+<div class="section" id="warnings">
+<h2>警告<a class="headerlink" href="#warnings" title="永久链接至标题">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>枕头和PIL不能共存于同一环境。在安装之前枕，请卸载PIL。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>枕&gt; = 1.0不再支持“进口图片”。请使用“从PIL进口影像”来代替。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>枕头&gt; = 2.1.0不再支持“进口_imaging ”。请使用“从PIL.Image进口核心为_imaging ”来代替。</p>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>笔记<a class="headerlink" href="#notes" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>枕头支持以下Python版本</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Python</strong></p></td>
+<td><p><strong>3.8</strong></p></td>
+<td><p><strong>3.7</strong></p></td>
+<td><p><strong>3.6</strong></p></td>
+<td><p><strong>3.5</strong></p></td>
+<td><p><strong>3.4</strong></p></td>
+<td><p><strong>3.3</strong></p></td>
+<td><p><strong>3.2</strong></p></td>
+<td><p><strong>2.7</strong></p></td>
+<td><p><strong>2.6</strong></p></td>
+<td><p><strong>2.5</strong></p></td>
+<td><p><strong>2.4</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Pillow &gt;= 7</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Pillow 6.2.1</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Pillow 6.0 - 6.2.0</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Pillow 5.2 - 5.4</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Pillow 5.0 - 5.1</p></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Pillow 4</p></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Pillow 2 - 3</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Pillow &lt; 2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+<td><p>是</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="basic-installation">
+<h2>基本安装<a class="headerlink" href="#basic-installation" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>The following instructions will install Pillow with support for
+most common image formats. See <a class="reference internal" href="#external-libraries"><span class="std std-ref">外部库</span></a> for a
+full list of external libraries supported.</p>
+</div>
+<p>使用 <strong class="command">pip</strong> 安装 Pillow</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+<div class="section" id="windows-installation">
+<h3>Windows 安装<a class="headerlink" href="#windows-installation" title="永久链接至标题">¶</a></h3>
+<p>我们提供的编译支持蟒蛇的车轮，鸡蛋和可执行安装32位和64位版本的矩阵为Windows枕头二进制文件。 这些二进制文件都可选库包括除raqm和libimagequant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="macos-installation">
+<h3>MacOS的安装<a class="headerlink" href="#macos-installation" title="永久链接至标题">¶</a></h3>
+<p>We provide binaries for macOS for each of the supported Python
+versions in the wheel format. These include support for all optional
+libraries except libimagequant.  Raqm support requires libraqm,
+fribidi, and harfbuzz to be installed separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux-installation">
+<h3>Linux安装<a class="headerlink" href="#linux-installation" title="永久链接至标题">¶</a></h3>
+<p>We provide binaries for Linux for each of the supported Python
+versions in the manylinux wheel format. These include support for all
+optional libraries except libimagequant. Raqm support requires
+libraqm, fribidi, and harfbuzz to be installed separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+<p>Most major Linux distributions, including Fedora, Debian/Ubuntu and
+ArchLinux also include Pillow in packages that previously contained
+PIL e.g. <code class="docutils literal notranslate"><span class="pre">python-imaging</span></code>.</p>
+</div>
+<div class="section" id="freebsd-installation">
+<h3>FreeBSD的安装<a class="headerlink" href="#freebsd-installation" title="永久链接至标题">¶</a></h3>
+<p>Pillow can be installed on FreeBSD via the official Ports or Packages systems:</p>
+<p><strong>端口</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">graphics</span><span class="o">/</span><span class="n">py</span><span class="o">-</span><span class="n">pillow</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
+</pre></div>
+</div>
+<p><strong>包</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="n">py36</span><span class="o">-</span><span class="n">pillow</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>The <a class="reference external" href="https://www.freshports.org/graphics/py-pillow/">Pillow FreeBSD port</a> and packages
+are tested by the ports team with all supported FreeBSD versions.</p>
+</div>
+</div>
+</div>
+<div class="section" id="building-from-source">
+<h2>编译源<a class="headerlink" href="#building-from-source" title="永久链接至标题">¶</a></h2>
+<p>下载并解压 <a class="reference external" href="https://pypi.org/project/Pillow/">compressed archive from PyPI</a>.</p>
+<div class="section" id="external-libraries">
+<span id="id1"></span><h3>外部库<a class="headerlink" href="#external-libraries" title="永久链接至标题">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>You <strong>do not need to install all supported external libraries</strong> to
+use Pillow’s basic features. <strong>Zlib</strong> and <strong>libjpeg</strong> are required
+by default.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>There are Dockerfiles in our <a class="reference external" href="https://github.com/python-pillow/docker-images">Docker images repo</a> to install the
+dependencies for some operating systems.</p>
+</div>
+<p>许多枕头的功能需要外部库:</p>
+<ul class="simple">
+<li><p><strong>libjpeg</strong> 提供JPEG功能.</p>
+<ul>
+<li><p>Pillow has been tested with libjpeg versions <strong>6b</strong>, <strong>8</strong>, <strong>9-9c</strong> and
+libjpeg-turbo version <strong>8</strong>.</p></li>
+<li><p>Starting with Pillow 3.0.0, libjpeg is required by default, but
+may be disabled with the <code class="docutils literal notranslate"><span class="pre">--disable-jpeg</span></code> flag.</p></li>
+</ul>
+</li>
+<li><p><strong>zlib</strong> 提供访问压缩的PNG</p>
+<ul>
+<li><p>Starting with Pillow 3.0.0, zlib is required by default, but may
+be disabled with the <code class="docutils literal notranslate"><span class="pre">--disable-zlib</span></code> flag.</p></li>
+</ul>
+</li>
+<li><p><strong>libtiff</strong> 提供压缩的TIFF功能</p>
+<ul>
+<li><p>枕头已经利用libtiff版本测试** 3.x的**和** ** 4.0</p></li>
+</ul>
+</li>
+<li><p><strong>libfreetype</strong> 提供的类型相关的服务</p></li>
+<li><p><strong>littlecms</strong> 提供色彩管理</p>
+<ul>
+<li><p>Pillow version 2.2.1 and below uses liblcms1, Pillow 2.3.0 and
+above uses liblcms2. Tested with <strong>1.19</strong> and <strong>2.7-2.9</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>libwebp</strong> 提供的WebP格式。</p>
+<ul>
+<li><p>Pillow has been tested with version <strong>0.1.3</strong>, which does not read
+transparent WebP files. Versions <strong>0.3.0</strong> and above support
+transparency.</p></li>
+</ul>
+</li>
+<li><p><strong>tcl/tk</strong> 提供Tkinter的位图和照片图像的支持。</p></li>
+<li><p><strong>openjpeg</strong> 提供JPEG 2000的功能。</p>
+<ul>
+<li><p>枕头已经与openjpeg ** ** 2.0.0，2.1.0 ** <a href="#id1"><span class="problematic" id="id2">**</span></a>和**测试2.3.1 <a href="#id3"><span class="problematic" id="id4">**</span></a>。</p></li>
+<li><p>Pillow does <strong>not</strong> support the earlier <strong>1.5</strong> series which ships
+with Debian Jessie.</p></li>
+</ul>
+</li>
+<li><p><strong>libimagequant</strong> 提供了改进的颜色量化</p>
+<ul>
+<li><p>枕头已经与libimagequant测试** ** 2.6-2.12.6</p></li>
+<li><p>Libimagequant is licensed GPLv3, which is more restrictive than
+the Pillow license, therefore we will not be distributing binaries
+with libimagequant support enabled.</p></li>
+</ul>
+</li>
+<li><p><strong>libraqm</strong> 提供复杂的文本布局支持。</p>
+<ul>
+<li><p>libraqm provides bidirectional text support (using FriBiDi),
+shaping (using HarfBuzz), and proper script itemization. As a
+result, Raqm can support most writing systems covered by Unicode.</p></li>
+<li><p>libraqm depends on the following libraries: FreeType, HarfBuzz,
+FriBiDi, make sure that you install them before installing libraqm
+if not available as package in your system.</p></li>
+<li><p>不支持将文本方向或字体特征而不libraqm。</p></li>
+<li><p>libraqm is dynamically loaded in Pillow 5.0.0 and above, so support
+is available if all the libraries are installed.</p></li>
+<li><p>Windows的支持：Raqm不包括在预置的车轮</p></li>
+</ul>
+</li>
+</ul>
+<p>一旦你已经安装的先决条件，运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+<p>If the prerequisites are installed in the standard library locations
+for your machine (e.g. <code class="file docutils literal notranslate"><span class="pre">/usr</span></code> or <code class="file docutils literal notranslate"><span class="pre">/usr/local</span></code>), no
+additional configuration should be required. If they are installed in
+a non-standard location, you may need to configure setuptools to use
+those locations by editing <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> or
+<code class="file docutils literal notranslate"><span class="pre">setup.cfg</span></code>, or by adding environment variables on the command
+line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-I/usr/pkg/include&quot;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span>
+</pre></div>
+</div>
+<p>If Pillow has been previously built without the required
+prerequisites, it may be necessary to manually clear the pip cache or
+build without cache using the <code class="docutils literal notranslate"><span class="pre">--no-cache-dir</span></code> option to force a
+build with newly installed external libraries.</p>
+</div>
+<div class="section" id="build-options">
+<h3>构建选项<a class="headerlink" href="#build-options" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Environment variable: <code class="docutils literal notranslate"><span class="pre">MAX_CONCURRENCY=n</span></code>. Pillow can use
+multiprocessing to build the extension. Setting <code class="docutils literal notranslate"><span class="pre">MAX_CONCURRENCY</span></code>
+sets the number of CPUs to use, or can disable parallel building by
+using a setting of 1. By default, it uses 4 CPUs, or if 4 are not
+available, as many as are present.</p></li>
+<li><p>Build flags: <code class="docutils literal notranslate"><span class="pre">--disable-zlib</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-jpeg</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--disable-tiff</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-freetype</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-lcms</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--disable-webp</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-webpmux</span></code>, <code class="docutils literal notranslate"><span class="pre">--disable-jpeg2000</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--disable-imagequant</span></code>.
+Disable building the corresponding feature even if the development
+libraries are present on the building machine.</p></li>
+<li><p>Build flags: <code class="docutils literal notranslate"><span class="pre">--enable-zlib</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-jpeg</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--enable-tiff</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-freetype</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-lcms</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--enable-webp</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-webpmux</span></code>, <code class="docutils literal notranslate"><span class="pre">--enable-jpeg2000</span></code>,
+<code class="docutils literal notranslate"><span class="pre">--enable-imagequant</span></code>.
+Require that the corresponding feature is built. The build will raise
+an exception if the libraries are not found. Webpmux (WebP metadata)
+relies on WebP support. Tcl and Tk also must be used together.</p></li>
+<li><p>Build flag: <code class="docutils literal notranslate"><span class="pre">--disable-platform-guessing</span></code>. Skips all of the
+platform dependent guessing of include and library directories for
+automated build systems that configure the proper paths in the
+environment variables (e.g. Buildroot).</p></li>
+<li><p>Build flag: <code class="docutils literal notranslate"><span class="pre">--debug</span></code>. Adds a debugging flag to the include and
+library search process to dump all paths searched for and found to
+stdout.</p></li>
+</ul>
+<p>用法示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MAX_CONCURRENCY</span><span class="o">=</span><span class="mi">1</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>or using pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span> <span class="o">--</span><span class="k">global</span><span class="o">-</span><span class="n">option</span><span class="o">=</span><span class="s2">&quot;build_ext&quot;</span> <span class="o">--</span><span class="k">global</span><span class="o">-</span><span class="n">option</span><span class="o">=</span><span class="s2">&quot;--enable-[feature]&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-on-macos">
+<h3>建立在MacOS<a class="headerlink" href="#building-on-macos" title="永久链接至标题">¶</a></h3>
+<p>The Xcode command line tools are required to compile portions of
+Pillow. The tools are installed by running <code class="docutils literal notranslate"><span class="pre">xcode-select</span> <span class="pre">--install</span></code>
+from the command line. The command line tools are required even if you
+have the full Xcode package installed.  It may be necessary to run
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">xcodebuild</span> <span class="pre">-license</span></code> to accept the license prior to using the
+tools.</p>
+<p>The easiest way to install external libraries is via <a class="reference external" href="https://brew.sh/">Homebrew</a>. After you install Homebrew, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">libtiff</span> <span class="n">libjpeg</span> <span class="n">webp</span> <span class="n">little</span><span class="o">-</span><span class="n">cms2</span>
+</pre></div>
+</div>
+<p>要在Mac OS使用自制安装libraqm安装它的依赖:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">freetype</span> <span class="n">harfbuzz</span> <span class="n">fribidi</span>
+</pre></div>
+</div>
+<p>Then see <code class="docutils literal notranslate"><span class="pre">depends/install_raqm_cmake.sh</span></code> to install libraqm.</p>
+<p>现在安装枕:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
+</pre></div>
+</div>
+<p>或从所述未压缩源目录内:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-on-windows">
+<h3>建立在Windows<a class="headerlink" href="#building-on-windows" title="永久链接至标题">¶</a></h3>
+<p>We don’t recommend trying to build on Windows. It is a maze of twisty
+passages, mostly dead ends. There are build scripts and notes for the
+Windows build in the <code class="docutils literal notranslate"><span class="pre">winbuild</span></code> directory.</p>
+</div>
+<div class="section" id="building-on-freebsd">
+<h3>建立在FreeBSD<a class="headerlink" href="#building-on-freebsd" title="永久链接至标题">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>只有FreeBSD的10和11测试</p>
+</div>
+<p>请确保你已经安装了Python的开发库:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pkg</span> <span class="n">install</span> <span class="n">python2</span>
+</pre></div>
+</div>
+<p>或为Python 3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pkg</span> <span class="n">install</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>先决条件是安装在** FreeBSD的10或11 <a href="#id1"><span class="problematic" id="id2">**</span></a>与:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pkg</span> <span class="n">install</span> <span class="n">jpeg</span><span class="o">-</span><span class="n">turbo</span> <span class="n">tiff</span> <span class="n">webp</span> <span class="n">lcms2</span> <span class="n">freetype2</span> <span class="n">openjpeg</span> <span class="n">harfbuzz</span> <span class="n">fribidi</span>
+</pre></div>
+</div>
+<p>Then see <code class="docutils literal notranslate"><span class="pre">depends/install_raqm_cmake.sh</span></code> to install libraqm.</p>
+</div>
+<div class="section" id="building-on-linux">
+<h3>建立在Linux上<a class="headerlink" href="#building-on-linux" title="永久链接至标题">¶</a></h3>
+<p>If you didn’t build Python from source, make sure you have Python’s
+development libraries installed.</p>
+<p>在Debian或者ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span>
+</pre></div>
+</div>
+<p>或为Python 3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span>
+</pre></div>
+</div>
+<p>在Fedora，该命令是:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">devel</span> <span class="n">redhat</span><span class="o">-</span><span class="n">rpm</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+<p>或为Python 3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">devel</span> <span class="n">redhat</span><span class="o">-</span><span class="n">rpm</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">redhat-rpm-config</span></code> is required on Fedora 23, but not earlier versions.</p>
+</div>
+<p>前提条件是安装在Ubuntu的** 16.04 LTS与**:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libtiff5</span><span class="o">-</span><span class="n">dev</span> <span class="n">libjpeg8</span><span class="o">-</span><span class="n">dev</span> <span class="n">libopenjp2</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> \
+    <span class="n">libfreetype6</span><span class="o">-</span><span class="n">dev</span> <span class="n">liblcms2</span><span class="o">-</span><span class="n">dev</span> <span class="n">libwebp</span><span class="o">-</span><span class="n">dev</span> <span class="n">tcl8</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">dev</span> <span class="n">tk8</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">tk</span> \
+    <span class="n">libharfbuzz</span><span class="o">-</span><span class="n">dev</span> <span class="n">libfribidi</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>然后看``取决于/ install_raqm.sh``安装libraqm。</p>
+<p>Prerequisites are installed on recent <strong>RedHat</strong> <strong>Centos</strong> or <strong>Fedora</strong> with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">libtiff</span><span class="o">-</span><span class="n">devel</span> <span class="n">libjpeg</span><span class="o">-</span><span class="n">devel</span> <span class="n">openjpeg2</span><span class="o">-</span><span class="n">devel</span> <span class="n">zlib</span><span class="o">-</span><span class="n">devel</span> \
+    <span class="n">freetype</span><span class="o">-</span><span class="n">devel</span> <span class="n">lcms2</span><span class="o">-</span><span class="n">devel</span> <span class="n">libwebp</span><span class="o">-</span><span class="n">devel</span> <span class="n">tcl</span><span class="o">-</span><span class="n">devel</span> <span class="n">tk</span><span class="o">-</span><span class="n">devel</span> \
+    <span class="n">harfbuzz</span><span class="o">-</span><span class="n">devel</span> <span class="n">fribidi</span><span class="o">-</span><span class="n">devel</span> <span class="n">libraqm</span><span class="o">-</span><span class="n">devel</span> <span class="n">libimagequant</span><span class="o">-</span><span class="n">devel</span>
+</pre></div>
+</div>
+<p>Note that the package manager may be yum or dnf, depending on the
+exact distribution.</p>
+<p>See also the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s in the Test Infrastructure repo
+(<a class="reference external" href="https://github.com/python-pillow/docker-images">https://github.com/python-pillow/docker-images</a>) for a known working
+install process for other tested distros.</p>
+</div>
+<div class="section" id="building-on-android">
+<h3>在Android上构建<a class="headerlink" href="#building-on-android" title="永久链接至标题">¶</a></h3>
+<p>Basic Android support has been added for compilation within the Termux
+environment. The dependencies can be installed by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span> <span class="n">ndk</span><span class="o">-</span><span class="n">sysroot</span> <span class="n">clang</span> <span class="n">make</span> \
+    <span class="n">libjpeg</span><span class="o">-</span><span class="n">turbo</span>
+</pre></div>
+</div>
+<p>这一问题已经在Chrome操作系统的Termux应用程序中测试，在x86。</p>
+</div>
+</div>
+<div class="section" id="platform-support">
+<h2>平台支持<a class="headerlink" href="#platform-support" title="永久链接至标题">¶</a></h2>
+<p>Current platform support for Pillow. Binary distributions are
+contributed for each release on a volunteer basis, but the source
+should compile and run everywhere platform support is listed. In
+general, we aim to support all current versions of Linux, macOS, and
+Windows.</p>
+<div class="section" id="continuous-integration-targets">
+<h3>持续集成的目标<a class="headerlink" href="#continuous-integration-targets" title="永久链接至标题">¶</a></h3>
+<p>这些平台是建立和每一个变化测试。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 31%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>操作系统</strong></p></td>
+<td><p><strong>测试的Python版本</strong></p></td>
+<td><p><strong>经测试架构</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Alpine</p></td>
+<td><p>3.7</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Arch</p></td>
+<td><p>3.7</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Amazon Linux 1</p></td>
+<td><p>3.6</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Amazon Linux 2</p></td>
+<td><p>3.6</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>CentOS 6</p></td>
+<td><p>3.6</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>CentOS 7</p></td>
+<td><p>3.6</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>CentOS 8</p></td>
+<td><p>3.6</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debian 9 Stretch</p></td>
+<td><p>3.5</p></td>
+<td><p>x86</p></td>
+</tr>
+<tr class="row-even"><td><p>Debian 10 Buster</p></td>
+<td><p>3.7</p></td>
+<td><p>x86</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora 30</p></td>
+<td><p>3.7</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora 31</p></td>
+<td><p>3.7</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS 10.13 High Sierra</p></td>
+<td><p>3.5, 3.6, 3.7, 3.8</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>macOS 10.15 Catalina</p></td>
+<td><p>PyPy3</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu Linux 16.04 LTS</p></td>
+<td><p>3.5, 3.6, 3.7, 3.8, PyPy3</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Windows Server 2012 R2</p></td>
+<td><p>3.5, 3.8</p></td>
+<td><p>x86, x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>PyPy3, 3.7/MinGW</p></td>
+<td><p>x86</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Windows Server 2019</p></td>
+<td><p>3.5, 3.6, 3.7, 3.8</p></td>
+<td><p>x86, x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>PyPy3</p></td>
+<td><p>x86</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="other-platforms">
+<h3>其他平台<a class="headerlink" href="#other-platforms" title="永久链接至标题">¶</a></h3>
+<p>这些平台已报告在工作中提到的版本。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>请投稿枕头测试你的平台上，然后更新此文件并发送pull请求。</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 25%" />
+<col style="width: 27%" />
+<col style="width: 19%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>操作系统</strong></p></td>
+<td><p><strong>测试的Python版本</strong></p></td>
+<td><p><strong>最新的测试版本枕头</strong></p></td>
+<td><p><strong>经测试的处理器</strong></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>macOS 10.14 Mojave</p></td>
+<td><p>2.7, 3.5, 3.6, 3.7</p></td>
+<td><p>6.0.0</p></td>
+<td rowspan="2"><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.4</p></td>
+<td><p>5.4.1</p></td>
+</tr>
+<tr class="row-even"><td><p>macOS 10.13 High Sierra</p></td>
+<td><p>2.7, 3.4, 3.5, 3.6</p></td>
+<td><p>4.2.1</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS 10.12 Sierra</p></td>
+<td><p>2.7, 3.4, 3.5, 3.6</p></td>
+<td><p>4.1.1</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Mac OS X 10.11 El Capitan</p></td>
+<td><p>2.7, 3.4, 3.5, 3.6, 3.7</p></td>
+<td><p>5.4.1</p></td>
+<td rowspan="2"><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.3</p></td>
+<td><p>4.1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Mac OS X 10.9 Mavericks</p></td>
+<td><p>2.7, 3.2, 3.3, 3.4</p></td>
+<td><p>3.0.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mac OS X 10.8 Mountain Lion</p></td>
+<td><p>2.6, 2.7, 3.2, 3.3</p></td>
+<td></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Redhat Linux 6</p></td>
+<td><p>2.6</p></td>
+<td></td>
+<td><p>x86</p></td>
+</tr>
+<tr class="row-odd"><td><p>CentOS 6.3</p></td>
+<td><p>2.7, 3.3</p></td>
+<td></td>
+<td><p>x86</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora 23</p></td>
+<td><p>2.7, 3.4</p></td>
+<td><p>3.1.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>Ubuntu Linux 12.04 LTS</p></td>
+<td><p>2.6, 3.2, 3.3, 3.4, 3.5
+PyPy5.3.1, PyPy3 v2.4.0</p></td>
+<td><p>3.4.1</p></td>
+<td><p>x86,x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>2.7</p></td>
+<td><p>4.3.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.7, 3.2</p></td>
+<td><p>3.4.1</p></td>
+<td><p>ppc</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu Linux 10.04 LTS</p></td>
+<td><p>2.6</p></td>
+<td><p>2.3.0</p></td>
+<td><p>x86,x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debian 8.2 Jessie</p></td>
+<td><p>2.7, 3.4</p></td>
+<td><p>3.1.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Raspbian Jessie</p></td>
+<td><p>2.7, 3.4</p></td>
+<td><p>3.1.0</p></td>
+<td><p>arm</p></td>
+</tr>
+<tr class="row-odd"><td><p>Raspbian Stretch</p></td>
+<td><p>2.7, 3.5</p></td>
+<td><p>4.0.0</p></td>
+<td><p>arm</p></td>
+</tr>
+<tr class="row-even"><td><p>Gentoo Linux</p></td>
+<td><p>2.7, 3.2</p></td>
+<td><p>2.1.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>FreeBSD 11.1</p></td>
+<td><p>2.7, 3.4, 3.5, 3.6</p></td>
+<td><p>4.3.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>FreeBSD 10.3</p></td>
+<td><p>2.7, 3.4, 3.5</p></td>
+<td><p>4.2.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>FreeBSD 10.2</p></td>
+<td><p>2.7, 3.4</p></td>
+<td><p>3.1.0</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows 8.1 Pro</p></td>
+<td><p>2.6, 2.7, 3.2, 3.3, 3.4</p></td>
+<td><p>2.4.0</p></td>
+<td><p>x86,x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows 8 Pro</p></td>
+<td><p>2.6, 2.7, 3.2, 3.3, 3.4a3</p></td>
+<td><p>2.2.0</p></td>
+<td><p>x86,x86-64</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows 7 Pro</p></td>
+<td><p>2.7, 3.2, 3.3</p></td>
+<td><p>3.4.1</p></td>
+<td><p>x86-64</p></td>
+</tr>
+<tr class="row-odd"><td><p>在Windows Server 2008 R2企业版</p></td>
+<td><p>3.3</p></td>
+<td></td>
+<td><p>x86-64</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="old-versions">
+<h2>老版本<a class="headerlink" href="#old-versions" title="永久链接至标题">¶</a></h2>
+<p>您可以从 <a class="reference external" href="https://pypi.org/project/Pillow/#history">发行历史上的PyPI</a> 和直接URL访问如下载老分布。 <a class="reference external" href="https://pypi.org/project/Pillow/1.0/">https://pypi.org/project/Pillow/1.0/</a>。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="handbook/index.html" class="btn btn-neutral float-right" title="Handbook" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Pillow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

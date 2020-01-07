@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../deprecations.rst:4
+msgid "Deprecations and removals"
+msgstr "弃用和清除"
+
+#: ../../deprecations.rst:6
+msgid ""
+"This page lists Pillow features that are deprecated, or have been removed"
+" in past major releases, and gives the alternatives to use instead."
+msgstr "这一点，已被弃用，或在过去主要版本已被删除，并给出了替代页面列出枕头的功能，而不是使用。"
+
+#: ../../deprecations.rst:10
+msgid "Deprecated features"
+msgstr "提倡使用的功能"
+
+#: ../../deprecations.rst:12
+msgid ""
+"Below are features which are considered deprecated. Where appropriate, a "
+"``DeprecationWarning`` is issued."
+msgstr "下面是被认为已过时的功能。在适当情况下，一个``DeprecationWarning``发出。"
+
+#: ../../deprecations.rst:16
+msgid "ImageCms.CmsProfile attributes"
+msgstr "ImageCms.CmsProfile属性"
+
+#: ../../deprecations.rst:20
+msgid ""
+"Some attributes in ``ImageCms.CmsProfile`` are deprecated. From 6.0.0, "
+"they issue a ``DeprecationWarning``:"
+msgstr "在 ``ImageCms.CmsProfile`` 某些属性已被弃用。从6.0.0，他们发出了 ``DeprecationWarning``:"
+
+#: ../../deprecations.rst:24
+msgid "Deprecated"
+msgstr "已过时"
+
+#: ../../deprecations.rst:24 ../../deprecations.rst:140
+msgid "Use instead"
+msgstr "改用"
+
+#: ../../deprecations.rst:26
+msgid "``color_space``"
+msgstr "``color_space``"
+
+#: ../../deprecations.rst:26
+msgid "Padded ``xcolor_space``"
+msgstr "加厚 ``xcolor_space``"
+
+#: ../../deprecations.rst:27
+msgid "``pcs``"
+msgstr "``pcs``"
+
+#: ../../deprecations.rst:27
+msgid "Padded ``connection_space``"
+msgstr "Padded ``connection_space``"
+
+#: ../../deprecations.rst:28
+msgid "``product_copyright``"
+msgstr "``product_copyright``"
+
+#: ../../deprecations.rst:28
+msgid "Unicode ``copyright``"
+msgstr "Unicode ``copyright``"
+
+#: ../../deprecations.rst:29
+msgid "``product_desc``"
+msgstr "``product_desc``"
+
+#: ../../deprecations.rst:29 ../../deprecations.rst:30
+msgid "Unicode ``profile_description``"
+msgstr "Unicode ``profile_description``"
+
+#: ../../deprecations.rst:30
+msgid "``product_description``"
+msgstr "``product_description``"
+
+#: ../../deprecations.rst:31
+msgid "``product_manufacturer``"
+msgstr "``product_manufacturer``"
+
+#: ../../deprecations.rst:31
+msgid "Unicode ``manufacturer``"
+msgstr "Unicode ``manufacturer``"
+
+#: ../../deprecations.rst:32
+msgid "``product_model``"
+msgstr "``product_model``"
+
+#: ../../deprecations.rst:32
+msgid "Unicode ``model``"
+msgstr "Unicode ``model``"
+
+#: ../../deprecations.rst:36
+msgid "Removed features"
+msgstr "删除的功能"
+
+#: ../../deprecations.rst:38
+msgid ""
+"Deprecated features are only removed in major releases after an "
+"appropriate period of deprecation has passed."
+msgstr "提倡使用的功能仅在主要版本删除弃用的适当时期已经过去之后。"
+
+#: ../../deprecations.rst:42
+msgid "Python 2.7"
+msgstr "Python 2.7"
+
+#: ../../deprecations.rst:44 ../../deprecations.rst:52
+#: ../../deprecations.rst:75 ../../deprecations.rst:82
+#: ../../deprecations.rst:107 ../../deprecations.rst:118
+msgid "*Removed in version 7.0.0.*"
+msgstr "*删除7.0.0版本。*"
+
+#: ../../deprecations.rst:46
+msgid ""
+"Python 2.7 reached end-of-life on 2020-01-01. Pillow 6.x was the last "
+"series to support Python 2."
+msgstr "Python 2.7版在2020年1月1日达到了结束生命。枕头6.x的是最后一个系列，以支持Python 2里。"
+
+#: ../../deprecations.rst:50
+msgid "Image.__del__"
+msgstr "Image.__del__"
+
+#: ../../deprecations.rst:54
+msgid ""
+"Implicitly closing the image's underlying file in ``Image.__del__`` has "
+"been removed. Use a context manager or call ``Image.close()`` instead to "
+"close the file in a deterministic way."
+msgstr ""
+
+#: ../../deprecations.rst:58
+msgid "Previous method:"
+msgstr "以前的方法:"
+
+#: ../../deprecations.rst:65
+msgid "Use instead:"
+msgstr "Use instead:"
+
+#: ../../deprecations.rst:73
+msgid "PILLOW_VERSION constant"
+msgstr "PILLOW_VERSION constant"
+
+#: ../../deprecations.rst:77
+msgid "``PILLOW_VERSION`` has been removed. Use ``__version__`` instead."
+msgstr "``PILLOW_VERSION`` 已被删除。 使用 ``__version__`` 代替。"
+
+#: ../../deprecations.rst:80
+msgid "PIL.*ImagePlugin.__version__ attributes"
+msgstr "PIL.*ImagePlugin.__version__ attributes"
+
+#: ../../deprecations.rst:84
+msgid ""
+"The version constants of individual plugins have been removed. Use "
+"``PIL.__version__`` instead."
+msgstr "The version constants of individual plugins have been removed. Use ``PIL.__version__`` instead."
+
+#: ../../deprecations.rst:88 ../../deprecations.rst:140
+msgid "Removed"
+msgstr "Removed"
+
+#: ../../deprecations.rst:90
+msgid "``BmpImagePlugin.__version__``"
+msgstr "``BmpImagePlugin.__version__``"
+
+#: ../../deprecations.rst:90
+msgid "``Jpeg2KImagePlugin.__version__``"
+msgstr "``Jpeg2KImagePlugin.__version__``"
+
+#: ../../deprecations.rst:90
+msgid "``PngImagePlugin.__version__``"
+msgstr "``PngImagePlugin.__version__``"
+
+#: ../../deprecations.rst:91
+msgid "``CurImagePlugin.__version__``"
+msgstr "``CurImagePlugin.__version__``"
+
+#: ../../deprecations.rst:91
+msgid "``JpegImagePlugin.__version__``"
+msgstr "``JpegImagePlugin.__version__``"
+
+#: ../../deprecations.rst:91
+msgid "``PpmImagePlugin.__version__``"
+msgstr "``PpmImagePlugin.__version__``"
+
+#: ../../deprecations.rst:92
+msgid "``DcxImagePlugin.__version__``"
+msgstr "``DcxImagePlugin.__version__``"
+
+#: ../../deprecations.rst:92
+msgid "``McIdasImagePlugin.__version__``"
+msgstr "``McIdasImagePlugin.__version__``"
+
+#: ../../deprecations.rst:92
+msgid "``PsdImagePlugin.__version__``"
+msgstr "``PsdImagePlugin.__version__``"
+
+#: ../../deprecations.rst:93
+msgid "``EpsImagePlugin.__version__``"
+msgstr "``EpsImagePlugin.__version__``"
+
+#: ../../deprecations.rst:93
+msgid "``MicImagePlugin.__version__``"
+msgstr "``MicImagePlugin.__version__``"
+
+#: ../../deprecations.rst:93
+msgid "``SgiImagePlugin.__version__``"
+msgstr "``SgiImagePlugin.__version__``"
+
+#: ../../deprecations.rst:94
+msgid "``FliImagePlugin.__version__``"
+msgstr "``FliImagePlugin.__version__``"
+
+#: ../../deprecations.rst:94
+msgid "``MpegImagePlugin.__version__``"
+msgstr "``MpegImagePlugin.__version__``"
+
+#: ../../deprecations.rst:94
+msgid "``SunImagePlugin.__version__``"
+msgstr "``SunImagePlugin.__version__``"
+
+#: ../../deprecations.rst:95
+msgid "``FpxImagePlugin.__version__``"
+msgstr "``FpxImagePlugin.__version__``"
+
+#: ../../deprecations.rst:95
+msgid "``MpoImagePlugin.__version__``"
+msgstr "``MpoImagePlugin.__version__``"
+
+#: ../../deprecations.rst:95
+msgid "``TgaImagePlugin.__version__``"
+msgstr "``TgaImagePlugin.__version__``"
+
+#: ../../deprecations.rst:96
+msgid "``GdImageFile.__version__``"
+msgstr "``GdImageFile.__version__``"
+
+#: ../../deprecations.rst:96
+msgid "``MspImagePlugin.__version__``"
+msgstr "``MspImagePlugin.__version__``"
+
+#: ../../deprecations.rst:96
+msgid "``TiffImagePlugin.__version__``"
+msgstr "``TiffImagePlugin.__version__``"
+
+#: ../../deprecations.rst:97
+msgid "``GifImagePlugin.__version__``"
+msgstr "``GifImagePlugin.__version__``"
+
+#: ../../deprecations.rst:97
+msgid "``PalmImagePlugin.__version__``"
+msgstr "``PalmImagePlugin.__version__``"
+
+#: ../../deprecations.rst:97
+msgid "``WmfImagePlugin.__version__``"
+msgstr "``WmfImagePlugin.__version__``"
+
+#: ../../deprecations.rst:98
+msgid "``IcoImagePlugin.__version__``"
+msgstr "``IcoImagePlugin.__version__``"
+
+#: ../../deprecations.rst:98
+msgid "``PcdImagePlugin.__version__``"
+msgstr "``PcdImagePlugin.__version__``"
+
+#: ../../deprecations.rst:98
+msgid "``XbmImagePlugin.__version__``"
+msgstr "``XbmImagePlugin.__version__``"
+
+#: ../../deprecations.rst:99
+msgid "``ImImagePlugin.__version__``"
+msgstr "``ImImagePlugin.__version__``"
+
+#: ../../deprecations.rst:99
+msgid "``PcxImagePlugin.__version__``"
+msgstr "``PcxImagePlugin.__version__``"
+
+#: ../../deprecations.rst:99
+msgid "``XpmImagePlugin.__version__``"
+msgstr "``XpmImagePlugin.__version__``"
+
+#: ../../deprecations.rst:100
+msgid "``ImtImagePlugin.__version__``"
+msgstr "``ImtImagePlugin.__version__``"
+
+#: ../../deprecations.rst:100
+msgid "``PdfImagePlugin.__version__``"
+msgstr "``PdfImagePlugin.__version__``"
+
+#: ../../deprecations.rst:100
+msgid "``XVThumbImagePlugin.__version__``"
+msgstr "``XVThumbImagePlugin.__version__``"
+
+#: ../../deprecations.rst:101
+msgid "``IptcImagePlugin.__version__``"
+msgstr "``IptcImagePlugin.__version__``"
+
+#: ../../deprecations.rst:101
+msgid "``PixarImagePlugin.__version__``"
+msgstr "``PixarImagePlugin.__version__``"
+
+#: ../../deprecations.rst:105
+msgid "PyQt4 and PySide"
+msgstr "PyQt4 and PySide"
+
+#: ../../deprecations.rst:109
+msgid ""
+"Qt 4 reached end-of-life on 2015-12-19. Its Python bindings are also EOL:"
+" PyQt4 since 2018-08-31 and PySide since 2015-10-14."
+msgstr "Qt 4 reached end-of-life on 2015-12-19. Its Python bindings are also EOL: PyQt4 since 2018-08-31 and PySide since 2015-10-14."
+
+#: ../../deprecations.rst:112
+msgid ""
+"Support for PyQt4 and PySide has been removed  from ``ImageQt``. Please "
+"upgrade to PyQt5 or PySide2."
+msgstr "Support for PyQt4 and PySide has been removed  from ``ImageQt``. Please upgrade to PyQt5 or PySide2."
+
+#: ../../deprecations.rst:116
+msgid "Setting the size of TIFF images"
+msgstr "Setting the size of TIFF images"
+
+#: ../../deprecations.rst:120
+msgid ""
+"Setting the size of a TIFF image directly (eg. ``im.size = (256, 256)``) "
+"throws an error. Use ``Image.resize`` instead."
+msgstr "Setting the size of a TIFF image directly (eg. ``im.size = (256, 256)``) throws an error. Use ``Image.resize`` instead."
+
+#: ../../deprecations.rst:124
+msgid "VERSION constant"
+msgstr "VERSION constant"
+
+#: ../../deprecations.rst:126 ../../deprecations.rst:134
+#: ../../deprecations.rst:152
+msgid "*Removed in version 6.0.0.*"
+msgstr "*Removed in version 6.0.0.*"
+
+#: ../../deprecations.rst:128
+msgid ""
+"``VERSION`` (the old PIL version, always 1.1.7) has been removed. Use "
+"``__version__`` instead."
+msgstr "``VERSION`` (the old PIL version, always 1.1.7) has been removed. Use ``__version__`` instead."
+
+#: ../../deprecations.rst:132
+msgid "Undocumented ImageOps functions"
+msgstr "Undocumented ImageOps functions"
+
+#: ../../deprecations.rst:136
+msgid ""
+"Several undocumented functions in ``ImageOps`` have been removed. Use the"
+" equivalents in ``ImageFilter`` instead:"
+msgstr "Several undocumented functions in ``ImageOps`` have been removed. Use the equivalents in ``ImageFilter`` instead:"
+
+#: ../../deprecations.rst:142
+msgid "``ImageOps.box_blur``"
+msgstr "``ImageOps.box_blur``"
+
+#: ../../deprecations.rst:142
+msgid "``ImageFilter.BoxBlur``"
+msgstr "``ImageFilter.BoxBlur``"
+
+#: ../../deprecations.rst:143
+msgid "``ImageOps.gaussian_blur``"
+msgstr "``ImageOps.gaussian_blur``"
+
+#: ../../deprecations.rst:143 ../../deprecations.rst:144
+msgid "``ImageFilter.GaussianBlur``"
+msgstr "``ImageFilter.GaussianBlur``"
+
+#: ../../deprecations.rst:144
+msgid "``ImageOps.gblur``"
+msgstr "``ImageOps.gblur``"
+
+#: ../../deprecations.rst:145
+msgid "``ImageOps.usm``"
+msgstr "``ImageOps.usm``"
+
+#: ../../deprecations.rst:145 ../../deprecations.rst:146
+msgid "``ImageFilter.UnsharpMask``"
+msgstr "``ImageFilter.UnsharpMask``"
+
+#: ../../deprecations.rst:146
+msgid "``ImageOps.unsharp_mask``"
+msgstr "``ImageOps.unsharp_mask``"
+
+#: ../../deprecations.rst:150
+msgid "PIL.OleFileIO"
+msgstr "PIL.OleFileIO"
+
+#: ../../deprecations.rst:154
+msgid ""
+"PIL.OleFileIO was removed as a vendored file and in Pillow 4.0.0 "
+"(2017-01) in favour of the upstream olefile Python package, and replaced "
+"with an ``ImportError`` in 5.0.0 (2018-01). The deprecated file has now "
+"been removed from Pillow. If needed, install from PyPI (eg. ``pip install"
+" olefile``)."
+msgstr ""
+

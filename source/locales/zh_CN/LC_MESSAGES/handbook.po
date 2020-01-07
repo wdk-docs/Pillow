@@ -1,0 +1,3740 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../handbook/appendices.rst:2
+msgid "Appendices"
+msgstr "附录"
+
+#: ../../handbook/appendices.rst:4
+msgid ""
+"Contributors please include appendices as needed or appropriate with your"
+" bug fixes, feature additions and tests."
+msgstr "请投稿附录包括根据需要或适合你的bug修复，功能的增加和测试。"
+
+#: ../../handbook/concepts.rst:2
+msgid "Concepts"
+msgstr "概念"
+
+#: ../../handbook/concepts.rst:4
+msgid ""
+"The Python Imaging Library handles *raster images*; that is, rectangles "
+"of pixel data."
+msgstr "Python图像库处理*光栅图像*;即，像素数据的矩形。"
+
+#: ../../handbook/concepts.rst:10
+msgid "Bands"
+msgstr "带"
+
+#: ../../handbook/concepts.rst:12
+msgid ""
+"An image can consist of one or more bands of data. The Python Imaging "
+"Library allows you to store several bands in a single image, provided "
+"they all have the same dimensions and depth.  For example, a PNG image "
+"might have 'R', 'G', 'B', and 'A' bands for the red, green, blue, and "
+"alpha transparency values.  Many operations act on each band separately, "
+"e.g., histograms.  It is often useful to think of each pixel as having "
+"one value per band."
+msgstr ""
+
+#: ../../handbook/concepts.rst:19
+msgid ""
+"To get the number and names of bands in an image, use the "
+":py:meth:`~PIL.Image.Image.getbands` method."
+msgstr "要获得号码和图像中的band的名称，请使用：PY：甲基：`〜PIL.Image.Image.getbands`方法。"
+
+#: ../../handbook/concepts.rst:25
+msgid "Modes"
+msgstr "模式"
+
+#: ../../handbook/concepts.rst:27
+msgid ""
+"The ``mode`` of an image defines the type and depth of a pixel in the "
+"image. Each pixel uses the full range of the bit depth. So a 1-bit pixel "
+"has a range of 0-1, an 8-bit pixel has a range of 0-255 and so on. The "
+"current release supports the following standard modes:"
+msgstr ""
+
+#: ../../handbook/concepts.rst:32
+msgid "``1`` (1-bit pixels, black and white, stored with one pixel per byte)"
+msgstr "``1`` (1位的像素，黑色和白色，存储有每字节的一个像素)"
+
+#: ../../handbook/concepts.rst:33
+msgid "``L`` (8-bit pixels, black and white)"
+msgstr "``L`` (8-bit pixels, black and white)"
+
+#: ../../handbook/concepts.rst:34
+msgid "``P`` (8-bit pixels, mapped to any other mode using a color palette)"
+msgstr "``P`` (8比特象素，映射到任何其他模式下使用彩色调色板)"
+
+#: ../../handbook/concepts.rst:35
+msgid "``RGB`` (3x8-bit pixels, true color)"
+msgstr "``RGB`` (3×8位像素，色彩真实)"
+
+#: ../../handbook/concepts.rst:36
+msgid "``RGBA`` (4x8-bit pixels, true color with transparency mask)"
+msgstr "``RGBA`` (4×8位像素，色彩真实与透明遮罩)"
+
+#: ../../handbook/concepts.rst:37
+msgid "``CMYK`` (4x8-bit pixels, color separation)"
+msgstr "``CMYK`` (4×8比特象素，分色)"
+
+#: ../../handbook/concepts.rst:38
+msgid "``YCbCr`` (3x8-bit pixels, color video format)"
+msgstr "``YCbCr`` (3×8位像素，彩色视频格式)"
+
+#: ../../handbook/concepts.rst:40
+msgid "Note that this refers to the JPEG, and not the ITU-R BT.2020, standard"
+msgstr "请注意，这指的是JPEG，而不是ITU-R BT.2020，标准"
+
+#: ../../handbook/concepts.rst:42
+msgid "``LAB`` (3x8-bit pixels, the L*a*b color space)"
+msgstr "``LAB`` (3x8-bit pixels, the L*a*b color space)"
+
+#: ../../handbook/concepts.rst:43
+msgid "``HSV`` (3x8-bit pixels, Hue, Saturation, Value color space)"
+msgstr "``HSV`` (3x8-bit pixels, Hue, Saturation, Value color space)"
+
+#: ../../handbook/concepts.rst:44
+msgid "``I`` (32-bit signed integer pixels)"
+msgstr "``I`` (32位带符号整数的像素)"
+
+#: ../../handbook/concepts.rst:45
+msgid "``F`` (32-bit floating point pixels)"
+msgstr "``F`` (32位浮点像素)"
+
+#: ../../handbook/concepts.rst:47
+msgid "Pillow also provides limited support for a few special modes, including:"
+msgstr "枕头也提供有限的支持少数特殊模式，包括:"
+
+#: ../../handbook/concepts.rst:49
+msgid "``LA`` (L with alpha)"
+msgstr "``LA`` (l当阿尔法)"
+
+#: ../../handbook/concepts.rst:50
+msgid "``PA`` (P with alpha)"
+msgstr "``PA`` (P阿尔法)"
+
+#: ../../handbook/concepts.rst:51
+msgid "``RGBX`` (true color with padding)"
+msgstr "``RGBX`` (真实的色彩与填充)"
+
+#: ../../handbook/concepts.rst:52
+msgid "``RGBa`` (true color with premultiplied alpha)"
+msgstr "``RGBa`` (真实的色彩与预乘alpha)"
+
+#: ../../handbook/concepts.rst:53
+msgid "``La`` (L with premultiplied alpha)"
+msgstr "``La`` (l当预乘alpha)"
+
+#: ../../handbook/concepts.rst:54
+msgid "``I;16`` (16-bit unsigned integer pixels)"
+msgstr "``I;16`` (16-bit unsigned integer pixels)"
+
+#: ../../handbook/concepts.rst:55
+msgid "``I;16L`` (16-bit little endian unsigned integer pixels)"
+msgstr "``I;16L`` (16-bit little endian unsigned integer pixels)"
+
+#: ../../handbook/concepts.rst:56
+msgid "``I;16B`` (16-bit big endian unsigned integer pixels)"
+msgstr "``I;16B`` (16-bit big endian unsigned integer pixels)"
+
+#: ../../handbook/concepts.rst:57
+msgid "``I;16N`` (16-bit native endian unsigned integer pixels)"
+msgstr "``I;16N`` (16-bit native endian unsigned integer pixels)"
+
+#: ../../handbook/concepts.rst:58
+msgid "``BGR;15`` (15-bit reversed true colour)"
+msgstr "``BGR;15`` (15-bit reversed true colour)"
+
+#: ../../handbook/concepts.rst:59
+msgid "``BGR;16`` (16-bit reversed true colour)"
+msgstr "``BGR;16`` (16-bit reversed true colour)"
+
+#: ../../handbook/concepts.rst:60
+msgid "``BGR;24`` (24-bit reversed true colour)"
+msgstr "``BGR;24`` (24-bit reversed true colour)"
+
+#: ../../handbook/concepts.rst:61
+msgid "``BGR;32`` (32-bit reversed true colour)"
+msgstr "``BGR;32`` (32-bit reversed true colour)"
+
+#: ../../handbook/concepts.rst:63
+msgid ""
+"However, Pillow doesn’t support user-defined modes; if you need to handle"
+" band combinations that are not listed above, use a sequence of Image "
+"objects."
+msgstr ""
+
+#: ../../handbook/concepts.rst:66
+msgid ""
+"You can read the mode of an image through the "
+":py:attr:`~PIL.Image.Image.mode` attribute. This is a string containing "
+"one of the above values."
+msgstr ""
+
+#: ../../handbook/concepts.rst:70
+msgid "Size"
+msgstr "尺寸"
+
+#: ../../handbook/concepts.rst:72
+msgid ""
+"You can read the image size through the :py:attr:`~PIL.Image.Image.size` "
+"attribute. This is a 2-tuple, containing the horizontal and vertical size"
+" in pixels."
+msgstr ""
+
+#: ../../handbook/concepts.rst:79
+msgid "Coordinate System"
+msgstr "坐标系"
+
+#: ../../handbook/concepts.rst:81
+msgid ""
+"The Python Imaging Library uses a Cartesian pixel coordinate system, with"
+" (0,0) in the upper left corner. Note that the coordinates refer to the "
+"implied pixel corners; the centre of a pixel addressed as (0, 0) actually"
+" lies at (0.5, 0.5)."
+msgstr ""
+
+#: ../../handbook/concepts.rst:85
+msgid ""
+"Coordinates are usually passed to the library as 2-tuples (x, y). "
+"Rectangles are represented as 4-tuples, with the upper left corner given "
+"first. For example, a rectangle covering all of an 800x600 pixel image is"
+" written as (0, 0, 800, 600)."
+msgstr ""
+
+#: ../../handbook/concepts.rst:91
+msgid "Palette"
+msgstr "调色板"
+
+#: ../../handbook/concepts.rst:93
+msgid ""
+"The palette mode (``P``) uses a color palette to define the actual color "
+"for each pixel."
+msgstr "调色板模式（``P``）使用一个调色板，以限定每个像素的实际色彩。"
+
+#: ../../handbook/concepts.rst:97
+msgid "Info"
+msgstr "信息"
+
+#: ../../handbook/concepts.rst:99
+msgid ""
+"You can attach auxiliary information to an image using the "
+":py:attr:`~PIL.Image.Image.info` attribute. This is a dictionary object."
+msgstr "您可以将辅助信息中使用的图像：PY：ATTR：`〜PIL.Image.Image.info`属性。这是一个字典对象。"
+
+#: ../../handbook/concepts.rst:102
+msgid ""
+"How such information is handled when loading and saving image files is up"
+" to the file format handler (see the chapter on :ref:`image-file-"
+"formats`). Most handlers add properties to the "
+":py:attr:`~PIL.Image.Image.info` attribute when loading an image, but "
+"ignore it when saving images."
+msgstr ""
+
+#: ../../handbook/concepts.rst:108
+msgid "Orientation"
+msgstr "取向"
+
+#: ../../handbook/concepts.rst:110
+msgid ""
+"A common element of the :py:attr:`~PIL.Image.Image.info` attribute for "
+"JPG and TIFF images is the EXIF orientation tag. This is an instruction "
+"for how the image data should be oriented. For example, it may instruct "
+"an image to be rotated by 90 degrees, or to be mirrored. To apply this "
+"information to an image, :py:meth:`~PIL.ImageOps.exif_transpose` can be "
+"used."
+msgstr ""
+
+#: ../../handbook/concepts.rst:119 ../../handbook/tutorial.rst:280
+msgid "Filters"
+msgstr "过滤器"
+
+#: ../../handbook/concepts.rst:121
+msgid ""
+"For geometry operations that may map multiple input pixels to a single "
+"output pixel, the Python Imaging Library provides different resampling "
+"*filters*."
+msgstr ""
+
+#: ../../handbook/concepts.rst:125 ../../handbook/concepts.rst:172
+msgid "``NEAREST``"
+msgstr "``NEAREST``"
+
+#: ../../handbook/concepts.rst:125
+msgid ""
+"Pick one nearest pixel from the input image. Ignore all other input "
+"pixels."
+msgstr "挑从输入图像的一个最近的像素。忽略其他所有输入像素。"
+
+#: ../../handbook/concepts.rst:134 ../../handbook/concepts.rst:174
+msgid "``BOX``"
+msgstr "``BOX``"
+
+#: ../../handbook/concepts.rst:128
+msgid ""
+"Each pixel of source image contributes to one pixel of the destination "
+"image with identical weights. For upscaling is equivalent of ``NEAREST``."
+" This filter can only be used with the :py:meth:`~PIL.Image.Image.resize`"
+" and :py:meth:`~PIL.Image.Image.thumbnail` methods."
+msgstr ""
+
+#: ../../handbook/concepts.rst:140 ../../handbook/concepts.rst:176
+msgid "``BILINEAR``"
+msgstr "``BILINEAR``"
+
+#: ../../handbook/concepts.rst:137
+msgid ""
+"For resize calculate the output pixel value using linear interpolation on"
+" all pixels that may contribute to the output value. For other "
+"transformations linear interpolation over a 2x2 environment in the input "
+"image is used."
+msgstr ""
+
+#: ../../handbook/concepts.rst:148 ../../handbook/concepts.rst:178
+msgid "``HAMMING``"
+msgstr "``HAMMING``"
+
+#: ../../handbook/concepts.rst:143
+msgid ""
+"Produces a sharper image than ``BILINEAR``, doesn't have dislocations on "
+"local level like with ``BOX``. This filter can only be used with the "
+":py:meth:`~PIL.Image.Image.resize` and "
+":py:meth:`~PIL.Image.Image.thumbnail` methods."
+msgstr ""
+
+#: ../../handbook/concepts.rst:154 ../../handbook/concepts.rst:180
+msgid "``BICUBIC``"
+msgstr "``BICUBIC``"
+
+#: ../../handbook/concepts.rst:151
+msgid ""
+"For resize calculate the output pixel value using cubic interpolation on "
+"all pixels that may contribute to the output value. For other "
+"transformations cubic interpolation over a 4x4 environment in the input "
+"image is used."
+msgstr ""
+
+#: ../../handbook/concepts.rst:163 ../../handbook/concepts.rst:182
+msgid "``LANCZOS``"
+msgstr "``LANCZOS``"
+
+#: ../../handbook/concepts.rst:157
+msgid ""
+"Calculate the output pixel value using a high-quality Lanczos filter (a "
+"truncated sinc) on all pixels that may contribute to the output value. "
+"This filter can only be used with the :py:meth:`~PIL.Image.Image.resize` "
+"and :py:meth:`~PIL.Image.Image.thumbnail` methods."
+msgstr ""
+
+#: ../../handbook/concepts.rst:166
+msgid "Filters comparison table"
+msgstr "过滤器比较表"
+
+#: ../../handbook/concepts.rst:169
+msgid "Filter"
+msgstr "过滤"
+
+#: ../../handbook/concepts.rst:169
+msgid "Downscaling quality"
+msgstr "Downscaling quality"
+
+#: ../../handbook/concepts.rst:169
+msgid "Upscaling quality"
+msgstr "Upscaling quality"
+
+#: ../../handbook/concepts.rst:169
+msgid "Performance"
+msgstr "Performance"
+
+#: ../../handbook/concepts.rst:172
+msgid "⭐⭐⭐⭐⭐"
+msgstr "⭐⭐⭐⭐⭐"
+
+#: ../../handbook/concepts.rst:174 ../../handbook/concepts.rst:176
+#: ../../handbook/concepts.rst:182
+msgid "⭐"
+msgstr "⭐"
+
+#: ../../handbook/concepts.rst:174 ../../handbook/concepts.rst:182
+msgid "⭐⭐⭐⭐"
+msgstr "⭐⭐⭐⭐"
+
+#: ../../handbook/concepts.rst:176 ../../handbook/concepts.rst:178
+#: ../../handbook/concepts.rst:180
+msgid "⭐⭐⭐"
+msgstr "⭐⭐⭐"
+
+#: ../../handbook/concepts.rst:178 ../../handbook/concepts.rst:180
+msgid "⭐⭐"
+msgstr "⭐⭐"
+
+#: ../../handbook/image-file-formats.rst:4
+msgid "Image file formats"
+msgstr "图像文件格式"
+
+#: ../../handbook/image-file-formats.rst:6
+msgid ""
+"The Python Imaging Library supports a wide variety of raster file "
+"formats. Over 30 different file formats can be identified and read by the"
+" library. Write support is less extensive, but most common interchange "
+"and presentation formats are supported."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:11
+msgid ""
+"The :py:meth:`~PIL.Image.Image.open` function identifies files from their"
+" contents, not their names, but the :py:meth:`~PIL.Image.Image.save` "
+"method looks at the name to determine which format to use, unless the "
+"format is given explicitly."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:17
+msgid "Fully supported formats"
+msgstr "完全支持的格式"
+
+#: ../../handbook/image-file-formats.rst:19
+msgid "目录"
+msgstr "目录"
+
+#: ../../handbook/image-file-formats.rst:22
+msgid "BMP"
+msgstr "BMP"
+
+#: ../../handbook/image-file-formats.rst:24
+msgid ""
+"Pillow reads and writes Windows and OS/2 BMP files containing ``1``, "
+"``L``, ``P``, or ``RGB`` data. 16-colour images are read as ``P`` images."
+" Run-length encoding is not supported."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:28
+#: ../../handbook/image-file-formats.rst:77
+#: ../../handbook/image-file-formats.rst:629
+#: ../../handbook/image-file-formats.rst:900
+#: ../../handbook/image-file-formats.rst:933
+#: ../../handbook/image-file-formats.rst:948
+#: ../../handbook/image-file-formats.rst:1064
+msgid ""
+"The :py:meth:`~PIL.Image.Image.open` method sets the following "
+":py:attr:`~PIL.Image.Image.info` properties:"
+msgstr "的：吡啶：甲基：`〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：`〜PIL.Image.Image.info`属性:"
+
+#: ../../handbook/image-file-formats.rst:32
+#: ../../handbook/image-file-formats.rst:635
+#: ../../handbook/image-file-formats.rst:739
+msgid "**compression**"
+msgstr "**压缩**"
+
+#: ../../handbook/image-file-formats.rst:32
+msgid "Set to ``bmp_rle`` if the file is run-length encoded."
+msgstr "如果文件被运行长度编码设置为``bmp_rle``。"
+
+#: ../../handbook/image-file-formats.rst:35
+msgid "DIB"
+msgstr "DIB"
+
+#: ../../handbook/image-file-formats.rst:37
+msgid ""
+"Pillow reads and writes DIB files. DIB files are similar to BMP files, so"
+" see above for more information."
+msgstr "枕头读取和写入DIB的文件。 DIB文件类似于BMP文件，所以见上文的详细信息。"
+
+#: ../../handbook/image-file-formats.rst:43
+msgid "EPS"
+msgstr "EPS"
+
+#: ../../handbook/image-file-formats.rst:45
+msgid ""
+"Pillow identifies EPS files containing image data, and can read files "
+"that contain embedded raster images (ImageData descriptors). If "
+"Ghostscript is available, other EPS files can be read as well. The EPS "
+"driver can also write EPS images. The EPS driver can read EPS images in "
+"``L``, ``LAB``, ``RGB`` and ``CMYK`` mode, but Ghostscript may convert "
+"the images to ``RGB`` mode rather than leaving them in the original color"
+" space. The EPS driver can write images in ``L``, ``RGB`` and ``CMYK`` "
+"modes."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:53
+msgid ""
+"If Ghostscript is available, you can call the "
+":py:meth:`~PIL.Image.Image.load` method with the following parameter to "
+"affect how Ghostscript renders the EPS"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:65
+msgid "**scale**"
+msgstr "**规模**"
+
+#: ../../handbook/image-file-formats.rst:57
+msgid ""
+"Affects the scale of the resultant rasterized image. If the EPS suggests "
+"that the image be rendered at 100px x 100px, setting this parameter to 2 "
+"will make the Ghostscript render a 200px x 200px image instead. The "
+"relative position of the bounding box is maintained::"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:68
+msgid "GIF"
+msgstr "GIF"
+
+#: ../../handbook/image-file-formats.rst:70
+msgid ""
+"Pillow reads GIF87a and GIF89a versions of the GIF file format. The "
+"library writes run-length encoded files in GIF87a by default, unless "
+"GIF89a features are used or GIF89a is already in use."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:74
+msgid ""
+"Note that GIF files are always read as grayscale (``L``) or palette mode "
+"(``P``) images."
+msgstr "需要注意的是GIF文件总是读出灰度（``L``）或调色板模式（``P``）图像。"
+
+#: ../../handbook/image-file-formats.rst:81
+#: ../../handbook/image-file-formats.rst:834
+msgid "**background**"
+msgstr "**background**"
+
+#: ../../handbook/image-file-formats.rst:81
+msgid "Default background color (a palette color index)."
+msgstr "默认的背景颜色（调色板颜色索引）。"
+
+#: ../../handbook/image-file-formats.rst:85
+#: ../../handbook/image-file-formats.rst:169
+#: ../../handbook/image-file-formats.rst:497
+#: ../../handbook/image-file-formats.rst:519
+#: ../../handbook/image-file-formats.rst:953
+#: ../../handbook/image-file-formats.rst:1069
+msgid "**transparency**"
+msgstr "**透明度**"
+
+#: ../../handbook/image-file-formats.rst:84
+#: ../../handbook/image-file-formats.rst:952
+#: ../../handbook/image-file-formats.rst:1068
+msgid ""
+"Transparency color index. This key is omitted if the image is not "
+"transparent."
+msgstr "透明色指数。如果图像是不透明的该键被省略。"
+
+#: ../../handbook/image-file-formats.rst:88
+msgid "**version**"
+msgstr "**version**"
+
+#: ../../handbook/image-file-formats.rst:88
+msgid "Version (either ``GIF87a`` or ``GIF89a``)."
+msgstr "Version (either ``GIF87a`` or ``GIF89a``)."
+
+#: ../../handbook/image-file-formats.rst:92
+#: ../../handbook/image-file-formats.rst:174
+#: ../../handbook/image-file-formats.rst:827
+#: ../../handbook/image-file-formats.rst:904
+msgid "**duration**"
+msgstr "**duration**"
+
+#: ../../handbook/image-file-formats.rst:91
+msgid ""
+"May not be present. The time to display the current frame of the GIF, in "
+"milliseconds."
+msgstr "可能不存在。的时间，以显示GIF的当前帧，以毫秒为单位。"
+
+#: ../../handbook/image-file-formats.rst:96
+#: ../../handbook/image-file-formats.rst:178
+#: ../../handbook/image-file-formats.rst:830
+msgid "**loop**"
+msgstr "**loop**"
+
+#: ../../handbook/image-file-formats.rst:95
+msgid ""
+"May not be present. The number of times the GIF should loop. 0 means that"
+" it will loop forever."
+msgstr "可能不存在。时代的GIF应该循环的数量。 0意味着它将永远循环下去。"
+
+#: ../../handbook/image-file-formats.rst:99
+#: ../../handbook/image-file-formats.rst:181
+#: ../../handbook/image-file-formats.rst:937
+msgid "**comment**"
+msgstr "**comment**"
+
+#: ../../handbook/image-file-formats.rst:99
+msgid "May not be present. A comment about the image."
+msgstr "可能不存在。有关图像的注释。"
+
+#: ../../handbook/image-file-formats.rst:102
+msgid "**extension**"
+msgstr "**extension**"
+
+#: ../../handbook/image-file-formats.rst:102
+msgid "May not be present. Contains application specific information."
+msgstr "可能不存在。包含应用程序的具体信息。"
+
+#: ../../handbook/image-file-formats.rst:105 ../../handbook/tutorial.rst:377
+msgid "Reading sequences"
+msgstr "读出序列"
+
+#: ../../handbook/image-file-formats.rst:107
+msgid ""
+"The GIF loader supports the :py:meth:`~PIL.Image.Image.seek` and "
+":py:meth:`~PIL.Image.Image.tell` methods. You can combine these methods "
+"to seek to the next frame (``im.seek(im.tell() + 1)``)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:111
+#: ../../handbook/image-file-formats.rst:677
+msgid ""
+"``im.seek()`` raises an :py:exc:`EOFError` if you try to seek after the "
+"last frame."
+msgstr "``im.seek（）``引发：PY：EXC：`EOFError`如果你试图在最后一帧后寻求。"
+
+#: ../../handbook/image-file-formats.rst:114
+msgid "Saving"
+msgstr "Saving"
+
+#: ../../handbook/image-file-formats.rst:116
+msgid ""
+"When calling :py:meth:`~PIL.Image.Image.save` to write a GIF file, the "
+"following options are available::"
+msgstr "当调用：PY：甲基：`〜PIL.Image.Image.save`写一个GIF文件，下列选项可用::"
+
+#: ../../handbook/image-file-formats.rst:123
+#: ../../handbook/image-file-formats.rst:688
+#: ../../handbook/image-file-formats.rst:1095
+msgid "**save_all**"
+msgstr "**save_all**"
+
+#: ../../handbook/image-file-formats.rst:122
+msgid ""
+"If present and true, all frames of the image will be saved. If not, then "
+"only the first frame of a multiframe image will be saved."
+msgstr "如果存在，真实，图像的所有帧将被保存。如果没有，那么只有一个多帧图像的第一帧将被保存。"
+
+#: ../../handbook/image-file-formats.rst:131
+#: ../../handbook/image-file-formats.rst:226
+#: ../../handbook/image-file-formats.rst:696
+#: ../../handbook/image-file-formats.rst:822
+#: ../../handbook/image-file-formats.rst:1101
+msgid "**append_images**"
+msgstr "**append_images**"
+
+#: ../../handbook/image-file-formats.rst:126
+msgid ""
+"A list of images to append as additional frames. Each of the images in "
+"the list can be single or multiframe images. This is currently supported "
+"for GIF, PDF, TIFF, and WebP."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:130
+msgid ""
+"It is also supported for ICNS. If images are passed in of relevant sizes,"
+" they will be used instead of scaling down the main image."
+msgstr "它也支持ICNS。如果图像相关尺寸的通过，他们将被用来代替缩小主图像。"
+
+#: ../../handbook/image-file-formats.rst:134
+msgid "**include_color_table**"
+msgstr "**include_color_table**"
+
+#: ../../handbook/image-file-formats.rst:134
+msgid "Whether or not to include local color table."
+msgstr "Whether or not to include local color table."
+
+#: ../../handbook/image-file-formats.rst:138
+msgid "**interlace**"
+msgstr "**interlace**"
+
+#: ../../handbook/image-file-formats.rst:137
+msgid ""
+"Whether or not the image is interlaced. By default, it is, unless the "
+"image is less than 16 pixels in width or height."
+msgstr "无论图像交错。默认情况下，它是，除非图像的宽度或高度小于16个像素。"
+
+#: ../../handbook/image-file-formats.rst:149
+msgid "**disposal**"
+msgstr "**disposal**"
+
+#: ../../handbook/image-file-formats.rst:141
+msgid ""
+"Indicates the way in which the graphic is to be treated after being "
+"displayed."
+msgstr "指示其中图形是被显示之后，待处理的方式。"
+
+#: ../../handbook/image-file-formats.rst:143
+msgid "0 - No disposal specified."
+msgstr "0 - No disposal specified."
+
+#: ../../handbook/image-file-formats.rst:144
+msgid "1 - Do not dispose."
+msgstr "1 - Do not dispose."
+
+#: ../../handbook/image-file-formats.rst:145
+msgid "2 - Restore to background color."
+msgstr "2 - Restore to background color."
+
+#: ../../handbook/image-file-formats.rst:146
+msgid "3 - Restore to previous content."
+msgstr "3 - Restore to previous content."
+
+#: ../../handbook/image-file-formats.rst:148
+msgid ""
+"Pass a single integer for a constant disposal, or a list or tuple to set "
+"the disposal for each frame separately."
+msgstr "通过对于恒定的处置的单一的整数，或列表或元组分别设定处置对于每个帧。"
+
+#: ../../handbook/image-file-formats.rst:156
+msgid "**palette**"
+msgstr "**palette**"
+
+#: ../../handbook/image-file-formats.rst:152
+msgid ""
+"Use the specified palette for the saved image. The palette should be a "
+"bytes or bytearray object containing the palette entries in RGBRGB... "
+"form. It should be no more than 768 bytes. Alternately, the palette can "
+"be passed in as an :py:class:`PIL.ImagePalette.ImagePalette` object."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:161
+#: ../../handbook/image-file-formats.rst:312
+#: ../../handbook/image-file-formats.rst:512
+msgid "**optimize**"
+msgstr "**optimize**"
+
+#: ../../handbook/image-file-formats.rst:159
+msgid ""
+"If present and true, attempt to compress the palette by eliminating "
+"unused colors. This is only useful if the palette can be compressed to "
+"the next smaller power of 2 elements."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:163
+msgid ""
+"Note that if the image you are saving comes from an existing GIF, it may "
+"have the following properties in its :py:attr:`~PIL.Image.Image.info` "
+"dictionary. For these options, if you do not pass them in, they will "
+"default to their :py:attr:`~PIL.Image.Image.info` values."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:169
+msgid "Transparency color index."
+msgstr "Transparency color index."
+
+#: ../../handbook/image-file-formats.rst:172
+msgid ""
+"The display duration of each frame of the multiframe gif, in "
+"milliseconds. Pass a single integer for a constant duration, or a list or"
+" tuple to set the duration for each frame separately."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:177
+msgid ""
+"Integer number of times the GIF should loop. 0 means that it will loop "
+"forever. By default, the image will not loop."
+msgstr "整数次数的GIF应该循环。 0意味着它将永远循环下去。默认情况下，图像将无法循环。"
+
+#: ../../handbook/image-file-formats.rst:181
+msgid "A comment about the image."
+msgstr "A comment about the image."
+
+#: ../../handbook/image-file-formats.rst:184
+msgid "Reading local images"
+msgstr "Reading local images"
+
+#: ../../handbook/image-file-formats.rst:186
+msgid ""
+"The GIF loader creates an image memory the same size as the GIF file’s "
+"*logical screen size*, and pastes the actual pixel data (the *local "
+"image*) into this image. If you only want the actual pixel rectangle, you"
+" can manipulate the :py:attr:`~PIL.Image.Image.size` and "
+":py:attr:`~PIL.Image.Image.tile` attributes before loading the file::"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:201
+msgid "ICNS"
+msgstr "ICNS"
+
+#: ../../handbook/image-file-formats.rst:203
+msgid ""
+"Pillow reads and (macOS only) writes macOS ``.icns`` files.  By default, "
+"the largest available icon is read, though you can override this by "
+"setting the :py:attr:`~PIL.Image.Image.size` property before calling "
+":py:meth:`~PIL.Image.Image.load`.  The :py:meth:`~PIL.Image.Image.open` "
+"method sets the following :py:attr:`~PIL.Image.Image.info` property:"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:217
+#: ../../handbook/image-file-formats.rst:239
+msgid "**sizes**"
+msgstr "**sizes**"
+
+#: ../../handbook/image-file-formats.rst:210
+msgid ""
+"A list of supported sizes found in this icon file; these are a 3-tuple, "
+"``(width, height, scale)``, where ``scale`` is 2 for a retina icon and 1 "
+"for a standard icon.  You *are* permitted to use this 3-tuple format for "
+"the :py:attr:`~PIL.Image.Image.size` property if you set it before "
+"calling :py:meth:`~PIL.Image.Image.load`; after loading, the size will be"
+" reset to a 2-tuple containing pixel dimensions (so, e.g. if you ask for "
+"``(512, 512, 2)``, the final value of :py:attr:`~PIL.Image.Image.size` "
+"will be ``(1024, 1024)``)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:219
+#: ../../handbook/image-file-formats.rst:683
+#: ../../handbook/image-file-formats.rst:1088
+msgid ""
+"The :py:meth:`~PIL.Image.Image.save` method can take the following "
+"keyword arguments:"
+msgstr "The :py:meth:`~PIL.Image.Image.save` method can take the following keyword arguments:"
+
+#: ../../handbook/image-file-formats.rst:222
+msgid ""
+"A list of images to replace the scaled down versions of the image. The "
+"order of the images does not matter, as their use is determined by the "
+"size of each image."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:229
+msgid "ICO"
+msgstr "ICO"
+
+#: ../../handbook/image-file-formats.rst:231
+msgid "ICO is used to store icons on Windows. The largest available icon is read."
+msgstr "ICO用于在Windows应用商店图标。最大可用图标被读取。"
+
+#: ../../handbook/image-file-formats.rst:233
+#: ../../handbook/image-file-formats.rst:302
+#: ../../handbook/image-file-formats.rst:379
+#: ../../handbook/image-file-formats.rst:507
+#: ../../handbook/image-file-formats.rst:785
+msgid ""
+"The :py:meth:`~PIL.Image.Image.save` method supports the following "
+"options:"
+msgstr "The :py:meth:`~PIL.Image.Image.save` method supports the following options:"
+
+#: ../../handbook/image-file-formats.rst:236
+msgid ""
+"A list of sizes including in this ico file; these are a 2-tuple, "
+"``(width, height)``; Default to ``[(16, 16), (24, 24), (32, 32), (48, "
+"48), (64, 64), (128, 128), (256, 256)]``. Any sizes bigger than the "
+"original size or 256 will be ignored."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:242
+msgid "IM"
+msgstr "IM"
+
+#: ../../handbook/image-file-formats.rst:244
+msgid ""
+"IM is a format used by LabEye and other applications based on the IFUNC "
+"image processing library. The library reads and writes most uncompressed "
+"interchange versions of this format."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:248
+msgid "IM is the only format that can store all internal Pillow formats."
+msgstr "IM是可以存储所有内部枕格式的唯一格式。"
+
+#: ../../handbook/image-file-formats.rst:251
+msgid "JPEG"
+msgstr "JPEG"
+
+#: ../../handbook/image-file-formats.rst:253
+msgid ""
+"Pillow reads JPEG, JFIF, and Adobe JPEG files containing ``L``, ``RGB``, "
+"or ``CMYK`` data. It writes standard and progressive JFIF files."
+msgstr "枕头读取JPEG，JFIF和Adobe JPEG文件包含``L``，``RGB``，或``CMYK``数据。它写入标准和渐进JFIF文件。"
+
+#: ../../handbook/image-file-formats.rst:256
+msgid ""
+"Using the :py:meth:`~PIL.Image.Image.draft` method, you can speed things "
+"up by converting ``RGB`` images to ``L``, and resize images to 1/2, 1/4 "
+"or 1/8 of their original size while loading them."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:260
+msgid ""
+"The :py:meth:`~PIL.Image.Image.open` method may set the following "
+":py:attr:`~PIL.Image.Image.info` properties if available:"
+msgstr "The :py:meth:`~PIL.Image.Image.open` method may set the following :py:attr:`~PIL.Image.Image.info` properties if available:"
+
+#: ../../handbook/image-file-formats.rst:265
+msgid "**jfif**"
+msgstr "**jfif**"
+
+#: ../../handbook/image-file-formats.rst:264
+msgid ""
+"JFIF application marker found. If the file is not a JFIF file, this key "
+"is not present."
+msgstr "JFIF应用标记发现。如果文件不是一个JFIF文件，这个键不存在。"
+
+#: ../../handbook/image-file-formats.rst:268
+msgid "**jfif_version**"
+msgstr "**jfif_version**"
+
+#: ../../handbook/image-file-formats.rst:268
+msgid "A tuple representing the jfif version, (major version, minor version)."
+msgstr "A tuple representing the jfif version, (major version, minor version)."
+
+#: ../../handbook/image-file-formats.rst:272
+msgid "**jfif_density**"
+msgstr "**jfif_density**"
+
+#: ../../handbook/image-file-formats.rst:271
+msgid ""
+"A tuple representing the pixel density of the image, in units specified "
+"by jfif_unit."
+msgstr "A tuple representing the pixel density of the image, in units specified by jfif_unit."
+
+#: ../../handbook/image-file-formats.rst:279
+msgid "**jfif_unit**"
+msgstr "**jfif_unit**"
+
+#: ../../handbook/image-file-formats.rst:275
+msgid "Units for the jfif_density:"
+msgstr "Units for the jfif_density:"
+
+#: ../../handbook/image-file-formats.rst:277
+msgid "0 - No Units"
+msgstr "0 - No Units"
+
+#: ../../handbook/image-file-formats.rst:278
+msgid "1 - Pixels per Inch"
+msgstr "1 - Pixels per Inch"
+
+#: ../../handbook/image-file-formats.rst:279
+msgid "2 - Pixels per Centimeter"
+msgstr "2 - Pixels per Centimeter"
+
+#: ../../handbook/image-file-formats.rst:283
+#: ../../handbook/image-file-formats.rst:319
+#: ../../handbook/image-file-formats.rst:522
+#: ../../handbook/image-file-formats.rst:642
+#: ../../handbook/image-file-formats.rst:777
+msgid "**dpi**"
+msgstr "**dpi**"
+
+#: ../../handbook/image-file-formats.rst:282
+msgid ""
+"A tuple representing the reported pixel density in pixels per inch, if "
+"the file is a jfif file and the units are in inches."
+msgstr "A tuple representing the reported pixel density in pixels per inch, if the file is a jfif file and the units are in inches."
+
+#: ../../handbook/image-file-formats.rst:287
+msgid "**adobe**"
+msgstr "**adobe**"
+
+#: ../../handbook/image-file-formats.rst:286
+msgid ""
+"Adobe application marker found. If the file is not an Adobe JPEG file, "
+"this key is not present."
+msgstr "Adobe application marker found. If the file is not an Adobe JPEG file, this key is not present."
+
+#: ../../handbook/image-file-formats.rst:290
+msgid "**adobe_transform**"
+msgstr "**adobe_transform**"
+
+#: ../../handbook/image-file-formats.rst:290
+msgid "Vendor Specific Tag."
+msgstr "Vendor Specific Tag."
+
+#: ../../handbook/image-file-formats.rst:293
+#: ../../handbook/image-file-formats.rst:426
+msgid "**progression**"
+msgstr "**progression**"
+
+#: ../../handbook/image-file-formats.rst:293
+msgid "Indicates that this is a progressive JPEG file."
+msgstr "Indicates that this is a progressive JPEG file."
+
+#: ../../handbook/image-file-formats.rst:296
+#: ../../handbook/image-file-formats.rst:326
+#: ../../handbook/image-file-formats.rst:534
+#: ../../handbook/image-file-formats.rst:801
+msgid "**icc_profile**"
+msgstr "**icc_profile**"
+
+#: ../../handbook/image-file-formats.rst:296
+msgid "The ICC color profile for the image."
+msgstr "The ICC color profile for the image."
+
+#: ../../handbook/image-file-formats.rst:300
+#: ../../handbook/image-file-formats.rst:329
+#: ../../handbook/image-file-formats.rst:539
+#: ../../handbook/image-file-formats.rst:805
+msgid "**exif**"
+msgstr "**exif**"
+
+#: ../../handbook/image-file-formats.rst:299
+msgid "Raw EXIF data from the image."
+msgstr "Raw EXIF data from the image."
+
+#: ../../handbook/image-file-formats.rst:308
+#: ../../handbook/image-file-formats.rst:745
+#: ../../handbook/image-file-formats.rst:794
+msgid "**quality**"
+msgstr "**quality**"
+
+#: ../../handbook/image-file-formats.rst:305
+msgid ""
+"The image quality, on a scale from 1 (worst) to 95 (best). The default is"
+" 75. Values above 95 should be avoided; 100 disables portions of the JPEG"
+" compression algorithm, and results in large files with hardly any gain "
+"in image quality."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:311
+msgid ""
+"If present and true, indicates that the encoder should make an extra pass"
+" over the image in order to select optimal encoder settings."
+msgstr "If present and true, indicates that the encoder should make an extra pass over the image in order to select optimal encoder settings."
+
+#: ../../handbook/image-file-formats.rst:316
+msgid "**progressive**"
+msgstr "**progressive**"
+
+#: ../../handbook/image-file-formats.rst:315
+msgid ""
+"If present and true, indicates that this image should be stored as a "
+"progressive JPEG file."
+msgstr "If present and true, indicates that this image should be stored as a progressive JPEG file."
+
+#: ../../handbook/image-file-formats.rst:319
+msgid "A tuple of integers representing the pixel density, ``(x,y)``."
+msgstr "A tuple of integers representing the pixel density, ``(x,y)``."
+
+#: ../../handbook/image-file-formats.rst:322
+msgid ""
+"If present and true, the image is stored with the provided ICC profile. "
+"If this parameter is not provided, the image will be saved with no "
+"profile attached. To preserve the existing profile::"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:329
+msgid "If present, the image will be stored with the provided raw EXIF data."
+msgstr "If present, the image will be stored with the provided raw EXIF data."
+
+#: ../../handbook/image-file-formats.rst:339
+msgid "**subsampling**"
+msgstr "**subsampling**"
+
+#: ../../handbook/image-file-formats.rst:332
+msgid "If present, sets the subsampling for the encoder."
+msgstr "If present, sets the subsampling for the encoder."
+
+#: ../../handbook/image-file-formats.rst:334
+msgid ""
+"``keep``: Only valid for JPEG files, will retain the original image "
+"setting."
+msgstr "``keep``: Only valid for JPEG files, will retain the original image setting."
+
+#: ../../handbook/image-file-formats.rst:335
+msgid "``4:4:4``, ``4:2:2``, ``4:2:0``: Specific sampling values"
+msgstr "``4:4:4``, ``4:2:2``, ``4:2:0``: Specific sampling values"
+
+#: ../../handbook/image-file-formats.rst:336
+msgid "``-1``: equivalent to ``keep``"
+msgstr "``-1``: equivalent to ``keep``"
+
+#: ../../handbook/image-file-formats.rst:337
+msgid "``0``: equivalent to ``4:4:4``"
+msgstr "``0``: equivalent to ``4:4:4``"
+
+#: ../../handbook/image-file-formats.rst:338
+msgid "``1``: equivalent to ``4:2:2``"
+msgstr "``1``: equivalent to ``4:2:2``"
+
+#: ../../handbook/image-file-formats.rst:339
+msgid "``2``: equivalent to ``4:2:0``"
+msgstr "``2``: equivalent to ``4:2:0``"
+
+#: ../../handbook/image-file-formats.rst:352
+msgid "**qtables**"
+msgstr "**qtables**"
+
+#: ../../handbook/image-file-formats.rst:342
+msgid ""
+"If present, sets the qtables for the encoder. This is listed as an "
+"advanced option for wizards in the JPEG documentation. Use with caution. "
+"``qtables`` can be one of several types of values:"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:346
+msgid "a string, naming a preset, e.g. ``keep``, ``web_low``, or ``web_high``"
+msgstr "a string, naming a preset, e.g. ``keep``, ``web_low``, or ``web_high``"
+
+#: ../../handbook/image-file-formats.rst:347
+msgid ""
+"a list, tuple, or dictionary (with integer keys = range(len(keys))) of "
+"lists of 64 integers. There must be between 2 and 4 tables."
+msgstr "a list, tuple, or dictionary (with integer keys = range(len(keys))) of lists of 64 integers. There must be between 2 and 4 tables."
+
+#: ../../handbook/image-file-formats.rst:356
+msgid ""
+"To enable JPEG support, you need to build and install the IJG JPEG "
+"library before building the Python Imaging Library. See the distribution "
+"README for details."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:361
+msgid "JPEG 2000"
+msgstr "JPEG 2000"
+
+#: ../../handbook/image-file-formats.rst:365
+msgid ""
+"Pillow reads and writes JPEG 2000 files containing ``L``, ``LA``, ``RGB``"
+" or ``RGBA`` data.  It can also read files containing ``YCbCr`` data, "
+"which it converts on read into ``RGB`` or ``RGBA`` depending on whether "
+"or not there is an alpha channel.  Pillow supports JPEG 2000 raw "
+"codestreams (``.j2k`` files), as well as boxed JPEG 2000 files (``.j2p`` "
+"or ``.jpx`` files).  Pillow does *not* support files whose components "
+"have different sampling frequencies."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:372
+msgid ""
+"When loading, if you set the ``mode`` on the image prior to the "
+":py:meth:`~PIL.Image.Image.load` method being invoked, you can ask Pillow"
+" to convert the image to either ``RGB`` or ``RGBA`` rather than choosing "
+"for itself.  It is also possible to set ``reduce`` to the number of "
+"resolutions to discard (each one reduces the size of the resulting image "
+"by a factor of 2), and ``layers`` to specify the number of quality layers"
+" to load."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:382
+#: ../../handbook/writing-your-own-file-decoder.rst:131
+msgid "**offset**"
+msgstr "**offset**"
+
+#: ../../handbook/image-file-formats.rst:382
+msgid "The image offset, as a tuple of integers, e.g. (16, 16)"
+msgstr "The image offset, as a tuple of integers, e.g. (16, 16)"
+
+#: ../../handbook/image-file-formats.rst:385
+msgid "**tile_offset**"
+msgstr "**tile_offset**"
+
+#: ../../handbook/image-file-formats.rst:385
+msgid "The tile offset, again as a 2-tuple of integers."
+msgstr "The tile offset, again as a 2-tuple of integers."
+
+#: ../../handbook/image-file-formats.rst:389
+msgid "**tile_size**"
+msgstr "**tile_size**"
+
+#: ../../handbook/image-file-formats.rst:388
+msgid ""
+"The tile size as a 2-tuple.  If not specified, or if set to None, the "
+"image will be saved without tiling."
+msgstr "The tile size as a 2-tuple.  If not specified, or if set to None, the image will be saved without tiling."
+
+#: ../../handbook/image-file-formats.rst:393
+msgid "**quality_mode**"
+msgstr "**quality_mode**"
+
+#: ../../handbook/image-file-formats.rst:392
+msgid ""
+"Either ``\"rates\"`` or ``\"dB\"`` depending on the units you want to use"
+" to specify image quality."
+msgstr "Either ``\"rates\"`` or ``\"dB\"`` depending on the units you want to use to specify image quality."
+
+#: ../../handbook/image-file-formats.rst:398
+msgid "**quality_layers**"
+msgstr "**quality_layers**"
+
+#: ../../handbook/image-file-formats.rst:396
+msgid ""
+"A sequence of numbers, each of which represents either an approximate "
+"size reduction (if quality mode is ``\"rates\"``) or a signal to noise "
+"ratio value in decibels.  If not specified, defaults to a single layer of"
+" full quality."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:402
+msgid "**num_resolutions**"
+msgstr "**num_resolutions**"
+
+#: ../../handbook/image-file-formats.rst:401
+msgid ""
+"The number of different image resolutions to be stored (which corresponds"
+" to the number of Discrete Wavelet Transform decompositions plus one)."
+msgstr "The number of different image resolutions to be stored (which corresponds to the number of Discrete Wavelet Transform decompositions plus one)."
+
+#: ../../handbook/image-file-formats.rst:408
+msgid "**codeblock_size**"
+msgstr "**codeblock_size**"
+
+#: ../../handbook/image-file-formats.rst:405
+msgid ""
+"The code-block size as a 2-tuple.  Minimum size is 4 x 4, maximum is 1024"
+" x 1024, with the additional restriction that no code-block may have more"
+" than 4096 coefficients (i.e. the product of the two numbers must be no "
+"greater than 4096)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:412
+msgid "**precinct_size**"
+msgstr "**precinct_size**"
+
+#: ../../handbook/image-file-formats.rst:411
+msgid ""
+"The precinct size as a 2-tuple.  Must be a power of two along both axes, "
+"and must be greater than the code-block size."
+msgstr "The precinct size as a 2-tuple.  Must be a power of two along both axes, and must be greater than the code-block size."
+
+#: ../../handbook/image-file-formats.rst:417
+msgid "**irreversible**"
+msgstr "**irreversible**"
+
+#: ../../handbook/image-file-formats.rst:415
+msgid ""
+"If ``True``, use the lossy Irreversible Color Transformation followed by "
+"DWT 9-7.  Defaults to ``False``, which means to use the Reversible Color "
+"Transformation with DWT 5-3."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:420
+msgid ""
+"Controls the progression order; must be one of ``\"LRCP\"``, "
+"``\"RLCP\"``, ``\"RPCL\"``, ``\"PCRL\"``, ``\"CPRL\"``.  The letters "
+"stand for Component, Position, Resolution and Layer respectively and "
+"control the order of encoding, the idea being that e.g. an image encoded "
+"using LRCP mode can have its quality layers decoded as they arrive at the"
+" decoder, while one encoded using RLCP mode will have increasing "
+"resolutions decoded as they arrive, and so on."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:435
+msgid "**cinema_mode**"
+msgstr "**cinema_mode**"
+
+#: ../../handbook/image-file-formats.rst:429
+msgid ""
+"Set the encoder to produce output compliant with the digital cinema "
+"specifications.  The options here are ``\"no\"`` (the default), "
+"``\"cinema2k-24\"`` for 24fps 2K, ``\"cinema2k-48\"`` for 48fps 2K, and "
+"``\"cinema4k-24\"`` for 24fps 4K.  Note that for compliant 2K files, *at "
+"least one* of your image dimensions must match 2048 x 1080, while for "
+"compliant 4K files, *at least one* of the dimensions must match 4096 x "
+"2160."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:439
+msgid ""
+"To enable JPEG 2000 support, you need to build and install the OpenJPEG "
+"library, version 2.0.0 or higher, before building the Python Imaging "
+"Library."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:443
+msgid ""
+"Windows users can install the OpenJPEG binaries available on the OpenJPEG"
+" website, but must add them to their PATH in order to use Pillow (if you "
+"fail to do this, you will get errors about not being able to load the "
+"``_imaging`` DLL)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:449
+msgid "MSP"
+msgstr "MSP"
+
+#: ../../handbook/image-file-formats.rst:451
+msgid ""
+"Pillow identifies and reads MSP files from Windows 1 and 2. The library "
+"writes uncompressed (Windows 1) versions of this format."
+msgstr "Pillow identifies and reads MSP files from Windows 1 and 2. The library writes uncompressed (Windows 1) versions of this format."
+
+#: ../../handbook/image-file-formats.rst:455
+msgid "PCX"
+msgstr "PCX"
+
+#: ../../handbook/image-file-formats.rst:457
+msgid ""
+"Pillow reads and writes PCX files containing ``1``, ``L``, ``P``, or "
+"``RGB`` data."
+msgstr "Pillow reads and writes PCX files containing ``1``, ``L``, ``P``, or ``RGB`` data."
+
+#: ../../handbook/image-file-formats.rst:460
+msgid "PNG"
+msgstr "PNG"
+
+#: ../../handbook/image-file-formats.rst:462
+msgid ""
+"Pillow identifies, reads, and writes PNG files containing ``1``, ``L``, "
+"``LA``, ``I``, ``P``, ``RGB`` or ``RGBA`` data. Interlaced files are "
+"supported as of v1.1.7."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:466
+msgid ""
+"As of Pillow 6.0, EXIF data can be read from PNG images. However, unlike "
+"other image formats, EXIF data is not guaranteed to be present in "
+":py:attr:`~PIL.Image.Image.info` until :py:meth:`~PIL.Image.Image.load` "
+"has been called."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:471
+msgid ""
+"The :py:meth:`~PIL.Image.Image.open` method sets the following "
+":py:attr:`~PIL.Image.Image.info` properties, when appropriate:"
+msgstr "The :py:meth:`~PIL.Image.Image.open` method sets the following :py:attr:`~PIL.Image.Image.info` properties, when appropriate:"
+
+#: ../../handbook/image-file-formats.rst:477
+msgid "**chromaticity**"
+msgstr "**chromaticity**"
+
+#: ../../handbook/image-file-formats.rst:475
+msgid ""
+"The chromaticity points, as an 8 tuple of floats. (``White Point X``, "
+"``White Point Y``, ``Red X``, ``Red Y``, ``Green X``, ``Green Y``, ``Blue"
+" X``, ``Blue Y``)"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:480
+msgid "**gamma**"
+msgstr "**gamma**"
+
+#: ../../handbook/image-file-formats.rst:480
+msgid "Gamma, given as a floating point number."
+msgstr "Gamma, given as a floating point number."
+
+#: ../../handbook/image-file-formats.rst:488
+msgid "**srgb**"
+msgstr "**srgb**"
+
+#: ../../handbook/image-file-formats.rst:483
+msgid "The sRGB rendering intent as an integer."
+msgstr "The sRGB rendering intent as an integer."
+
+#: ../../handbook/image-file-formats.rst:485
+msgid "0 Perceptual"
+msgstr "0 Perceptual"
+
+#: ../../handbook/image-file-formats.rst:486
+msgid "1 Relative Colorimetric"
+msgstr "1 Relative Colorimetric"
+
+#: ../../handbook/image-file-formats.rst:487
+msgid "2 Saturation"
+msgstr "2 Saturation"
+
+#: ../../handbook/image-file-formats.rst:488
+msgid "3 Absolute Colorimetric"
+msgstr "3 Absolute Colorimetric"
+
+#: ../../handbook/image-file-formats.rst:491
+msgid ""
+"For ``P`` images: Either the palette index for full transparent pixels, "
+"or a byte string with alpha values for each palette entry."
+msgstr "For ``P`` images: Either the palette index for full transparent pixels, or a byte string with alpha values for each palette entry."
+
+#: ../../handbook/image-file-formats.rst:494
+msgid ""
+"For ``1``, ``L``, ``I`` and ``RGB`` images, the color that represents "
+"full transparent pixels in this image."
+msgstr "For ``1``, ``L``, ``I`` and ``RGB`` images, the color that represents full transparent pixels in this image."
+
+#: ../../handbook/image-file-formats.rst:497
+msgid "This key is omitted if the image is not a transparent palette image."
+msgstr "This key is omitted if the image is not a transparent palette image."
+
+#: ../../handbook/image-file-formats.rst:499
+msgid ""
+"``open`` also sets ``Image.text`` to a dictionary of the values of the "
+"``tEXt``, ``zTXt``, and ``iTXt`` chunks of the PNG image. Individual "
+"compressed chunks are limited to a decompressed size of "
+"``PngImagePlugin.MAX_TEXT_CHUNK``, by default 1MB, to prevent "
+"decompression bombs. Additionally, the total size of all of the text "
+"chunks is limited to ``PngImagePlugin.MAX_TEXT_MEMORY``, defaulting to "
+"64MB."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:510
+msgid ""
+"If present and true, instructs the PNG writer to make the output file as "
+"small as possible. This includes extra processing in order to find "
+"optimal encoder settings."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:515
+msgid ""
+"For ``P``, ``1``, ``L``, ``I``, and ``RGB`` images, this option controls "
+"what color from the image to mark as transparent."
+msgstr "For ``P``, ``1``, ``L``, ``I``, and ``RGB`` images, this option controls what color from the image to mark as transparent."
+
+#: ../../handbook/image-file-formats.rst:518
+msgid ""
+"For ``P`` images, this can be a either the palette index, or a byte "
+"string with alpha values for each palette entry."
+msgstr "For ``P`` images, this can be a either the palette index, or a byte string with alpha values for each palette entry."
+
+#: ../../handbook/image-file-formats.rst:522
+msgid "A tuple of two numbers corresponding to the desired dpi in each direction."
+msgstr "A tuple of two numbers corresponding to the desired dpi in each direction."
+
+#: ../../handbook/image-file-formats.rst:525
+msgid "**pnginfo**"
+msgstr "**pnginfo**"
+
+#: ../../handbook/image-file-formats.rst:525
+msgid "A :py:class:`PIL.PngImagePlugin.PngInfo` instance containing text tags."
+msgstr "A :py:class:`PIL.PngImagePlugin.PngInfo` instance containing text tags."
+
+#: ../../handbook/image-file-formats.rst:531
+msgid "**compress_level**"
+msgstr "**compress_level**"
+
+#: ../../handbook/image-file-formats.rst:528
+msgid ""
+"ZLIB compression level, a number between 0 and 9: 1 gives best speed, 9 "
+"gives best compression, 0 gives no compression at all. Default is 6. When"
+" ``optimize`` option is True ``compress_level`` has no effect (it is set "
+"to 9 regardless of a value passed)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:534
+msgid "The ICC Profile to include in the saved file."
+msgstr "The ICC Profile to include in the saved file."
+
+#: ../../handbook/image-file-formats.rst:537
+msgid "The exif data to include in the saved file."
+msgstr "The exif data to include in the saved file."
+
+#: ../../handbook/image-file-formats.rst:543
+msgid "**bits (experimental)**"
+msgstr "**bits (experimental)**"
+
+#: ../../handbook/image-file-formats.rst:542
+msgid ""
+"For ``P`` images, this option controls how many bits to store. If "
+"omitted, the PNG writer uses 8 bits (256 colors)."
+msgstr "For ``P`` images, this option controls how many bits to store. If omitted, the PNG writer uses 8 bits (256 colors)."
+
+#: ../../handbook/image-file-formats.rst:546
+msgid "**dictionary (experimental)**"
+msgstr "**dictionary (experimental)**"
+
+#: ../../handbook/image-file-formats.rst:546
+msgid "Set the ZLIB encoder dictionary."
+msgstr "Set the ZLIB encoder dictionary."
+
+#: ../../handbook/image-file-formats.rst:550
+msgid ""
+"To enable PNG support, you need to build and install the ZLIB compression"
+" library before building the Python Imaging Library. See the "
+"`installation documentation <../installation.html>`_ for details."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:555
+msgid "PPM"
+msgstr "PPM"
+
+#: ../../handbook/image-file-formats.rst:557
+msgid ""
+"Pillow reads and writes PBM, PGM, PPM and PNM files containing ``1``, "
+"``L`` or ``RGB`` data."
+msgstr "Pillow reads and writes PBM, PGM, PPM and PNM files containing ``1``, ``L`` or ``RGB`` data."
+
+#: ../../handbook/image-file-formats.rst:561
+msgid "SGI"
+msgstr "SGI"
+
+#: ../../handbook/image-file-formats.rst:563
+msgid "Pillow reads and writes uncompressed ``L``, ``RGB``, and ``RGBA`` files."
+msgstr "Pillow reads and writes uncompressed ``L``, ``RGB``, and ``RGBA`` files."
+
+#: ../../handbook/image-file-formats.rst:567
+msgid "SPIDER"
+msgstr "SPIDER"
+
+#: ../../handbook/image-file-formats.rst:569
+msgid ""
+"Pillow reads and writes SPIDER image files of 32-bit floating point data "
+"(\"F;32F\")."
+msgstr "Pillow reads and writes SPIDER image files of 32-bit floating point data (\"F;32F\")."
+
+#: ../../handbook/image-file-formats.rst:572
+msgid ""
+"Pillow also reads SPIDER stack files containing sequences of SPIDER "
+"images. The :py:meth:`~PIL.Image.Image.seek` and "
+":py:meth:`~PIL.Image.Image.tell` methods are supported, and random access"
+" is allowed."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:576
+msgid "The :py:meth:`~PIL.Image.Image.open` method sets the following attributes:"
+msgstr "The :py:meth:`~PIL.Image.Image.open` method sets the following attributes:"
+
+#: ../../handbook/image-file-formats.rst:579
+msgid "**format**"
+msgstr "**format**"
+
+#: ../../handbook/image-file-formats.rst:579
+msgid "Set to ``SPIDER``"
+msgstr "Set to ``SPIDER``"
+
+#: ../../handbook/image-file-formats.rst:582
+msgid "**istack**"
+msgstr "**istack**"
+
+#: ../../handbook/image-file-formats.rst:582
+msgid "Set to 1 if the file is an image stack, else 0."
+msgstr "Set to 1 if the file is an image stack, else 0."
+
+#: ../../handbook/image-file-formats.rst:585
+msgid "**n_frames**"
+msgstr "**n_frames**"
+
+#: ../../handbook/image-file-formats.rst:585
+msgid "Set to the number of images in the stack."
+msgstr "Set to the number of images in the stack."
+
+#: ../../handbook/image-file-formats.rst:587
+msgid ""
+"A convenience method, :py:meth:`~PIL.Image.Image.convert2byte`, is "
+"provided for converting floating point data to byte data (mode ``L``)::"
+msgstr "A convenience method, :py:meth:`~PIL.Image.Image.convert2byte`, is provided for converting floating point data to byte data (mode ``L``)::"
+
+#: ../../handbook/image-file-formats.rst:593
+msgid "Writing files in SPIDER format"
+msgstr "Writing files in SPIDER format"
+
+#: ../../handbook/image-file-formats.rst:595
+msgid ""
+"The extension of SPIDER files may be any 3 alphanumeric characters. "
+"Therefore the output format must be specified explicitly::"
+msgstr "The extension of SPIDER files may be any 3 alphanumeric characters. Therefore the output format must be specified explicitly::"
+
+#: ../../handbook/image-file-formats.rst:600
+msgid ""
+"For more information about the SPIDER image processing package, see the "
+"`SPIDER homepage`_ at `Wadsworth Center`_."
+msgstr "For more information about the SPIDER image processing package, see the `SPIDER homepage`_ at `Wadsworth Center`_."
+
+#: ../../handbook/image-file-formats.rst:607
+msgid "TGA"
+msgstr "TGA"
+
+#: ../../handbook/image-file-formats.rst:609
+msgid ""
+"Pillow reads and writes TGA images containing ``L``, ``LA``, ``P``, "
+"``RGB``, and ``RGBA`` data. Pillow can read and write both uncompressed "
+"and run-length encoded TGAs."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:614
+msgid "TIFF"
+msgstr "TIFF"
+
+#: ../../handbook/image-file-formats.rst:616
+msgid ""
+"Pillow reads and writes TIFF files. It can read both striped and tiled "
+"images, pixel and plane interleaved multi-band images. If you have "
+"libtiff and its headers installed, Pillow can read and write many kinds "
+"of compressed TIFF files. If not, Pillow will only read and write "
+"uncompressed files."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:624
+msgid ""
+"Beginning in version 5.0.0, Pillow requires libtiff to read or write "
+"compressed files. Prior to that release, Pillow had buggy support for "
+"reading Packbits, LZW and JPEG compressed TIFFs without using libtiff."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:633
+msgid "Compression mode."
+msgstr "Compression mode."
+
+#: ../../handbook/image-file-formats.rst:638
+msgid ""
+"Image resolution as an ``(xdpi, ydpi)`` tuple, where applicable. You can "
+"use the :py:attr:`~PIL.Image.Image.tag` attribute to get more detailed "
+"information about the image resolution."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:649
+#: ../../handbook/image-file-formats.rst:765
+#: ../../handbook/image-file-formats.rst:1112
+msgid "**resolution**"
+msgstr "**resolution**"
+
+#: ../../handbook/image-file-formats.rst:645
+msgid ""
+"Image resolution as an ``(xres, yres)`` tuple, where applicable. This is "
+"a measurement in whichever unit is specified by the file."
+msgstr "Image resolution as an ``(xres, yres)`` tuple, where applicable. This is a measurement in whichever unit is specified by the file."
+
+#: ../../handbook/image-file-formats.rst:651
+msgid ""
+"The :py:attr:`~PIL.Image.Image.tag_v2` attribute contains a dictionary of"
+" TIFF metadata. The keys are numerical indexes from "
+":py:attr:`~PIL.TiffTags.TAGS_V2`.  Values are strings or numbers for "
+"single items, multiple values are returned in a tuple of values. Rational"
+" numbers are returned as a :py:class:`~PIL.TiffImagePlugin.IFDRational` "
+"object."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:660
+msgid ""
+"For compatibility with legacy code, the :py:attr:`~PIL.Image.Image.tag` "
+"attribute contains a dictionary of decoded TIFF fields as returned prior "
+"to version 3.0.0.  Values are returned as either strings or tuples of "
+"numeric values. Rational numbers are returned as a tuple of ``(numerator,"
+" denominator)``."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:669
+msgid "Reading Multi-frame TIFF Images"
+msgstr "Reading Multi-frame TIFF Images"
+
+#: ../../handbook/image-file-formats.rst:671
+msgid ""
+"The TIFF loader supports the :py:meth:`~PIL.Image.Image.seek` and "
+":py:meth:`~PIL.Image.Image.tell` methods, taking and returning frame "
+"numbers within the image file. You can combine these methods to seek to "
+"the next frame (``im.seek(im.tell() + 1)``). Frames are numbered from 0 "
+"to ``im.num_frames - 1``, and can be accessed in any order."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:681
+msgid "Saving Tiff Images"
+msgstr "Saving Tiff Images"
+
+#: ../../handbook/image-file-formats.rst:686
+msgid ""
+"If true, Pillow will save all frames of the image to a multiframe tiff "
+"document."
+msgstr "If true, Pillow will save all frames of the image to a multiframe tiff document."
+
+#: ../../handbook/image-file-formats.rst:691
+msgid ""
+"A list of images to append as additional frames. Each of the images in "
+"the list can be single or multiframe images. Note however, that for "
+"correct results, all the appended images should have the same "
+"``encoderinfo`` and ``encoderconfig`` properties."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:731
+msgid "**tiffinfo**"
+msgstr "**tiffinfo**"
+
+#: ../../handbook/image-file-formats.rst:699
+msgid ""
+"A :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2` object or dict "
+"object containing tiff tags and values. The TIFF field type is "
+"autodetected for Numeric and string values, any other types require using"
+" an :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2` object and "
+"setting the type in "
+":py:attr:`~PIL.TiffImagePlugin.ImageFileDirectory_v2.tagtype` with the "
+"appropriate numerical value from ``TiffTags.TYPES``."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:710
+msgid ""
+"Metadata values that are of the rational type should be passed in using a"
+" :py:class:`~PIL.TiffImagePlugin.IFDRational` object."
+msgstr "Metadata values that are of the rational type should be passed in using a :py:class:`~PIL.TiffImagePlugin.IFDRational` object."
+
+#: ../../handbook/image-file-formats.rst:715
+msgid ""
+"For compatibility with legacy code, a "
+":py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v1` object may be "
+"passed in this field. However, this is deprecated."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:721
+msgid ""
+"Previous versions only supported some tags when writing using libtiff. "
+"The supported list is found in :py:attr:`~PIL:TiffTags.LIBTIFF_CORE`."
+msgstr "Previous versions only supported some tags when writing using libtiff. The supported list is found in :py:attr:`~PIL:TiffTags.LIBTIFF_CORE`."
+
+#: ../../handbook/image-file-formats.rst:727
+msgid ""
+"Added support for signed types (e.g. ``TIFF_SIGNED_LONG``) and multiple "
+"values. Multiple values for a single tag must be to "
+":py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2` as a tuple and "
+"require a matching type in "
+":py:attr:`~PIL.TiffImagePlugin.ImageFileDirectory_v2.tagtype` tagtype."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:734
+msgid ""
+"A string containing the desired compression method for the file. (valid "
+"only with libtiff installed) Valid compression methods are: ``None``, "
+"``\"tiff_ccitt\"``, ``\"group3\"``, ``\"group4\"``, ``\"tiff_jpeg\"``, "
+"``\"tiff_adobe_deflate\"``, ``\"tiff_thunderscan\"``, "
+"``\"tiff_deflate\"``, ``\"tiff_sgilog\"``, ``\"tiff_sgilog24\"``, "
+"``\"tiff_raw_16\"``"
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:742
+msgid ""
+"The image quality for JPEG compression, on a scale from 0 (worst) to 100 "
+"(best). The default is 75."
+msgstr "The image quality for JPEG compression, on a scale from 0 (worst) to 100 (best). The default is 75."
+
+#: ../../handbook/image-file-formats.rst:747
+msgid ""
+"These arguments to set the tiff header fields are an alternative to using"
+" the general tags available through tiffinfo."
+msgstr "These arguments to set the tiff header fields are an alternative to using the general tags available through tiffinfo."
+
+#: ../../handbook/image-file-formats.rst:750
+msgid "**description**"
+msgstr "**description**"
+
+#: ../../handbook/image-file-formats.rst:752
+msgid "**software**"
+msgstr "**software**"
+
+#: ../../handbook/image-file-formats.rst:754
+msgid "**date_time**"
+msgstr "**date_time**"
+
+#: ../../handbook/image-file-formats.rst:756
+msgid "**artist**"
+msgstr "**artist**"
+
+#: ../../handbook/image-file-formats.rst:759
+msgid "**copyright**"
+msgstr "**copyright**"
+
+#: ../../handbook/image-file-formats.rst:759
+msgid "Strings"
+msgstr "Strings"
+
+#: ../../handbook/image-file-formats.rst:762
+msgid "**resolution_unit**"
+msgstr "**resolution_unit**"
+
+#: ../../handbook/image-file-formats.rst:762
+msgid "An integer. 1 for no unit, 2 for inches and 3 for centimeters."
+msgstr "An integer. 1 for no unit, 2 for inches and 3 for centimeters."
+
+#: ../../handbook/image-file-formats.rst:765
+msgid "Either an integer or a float, used for both the x and y resolution."
+msgstr "Either an integer or a float, used for both the x and y resolution."
+
+#: ../../handbook/image-file-formats.rst:768
+msgid "**x_resolution**"
+msgstr "**x_resolution**"
+
+#: ../../handbook/image-file-formats.rst:768
+#: ../../handbook/image-file-formats.rst:771
+msgid "Either an integer or a float."
+msgstr "Either an integer or a float."
+
+#: ../../handbook/image-file-formats.rst:771
+msgid "**y_resolution**"
+msgstr "**y_resolution**"
+
+#: ../../handbook/image-file-formats.rst:774
+msgid ""
+"A tuple of (x_resolution, y_resolution), with inches as the resolution "
+"unit. For consistency with other image formats, the x and y resolutions "
+"of the dpi will be rounded to the nearest integer."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:780
+msgid "WebP"
+msgstr "WebP"
+
+#: ../../handbook/image-file-formats.rst:782
+msgid ""
+"Pillow reads and writes WebP files. The specifics of Pillow's "
+"capabilities with this format are currently undocumented."
+msgstr "Pillow reads and writes WebP files. The specifics of Pillow's capabilities with this format are currently undocumented."
+
+#: ../../handbook/image-file-formats.rst:788
+msgid "**lossless**"
+msgstr "**lossless**"
+
+#: ../../handbook/image-file-formats.rst:788
+msgid ""
+"If present and true, instructs the WebP writer to use lossless "
+"compression."
+msgstr "If present and true, instructs the WebP writer to use lossless compression."
+
+#: ../../handbook/image-file-formats.rst:791
+msgid ""
+"Integer, 1-100, Defaults to 80. For lossy, 0 gives the smallest size and "
+"100 the largest. For lossless, this parameter is the amount of effort put"
+" into the compression: 0 is the fastest, but gives larger files compared "
+"to the slowest, but best, 100."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:797
+msgid "**method**"
+msgstr "**method**"
+
+#: ../../handbook/image-file-formats.rst:797
+msgid "Quality/speed trade-off (0=fast, 6=slower-better). Defaults to 0."
+msgstr "Quality/speed trade-off (0=fast, 6=slower-better). Defaults to 0."
+
+#: ../../handbook/image-file-formats.rst:800
+msgid ""
+"The ICC Profile to include in the saved file. Only supported if the "
+"system WebP library was built with webpmux support."
+msgstr "The ICC Profile to include in the saved file. Only supported if the system WebP library was built with webpmux support."
+
+#: ../../handbook/image-file-formats.rst:804
+msgid ""
+"The exif data to include in the saved file. Only supported if the system "
+"WebP library was built with webpmux support."
+msgstr "The exif data to include in the saved file. Only supported if the system WebP library was built with webpmux support."
+
+#: ../../handbook/image-file-formats.rst:808
+msgid "Saving sequences"
+msgstr "Saving sequences"
+
+#: ../../handbook/image-file-formats.rst:812
+msgid ""
+"Support for animated WebP files will only be enabled if the system WebP "
+"library is v0.5.0 or later. You can check webp animation support at "
+"runtime by calling ``features.check(\"webp_anim\")``."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:816
+msgid ""
+"When calling :py:meth:`~PIL.Image.Image.save` to write a WebP file, the "
+"following options are available when the ``save_all`` argument is present"
+" and true."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:821
+msgid ""
+"A list of images to append as additional frames. Each of the images in "
+"the list can be single or multiframe images."
+msgstr "A list of images to append as additional frames. Each of the images in the list can be single or multiframe images."
+
+#: ../../handbook/image-file-formats.rst:825
+msgid ""
+"The display duration of each frame, in milliseconds. Pass a single "
+"integer for a constant duration, or a list or tuple to set the duration "
+"for each frame separately."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:830
+msgid "Number of times to repeat the animation. Defaults to [0 = infinite]."
+msgstr "Number of times to repeat the animation. Defaults to [0 = infinite]."
+
+#: ../../handbook/image-file-formats.rst:833
+msgid ""
+"Background color of the canvas, as an RGBA tuple with values in the range"
+" of (0-255)."
+msgstr "Background color of the canvas, as an RGBA tuple with values in the range of (0-255)."
+
+#: ../../handbook/image-file-formats.rst:838
+msgid "**minimize_size**"
+msgstr "**minimize_size**"
+
+#: ../../handbook/image-file-formats.rst:837
+msgid ""
+"If true, minimize the output size (slow). Implicitly disables key-frame "
+"insertion."
+msgstr "If true, minimize the output size (slow). Implicitly disables key-frame insertion."
+
+#: ../../handbook/image-file-formats.rst:847
+msgid "**kmin, kmax**"
+msgstr "**kmin, kmax**"
+
+#: ../../handbook/image-file-formats.rst:841
+msgid ""
+"Minimum and maximum distance between consecutive key frames in the "
+"output. The library may insert some key frames as needed to satisfy this "
+"criteria. Note that these conditions should hold: kmax > kmin and kmin >="
+" kmax / 2 + 1. Also, if kmax <= 0, then key-frame insertion is disabled; "
+"and if kmax == 1, then all frames will be key-frames (kmin value does not"
+" matter for these special cases)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:851
+msgid "**allow_mixed**"
+msgstr "**allow_mixed**"
+
+#: ../../handbook/image-file-formats.rst:850
+msgid ""
+"If true, use mixed compression mode; the encoder heuristically chooses "
+"between lossy and lossless for each frame."
+msgstr "If true, use mixed compression mode; the encoder heuristically chooses between lossy and lossless for each frame."
+
+#: ../../handbook/image-file-formats.rst:854
+msgid "XBM"
+msgstr "XBM"
+
+#: ../../handbook/image-file-formats.rst:856
+msgid "Pillow reads and writes X bitmap files (mode ``1``)."
+msgstr "Pillow reads and writes X bitmap files (mode ``1``)."
+
+#: ../../handbook/image-file-formats.rst:859
+msgid "Read-only formats"
+msgstr "Read-only formats"
+
+#: ../../handbook/image-file-formats.rst:862
+msgid "BLP"
+msgstr "BLP"
+
+#: ../../handbook/image-file-formats.rst:864
+msgid ""
+"BLP is the Blizzard Mipmap Format, a texture format used in World of "
+"Warcraft. Pillow supports reading ``JPEG`` Compressed or raw ``BLP1`` "
+"images, and all types of ``BLP2`` images."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:869
+msgid "CUR"
+msgstr "CUR"
+
+#: ../../handbook/image-file-formats.rst:871
+msgid ""
+"CUR is used to store cursors on Windows. The CUR decoder reads the "
+"largest available cursor. Animated cursors are not supported."
+msgstr "CUR is used to store cursors on Windows. The CUR decoder reads the largest available cursor. Animated cursors are not supported."
+
+#: ../../handbook/image-file-formats.rst:875
+msgid "DCX"
+msgstr "DCX"
+
+#: ../../handbook/image-file-formats.rst:877
+msgid ""
+"DCX is a container file format for PCX files, defined by Intel. The DCX "
+"format is commonly used in fax applications. The DCX decoder can read "
+"files containing ``1``, ``L``, ``P``, or ``RGB`` data."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:881
+msgid ""
+"When the file is opened, only the first image is read. You can use "
+":py:meth:`~PIL.Image.Image.seek` or :py:mod:`~PIL.ImageSequence` to read "
+"other images."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:886
+msgid "DDS"
+msgstr "DDS"
+
+#: ../../handbook/image-file-formats.rst:888
+msgid ""
+"DDS is a popular container texture format used in video games and "
+"natively supported by DirectX. Currently, uncompressed RGB data and DXT1,"
+" DXT3, and DXT5 pixel formats are supported, and only in ``RGBA`` mode."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:893
+msgid "DXT3"
+msgstr "DXT3"
+
+#: ../../handbook/image-file-formats.rst:896
+msgid "FLI, FLC"
+msgstr "FLI, FLC"
+
+#: ../../handbook/image-file-formats.rst:898
+msgid "Pillow reads Autodesk FLI and FLC animations."
+msgstr "Pillow reads Autodesk FLI and FLC animations."
+
+#: ../../handbook/image-file-formats.rst:904
+msgid "The delay (in milliseconds) between each frame."
+msgstr "The delay (in milliseconds) between each frame."
+
+#: ../../handbook/image-file-formats.rst:907
+msgid "FPX"
+msgstr "FPX"
+
+#: ../../handbook/image-file-formats.rst:909
+msgid ""
+"Pillow reads Kodak FlashPix files. In the current version, only the "
+"highest resolution image is read from the file, and the viewing transform"
+" is not taken into account."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:915
+msgid ""
+"To enable full FlashPix support, you need to build and install the IJG "
+"JPEG library before building the Python Imaging Library. See the "
+"distribution README for details."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:920
+msgid "FTEX"
+msgstr "FTEX"
+
+#: ../../handbook/image-file-formats.rst:924
+msgid ""
+"The FTEX decoder reads textures used for 3D objects in Independence War "
+"2: Edge Of Chaos. The plugin reads a single texture per file, in the "
+"compressed and uncompressed formats."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:929
+msgid "GBR"
+msgstr "GBR"
+
+#: ../../handbook/image-file-formats.rst:931
+msgid "The GBR decoder reads GIMP brush files, version 1 and 2."
+msgstr "The GBR decoder reads GIMP brush files, version 1 and 2."
+
+#: ../../handbook/image-file-formats.rst:937
+msgid "The brush name."
+msgstr "The brush name."
+
+#: ../../handbook/image-file-formats.rst:940
+msgid "**spacing**"
+msgstr "**spacing**"
+
+#: ../../handbook/image-file-formats.rst:940
+msgid "The spacing between the brushes, in pixels. Version 2 only."
+msgstr "The spacing between the brushes, in pixels. Version 2 only."
+
+#: ../../handbook/image-file-formats.rst:943
+msgid "GD"
+msgstr "GD"
+
+#: ../../handbook/image-file-formats.rst:945
+msgid ""
+"Pillow reads uncompressed GD2 files. Note that you must use "
+":py:func:`PIL.GdImageFile.open` to read such a file."
+msgstr "Pillow reads uncompressed GD2 files. Note that you must use :py:func:`PIL.GdImageFile.open` to read such a file."
+
+#: ../../handbook/image-file-formats.rst:956
+msgid "IMT"
+msgstr "IMT"
+
+#: ../../handbook/image-file-formats.rst:958
+msgid "Pillow reads Image Tools images containing ``L`` data."
+msgstr "Pillow reads Image Tools images containing ``L`` data."
+
+#: ../../handbook/image-file-formats.rst:961
+msgid "IPTC/NAA"
+msgstr "IPTC/NAA"
+
+#: ../../handbook/image-file-formats.rst:963
+msgid "Pillow provides limited read support for IPTC/NAA newsphoto files."
+msgstr "Pillow provides limited read support for IPTC/NAA newsphoto files."
+
+#: ../../handbook/image-file-formats.rst:966
+msgid "MCIDAS"
+msgstr "MCIDAS"
+
+#: ../../handbook/image-file-formats.rst:968
+msgid "Pillow identifies and reads 8-bit McIdas area files."
+msgstr "Pillow identifies and reads 8-bit McIdas area files."
+
+#: ../../handbook/image-file-formats.rst:971
+msgid "MIC"
+msgstr "MIC"
+
+#: ../../handbook/image-file-formats.rst:973
+msgid ""
+"Pillow identifies and reads Microsoft Image Composer (MIC) files. When "
+"opened, the first sprite in the file is loaded. You can use "
+":py:meth:`~PIL.Image.Image.seek` and :py:meth:`~PIL.Image.Image.tell` to "
+"read other sprites from the file."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:977
+msgid "Note that there may be an embedded gamma of 2.2 in MIC files."
+msgstr "Note that there may be an embedded gamma of 2.2 in MIC files."
+
+#: ../../handbook/image-file-formats.rst:980
+msgid "MPO"
+msgstr "MPO"
+
+#: ../../handbook/image-file-formats.rst:982
+msgid ""
+"Pillow identifies and reads Multi Picture Object (MPO) files, loading the"
+" primary image when first opened. The :py:meth:`~PIL.Image.Image.seek` "
+"and :py:meth:`~PIL.Image.Image.tell` methods may be used to read other "
+"pictures from the file. The pictures are zero-indexed and random access "
+"is supported."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:988
+msgid "PCD"
+msgstr "PCD"
+
+#: ../../handbook/image-file-formats.rst:990
+msgid ""
+"Pillow reads PhotoCD files containing ``RGB`` data. This only reads the "
+"768x512 resolution image from the file. Higher resolutions are encoded in"
+" a proprietary encoding."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:995
+msgid "PIXAR"
+msgstr "PIXAR"
+
+#: ../../handbook/image-file-formats.rst:997
+msgid ""
+"Pillow provides limited support for PIXAR raster files. The library can "
+"identify and read “dumped” RGB files."
+msgstr "Pillow provides limited support for PIXAR raster files. The library can identify and read “dumped” RGB files."
+
+#: ../../handbook/image-file-formats.rst:1000
+msgid "The format code is ``PIXAR``."
+msgstr "The format code is ``PIXAR``."
+
+#: ../../handbook/image-file-formats.rst:1003
+msgid "PSD"
+msgstr "PSD"
+
+#: ../../handbook/image-file-formats.rst:1005
+msgid ""
+"Pillow identifies and reads PSD files written by Adobe Photoshop 2.5 and "
+"3.0."
+msgstr "Pillow identifies and reads PSD files written by Adobe Photoshop 2.5 and 3.0."
+
+#: ../../handbook/image-file-formats.rst:1009
+msgid "WAL"
+msgstr "WAL"
+
+#: ../../handbook/image-file-formats.rst:1013
+msgid "Pillow reads Quake2 WAL texture files."
+msgstr "Pillow reads Quake2 WAL texture files."
+
+#: ../../handbook/image-file-formats.rst:1015
+msgid ""
+"Note that this file format cannot be automatically identified, so you "
+"must use the open function in the :py:mod:`~PIL.WalImageFile` module to "
+"read files in this format."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1019
+msgid ""
+"By default, a Quake2 standard palette is attached to the texture. To "
+"override the palette, use the putpalette method."
+msgstr "By default, a Quake2 standard palette is attached to the texture. To override the palette, use the putpalette method."
+
+#: ../../handbook/image-file-formats.rst:1023
+msgid "WMF"
+msgstr "WMF"
+
+#: ../../handbook/image-file-formats.rst:1025
+msgid "Pillow can identify WMF files."
+msgstr "Pillow can identify WMF files."
+
+#: ../../handbook/image-file-formats.rst:1027
+msgid ""
+"On Windows, it can read WMF files. By default, it will load the image at "
+"72 dpi. To load it at another resolution:"
+msgstr "On Windows, it can read WMF files. By default, it will load the image at 72 dpi. To load it at another resolution:"
+
+#: ../../handbook/image-file-formats.rst:1036
+msgid ""
+"To add other read or write support, use "
+":py:func:`PIL.WmfImagePlugin.register_handler` to register a WMF handler."
+msgstr "To add other read or write support, use :py:func:`PIL.WmfImagePlugin.register_handler` to register a WMF handler."
+
+#: ../../handbook/image-file-formats.rst:1060
+msgid "XPM"
+msgstr "XPM"
+
+#: ../../handbook/image-file-formats.rst:1062
+msgid "Pillow reads X pixmap files (mode ``P``) with 256 colors or less."
+msgstr "Pillow reads X pixmap files (mode ``P``) with 256 colors or less."
+
+#: ../../handbook/image-file-formats.rst:1072
+msgid "Write-only formats"
+msgstr "Write-only formats"
+
+#: ../../handbook/image-file-formats.rst:1075
+msgid "PALM"
+msgstr "PALM"
+
+#: ../../handbook/image-file-formats.rst:1077
+msgid "Pillow provides write-only support for PALM pixmap files."
+msgstr "Pillow provides write-only support for PALM pixmap files."
+
+#: ../../handbook/image-file-formats.rst:1079
+msgid "The format code is ``Palm``, the extension is ``.palm``."
+msgstr "The format code is ``Palm``, the extension is ``.palm``."
+
+#: ../../handbook/image-file-formats.rst:1082
+msgid "PDF"
+msgstr "PDF"
+
+#: ../../handbook/image-file-formats.rst:1084
+msgid ""
+"Pillow can write PDF (Acrobat) images. Such images are written as binary "
+"PDF 1.4 files, using either JPEG or HEX encoding depending on the image "
+"mode (and whether JPEG support is available or not)."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1091
+msgid ""
+"If a multiframe image is used, by default, only the first image will be "
+"saved. To save all frames, each frame to a separate page of the PDF, the "
+"``save_all`` parameter must be present and set to ``True``."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1098
+msgid ""
+"A list of images to append as additional pages. Each of the images in the"
+" list can be single or multiframe images."
+msgstr "A list of images to append as additional pages. Each of the images in the list can be single or multiframe images."
+
+#: ../../handbook/image-file-formats.rst:1107
+msgid "**append**"
+msgstr "**append**"
+
+#: ../../handbook/image-file-formats.rst:1104
+msgid ""
+"Set to True to append pages to an existing PDF file. If the file doesn't "
+"exist, an :py:exc:`IOError` will be raised."
+msgstr "Set to True to append pages to an existing PDF file. If the file doesn't exist, an :py:exc:`IOError` will be raised."
+
+#: ../../handbook/image-file-formats.rst:1110
+msgid ""
+"Image resolution in DPI. This, together with the number of pixels in the "
+"image, will determine the physical dimensions of the page that will be "
+"saved in the PDF."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1118
+msgid "**title**"
+msgstr "**title**"
+
+#: ../../handbook/image-file-formats.rst:1115
+msgid ""
+"The document’s title. If not appending to an existing PDF file, this will"
+" default to the filename."
+msgstr "The document’s title. If not appending to an existing PDF file, this will default to the filename."
+
+#: ../../handbook/image-file-formats.rst:1123
+msgid "**author**"
+msgstr "**author**"
+
+#: ../../handbook/image-file-formats.rst:1121
+msgid "The name of the person who created the document."
+msgstr "The name of the person who created the document."
+
+#: ../../handbook/image-file-formats.rst:1128
+msgid "**subject**"
+msgstr "**subject**"
+
+#: ../../handbook/image-file-formats.rst:1126
+msgid "The subject of the document."
+msgstr "The subject of the document."
+
+#: ../../handbook/image-file-formats.rst:1133
+msgid "**keywords**"
+msgstr "**keywords**"
+
+#: ../../handbook/image-file-formats.rst:1131
+msgid "Keywords associated with the document."
+msgstr "Keywords associated with the document."
+
+#: ../../handbook/image-file-formats.rst:1140
+msgid "**creator**"
+msgstr "**creator**"
+
+#: ../../handbook/image-file-formats.rst:1136
+msgid ""
+"If the document was converted to PDF from another format, the name of the"
+" conforming product that created the original document from which it was "
+"converted."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1146
+msgid "**producer**"
+msgstr "**producer**"
+
+#: ../../handbook/image-file-formats.rst:1143
+msgid ""
+"If the document was converted to PDF from another format, the name of the"
+" conforming product that converted it to PDF."
+msgstr "If the document was converted to PDF from another format, the name of the conforming product that converted it to PDF."
+
+#: ../../handbook/image-file-formats.rst:1152
+msgid "**creationDate**"
+msgstr "**creationDate**"
+
+#: ../../handbook/image-file-formats.rst:1149
+msgid ""
+"The creation date of the document. If not appending to an existing PDF "
+"file, this will default to the current time."
+msgstr "The creation date of the document. If not appending to an existing PDF file, this will default to the current time."
+
+#: ../../handbook/image-file-formats.rst:1158
+msgid "**modDate**"
+msgstr "**modDate**"
+
+#: ../../handbook/image-file-formats.rst:1155
+msgid ""
+"The modification date of the document. If not appending to an existing "
+"PDF file, this will default to the current time."
+msgstr "The modification date of the document. If not appending to an existing PDF file, this will default to the current time."
+
+#: ../../handbook/image-file-formats.rst:1161
+msgid "XV Thumbnails"
+msgstr "XV Thumbnails"
+
+#: ../../handbook/image-file-formats.rst:1163
+msgid "Pillow can read XV thumbnail files."
+msgstr "Pillow can read XV thumbnail files."
+
+#: ../../handbook/image-file-formats.rst:1166
+msgid "Identify-only formats"
+msgstr "Identify-only formats"
+
+#: ../../handbook/image-file-formats.rst:1169
+msgid "BUFR"
+msgstr "BUFR"
+
+#: ../../handbook/image-file-formats.rst:1173
+msgid "Pillow provides a stub driver for BUFR files."
+msgstr "Pillow provides a stub driver for BUFR files."
+
+#: ../../handbook/image-file-formats.rst:1175
+msgid ""
+"To add read or write support to your application, use "
+":py:func:`PIL.BufrStubImagePlugin.register_handler`."
+msgstr "To add read or write support to your application, use :py:func:`PIL.BufrStubImagePlugin.register_handler`."
+
+#: ../../handbook/image-file-formats.rst:1179
+msgid "FITS"
+msgstr "FITS"
+
+#: ../../handbook/image-file-formats.rst:1183
+msgid "Pillow provides a stub driver for FITS files."
+msgstr "Pillow provides a stub driver for FITS files."
+
+#: ../../handbook/image-file-formats.rst:1185
+msgid ""
+"To add read or write support to your application, use "
+":py:func:`PIL.FitsStubImagePlugin.register_handler`."
+msgstr "To add read or write support to your application, use :py:func:`PIL.FitsStubImagePlugin.register_handler`."
+
+#: ../../handbook/image-file-formats.rst:1189
+msgid "GRIB"
+msgstr "GRIB"
+
+#: ../../handbook/image-file-formats.rst:1193
+msgid "Pillow provides a stub driver for GRIB files."
+msgstr "Pillow provides a stub driver for GRIB files."
+
+#: ../../handbook/image-file-formats.rst:1195
+msgid ""
+"The driver requires the file to start with a GRIB header. If you have "
+"files with embedded GRIB data, or files with multiple GRIB fields, your "
+"application has to seek to the header before passing the file handle to "
+"Pillow."
+msgstr ""
+
+#: ../../handbook/image-file-formats.rst:1199
+msgid ""
+"To add read or write support to your application, use "
+":py:func:`PIL.GribStubImagePlugin.register_handler`."
+msgstr "To add read or write support to your application, use :py:func:`PIL.GribStubImagePlugin.register_handler`."
+
+#: ../../handbook/image-file-formats.rst:1203
+msgid "HDF5"
+msgstr "HDF5"
+
+#: ../../handbook/image-file-formats.rst:1207
+msgid "Pillow provides a stub driver for HDF5 files."
+msgstr "Pillow provides a stub driver for HDF5 files."
+
+#: ../../handbook/image-file-formats.rst:1209
+msgid ""
+"To add read or write support to your application, use "
+":py:func:`PIL.Hdf5StubImagePlugin.register_handler`."
+msgstr "To add read or write support to your application, use :py:func:`PIL.Hdf5StubImagePlugin.register_handler`."
+
+#: ../../handbook/image-file-formats.rst:1213
+msgid "MPEG"
+msgstr "MPEG"
+
+#: ../../handbook/image-file-formats.rst:1215
+msgid "Pillow identifies MPEG files."
+msgstr "Pillow identifies MPEG files."
+
+#: ../../handbook/index.rst:2
+msgid "Handbook"
+msgstr "手册"
+
+#: ../../handbook/overview.rst:2
+msgid "Overview"
+msgstr "概观"
+
+#: ../../handbook/overview.rst:4
+msgid ""
+"The **Python Imaging Library** adds image processing capabilities to your"
+" Python interpreter."
+msgstr "**的Python图像库**增加了图像处理功能，您的Python解释器。"
+
+#: ../../handbook/overview.rst:7
+msgid ""
+"This library provides extensive file format support, an efficient "
+"internal representation, and fairly powerful image processing "
+"capabilities."
+msgstr ""
+
+#: ../../handbook/overview.rst:10
+msgid ""
+"The core image library is designed for fast access to data stored in a "
+"few basic pixel formats. It should provide a solid foundation for a "
+"general image processing tool."
+msgstr ""
+
+#: ../../handbook/overview.rst:14
+msgid "Let’s look at a few possible uses of this library."
+msgstr "让我们看看这个库的几个可能的用途。"
+
+#: ../../handbook/overview.rst:17
+msgid "Image Archives"
+msgstr "图片档案"
+
+#: ../../handbook/overview.rst:19
+msgid ""
+"The Python Imaging Library is ideal for image archival and batch "
+"processing applications. You can use the library to create thumbnails, "
+"convert between file formats, print images, etc."
+msgstr ""
+
+#: ../../handbook/overview.rst:23
+msgid ""
+"The current version identifies and reads a large number of formats. Write"
+" support is intentionally restricted to the most commonly used "
+"interchange and presentation formats."
+msgstr ""
+
+#: ../../handbook/overview.rst:28
+msgid "Image Display"
+msgstr "图像显示"
+
+#: ../../handbook/overview.rst:30
+msgid ""
+"The current release includes Tk :py:class:`~PIL.ImageTk.PhotoImage` and "
+":py:class:`~PIL.ImageTk.BitmapImage` interfaces, as well as a "
+":py:mod:`Windows DIB interface <PIL.ImageWin>` that can be used with "
+"PythonWin and other Windows-based toolkits. Many other GUI toolkits come "
+"with some kind of PIL support."
+msgstr ""
+
+#: ../../handbook/overview.rst:36
+msgid ""
+"For debugging, there’s also a :py:meth:`~PIL.Image.Image.show` method "
+"which saves an image to disk, and calls an external display utility."
+msgstr "出于调试，还有一个：PY：甲基：`〜PIL.Image.Image.show`方法，其保存图像到磁盘，并且调用外部显示效用。"
+
+#: ../../handbook/overview.rst:40
+msgid "Image Processing"
+msgstr "图像处理"
+
+#: ../../handbook/overview.rst:42
+msgid ""
+"The library contains basic image processing functionality, including "
+"point operations, filtering with a set of built-in convolution kernels, "
+"and colour space conversions."
+msgstr ""
+
+#: ../../handbook/overview.rst:44
+msgid ""
+"The library also supports image resizing, rotation and arbitrary affine "
+"transforms."
+msgstr "该库还支持图像缩放，旋转和任意仿射变换。"
+
+#: ../../handbook/overview.rst:46
+msgid ""
+"There’s a histogram method allowing you to pull some statistics out of an"
+" image. This can be used for automatic contrast enhancement, and for "
+"global statistical analysis."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:2
+msgid "Tutorial"
+msgstr "教程"
+
+#: ../../handbook/tutorial.rst:5
+msgid "Using the Image class"
+msgstr "使用Image类"
+
+#: ../../handbook/tutorial.rst:7
+msgid ""
+"The most important class in the Python Imaging Library is the "
+":py:class:`~PIL.Image.Image` class, defined in the module with the same "
+"name. You can create instances of this class in several ways; either by "
+"loading images from files, processing other images, or creating images "
+"from scratch."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:12
+msgid ""
+"To load an image from a file, use the :py:func:`~PIL.Image.open` function"
+" in the :py:mod:`~PIL.Image` module::"
+msgstr "从文件加载图像，可以使用：吡啶：FUNC：`在〜PIL.Image.open`功能：PY：MOD：`〜PIL.Image`模块::"
+
+#: ../../handbook/tutorial.rst:18
+msgid ""
+"If successful, this function returns an :py:class:`~PIL.Image.Image` "
+"object. You can now use instance attributes to examine the file "
+"contents::"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:24
+msgid ""
+"The :py:attr:`~PIL.Image.Image.format` attribute identifies the source of"
+" an image. If the image was not read from a file, it is set to None. The "
+"size attribute is a 2-tuple containing width and height (in pixels). The "
+":py:attr:`~PIL.Image.Image.mode` attribute defines the number and names "
+"of the bands in the image, and also the pixel type and depth. Common "
+"modes are “L” (luminance) for greyscale images, “RGB” for true color "
+"images, and “CMYK” for pre-press images."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:32
+msgid "If the file cannot be opened, an :py:exc:`IOError` exception is raised."
+msgstr "如果该文件无法打开，一：PY：EXC：`IOError`异常。"
+
+#: ../../handbook/tutorial.rst:34
+msgid ""
+"Once you have an instance of the :py:class:`~PIL.Image.Image` class, you "
+"can use the methods defined by this class to process and manipulate the "
+"image. For example, let’s display the image we just loaded::"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:42
+msgid ""
+"The standard version of :py:meth:`~PIL.Image.Image.show` is not very "
+"efficient, since it saves the image to a temporary file and calls a "
+"utility to display the image. If you don’t have an appropriate utility "
+"installed, it won’t even work. When it does work though, it is very handy"
+" for debugging and tests."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:48
+msgid ""
+"The following sections provide an overview of the different functions "
+"provided in this library."
+msgstr "以下各节提供的这个库中提供的不同功能的概述。"
+
+#: ../../handbook/tutorial.rst:51
+msgid "Reading and writing images"
+msgstr "读取和写入图像"
+
+#: ../../handbook/tutorial.rst:53
+msgid ""
+"The Python Imaging Library supports a wide variety of image file formats."
+" To read files from disk, use the :py:func:`~PIL.Image.open` function in "
+"the :py:mod:`~PIL.Image` module. You don’t have to know the file format "
+"to open a file. The library automatically determines the format based on "
+"the contents of the file."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:59
+msgid ""
+"To save a file, use the :py:meth:`~PIL.Image.Image.save` method of the "
+":py:class:`~PIL.Image.Image` class. When saving files, the name becomes "
+"important. Unless you specify the format, the library uses the filename "
+"extension to discover which file storage format to use."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:65
+msgid "Convert files to JPEG"
+msgstr "将文件转换为JPEG"
+
+#: ../../handbook/tutorial.rst:81
+msgid ""
+"A second argument can be supplied to the :py:meth:`~PIL.Image.Image.save`"
+" method which explicitly specifies a file format. If you use a non-"
+"standard extension, you must always specify the format this way:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:86
+msgid "Create JPEG thumbnails"
+msgstr "创建JPEG缩略图"
+
+#: ../../handbook/tutorial.rst:105
+msgid ""
+"It is important to note that the library doesn’t decode or load the "
+"raster data unless it really has to. When you open a file, the file "
+"header is read to determine the file format and extract things like mode,"
+" size, and other properties required to decode the file, but the rest of "
+"the file is not processed until later."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:111
+msgid ""
+"This means that opening an image file is a fast operation, which is "
+"independent of the file size and compression type. Here’s a simple script"
+" to quickly identify a set of image files:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:116
+msgid "Identify Image Files"
+msgstr "识别图像文件"
+
+#: ../../handbook/tutorial.rst:131
+msgid "Cutting, pasting, and merging images"
+msgstr "剪切，粘贴，和合并图像"
+
+#: ../../handbook/tutorial.rst:133
+msgid ""
+"The :py:class:`~PIL.Image.Image` class contains methods allowing you to "
+"manipulate regions within an image. To extract a sub-rectangle from an "
+"image, use the :py:meth:`~PIL.Image.Image.crop` method."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:138
+msgid "Copying a subrectangle from an image"
+msgstr "从图像复制子矩形"
+
+#: ../../handbook/tutorial.rst:145
+msgid ""
+"The region is defined by a 4-tuple, where coordinates are (left, upper, "
+"right, lower). The Python Imaging Library uses a coordinate system with "
+"(0, 0) in the upper left corner. Also note that coordinates refer to "
+"positions between the pixels, so the region in the above example is "
+"exactly 300x300 pixels."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:150
+msgid "The region could now be processed in a certain manner and pasted back."
+msgstr "该区域现在可以以一定的方式进行处理和粘贴回。"
+
+#: ../../handbook/tutorial.rst:153
+msgid "Processing a subrectangle, and pasting it back"
+msgstr "处理子矩形，并将其粘贴回"
+
+#: ../../handbook/tutorial.rst:160
+msgid ""
+"When pasting regions back, the size of the region must match the given "
+"region exactly. In addition, the region cannot extend outside the image. "
+"However, the modes of the original image and the region do not need to "
+"match. If they don’t, the region is automatically converted before being "
+"pasted (see the section on :ref:`color-transforms` below for details)."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:166
+msgid "Here’s an additional example:"
+msgstr "这里有一个额外的例子:"
+
+#: ../../handbook/tutorial.rst:169
+msgid "Rolling an image"
+msgstr "滚动图像"
+
+#: ../../handbook/tutorial.rst:187
+msgid ""
+"For more advanced tricks, the paste method can also take a transparency "
+"mask as an optional argument. In this mask, the value 255 indicates that "
+"the pasted image is opaque in that position (that is, the pasted image "
+"should be used as is). The value 0 means that the pasted image is "
+"completely transparent. Values in-between indicate different levels of "
+"transparency. For example, pasting an RGBA image and also using it as the"
+" mask would paste the opaque portion of the image but not its transparent"
+" background."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:195
+msgid ""
+"The Python Imaging Library also allows you to work with the individual "
+"bands of an multi-band image, such as an RGB image. The split method "
+"creates a set of new images, each containing one band from the original "
+"multi-band image. The merge function takes a mode and a tuple of images, "
+"and combines them into a new image. The following sample swaps the three "
+"bands of an RGB image:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:202
+msgid "Splitting and merging bands"
+msgstr "拆分和合并波段"
+
+#: ../../handbook/tutorial.rst:209
+msgid ""
+"Note that for a single-band image, :py:meth:`~PIL.Image.Image.split` "
+"returns the image itself. To work with individual color bands, you may "
+"want to convert the image to “RGB” first."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:214
+msgid "Geometrical transforms"
+msgstr "几何变换"
+
+#: ../../handbook/tutorial.rst:216
+msgid ""
+"The :py:class:`PIL.Image.Image` class contains methods to "
+":py:meth:`~PIL.Image.Image.resize` and :py:meth:`~PIL.Image.Image.rotate`"
+" an image. The former takes a tuple giving the new size, the latter the "
+"angle in degrees counter-clockwise."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:222
+msgid "Simple geometry transforms"
+msgstr "简单的几何变换"
+
+#: ../../handbook/tutorial.rst:229
+msgid ""
+"To rotate the image in 90 degree steps, you can either use the "
+":py:meth:`~PIL.Image.Image.rotate` method or the "
+":py:meth:`~PIL.Image.Image.transpose` method. The latter can also be used"
+" to flip an image around its horizontal or vertical axis."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:235
+msgid "Transposing an image"
+msgstr "移调图像"
+
+#: ../../handbook/tutorial.rst:245
+msgid ""
+"``transpose(ROTATE)`` operations can also be performed identically with "
+":py:meth:`~PIL.Image.Image.rotate` operations, provided the ``expand`` "
+"flag is true, to provide for the same changes to the image's size."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:249
+msgid ""
+"A more general form of image transformations can be carried out via the "
+":py:meth:`~PIL.Image.Image.transform` method."
+msgstr "PY：图像变换的更一般的形式可通过进行甲基：`〜PIL.Image.Image.transform`方法。"
+
+#: ../../handbook/tutorial.rst:255
+msgid "Color transforms"
+msgstr "颜色变换"
+
+#: ../../handbook/tutorial.rst:257
+msgid ""
+"The Python Imaging Library allows you to convert images between different"
+" pixel representations using the :py:meth:`~PIL.Image.Image.convert` "
+"method."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:261
+msgid "Converting between modes"
+msgstr "模式之间转换"
+
+#: ../../handbook/tutorial.rst:269
+msgid ""
+"The library supports transformations between each supported mode and the "
+"“L” and “RGB” modes. To convert between other modes, you may have to use "
+"an intermediate image (typically an “RGB” image)."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:274
+msgid "Image enhancement"
+msgstr "图像增强"
+
+#: ../../handbook/tutorial.rst:276
+msgid ""
+"The Python Imaging Library provides a number of methods and modules that "
+"can be used to enhance images."
+msgstr "Python图像库提供了许多可用于增强图像的方法和模块。"
+
+#: ../../handbook/tutorial.rst:282
+msgid ""
+"The :py:mod:`~PIL.ImageFilter` module contains a number of pre-defined "
+"enhancement filters that can be used with the "
+":py:meth:`~PIL.Image.Image.filter` method."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:287
+msgid "Applying filters"
+msgstr "应用滤镜"
+
+#: ../../handbook/tutorial.rst:295
+msgid "Point Operations"
+msgstr "Point Operations"
+
+#: ../../handbook/tutorial.rst:297
+msgid ""
+"The :py:meth:`~PIL.Image.Image.point` method can be used to translate the"
+" pixel values of an image (e.g. image contrast manipulation). In most "
+"cases, a function object expecting one argument can be passed to this "
+"method. Each pixel is processed according to that function:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:303
+msgid "Applying point transforms"
+msgstr "运用点变换"
+
+#: ../../handbook/tutorial.rst:310
+msgid ""
+"Using the above technique, you can quickly apply any simple expression to"
+" an image. You can also combine the :py:meth:`~PIL.Image.Image.point` and"
+" :py:meth:`~PIL.Image.Image.paste` methods to selectively modify an "
+"image:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:315
+msgid "Processing individual bands"
+msgstr "处理单个带"
+
+#: ../../handbook/tutorial.rst:336
+msgid "Note the syntax used to create the mask::"
+msgstr "注意：用于创建蒙语法::"
+
+#: ../../handbook/tutorial.rst:340
+msgid ""
+"Python only evaluates the portion of a logical expression as is necessary"
+" to determine the outcome, and returns the last value examined as the "
+"result of the expression. So if the expression above is false (0), Python"
+" does not look at the second operand, and thus returns 0. Otherwise, it "
+"returns 255."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:346
+msgid "Enhancement"
+msgstr "增强"
+
+#: ../../handbook/tutorial.rst:348
+msgid ""
+"For more advanced image enhancement, you can use the classes in the "
+":py:mod:`~PIL.ImageEnhance` module. Once created from an image, an "
+"enhancement object can be used to quickly try out different settings."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:352
+msgid ""
+"You can adjust contrast, brightness, color balance and sharpness in this "
+"way."
+msgstr "您可以调整这样的对比度，亮度，色彩平衡和清晰度。"
+
+#: ../../handbook/tutorial.rst:355
+msgid "Enhancing images"
+msgstr "增强图像"
+
+#: ../../handbook/tutorial.rst:365
+msgid "Image sequences"
+msgstr "图像序列"
+
+#: ../../handbook/tutorial.rst:367
+msgid ""
+"The Python Imaging Library contains some basic support for image "
+"sequences (also called animation formats). Supported sequence formats "
+"include FLI/FLC, GIF, and a few experimental formats. TIFF files can also"
+" contain more than one frame."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:372
+msgid ""
+"When you open a sequence file, PIL automatically loads the first frame in"
+" the sequence. You can use the seek and tell methods to move between "
+"different frames:"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:393
+msgid ""
+"As seen in this example, you’ll get an :py:exc:`EOFError` exception when "
+"the sequence ends."
+msgstr "如本例中看到的那样，你会得到一个：PY：EXC：`EOFError`例外序时结束。"
+
+#: ../../handbook/tutorial.rst:396
+msgid ""
+"The following class lets you use the for-statement to loop over the "
+"sequence:"
+msgstr "下面的类可以让你在序列使用for语句循环:"
+
+#: ../../handbook/tutorial.rst:399
+msgid "Using the ImageSequence Iterator class"
+msgstr "使用ImageSequence迭代器类"
+
+#: ../../handbook/tutorial.rst:409
+msgid "Postscript printing"
+msgstr "Postscript打印"
+
+#: ../../handbook/tutorial.rst:411
+msgid ""
+"The Python Imaging Library includes functions to print images, text and "
+"graphics on Postscript printers. Here’s a simple example:"
+msgstr "Python图像库包括功能在PostScript打印机上打印图像，文字和图形。这里有一个简单的例子:"
+
+#: ../../handbook/tutorial.rst:415
+msgid "Drawing Postscript"
+msgstr "绘图后记"
+
+#: ../../handbook/tutorial.rst:440
+msgid "More on reading images"
+msgstr "更多阅读图片"
+
+#: ../../handbook/tutorial.rst:442
+msgid ""
+"As described earlier, the :py:func:`~PIL.Image.open` function of the "
+":py:mod:`~PIL.Image` module is used to open an image file. In most cases,"
+" you simply pass it the filename as an argument. ``Image.open()`` can be "
+"used a context manager::"
+msgstr ""
+
+#: ../../handbook/tutorial.rst:451
+msgid ""
+"If everything goes well, the result is an :py:class:`PIL.Image.Image` "
+"object. Otherwise, an :exc:`IOError` exception is raised."
+msgstr "如果一切顺利的话，结果是：PY：类：`PIL.Image.Image`对象。否则，一：EXC：`IOError`异常。"
+
+#: ../../handbook/tutorial.rst:454
+msgid ""
+"You can use a file-like object instead of the filename. The object must "
+"implement :py:meth:`~file.read`, :py:meth:`~file.seek` and "
+":py:meth:`~file.tell` methods, and be opened in binary mode."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:459
+msgid "Reading from an open file"
+msgstr "从打开的文件中读取"
+
+#: ../../handbook/tutorial.rst:467
+msgid ""
+"To read an image from string data, use the :py:class:`~StringIO.StringIO`"
+" class:"
+msgstr "读取从字符串数据的图像，可以使用：吡啶：类：`〜StringIO.StringIO`类:"
+
+#: ../../handbook/tutorial.rst:471
+msgid "Reading from a string"
+msgstr "从字符串读"
+
+#: ../../handbook/tutorial.rst:479
+msgid ""
+"Note that the library rewinds the file (using ``seek(0)``) before reading"
+" the image header. In addition, seek will also be used when the image "
+"data is read (by the load method). If the image file is embedded in a "
+"larger file, such as a tar file, you can use the "
+":py:class:`~PIL.ContainerIO` or :py:class:`~PIL.TarIO` modules to access "
+"it."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:486
+msgid "Reading from a tar archive"
+msgstr "从tar归档阅读"
+
+#: ../../handbook/tutorial.rst:496
+msgid "Controlling the decoder"
+msgstr "控制解码器"
+
+#: ../../handbook/tutorial.rst:498
+msgid ""
+"Some decoders allow you to manipulate the image while reading it from a "
+"file. This can often be used to speed up decoding when creating "
+"thumbnails (when speed is usually more important than quality) and "
+"printing to a monochrome laser printer (when only a greyscale version of "
+"the image is needed)."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:503
+msgid ""
+"The :py:meth:`~PIL.Image.Image.draft` method manipulates an opened but "
+"not yet loaded image so it as closely as possible matches the given mode "
+"and size. This is done by reconfiguring the image decoder."
+msgstr ""
+
+#: ../../handbook/tutorial.rst:508
+msgid "Reading in draft mode"
+msgstr "阅读草稿模式"
+
+#: ../../handbook/tutorial.rst:510
+msgid "This is only available for JPEG and MPO files."
+msgstr "这仅适用于JPEG和MPO文件。"
+
+#: ../../handbook/tutorial.rst:522
+msgid "This prints something like::"
+msgstr "这将打印像::"
+
+#: ../../handbook/tutorial.rst:527
+msgid ""
+"Note that the resulting image may not exactly match the requested mode "
+"and size. To make sure that the image is not larger than the given size, "
+"use the thumbnail method instead."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:4
+msgid "Writing Your Own Image Plugin"
+msgstr "编写你自己的图片插件"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:6
+msgid ""
+"The Pillow uses a plug-in model which allows you to add your own decoders"
+" to the library, without any changes to the library itself. Such plug-ins"
+" usually have names like :file:`XxxImagePlugin.py`, where ``Xxx`` is a "
+"unique format name (usually an abbreviation)."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:12
+msgid ""
+"Pillow >= 2.1.0 no longer automatically imports any file in the Python "
+"path with a name ending in :file:`ImagePlugin.py`.  You will need to "
+"import your image plugin manually."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:17
+msgid "Pillow decodes files in 2 stages:"
+msgstr "枕头解码两个阶段文件:"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:19
+msgid ""
+"It loops over the available image plugins in the loaded order, and calls "
+"the plugin's ``accept`` function with the first 16 bytes of the file. If "
+"the ``accept`` function returns true, the plugin's ``_open`` method is "
+"called to set up the image metadata and image tiles. The ``_open`` method"
+" is not for decoding the actual image data."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:25
+msgid ""
+"When the image data is requested, the ``ImageFile.load`` method is "
+"called, which sets up a decoder for each tile and feeds the data to it."
+msgstr "当请求的图象数据时，``ImageFile.load``方法被调用时，它建立了一个解码器，用于每个区块与数据馈送到它。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:29
+msgid ""
+"An image plug-in should contain a format handler derived from the "
+":py:class:`PIL.ImageFile.ImageFile` base class. This class should provide"
+" an :py:meth:`_open` method, which reads the file header and sets up at "
+"least the :py:attr:`~PIL.Image.Image.mode` and "
+":py:attr:`~PIL.Image.Image.size` attributes. To be able to load the file,"
+" the method must also create a list of :py:attr:`tile` descriptors, which"
+" contain a decoder name, extents of the tile, and any decoder-specific "
+"data. The format handler class must be explicitly registered, via a call "
+"to the :py:mod:`~PIL.Image` module."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:39
+msgid ""
+"For performance reasons, it is important that the :py:meth:`_open` method"
+" quickly rejects files that do not have the appropriate contents."
+msgstr "For performance reasons, it is important that the :py:meth:`_open` method quickly rejects files that do not have the appropriate contents."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:44
+msgid "Example"
+msgstr "例"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:46
+msgid ""
+"The following plug-in supports a simple format, which has a 128-byte "
+"header consisting of the words “SPAM” followed by the width, height, and "
+"pixel size in bits. The header fields are separated by spaces. The image "
+"data follows directly after the header, and can be either bi-level, "
+"greyscale, or 24-bit true color."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:52
+msgid "**SpamImagePlugin.py**::"
+msgstr "**SpamImagePlugin.py**::"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:95
+msgid ""
+"The format handler must always set the :py:attr:`~PIL.Image.Image.size` "
+"and :py:attr:`~PIL.Image.Image.mode` attributes. If these are not set, "
+"the file cannot be opened. To simplify the plugin, the calling code "
+"considers exceptions like :py:exc:`SyntaxError`, :py:exc:`KeyError`, "
+":py:exc:`IndexError`, :py:exc:`EOFError` and :py:exc:`struct.error` as a "
+"failure to identify the file."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:103
+msgid ""
+"Note that the image plugin must be explicitly registered using "
+":py:func:`PIL.Image.register_open`. Although not required, it is also a "
+"good idea to register any extensions used by this format."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:108
+msgid "The :py:attr:`tile` attribute"
+msgstr "The :py:attr:`tile` attribute"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:110
+msgid ""
+"To be able to read the file as well as just identifying it, the "
+":py:attr:`tile` attribute must also be set. This attribute consists of a "
+"list of tile descriptors, where each descriptor specifies how data should"
+" be loaded to a given region in the image. In most cases, only a single "
+"descriptor is used, covering the full image."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:116
+msgid "The tile descriptor is a 4-tuple with the following contents::"
+msgstr "的砖描述符是一个四元组包含以下内容::"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:120
+#: ../../handbook/writing-your-own-file-decoder.rst:161
+#: ../../handbook/writing-your-own-file-decoder.rst:271
+msgid "The fields are used as follows:"
+msgstr "中的字段用于如下:"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:125
+msgid "**decoder**"
+msgstr "**decoder**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:123
+msgid ""
+"Specifies which decoder to use. The ``raw`` decoder used here supports "
+"uncompressed data, in a variety of pixel formats. For more information on"
+" this decoder, see the description below."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:128
+msgid "**region**"
+msgstr "**region**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:128
+msgid "A 4-tuple specifying where to store data in the image."
+msgstr "A 4元组指定，其中将数据存储在图像中。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:131
+msgid "Byte offset from the beginning of the file to image data."
+msgstr "字节从文件的图像数据的开始偏移。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:136
+msgid "**parameters**"
+msgstr "**parameters**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:134
+msgid ""
+"Parameters to the decoder. The contents of this field depends on the "
+"decoder specified by the first field in the tile descriptor tuple. If the"
+" decoder doesn’t need any parameters, use None for this field."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:138
+msgid ""
+"Note that the :py:attr:`tile` attribute contains a list of tile "
+"descriptors, not just a single descriptor."
+msgstr "请注意，：PY：ATTR：`tile`属性包含瓦块描述符的列表，而不仅仅是一个描述符。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:142
+msgid "Decoders"
+msgstr "解码器"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:145
+msgid "The raw decoder"
+msgstr "原始解码器"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:147
+msgid ""
+"The ``raw`` decoder is used to read uncompressed data from an image file."
+" It can be used with most uncompressed file formats, such as PPM, BMP, "
+"uncompressed TIFF, and many others. To use the raw decoder with the "
+":py:func:`PIL.Image.frombytes` function, use the following syntax::"
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:157
+#: ../../handbook/writing-your-own-file-decoder.rst:267
+msgid "When used in a tile descriptor, the parameter field should look like::"
+msgstr "当在砖描述符使用，参数字段应该像::"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:166
+msgid "**raw mode**"
+msgstr "**raw mode**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:164
+msgid ""
+"The pixel layout used in the file, and is used to properly convert data "
+"to PIL’s internal layout. For a summary of the available formats, see the"
+" table below."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:171
+msgid "**stride**"
+msgstr "**stride**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:169
+msgid ""
+"The distance in bytes between two consecutive lines in the image. If 0, "
+"the image is assumed to be packed (no padding between lines). If omitted,"
+" the stride defaults to 0."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:175
+#: ../../handbook/writing-your-own-file-decoder.rst:308
+msgid "**orientation**"
+msgstr "**orientation**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:174
+#: ../../handbook/writing-your-own-file-decoder.rst:307
+msgid ""
+"Whether the first line in the image is the top line on the screen (1), or"
+" the bottom line (-1). If omitted, the orientation defaults to 1."
+msgstr "是否在图像中的第一行是在屏幕（1）上的顶行或底行（-1）。如果省略，默认的方向为1。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:177
+msgid ""
+"The **raw mode** field is used to determine how the data should be "
+"unpacked to match PIL’s internal pixel layout. PIL supports a large set "
+"of raw modes; for a complete list, see the table in the "
+":py:mod:`Unpack.c` module. The following table describes some commonly "
+"used **raw modes**:"
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:183
+#: ../../handbook/writing-your-own-file-decoder.rst:227
+msgid "mode"
+msgstr "mode"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:183
+#: ../../handbook/writing-your-own-file-decoder.rst:227
+msgid "description"
+msgstr "描述"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:185
+msgid "``1``"
+msgstr "``1``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:185
+msgid ""
+"1-bit bilevel, stored with the leftmost pixel in the most significant "
+"bit. 0 means black, 1 means white."
+msgstr "1-bit bilevel, stored with the leftmost pixel in the most significant bit. 0 means black, 1 means white."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:188
+msgid "``1;I``"
+msgstr "``1;I``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:188
+msgid ""
+"1-bit inverted bilevel, stored with the leftmost pixel in the most "
+"significant bit. 0 means white, 1 means black."
+msgstr "1-bit inverted bilevel, stored with the leftmost pixel in the most significant bit. 0 means white, 1 means black."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:191
+msgid "``1;R``"
+msgstr "``1;R``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:191
+msgid ""
+"1-bit reversed bilevel, stored with the leftmost pixel in the least "
+"significant bit. 0 means black, 1 means white."
+msgstr "1-bit reversed bilevel, stored with the leftmost pixel in the least significant bit. 0 means black, 1 means white."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:194
+msgid "``L``"
+msgstr "``L``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:194
+msgid "8-bit greyscale. 0 means black, 255 means white."
+msgstr "8-bit greyscale. 0 means black, 255 means white."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:196
+msgid "``L;I``"
+msgstr "``L;I``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:196
+msgid "8-bit inverted greyscale. 0 means white, 255 means black."
+msgstr "8-bit inverted greyscale. 0 means white, 255 means black."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:198
+msgid "``P``"
+msgstr "``P``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:198
+msgid "8-bit palette-mapped image."
+msgstr "8-bit palette-mapped image."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:200
+msgid "``RGB``"
+msgstr "``RGB``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:200
+msgid "24-bit true colour, stored as (red, green, blue)."
+msgstr "24-bit true colour, stored as (red, green, blue)."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:202
+msgid "``BGR``"
+msgstr "``BGR``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:202
+msgid "24-bit true colour, stored as (blue, green, red)."
+msgstr "24-bit true colour, stored as (blue, green, red)."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:204
+msgid "``RGBX``"
+msgstr "``RGBX``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:204
+msgid ""
+"24-bit true colour, stored as (red, green, blue, pad). The pad pixels may"
+" vary."
+msgstr "24-bit true colour, stored as (red, green, blue, pad). The pad pixels may vary."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:207
+msgid "``RGB;L``"
+msgstr "``RGB;L``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:207
+msgid ""
+"24-bit true colour, line interleaved (first all red pixels, then all "
+"green pixels, finally all blue pixels)."
+msgstr "24-bit true colour, line interleaved (first all red pixels, then all green pixels, finally all blue pixels)."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:211
+msgid ""
+"Note that for the most common cases, the raw mode is simply the same as "
+"the mode."
+msgstr "Note that for the most common cases, the raw mode is simply the same as the mode."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:213
+msgid ""
+"The Python Imaging Library supports many other decoders, including JPEG, "
+"PNG, and PackBits. For details, see the :file:`decode.c` source file, and"
+" the standard plug-in implementations provided with the library."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:218
+msgid "Decoding floating point data"
+msgstr "Decoding floating point data"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:220
+msgid ""
+"PIL provides some special mechanisms to allow you to load a wide variety "
+"of formats into a mode ``F`` (floating point) image memory."
+msgstr "PIL provides some special mechanisms to allow you to load a wide variety of formats into a mode ``F`` (floating point) image memory."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:223
+msgid ""
+"You can use the ``raw`` decoder to read images where data is packed in "
+"any standard machine data type, using one of the following raw modes:"
+msgstr "You can use the ``raw`` decoder to read images where data is packed in any standard machine data type, using one of the following raw modes:"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:229
+msgid "``F``"
+msgstr "``F``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:229
+#: ../../handbook/writing-your-own-file-decoder.rst:246
+msgid "32-bit native floating point."
+msgstr "32-bit native floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:230
+msgid "``F;8``"
+msgstr "``F;8``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:230
+msgid "8-bit unsigned integer."
+msgstr "8-bit unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:231
+msgid "``F;8S``"
+msgstr "``F;8S``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:231
+msgid "8-bit signed integer."
+msgstr "8-bit signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:232
+msgid "``F;16``"
+msgstr "``F;16``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:232
+msgid "16-bit little endian unsigned integer."
+msgstr "16-bit little endian unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:233
+msgid "``F;16S``"
+msgstr "``F;16S``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:233
+msgid "16-bit little endian signed integer."
+msgstr "16-bit little endian signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:234
+msgid "``F;16B``"
+msgstr "``F;16B``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:234
+msgid "16-bit big endian unsigned integer."
+msgstr "16-bit big endian unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:235
+msgid "``F;16BS``"
+msgstr "``F;16BS``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:235
+msgid "16-bit big endian signed integer."
+msgstr "16-bit big endian signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:236
+msgid "``F;16N``"
+msgstr "``F;16N``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:236
+msgid "16-bit native unsigned integer."
+msgstr "16-bit native unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:237
+msgid "``F;16NS``"
+msgstr "``F;16NS``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:237
+msgid "16-bit native signed integer."
+msgstr "16-bit native signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:238
+msgid "``F;32``"
+msgstr "``F;32``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:238
+msgid "32-bit little endian unsigned integer."
+msgstr "32-bit little endian unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:239
+msgid "``F;32S``"
+msgstr "``F;32S``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:239
+msgid "32-bit little endian signed integer."
+msgstr "32-bit little endian signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:240
+msgid "``F;32B``"
+msgstr "``F;32B``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:240
+msgid "32-bit big endian unsigned integer."
+msgstr "32-bit big endian unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:241
+msgid "``F;32BS``"
+msgstr "``F;32BS``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:241
+msgid "32-bit big endian signed integer."
+msgstr "32-bit big endian signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:242
+msgid "``F;32N``"
+msgstr "``F;32N``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:242
+msgid "32-bit native unsigned integer."
+msgstr "32-bit native unsigned integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:243
+msgid "``F;32NS``"
+msgstr "``F;32NS``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:243
+msgid "32-bit native signed integer."
+msgstr "32-bit native signed integer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:244
+msgid "``F;32F``"
+msgstr "``F;32F``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:244
+msgid "32-bit little endian floating point."
+msgstr "32-bit little endian floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:245
+msgid "``F;32BF``"
+msgstr "``F;32BF``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:245
+msgid "32-bit big endian floating point."
+msgstr "32-bit big endian floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:246
+msgid "``F;32NF``"
+msgstr "``F;32NF``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:247
+msgid "``F;64F``"
+msgstr "``F;64F``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:247
+msgid "64-bit little endian floating point."
+msgstr "64-bit little endian floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:248
+msgid "``F;64BF``"
+msgstr "``F;64BF``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:248
+msgid "64-bit big endian floating point."
+msgstr "64-bit big endian floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:249
+msgid "``F;64NF``"
+msgstr "``F;64NF``"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:249
+msgid "64-bit native floating point."
+msgstr "64-bit native floating point."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:253
+msgid "The bit decoder"
+msgstr "The bit decoder"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:255
+msgid ""
+"If the raw decoder cannot handle your format, PIL also provides a special"
+" “bit” decoder that can be used to read various packed formats into a "
+"floating point image memory."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:259
+msgid ""
+"To use the bit decoder with the :py:func:`PIL.Image.frombytes` function, "
+"use the following syntax::"
+msgstr "To use the bit decoder with the :py:func:`PIL.Image.frombytes` function, use the following syntax::"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:274
+msgid "**bits**"
+msgstr "**bits**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:274
+msgid "Number of bits per pixel (2-32). No default."
+msgstr "Number of bits per pixel (2-32). No default."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:279
+msgid "**pad**"
+msgstr "**pad**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:277
+msgid ""
+"Padding between lines, in bits. This is either 0 if there is no padding, "
+"or 8 if lines are padded to full bytes. If omitted, the pad value "
+"defaults to 8."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:282
+msgid "**fill**"
+msgstr "**fill**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:282
+msgid "Controls how data are added to, and stored from, the decoder bit buffer."
+msgstr "Controls how data are added to, and stored from, the decoder bit buffer."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:286
+msgid "**fill=0**"
+msgstr "**fill=0**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:285
+msgid ""
+"Add bytes to the LSB end of the decoder buffer; store pixels from the MSB"
+" end."
+msgstr "Add bytes to the LSB end of the decoder buffer; store pixels from the MSB end."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:290
+msgid "**fill=1**"
+msgstr "**fill=1**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:289
+msgid ""
+"Add bytes to the MSB end of the decoder buffer; store pixels from the MSB"
+" end."
+msgstr "Add bytes to the MSB end of the decoder buffer; store pixels from the MSB end."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:294
+msgid "**fill=2**"
+msgstr "**fill=2**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:293
+msgid ""
+"Add bytes to the LSB end of the decoder buffer; store pixels from the LSB"
+" end."
+msgstr "Add bytes to the LSB end of the decoder buffer; store pixels from the LSB end."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:300
+msgid "**fill=3**"
+msgstr "**fill=3**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:297
+msgid ""
+"Add bytes to the MSB end of the decoder buffer; store pixels from the LSB"
+" end."
+msgstr "Add bytes to the MSB end of the decoder buffer; store pixels from the LSB end."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:300
+msgid "If omitted, the fill order defaults to 0."
+msgstr "If omitted, the fill order defaults to 0."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:304
+msgid "**sign**"
+msgstr "**sign**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:303
+msgid ""
+"If non-zero, bit fields are sign extended. If zero or omitted, bit fields"
+" are unsigned."
+msgstr "If non-zero, bit fields are sign extended. If zero or omitted, bit fields are unsigned."
+
+#: ../../handbook/writing-your-own-file-decoder.rst:313
+msgid "Writing Your Own File Decoder in C"
+msgstr "编写自己的文件解码器使用C"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:315
+msgid "There are 3 stages in a file decoder's lifetime:"
+msgstr "有一个文件解码器的寿命3个阶段："
+
+#: ../../handbook/writing-your-own-file-decoder.rst:317
+msgid ""
+"Setup: Pillow looks for a function in the decoder registry, falling back "
+"to a function named ``[decodername]_decoder`` on the internal core image "
+"object.  That function is called with the ``args`` tuple from the "
+"``tile`` setup in the ``_open`` method."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:322
+msgid ""
+"Decoding: The decoder's decode function is repeatedly called with chunks "
+"of image data."
+msgstr "解码：解码器的解码功能重复图像数据的块调用。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:325
+msgid ""
+"Cleanup: If the decoder has registered a cleanup function, it will be "
+"called at the end of the decoding process, even if there was an exception"
+" raised."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:331
+msgid "Setup"
+msgstr "设定"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:333
+msgid ""
+"The current conventions are that the decoder setup function is named "
+"``PyImaging_[Decodername]DecoderNew`` and defined in ``decode.c``. The "
+"python binding for it is named ``[decodername]_decoder`` and is setup "
+"from within the ``_imaging.c`` file in the codecs section of the function"
+" array."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:339
+msgid ""
+"The setup function needs to call ``PyImaging_DecoderNew`` and at the very"
+" least, set the ``decode`` function pointer. The fields of interest in "
+"this object are:"
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:345
+msgid "**decode**"
+msgstr "**解码**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:344
+msgid ""
+"Function pointer to the decode function, which has access to ``im``, "
+"``state``, and the buffer of data to be added to the image."
+msgstr "函数指针解码功能，它可以访问``im``，``state``，和数据的缓冲器被添加到该图像。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:348
+msgid "**cleanup**"
+msgstr "**cleanup**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:348
+msgid "Function pointer to the cleanup function, has access to ``state``."
+msgstr "函数指针的清理功能，可以访问``state``。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:351
+msgid "**im**"
+msgstr "**im**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:351
+msgid "The target image, will be set by Pillow."
+msgstr "目标图像，将枕头设定。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:356
+msgid "**state**"
+msgstr "**state**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:354
+msgid ""
+"An ImagingCodecStateInstance, will be set by Pillow. The **context** "
+"member is an opaque struct that can be used by the decoder to store any "
+"format specific state or options."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:367
+msgid "**pulls_fd**"
+msgstr "**pulls_fd**"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:359
+msgid ""
+"**EXPERIMENTAL** -- **WARNING**, interface may change. If set to 1, "
+"``state->fd`` will be a pointer to the Python file like object.  The "
+"decoder may use the functions in ``codec_fd.c`` to read directly from the"
+" file like object rather than have the data pushed through a buffer.  "
+"Note that this implementation may be refactored until this warning is "
+"removed."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:370
+msgid "Decoding"
+msgstr "解码"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:372
+msgid ""
+"The decode function is called with the target (core) image, the decoder "
+"state structure, and a buffer of data to be decoded."
+msgstr "解码功能被称为与目标（核心）图像，解码器状态的结构，并且将被解码的数据的缓冲。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:375
+msgid ""
+"**Experimental** -- If ``pulls_fd`` is set, then the decode function is "
+"called once, with an empty buffer. It is the decoder's responsibility to "
+"decode the entire tile in that one call.  The rest of this section only "
+"applies if ``pulls_fd`` is not set."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:380
+msgid ""
+"It is the decoder's responsibility to pull as much data as possible out "
+"of the buffer and return the number of bytes consumed. The next call to "
+"the decoder will include the previous unconsumed tail. The decoder "
+"function will be called multiple times as the data is read from the file "
+"like object."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:386
+msgid "If an error occurs, set ``state->errcode`` and return -1."
+msgstr "如果出现错误，集``国有> errcode``和返回-1。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:388
+msgid "Return -1 on success, without setting the errcode."
+msgstr "返回-1成功，无需设置ERRCODE。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:391
+msgid "Cleanup"
+msgstr "Cleanup"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:393
+msgid ""
+"The cleanup function is called after the decoder returns a negative "
+"value, or if there is a read error from the file. This function should "
+"free any allocated memory and release any resources from external "
+"libraries."
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:401
+msgid "Writing Your Own File Decoder in Python"
+msgstr "用Python写你自己的文件解码器"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:403
+msgid ""
+"Python file decoders should derive from "
+":py:class:`PIL.ImageFile.PyDecoder` and should at least override the "
+"decode method. File decoders should be registered using "
+":py:meth:`PIL.Image.register_decoder`. As in the C implementation of the "
+"file decoders, there are three stages in the lifetime of a Python-based "
+"file decoder:"
+msgstr ""
+
+#: ../../handbook/writing-your-own-file-decoder.rst:410
+msgid ""
+"Setup: Pillow looks for the decoder in the registry, then instantiates "
+"the class."
+msgstr "设置：枕头会在注册表中的解码器，然后实例化的类。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:413
+msgid ""
+"Decoding: The decoder instance's ``decode`` method is repeatedly called "
+"with a buffer of data to be interpreted."
+msgstr "解码：解码器实例的``decode``方法被反复调用的数据的缓冲器被解释。"
+
+#: ../../handbook/writing-your-own-file-decoder.rst:416
+msgid "Cleanup: The decoder instance's ``cleanup`` method is called."
+msgstr "清理：解码器实例的``cleanup``方法被调用。"
+

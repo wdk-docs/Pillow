@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../about.rst:2
+msgid "About"
+msgstr "关于"
+
+#: ../../about.rst:5
+msgid "Goals"
+msgstr "目标"
+
+#: ../../about.rst:7
+msgid ""
+"The fork author's goal is to foster and support active development of PIL"
+" through:"
+msgstr "叉笔者的目标是培育和扶持，通过公益诉讼的积极发展："
+
+#: ../../about.rst:9
+msgid ""
+"Continuous integration testing via `Travis CI`_, `AppVeyor`_ and `GitHub "
+"Actions`_"
+msgstr "通过`特拉维斯CI`_，`AppVeyor`_和`GitHub的Actions`_持续集成测试"
+
+#: ../../about.rst:10
+msgid "Publicized development activity on `GitHub`_"
+msgstr "在`GitHub`_宣传开发活动"
+
+#: ../../about.rst:11
+msgid "Regular releases to the `Python Package Index`_"
+msgstr "定期发布到`Python包Index`_"
+
+#: ../../about.rst:20
+msgid "License"
+msgstr "执照"
+
+#: ../../about.rst:22
+msgid ""
+"Like PIL, Pillow is `licensed under the open source PIL Software License "
+"<https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_"
+msgstr "Like PIL, Pillow is `licensed under the open source PIL Software License <https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_"
+
+#: ../../about.rst:25
+msgid "Why a fork?"
+msgstr "为什么叉子？"
+
+#: ../../about.rst:27
+msgid ""
+"PIL is not setuptools compatible. Please see `this Image-SIG post`_ for a"
+" more detailed explanation. Also, PIL's current bi-yearly (or greater) "
+"release schedule is too infrequent to accommodate the large number and "
+"frequency of issues reported."
+msgstr ""
+
+#: ../../about.rst:32
+msgid "What about PIL?"
+msgstr "什么PIL？"
+
+#: ../../about.rst:36
+msgid ""
+"Prior to Pillow 2.0.0, very few image code changes were made. Pillow "
+"2.0.0 added Python 3 support and includes many bug fixes from many "
+"contributors."
+msgstr ""
+
+#: ../../about.rst:39
+msgid ""
+"As more time passes since the last PIL release (1.1.7 in 2009), the "
+"likelihood of a new PIL release decreases. However, we've yet to hear an "
+"official \"PIL is dead\" announcement. So if you still want to support "
+"PIL, please `report issues here first`_, then `open corresponding Pillow "
+"tickets here`_."
+msgstr ""
+
+#: ../../about.rst:45
+msgid ""
+"Please provide a link to the first ticket so we can track the issue(s) "
+"upstream."
+msgstr "请提供给第一票一个链接，这样我们就可以跟踪这个问题（一个或多个）上游。"
+

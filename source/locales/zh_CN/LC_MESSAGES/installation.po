@@ -1,0 +1,1010 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../installation.rst:2
+msgid "Installation"
+msgstr "安装"
+
+#: ../../installation.rst:5
+msgid "Warnings"
+msgstr "警告"
+
+#: ../../installation.rst:7
+msgid ""
+"Pillow and PIL cannot co-exist in the same environment. Before installing"
+" Pillow, please uninstall PIL."
+msgstr "枕头和PIL不能共存于同一环境。在安装之前枕，请卸载PIL。"
+
+#: ../../installation.rst:9
+msgid ""
+"Pillow >= 1.0 no longer supports \"import Image\". Please use \"from PIL "
+"import Image\" instead."
+msgstr "枕> = 1.0不再支持\“进口图片\”。请使用\“从PIL进口影像\”来代替。"
+
+#: ../../installation.rst:11
+msgid ""
+"Pillow >= 2.1.0 no longer supports \"import _imaging\". Please use \"from"
+" PIL.Image import core as _imaging\" instead."
+msgstr "枕头> = 2.1.0不再支持\ “进口_imaging \”。请使用\“从PIL.Image进口核心为_imaging \”来代替。"
+
+#: ../../installation.rst:14
+msgid "Notes"
+msgstr "笔记"
+
+#: ../../installation.rst:16
+msgid "Pillow is supported on the following Python versions"
+msgstr "枕头支持以下Python版本"
+
+#: ../../installation.rst:20
+msgid "**Python**"
+msgstr "**Python**"
+
+#: ../../installation.rst:20
+msgid "**3.8**"
+msgstr "**3.8**"
+
+#: ../../installation.rst:20
+msgid "**3.7**"
+msgstr "**3.7**"
+
+#: ../../installation.rst:20
+msgid "**3.6**"
+msgstr "**3.6**"
+
+#: ../../installation.rst:20
+msgid "**3.5**"
+msgstr "**3.5**"
+
+#: ../../installation.rst:20
+msgid "**3.4**"
+msgstr "**3.4**"
+
+#: ../../installation.rst:20
+msgid "**3.3**"
+msgstr "**3.3**"
+
+#: ../../installation.rst:20
+msgid "**3.2**"
+msgstr "**3.2**"
+
+#: ../../installation.rst:20
+msgid "**2.7**"
+msgstr "**2.7**"
+
+#: ../../installation.rst:20
+msgid "**2.6**"
+msgstr "**2.6**"
+
+#: ../../installation.rst:20
+msgid "**2.5**"
+msgstr "**2.5**"
+
+#: ../../installation.rst:20
+msgid "**2.4**"
+msgstr "**2.4**"
+
+#: ../../installation.rst:22
+msgid "Pillow >= 7"
+msgstr "Pillow >= 7"
+
+#: ../../installation.rst:22 ../../installation.rst:24
+#: ../../installation.rst:26 ../../installation.rst:28
+#: ../../installation.rst:30 ../../installation.rst:32
+#: ../../installation.rst:34 ../../installation.rst:36
+msgid "Yes"
+msgstr "是"
+
+#: ../../installation.rst:24
+msgid "Pillow 6.2.1"
+msgstr "Pillow 6.2.1"
+
+#: ../../installation.rst:26
+msgid "Pillow 6.0 - 6.2.0"
+msgstr "Pillow 6.0 - 6.2.0"
+
+#: ../../installation.rst:28
+msgid "Pillow 5.2 - 5.4"
+msgstr "Pillow 5.2 - 5.4"
+
+#: ../../installation.rst:30
+msgid "Pillow 5.0 - 5.1"
+msgstr "Pillow 5.0 - 5.1"
+
+#: ../../installation.rst:32
+msgid "Pillow 4"
+msgstr "Pillow 4"
+
+#: ../../installation.rst:34
+msgid "Pillow 2 - 3"
+msgstr "Pillow 2 - 3"
+
+#: ../../installation.rst:36
+msgid "Pillow < 2"
+msgstr "Pillow < 2"
+
+#: ../../installation.rst:40
+msgid "Basic Installation"
+msgstr "基本安装"
+
+#: ../../installation.rst:44
+msgid ""
+"The following instructions will install Pillow with support for most "
+"common image formats. See :ref:`external-libraries` for a full list of "
+"external libraries supported."
+msgstr ""
+
+#: ../../installation.rst:48
+msgid "Install Pillow with :command:`pip`::"
+msgstr "使用 :command:`pip` 安装 Pillow ::"
+
+#: ../../installation.rst:55
+msgid "Windows Installation"
+msgstr "Windows 安装"
+
+#: ../../installation.rst:57
+msgid ""
+"We provide Pillow binaries for Windows compiled for the matrix of "
+"supported Pythons in both 32 and 64-bit versions in wheel, egg, and "
+"executable installers. These binaries have all of the optional libraries "
+"included except for raqm and libimagequant::"
+msgstr "我们提供的编译支持蟒蛇的车轮，鸡蛋和可执行安装32位和64位版本的矩阵为Windows枕头二进制文件。 这些二进制文件都可选库包括除raqm和libimagequant::"
+
+#: ../../installation.rst:67
+msgid "macOS Installation"
+msgstr "MacOS的安装"
+
+#: ../../installation.rst:69
+msgid ""
+"We provide binaries for macOS for each of the supported Python versions "
+"in the wheel format. These include support for all optional libraries "
+"except libimagequant.  Raqm support requires libraqm, fribidi, and "
+"harfbuzz to be installed separately::"
+msgstr ""
+
+#: ../../installation.rst:78
+msgid "Linux Installation"
+msgstr "Linux安装"
+
+#: ../../installation.rst:80
+msgid ""
+"We provide binaries for Linux for each of the supported Python versions "
+"in the manylinux wheel format. These include support for all optional "
+"libraries except libimagequant. Raqm support requires libraqm, fribidi, "
+"and harfbuzz to be installed separately::"
+msgstr ""
+
+#: ../../installation.rst:88
+msgid ""
+"Most major Linux distributions, including Fedora, Debian/Ubuntu and "
+"ArchLinux also include Pillow in packages that previously contained PIL "
+"e.g. ``python-imaging``."
+msgstr ""
+
+#: ../../installation.rst:93
+msgid "FreeBSD Installation"
+msgstr "FreeBSD的安装"
+
+#: ../../installation.rst:95
+msgid ""
+"Pillow can be installed on FreeBSD via the official Ports or Packages "
+"systems:"
+msgstr "Pillow can be installed on FreeBSD via the official Ports or Packages systems:"
+
+#: ../../installation.rst:97
+msgid "**Ports**::"
+msgstr "**端口**::"
+
+#: ../../installation.rst:101
+msgid "**Packages**::"
+msgstr "**包**::"
+
+#: ../../installation.rst:107
+msgid ""
+"The `Pillow FreeBSD port <https://www.freshports.org/graphics/py-"
+"pillow/>`_ and packages are tested by the ports team with all supported "
+"FreeBSD versions."
+msgstr ""
+
+#: ../../installation.rst:113
+msgid "Building From Source"
+msgstr "编译源"
+
+#: ../../installation.rst:115
+msgid "Download and extract the `compressed archive from PyPI`_."
+msgstr "下载并解压 `compressed archive from PyPI`_."
+
+#: ../../installation.rst:122
+msgid "External Libraries"
+msgstr "外部库"
+
+#: ../../installation.rst:126
+msgid ""
+"You **do not need to install all supported external libraries** to use "
+"Pillow's basic features. **Zlib** and **libjpeg** are required by "
+"default."
+msgstr ""
+
+#: ../../installation.rst:132
+msgid ""
+"There are Dockerfiles in our `Docker images repo <https://github.com"
+"/python-pillow/docker-images>`_ to install the dependencies for some "
+"operating systems."
+msgstr ""
+
+#: ../../installation.rst:136
+msgid "Many of Pillow's features require external libraries:"
+msgstr "许多枕头的功能需要外部库:"
+
+#: ../../installation.rst:138
+msgid "**libjpeg** provides JPEG functionality."
+msgstr "**libjpeg** 提供JPEG功能."
+
+#: ../../installation.rst:140
+msgid ""
+"Pillow has been tested with libjpeg versions **6b**, **8**, **9-9c** and "
+"libjpeg-turbo version **8**."
+msgstr "Pillow has been tested with libjpeg versions **6b**, **8**, **9-9c** and libjpeg-turbo version **8**."
+
+#: ../../installation.rst:142
+msgid ""
+"Starting with Pillow 3.0.0, libjpeg is required by default, but may be "
+"disabled with the ``--disable-jpeg`` flag."
+msgstr "Starting with Pillow 3.0.0, libjpeg is required by default, but may be disabled with the ``--disable-jpeg`` flag."
+
+#: ../../installation.rst:145
+msgid "**zlib** provides access to compressed PNGs"
+msgstr "**zlib** 提供访问压缩的PNG"
+
+#: ../../installation.rst:147
+msgid ""
+"Starting with Pillow 3.0.0, zlib is required by default, but may be "
+"disabled with the ``--disable-zlib`` flag."
+msgstr "Starting with Pillow 3.0.0, zlib is required by default, but may be disabled with the ``--disable-zlib`` flag."
+
+#: ../../installation.rst:150
+msgid "**libtiff** provides compressed TIFF functionality"
+msgstr "**libtiff** 提供压缩的TIFF功能"
+
+#: ../../installation.rst:152
+msgid "Pillow has been tested with libtiff versions **3.x** and **4.0**"
+msgstr "枕头已经利用libtiff版本测试** 3.x的**和** ** 4.0"
+
+#: ../../installation.rst:154
+msgid "**libfreetype** provides type related services"
+msgstr "**libfreetype** 提供的类型相关的服务"
+
+#: ../../installation.rst:156
+msgid "**littlecms** provides color management"
+msgstr "**littlecms** 提供色彩管理"
+
+#: ../../installation.rst:158
+msgid ""
+"Pillow version 2.2.1 and below uses liblcms1, Pillow 2.3.0 and above uses"
+" liblcms2. Tested with **1.19** and **2.7-2.9**."
+msgstr "Pillow version 2.2.1 and below uses liblcms1, Pillow 2.3.0 and above uses liblcms2. Tested with **1.19** and **2.7-2.9**."
+
+#: ../../installation.rst:161
+msgid "**libwebp** provides the WebP format."
+msgstr "**libwebp** 提供的WebP格式。"
+
+#: ../../installation.rst:163
+msgid ""
+"Pillow has been tested with version **0.1.3**, which does not read "
+"transparent WebP files. Versions **0.3.0** and above support "
+"transparency."
+msgstr ""
+
+#: ../../installation.rst:167
+msgid "**tcl/tk** provides support for tkinter bitmap and photo images."
+msgstr "**tcl/tk** 提供Tkinter的位图和照片图像的支持。"
+
+#: ../../installation.rst:169
+msgid "**openjpeg** provides JPEG 2000 functionality."
+msgstr "**openjpeg** 提供JPEG 2000的功能。"
+
+#: ../../installation.rst:171
+msgid "Pillow has been tested with openjpeg **2.0.0**, **2.1.0** and **2.3.1**."
+msgstr "枕头已经与openjpeg ** ** 2.0.0，2.1.0 ** **和**测试2.3.1 **。"
+
+#: ../../installation.rst:172
+msgid ""
+"Pillow does **not** support the earlier **1.5** series which ships with "
+"Debian Jessie."
+msgstr "Pillow does **not** support the earlier **1.5** series which ships with Debian Jessie."
+
+#: ../../installation.rst:175
+msgid "**libimagequant** provides improved color quantization"
+msgstr "**libimagequant** 提供了改进的颜色量化"
+
+#: ../../installation.rst:177
+msgid "Pillow has been tested with libimagequant **2.6-2.12.6**"
+msgstr "枕头已经与libimagequant测试** ** 2.6-2.12.6"
+
+#: ../../installation.rst:178
+msgid ""
+"Libimagequant is licensed GPLv3, which is more restrictive than the "
+"Pillow license, therefore we will not be distributing binaries with "
+"libimagequant support enabled."
+msgstr ""
+
+#: ../../installation.rst:182
+msgid "**libraqm** provides complex text layout support."
+msgstr "**libraqm** 提供复杂的文本布局支持。"
+
+#: ../../installation.rst:184
+msgid ""
+"libraqm provides bidirectional text support (using FriBiDi), shaping "
+"(using HarfBuzz), and proper script itemization. As a result, Raqm can "
+"support most writing systems covered by Unicode."
+msgstr ""
+
+#: ../../installation.rst:187
+msgid ""
+"libraqm depends on the following libraries: FreeType, HarfBuzz, FriBiDi, "
+"make sure that you install them before installing libraqm if not "
+"available as package in your system."
+msgstr ""
+
+#: ../../installation.rst:190
+msgid "setting text direction or font features is not supported without libraqm."
+msgstr "不支持将文本方向或字体特征而不libraqm。"
+
+#: ../../installation.rst:192
+msgid ""
+"libraqm is dynamically loaded in Pillow 5.0.0 and above, so support is "
+"available if all the libraries are installed."
+msgstr "libraqm is dynamically loaded in Pillow 5.0.0 and above, so support is available if all the libraries are installed."
+
+#: ../../installation.rst:194
+msgid "Windows support: Raqm is not included in prebuilt wheels"
+msgstr "Windows的支持：Raqm不包括在预置的车轮"
+
+#: ../../installation.rst:196
+msgid "Once you have installed the prerequisites, run::"
+msgstr "一旦你已经安装的先决条件，运行::"
+
+#: ../../installation.rst:201
+msgid ""
+"If the prerequisites are installed in the standard library locations for "
+"your machine (e.g. :file:`/usr` or :file:`/usr/local`), no additional "
+"configuration should be required. If they are installed in a non-standard"
+" location, you may need to configure setuptools to use those locations by"
+" editing :file:`setup.py` or :file:`setup.cfg`, or by adding environment "
+"variables on the command line::"
+msgstr ""
+
+#: ../../installation.rst:211
+msgid ""
+"If Pillow has been previously built without the required prerequisites, "
+"it may be necessary to manually clear the pip cache or build without "
+"cache using the ``--no-cache-dir`` option to force a build with newly "
+"installed external libraries."
+msgstr ""
+
+#: ../../installation.rst:218
+msgid "Build Options"
+msgstr "构建选项"
+
+#: ../../installation.rst:220
+msgid ""
+"Environment variable: ``MAX_CONCURRENCY=n``. Pillow can use "
+"multiprocessing to build the extension. Setting ``MAX_CONCURRENCY`` sets "
+"the number of CPUs to use, or can disable parallel building by using a "
+"setting of 1. By default, it uses 4 CPUs, or if 4 are not available, as "
+"many as are present."
+msgstr ""
+
+#: ../../installation.rst:226
+msgid ""
+"Build flags: ``--disable-zlib``, ``--disable-jpeg``, ``--disable-tiff``, "
+"``--disable-freetype``, ``--disable-lcms``, ``--disable-webp``, "
+"``--disable-webpmux``, ``--disable-jpeg2000``, ``--disable-imagequant``. "
+"Disable building the corresponding feature even if the development "
+"libraries are present on the building machine."
+msgstr ""
+
+#: ../../installation.rst:233
+msgid ""
+"Build flags: ``--enable-zlib``, ``--enable-jpeg``, ``--enable-tiff``, "
+"``--enable-freetype``, ``--enable-lcms``, ``--enable-webp``, ``--enable-"
+"webpmux``, ``--enable-jpeg2000``, ``--enable-imagequant``. Require that "
+"the corresponding feature is built. The build will raise an exception if "
+"the libraries are not found. Webpmux (WebP metadata) relies on WebP "
+"support. Tcl and Tk also must be used together."
+msgstr ""
+
+#: ../../installation.rst:241
+msgid ""
+"Build flag: ``--disable-platform-guessing``. Skips all of the platform "
+"dependent guessing of include and library directories for automated build"
+" systems that configure the proper paths in the environment variables "
+"(e.g. Buildroot)."
+msgstr ""
+
+#: ../../installation.rst:246
+msgid ""
+"Build flag: ``--debug``. Adds a debugging flag to the include and library"
+" search process to dump all paths searched for and found to stdout."
+msgstr "Build flag: ``--debug``. Adds a debugging flag to the include and library search process to dump all paths searched for and found to stdout."
+
+#: ../../installation.rst:251
+msgid "Sample usage::"
+msgstr "用法示例::"
+
+#: ../../installation.rst:255
+msgid "or using pip::"
+msgstr "or using pip::"
+
+#: ../../installation.rst:261
+msgid "Building on macOS"
+msgstr "建立在MacOS"
+
+#: ../../installation.rst:263
+msgid ""
+"The Xcode command line tools are required to compile portions of Pillow. "
+"The tools are installed by running ``xcode-select --install`` from the "
+"command line. The command line tools are required even if you have the "
+"full Xcode package installed.  It may be necessary to run ``sudo "
+"xcodebuild -license`` to accept the license prior to using the tools."
+msgstr ""
+
+#: ../../installation.rst:270
+msgid ""
+"The easiest way to install external libraries is via `Homebrew "
+"<https://brew.sh/>`_. After you install Homebrew, run::"
+msgstr "The easiest way to install external libraries is via `Homebrew <https://brew.sh/>`_. After you install Homebrew, run::"
+
+#: ../../installation.rst:275
+msgid "To install libraqm on macOS use Homebrew to install its dependencies::"
+msgstr "要在Mac OS使用自制安装libraqm安装它的依赖::"
+
+#: ../../installation.rst:279 ../../installation.rst:314
+msgid "Then see ``depends/install_raqm_cmake.sh`` to install libraqm."
+msgstr "Then see ``depends/install_raqm_cmake.sh`` to install libraqm."
+
+#: ../../installation.rst:281
+msgid "Now install Pillow with::"
+msgstr "现在安装枕::"
+
+#: ../../installation.rst:286
+msgid "or from within the uncompressed source directory::"
+msgstr "或从所述未压缩源目录内::"
+
+#: ../../installation.rst:291
+msgid "Building on Windows"
+msgstr "建立在Windows"
+
+#: ../../installation.rst:293
+msgid ""
+"We don't recommend trying to build on Windows. It is a maze of twisty "
+"passages, mostly dead ends. There are build scripts and notes for the "
+"Windows build in the ``winbuild`` directory."
+msgstr ""
+
+#: ../../installation.rst:298
+msgid "Building on FreeBSD"
+msgstr "建立在FreeBSD"
+
+#: ../../installation.rst:300
+msgid "Only FreeBSD 10 and 11 tested"
+msgstr "只有FreeBSD的10和11测试"
+
+#: ../../installation.rst:302
+msgid "Make sure you have Python's development libraries installed::"
+msgstr "请确保你已经安装了Python的开发库::"
+
+#: ../../installation.rst:306 ../../installation.rst:327
+#: ../../installation.rst:335
+msgid "Or for Python 3::"
+msgstr "或为Python 3::"
+
+#: ../../installation.rst:310
+msgid "Prerequisites are installed on **FreeBSD 10 or 11** with::"
+msgstr "先决条件是安装在** FreeBSD的10或11 **与::"
+
+#: ../../installation.rst:318
+msgid "Building on Linux"
+msgstr "建立在Linux上"
+
+#: ../../installation.rst:320
+msgid ""
+"If you didn't build Python from source, make sure you have Python's "
+"development libraries installed."
+msgstr "If you didn't build Python from source, make sure you have Python's development libraries installed."
+
+#: ../../installation.rst:323
+msgid "In Debian or Ubuntu::"
+msgstr "在Debian或者ubuntu::"
+
+#: ../../installation.rst:331
+msgid "In Fedora, the command is::"
+msgstr "在Fedora，该命令是::"
+
+#: ../../installation.rst:339
+msgid "``redhat-rpm-config`` is required on Fedora 23, but not earlier versions."
+msgstr "``redhat-rpm-config`` is required on Fedora 23, but not earlier versions."
+
+#: ../../installation.rst:341
+msgid "Prerequisites are installed on **Ubuntu 16.04 LTS** with::"
+msgstr "前提条件是安装在Ubuntu的** 16.04 LTS与**::"
+
+#: ../../installation.rst:347
+msgid "Then see ``depends/install_raqm.sh`` to install libraqm."
+msgstr "然后看``取决于/ install_raqm.sh``安装libraqm。"
+
+#: ../../installation.rst:349
+msgid ""
+"Prerequisites are installed on recent **RedHat** **Centos** or **Fedora**"
+" with::"
+msgstr "Prerequisites are installed on recent **RedHat** **Centos** or **Fedora** with::"
+
+#: ../../installation.rst:355
+msgid ""
+"Note that the package manager may be yum or dnf, depending on the exact "
+"distribution."
+msgstr "Note that the package manager may be yum or dnf, depending on the exact distribution."
+
+#: ../../installation.rst:358
+msgid ""
+"See also the ``Dockerfile``\\s in the Test Infrastructure repo "
+"(https://github.com/python-pillow/docker-images) for a known working "
+"install process for other tested distros."
+msgstr ""
+
+#: ../../installation.rst:363
+msgid "Building on Android"
+msgstr "在Android上构建"
+
+#: ../../installation.rst:365
+msgid ""
+"Basic Android support has been added for compilation within the Termux "
+"environment. The dependencies can be installed by::"
+msgstr "Basic Android support has been added for compilation within the Termux environment. The dependencies can be installed by::"
+
+#: ../../installation.rst:371
+msgid "This has been tested within the Termux app on ChromeOS, on x86."
+msgstr "这一问题已经在Chrome操作系统的Termux应用程序中测试，在x86。"
+
+#: ../../installation.rst:375
+msgid "Platform Support"
+msgstr "平台支持"
+
+#: ../../installation.rst:377
+msgid ""
+"Current platform support for Pillow. Binary distributions are contributed"
+" for each release on a volunteer basis, but the source should compile and"
+" run everywhere platform support is listed. In general, we aim to support"
+" all current versions of Linux, macOS, and Windows."
+msgstr ""
+
+#: ../../installation.rst:384
+msgid "Continuous Integration Targets"
+msgstr "持续集成的目标"
+
+#: ../../installation.rst:386
+msgid "These platforms are built and tested for every change."
+msgstr "这些平台是建立和每一个变化测试。"
+
+#: ../../installation.rst:389 ../../installation.rst:440
+msgid "**Operating system**"
+msgstr "**操作系统**"
+
+#: ../../installation.rst:389 ../../installation.rst:440
+msgid "**Tested Python versions**"
+msgstr "**测试的Python版本**"
+
+#: ../../installation.rst:389
+msgid "**Tested architecture**"
+msgstr "**经测试架构**"
+
+#: ../../installation.rst:391
+msgid "Alpine"
+msgstr "Alpine"
+
+#: ../../installation.rst:391 ../../installation.rst:393
+#: ../../installation.rst:407 ../../installation.rst:409
+#: ../../installation.rst:411
+msgid "3.7"
+msgstr "3.7"
+
+#: ../../installation.rst:391 ../../installation.rst:393
+#: ../../installation.rst:395 ../../installation.rst:397
+#: ../../installation.rst:399 ../../installation.rst:401
+#: ../../installation.rst:403 ../../installation.rst:409
+#: ../../installation.rst:411 ../../installation.rst:413
+#: ../../installation.rst:415 ../../installation.rst:417
+#: ../../installation.rst:442 ../../installation.rst:446
+#: ../../installation.rst:448 ../../installation.rst:450
+#: ../../installation.rst:454 ../../installation.rst:456
+#: ../../installation.rst:462 ../../installation.rst:467
+#: ../../installation.rst:473 ../../installation.rst:479
+#: ../../installation.rst:481 ../../installation.rst:483
+#: ../../installation.rst:485 ../../installation.rst:491
+#: ../../installation.rst:493
+msgid "x86-64"
+msgstr "x86-64"
+
+#: ../../installation.rst:393
+msgid "Arch"
+msgstr "Arch"
+
+#: ../../installation.rst:395
+msgid "Amazon Linux 1"
+msgstr "Amazon Linux 1"
+
+#: ../../installation.rst:395 ../../installation.rst:397
+#: ../../installation.rst:399 ../../installation.rst:401
+#: ../../installation.rst:403
+msgid "3.6"
+msgstr "3.6"
+
+#: ../../installation.rst:397
+msgid "Amazon Linux 2"
+msgstr "Amazon Linux 2"
+
+#: ../../installation.rst:399
+msgid "CentOS 6"
+msgstr "CentOS 6"
+
+#: ../../installation.rst:401
+msgid "CentOS 7"
+msgstr "CentOS 7"
+
+#: ../../installation.rst:403
+msgid "CentOS 8"
+msgstr "CentOS 8"
+
+#: ../../installation.rst:405
+msgid "Debian 9 Stretch"
+msgstr "Debian 9 Stretch"
+
+#: ../../installation.rst:405
+msgid "3.5"
+msgstr "3.5"
+
+#: ../../installation.rst:405 ../../installation.rst:407
+#: ../../installation.rst:421 ../../installation.rst:425
+#: ../../installation.rst:458 ../../installation.rst:460
+msgid "x86"
+msgstr "x86"
+
+#: ../../installation.rst:407
+msgid "Debian 10 Buster"
+msgstr "Debian 10 Buster"
+
+#: ../../installation.rst:409
+msgid "Fedora 30"
+msgstr "Fedora 30"
+
+#: ../../installation.rst:411
+msgid "Fedora 31"
+msgstr "Fedora 31"
+
+#: ../../installation.rst:413 ../../installation.rst:446
+msgid "macOS 10.13 High Sierra"
+msgstr "macOS 10.13 High Sierra"
+
+#: ../../installation.rst:413 ../../installation.rst:423
+msgid "3.5, 3.6, 3.7, 3.8"
+msgstr "3.5, 3.6, 3.7, 3.8"
+
+#: ../../installation.rst:415
+msgid "macOS 10.15 Catalina"
+msgstr "macOS 10.15 Catalina"
+
+#: ../../installation.rst:415 ../../installation.rst:425
+msgid "PyPy3"
+msgstr "PyPy3"
+
+#: ../../installation.rst:417
+msgid "Ubuntu Linux 16.04 LTS"
+msgstr "Ubuntu Linux 16.04 LTS"
+
+#: ../../installation.rst:417
+msgid "3.5, 3.6, 3.7, 3.8, PyPy3"
+msgstr "3.5, 3.6, 3.7, 3.8, PyPy3"
+
+#: ../../installation.rst:419
+msgid "Windows Server 2012 R2"
+msgstr "Windows Server 2012 R2"
+
+#: ../../installation.rst:419
+msgid "3.5, 3.8"
+msgstr "3.5, 3.8"
+
+#: ../../installation.rst:419 ../../installation.rst:423
+msgid "x86, x86-64"
+msgstr "x86, x86-64"
+
+#: ../../installation.rst:421
+msgid "PyPy3, 3.7/MinGW"
+msgstr "PyPy3, 3.7/MinGW"
+
+#: ../../installation.rst:423
+msgid "Windows Server 2019"
+msgstr "Windows Server 2019"
+
+#: ../../installation.rst:430
+msgid "Other Platforms"
+msgstr "其他平台"
+
+#: ../../installation.rst:432
+msgid "These platforms have been reported to work at the versions mentioned."
+msgstr "这些平台已报告在工作中提到的版本。"
+
+#: ../../installation.rst:436
+msgid ""
+"Contributors please test Pillow on your platform then update this "
+"document and send a pull request."
+msgstr "请投稿枕头测试你的平台上，然后更新此文件并发送pull请求。"
+
+#: ../../installation.rst:440
+msgid "**Latest tested Pillow version**"
+msgstr "**最新的测试版本枕头**"
+
+#: ../../installation.rst:440
+msgid "**Tested processors**"
+msgstr "**经测试的处理器**"
+
+#: ../../installation.rst:442
+msgid "macOS 10.14 Mojave"
+msgstr "macOS 10.14 Mojave"
+
+#: ../../installation.rst:442
+msgid "2.7, 3.5, 3.6, 3.7"
+msgstr "2.7, 3.5, 3.6, 3.7"
+
+#: ../../installation.rst:442
+msgid "6.0.0"
+msgstr "6.0.0"
+
+#: ../../installation.rst:444
+msgid "3.4"
+msgstr "3.4"
+
+#: ../../installation.rst:444 ../../installation.rst:450
+msgid "5.4.1"
+msgstr "5.4.1"
+
+#: ../../installation.rst:446 ../../installation.rst:448
+#: ../../installation.rst:481
+msgid "2.7, 3.4, 3.5, 3.6"
+msgstr "2.7, 3.4, 3.5, 3.6"
+
+#: ../../installation.rst:446
+msgid "4.2.1"
+msgstr "4.2.1"
+
+#: ../../installation.rst:448
+msgid "macOS 10.12 Sierra"
+msgstr "macOS 10.12 Sierra"
+
+#: ../../installation.rst:448
+msgid "4.1.1"
+msgstr "4.1.1"
+
+#: ../../installation.rst:450
+msgid "Mac OS X 10.11 El Capitan"
+msgstr "Mac OS X 10.11 El Capitan"
+
+#: ../../installation.rst:450
+msgid "2.7, 3.4, 3.5, 3.6, 3.7"
+msgstr "2.7, 3.4, 3.5, 3.6, 3.7"
+
+#: ../../installation.rst:452 ../../installation.rst:493
+msgid "3.3"
+msgstr "3.3"
+
+#: ../../installation.rst:452
+msgid "4.1.0"
+msgstr "4.1.0"
+
+#: ../../installation.rst:454
+msgid "Mac OS X 10.9 Mavericks"
+msgstr "Mac OS X 10.9 Mavericks"
+
+#: ../../installation.rst:454
+msgid "2.7, 3.2, 3.3, 3.4"
+msgstr "2.7, 3.2, 3.3, 3.4"
+
+#: ../../installation.rst:454
+msgid "3.0.0"
+msgstr "3.0.0"
+
+#: ../../installation.rst:456
+msgid "Mac OS X 10.8 Mountain Lion"
+msgstr "Mac OS X 10.8 Mountain Lion"
+
+#: ../../installation.rst:456
+msgid "2.6, 2.7, 3.2, 3.3"
+msgstr "2.6, 2.7, 3.2, 3.3"
+
+#: ../../installation.rst:458
+msgid "Redhat Linux 6"
+msgstr "Redhat Linux 6"
+
+#: ../../installation.rst:458 ../../installation.rst:471
+msgid "2.6"
+msgstr "2.6"
+
+#: ../../installation.rst:460
+msgid "CentOS 6.3"
+msgstr "CentOS 6.3"
+
+#: ../../installation.rst:460
+msgid "2.7, 3.3"
+msgstr "2.7, 3.3"
+
+#: ../../installation.rst:462
+msgid "Fedora 23"
+msgstr "Fedora 23"
+
+#: ../../installation.rst:462 ../../installation.rst:473
+#: ../../installation.rst:475 ../../installation.rst:485
+msgid "2.7, 3.4"
+msgstr "2.7, 3.4"
+
+#: ../../installation.rst:462 ../../installation.rst:473
+#: ../../installation.rst:475 ../../installation.rst:485
+msgid "3.1.0"
+msgstr "3.1.0"
+
+#: ../../installation.rst:464
+msgid "Ubuntu Linux 12.04 LTS"
+msgstr "Ubuntu Linux 12.04 LTS"
+
+#: ../../installation.rst:464
+msgid "2.6, 3.2, 3.3, 3.4, 3.5 PyPy5.3.1, PyPy3 v2.4.0"
+msgstr "2.6, 3.2, 3.3, 3.4, 3.5 PyPy5.3.1, PyPy3 v2.4.0"
+
+#: ../../installation.rst:464 ../../installation.rst:469
+#: ../../installation.rst:491
+msgid "3.4.1"
+msgstr "3.4.1"
+
+#: ../../installation.rst:464 ../../installation.rst:471
+#: ../../installation.rst:487 ../../installation.rst:489
+msgid "x86,x86-64"
+msgstr "x86,x86-64"
+
+#: ../../installation.rst:467
+msgid "2.7"
+msgstr "2.7"
+
+#: ../../installation.rst:467 ../../installation.rst:481
+msgid "4.3.0"
+msgstr "4.3.0"
+
+#: ../../installation.rst:469 ../../installation.rst:479
+msgid "2.7, 3.2"
+msgstr "2.7, 3.2"
+
+#: ../../installation.rst:469
+msgid "ppc"
+msgstr "ppc"
+
+#: ../../installation.rst:471
+msgid "Ubuntu Linux 10.04 LTS"
+msgstr "Ubuntu Linux 10.04 LTS"
+
+#: ../../installation.rst:471
+msgid "2.3.0"
+msgstr "2.3.0"
+
+#: ../../installation.rst:473
+msgid "Debian 8.2 Jessie"
+msgstr "Debian 8.2 Jessie"
+
+#: ../../installation.rst:475
+msgid "Raspbian Jessie"
+msgstr "Raspbian Jessie"
+
+#: ../../installation.rst:475 ../../installation.rst:477
+msgid "arm"
+msgstr "arm"
+
+#: ../../installation.rst:477
+msgid "Raspbian Stretch"
+msgstr "Raspbian Stretch"
+
+#: ../../installation.rst:477
+msgid "2.7, 3.5"
+msgstr "2.7, 3.5"
+
+#: ../../installation.rst:477
+msgid "4.0.0"
+msgstr "4.0.0"
+
+#: ../../installation.rst:479
+msgid "Gentoo Linux"
+msgstr "Gentoo Linux"
+
+#: ../../installation.rst:479
+msgid "2.1.0"
+msgstr "2.1.0"
+
+#: ../../installation.rst:481
+msgid "FreeBSD 11.1"
+msgstr "FreeBSD 11.1"
+
+#: ../../installation.rst:483
+msgid "FreeBSD 10.3"
+msgstr "FreeBSD 10.3"
+
+#: ../../installation.rst:483
+msgid "2.7, 3.4, 3.5"
+msgstr "2.7, 3.4, 3.5"
+
+#: ../../installation.rst:483
+msgid "4.2.0"
+msgstr "4.2.0"
+
+#: ../../installation.rst:485
+msgid "FreeBSD 10.2"
+msgstr "FreeBSD 10.2"
+
+#: ../../installation.rst:487
+msgid "Windows 8.1 Pro"
+msgstr "Windows 8.1 Pro"
+
+#: ../../installation.rst:487
+msgid "2.6, 2.7, 3.2, 3.3, 3.4"
+msgstr "2.6, 2.7, 3.2, 3.3, 3.4"
+
+#: ../../installation.rst:487
+msgid "2.4.0"
+msgstr "2.4.0"
+
+#: ../../installation.rst:489
+msgid "Windows 8 Pro"
+msgstr "Windows 8 Pro"
+
+#: ../../installation.rst:489
+msgid "2.6, 2.7, 3.2, 3.3, 3.4a3"
+msgstr "2.6, 2.7, 3.2, 3.3, 3.4a3"
+
+#: ../../installation.rst:489
+msgid "2.2.0"
+msgstr "2.2.0"
+
+#: ../../installation.rst:491
+msgid "Windows 7 Pro"
+msgstr "Windows 7 Pro"
+
+#: ../../installation.rst:491
+msgid "2.7, 3.2, 3.3"
+msgstr "2.7, 3.2, 3.3"
+
+#: ../../installation.rst:493
+msgid "Windows Server 2008 R2 Enterprise"
+msgstr "在Windows Server 2008 R2企业版"
+
+#: ../../installation.rst:497
+msgid "Old Versions"
+msgstr "老版本"
+
+#: ../../installation.rst:499
+msgid ""
+"You can download old distributions from the `release history at PyPI "
+"<https://pypi.org/project/Pillow/#history>`_ and by direct URL access eg."
+" https://pypi.org/project/Pillow/1.0/."
+msgstr "您可以从 `发行历史上的PyPI <https://pypi.org/project/Pillow/#history>`_ 和直接URL访问如下载老分布。 https://pypi.org/project/Pillow/1.0/。"
+

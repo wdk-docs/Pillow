@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and
+# Contributors
+# This file is distributed under the same license as the Pillow (PIL Fork)
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillow (PIL Fork) 7.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-07 15:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../porting.rst:2
+msgid "Porting"
+msgstr "移植"
+
+#: ../../porting.rst:4
+msgid "**Porting existing PIL-based code to Pillow**"
+msgstr "**移植现有的基于PIL代码到枕头**"
+
+#: ../../porting.rst:6
+msgid ""
+"Pillow is a functional drop-in replacement for the Python Imaging "
+"Library. To run your existing PIL-compatible code with Pillow, it needs "
+"to be modified to import the ``Image`` module from the ``PIL`` namespace "
+"*instead* of the global namespace. Change this::"
+msgstr ""
+
+#: ../../porting.rst:13
+msgid "to this::"
+msgstr "这::"
+
+#: ../../porting.rst:17
+msgid ""
+"The :py:mod:`_imaging` module has been moved. You can now import it like "
+"this::"
+msgstr "The :py:mod:`_imaging` module has been moved. You can now import it like this::"
+
+#: ../../porting.rst:21
+msgid ""
+"The image plugin loading mechanism has changed. Pillow no longer "
+"automatically imports any file in the Python path with a name ending in "
+":file:`ImagePlugin.py`. You will need to import your image plugin "
+"manually."
+msgstr ""
+
+#: ../../porting.rst:26
+msgid ""
+"Pillow will raise an exception if the core extension can't be loaded for "
+"any reason, including a version mismatch between the Python and extension"
+" code. Previously PIL allowed Python only code to run if the core "
+"extension was not available."
+msgstr ""
+
