@@ -27,7 +27,7 @@ msgstr "附录"
 msgid ""
 "Contributors please include appendices as needed or appropriate with your"
 " bug fixes, feature additions and tests."
-msgstr "请投稿附录包括根据需要或适合你的bug修复，功能的增加和测试。"
+msgstr "请投稿附录包括根据需要或适合你的bug修复，功能的增加和测试. "
 
 #: ../../handbook/concepts.rst:2
 msgid "Concepts"
@@ -37,11 +37,11 @@ msgstr "概念"
 msgid ""
 "The Python Imaging Library handles *raster images*; that is, rectangles "
 "of pixel data."
-msgstr "Python图像库处理*光栅图像*;即，像素数据的矩形。"
+msgstr "Python图像库处理 *光栅图像*; 即，像素数据的矩形. "
 
 #: ../../handbook/concepts.rst:10
 msgid "Bands"
-msgstr "带"
+msgstr ""
 
 #: ../../handbook/concepts.rst:12
 msgid ""
@@ -52,17 +52,17 @@ msgid ""
 "alpha transparency values.  Many operations act on each band separately, "
 "e.g., histograms.  It is often useful to think of each pixel as having "
 "one value per band."
-msgstr ""
+msgstr "图像可以由一个或多个频带的数据组成.  Python图像库允许你把几个波段存储在一个单一的形象，只要它们都具有相同的尺寸和深度. 例如，PNG图像可能具有 'R', 'G', 'B', 和 'A' 为红，绿，蓝条带，和Alpha透明度值. 许多操作分别作用于每个频带，例如，直方图. 通常认为各像素的具有每频带的一个值是有用的. "
 
 #: ../../handbook/concepts.rst:19
 msgid ""
 "To get the number and names of bands in an image, use the "
 ":py:meth:`~PIL.Image.Image.getbands` method."
-msgstr "要获得号码和图像中的band的名称，请使用：PY：甲基：`〜PIL.Image.Image.getbands`方法。"
+msgstr "要获得号码和图像中的band的名称，请使用 :py:meth:`~PIL.Image.Image.getbands` 方法. "
 
 #: ../../handbook/concepts.rst:25
 msgid "Modes"
-msgstr "模式"
+msgstr ""
 
 #: ../../handbook/concepts.rst:27
 msgid ""
@@ -70,35 +70,35 @@ msgid ""
 "image. Each pixel uses the full range of the bit depth. So a 1-bit pixel "
 "has a range of 0-1, an 8-bit pixel has a range of 0-255 and so on. The "
 "current release supports the following standard modes:"
-msgstr ""
+msgstr "图像的 ``mode`` 定义了图像中的像素的类型和深度.  每个像素使用的全范围位深度的.  因此，一个 1-bit 的像素的范围为0-1，一个 8-bit 的像素具有0-255的范围等.  当前版本支持以下标准模式:"
 
 #: ../../handbook/concepts.rst:32
 msgid "``1`` (1-bit pixels, black and white, stored with one pixel per byte)"
-msgstr "``1`` (1位的像素，黑色和白色，存储有每字节的一个像素)"
+msgstr "``1`` (1-bit 像素，黑色和白色，存储有每字节的一个像素)"
 
 #: ../../handbook/concepts.rst:33
 msgid "``L`` (8-bit pixels, black and white)"
-msgstr "``L`` (8-bit pixels, black and white)"
+msgstr "``L`` (8-bit 像素，黑色和白色)"
 
 #: ../../handbook/concepts.rst:34
 msgid "``P`` (8-bit pixels, mapped to any other mode using a color palette)"
-msgstr "``P`` (8比特象素，映射到任何其他模式下使用彩色调色板)"
+msgstr "``P`` (8-bit 象素，映射到任何其他模式下使用彩色调色板)"
 
 #: ../../handbook/concepts.rst:35
 msgid "``RGB`` (3x8-bit pixels, true color)"
-msgstr "``RGB`` (3×8位像素，色彩真实)"
+msgstr "``RGB`` (3×8-bit 像素，色彩真实)"
 
 #: ../../handbook/concepts.rst:36
 msgid "``RGBA`` (4x8-bit pixels, true color with transparency mask)"
-msgstr "``RGBA`` (4×8位像素，色彩真实与透明遮罩)"
+msgstr "``RGBA`` (4×8-bit 像素，色彩真实与透明遮罩)"
 
 #: ../../handbook/concepts.rst:37
 msgid "``CMYK`` (4x8-bit pixels, color separation)"
-msgstr "``CMYK`` (4×8比特象素，分色)"
+msgstr "``CMYK`` (4×8-bit 象素，分色)"
 
 #: ../../handbook/concepts.rst:38
 msgid "``YCbCr`` (3x8-bit pixels, color video format)"
-msgstr "``YCbCr`` (3×8位像素，彩色视频格式)"
+msgstr "``YCbCr`` (3×8-bit 像素，彩色视频格式)"
 
 #: ../../handbook/concepts.rst:40
 msgid "Note that this refers to the JPEG, and not the ITU-R BT.2020, standard"
@@ -106,31 +106,31 @@ msgstr "请注意，这指的是JPEG，而不是ITU-R BT.2020，标准"
 
 #: ../../handbook/concepts.rst:42
 msgid "``LAB`` (3x8-bit pixels, the L*a*b color space)"
-msgstr "``LAB`` (3x8-bit pixels, the L*a*b color space)"
+msgstr "``LAB`` (3x8-bit 像素, 所述 L*a*b 色彩空间)"
 
 #: ../../handbook/concepts.rst:43
 msgid "``HSV`` (3x8-bit pixels, Hue, Saturation, Value color space)"
-msgstr "``HSV`` (3x8-bit pixels, Hue, Saturation, Value color space)"
+msgstr "``HSV`` (3x8-bit 像素, 色调，饱和度，值颜色空间中)"
 
 #: ../../handbook/concepts.rst:44
 msgid "``I`` (32-bit signed integer pixels)"
-msgstr "``I`` (32位带符号整数的像素)"
+msgstr "``I`` (32-bit 带符号整数的像素)"
 
 #: ../../handbook/concepts.rst:45
 msgid "``F`` (32-bit floating point pixels)"
-msgstr "``F`` (32位浮点像素)"
+msgstr "``F`` (32-bit 浮点像素)"
 
 #: ../../handbook/concepts.rst:47
 msgid "Pillow also provides limited support for a few special modes, including:"
-msgstr "枕头也提供有限的支持少数特殊模式，包括:"
+msgstr "Pillow 也提供有限的支持少数特殊模式，包括:"
 
 #: ../../handbook/concepts.rst:49
 msgid "``LA`` (L with alpha)"
-msgstr "``LA`` (l当阿尔法)"
+msgstr "``LA`` (L 带阿尔法)"
 
 #: ../../handbook/concepts.rst:50
 msgid "``PA`` (P with alpha)"
-msgstr "``PA`` (P阿尔法)"
+msgstr "``PA`` (P 带阿尔法)"
 
 #: ../../handbook/concepts.rst:51
 msgid "``RGBX`` (true color with padding)"
@@ -142,68 +142,68 @@ msgstr "``RGBa`` (真实的色彩与预乘alpha)"
 
 #: ../../handbook/concepts.rst:53
 msgid "``La`` (L with premultiplied alpha)"
-msgstr "``La`` (l当预乘alpha)"
+msgstr "``La`` (L 当预乘 alpha)"
 
 #: ../../handbook/concepts.rst:54
 msgid "``I;16`` (16-bit unsigned integer pixels)"
-msgstr "``I;16`` (16-bit unsigned integer pixels)"
+msgstr "``I;16`` (16-bit 无符号整数像素)"
 
 #: ../../handbook/concepts.rst:55
 msgid "``I;16L`` (16-bit little endian unsigned integer pixels)"
-msgstr "``I;16L`` (16-bit little endian unsigned integer pixels)"
+msgstr "``I;16L`` (16-bit 小尾数无符号整数像素)"
 
 #: ../../handbook/concepts.rst:56
 msgid "``I;16B`` (16-bit big endian unsigned integer pixels)"
-msgstr "``I;16B`` (16-bit big endian unsigned integer pixels)"
+msgstr "``I;16B`` (16-bit 大端无符号整数像素)"
 
 #: ../../handbook/concepts.rst:57
 msgid "``I;16N`` (16-bit native endian unsigned integer pixels)"
-msgstr "``I;16N`` (16-bit native endian unsigned integer pixels)"
+msgstr "``I;16N`` (16-bit 本地端的无符号整数像素)"
 
 #: ../../handbook/concepts.rst:58
 msgid "``BGR;15`` (15-bit reversed true colour)"
-msgstr "``BGR;15`` (15-bit reversed true colour)"
+msgstr "``BGR;15`` (15-bit 相反真彩)"
 
 #: ../../handbook/concepts.rst:59
 msgid "``BGR;16`` (16-bit reversed true colour)"
-msgstr "``BGR;16`` (16-bit reversed true colour)"
+msgstr "``BGR;16`` (16-bit 相反真彩)"
 
 #: ../../handbook/concepts.rst:60
 msgid "``BGR;24`` (24-bit reversed true colour)"
-msgstr "``BGR;24`` (24-bit reversed true colour)"
+msgstr "``BGR;24`` (24-bit 相反真彩)"
 
 #: ../../handbook/concepts.rst:61
 msgid "``BGR;32`` (32-bit reversed true colour)"
-msgstr "``BGR;32`` (32-bit reversed true colour)"
+msgstr "``BGR;32`` (32-bit 相反真彩)"
 
 #: ../../handbook/concepts.rst:63
 msgid ""
 "However, Pillow doesn’t support user-defined modes; if you need to handle"
 " band combinations that are not listed above, use a sequence of Image "
 "objects."
-msgstr ""
+msgstr "然而，Pillow不支持用户定义的模式;如果您需要处理未上面列出的乐队组合，使用图像对象的序列. "
 
 #: ../../handbook/concepts.rst:66
 msgid ""
 "You can read the mode of an image through the "
 ":py:attr:`~PIL.Image.Image.mode` attribute. This is a string containing "
 "one of the above values."
-msgstr ""
+msgstr "您可以阅读通过图像的方式 :py:attr:`~PIL.Image.Image.mode` 属性.  这是包含在上述值中的一个的字符串. "
 
 #: ../../handbook/concepts.rst:70
 msgid "Size"
-msgstr "尺寸"
+msgstr ""
 
 #: ../../handbook/concepts.rst:72
 msgid ""
 "You can read the image size through the :py:attr:`~PIL.Image.Image.size` "
 "attribute. This is a 2-tuple, containing the horizontal and vertical size"
 " in pixels."
-msgstr ""
+msgstr "你可以通过  :py:attr:`~PIL.Image.Image.size` 属性阅读图像尺寸. 这是一个二元组，包含在像素中的水平和垂直尺寸. "
 
 #: ../../handbook/concepts.rst:79
 msgid "Coordinate System"
-msgstr "坐标系"
+msgstr ""
 
 #: ../../handbook/concepts.rst:81
 msgid ""
@@ -211,7 +211,7 @@ msgid ""
 " (0,0) in the upper left corner. Note that the coordinates refer to the "
 "implied pixel corners; the centre of a pixel addressed as (0, 0) actually"
 " lies at (0.5, 0.5)."
-msgstr ""
+msgstr "Python图像库使用的笛卡尔坐标的像素中的左上角的系统，与（0,0) .  需要注意的是坐标指的是隐含的像素角落;一个像素的中心编址为（0,0) 实际上在位于（0.5，0.5) . "
 
 #: ../../handbook/concepts.rst:85
 msgid ""
@@ -219,27 +219,27 @@ msgid ""
 "Rectangles are represented as 4-tuples, with the upper left corner given "
 "first. For example, a rectangle covering all of an 800x600 pixel image is"
 " written as (0, 0, 800, 600)."
-msgstr ""
+msgstr "坐标通常传递到库作为2元组（X，Y) . 矩形被表示为4元组，具有第一给定的左上角. 例如，覆盖所有一个800x600像素的图像的矩形被写为（0，0，800，600) . "
 
 #: ../../handbook/concepts.rst:91
 msgid "Palette"
-msgstr "调色板"
+msgstr ""
 
 #: ../../handbook/concepts.rst:93
 msgid ""
 "The palette mode (``P``) uses a color palette to define the actual color "
 "for each pixel."
-msgstr "调色板模式（``P``）使用一个调色板，以限定每个像素的实际色彩。"
+msgstr "调色板模式（``P``) 使用一个调色板，以限定每个像素的实际色彩. "
 
 #: ../../handbook/concepts.rst:97
 msgid "Info"
-msgstr "信息"
+msgstr ""
 
 #: ../../handbook/concepts.rst:99
 msgid ""
 "You can attach auxiliary information to an image using the "
 ":py:attr:`~PIL.Image.Image.info` attribute. This is a dictionary object."
-msgstr "您可以将辅助信息中使用的图像：PY：ATTR：`〜PIL.Image.Image.info`属性。这是一个字典对象。"
+msgstr "您可以将辅助信息中使用的图像 :PY:ATTR:`〜PIL.Image.Image.info` 属性. 这是一个字典对象. "
 
 #: ../../handbook/concepts.rst:102
 msgid ""
@@ -248,11 +248,11 @@ msgid ""
 "formats`). Most handlers add properties to the "
 ":py:attr:`~PIL.Image.Image.info` attribute when loading an image, but "
 "ignore it when saving images."
-msgstr ""
+msgstr "信息如何这样的处理时，加载和保存图像文件是到文件格式处理程序 (见章 :ref:`image-file-formats`). 大多数处理器添加属性的  :py:attr:`~PIL.Image.Image.info` 属性加载图像的时候，但保存图像时忽略它. "
 
 #: ../../handbook/concepts.rst:108
 msgid "Orientation"
-msgstr "取向"
+msgstr ""
 
 #: ../../handbook/concepts.rst:110
 msgid ""
@@ -262,18 +262,18 @@ msgid ""
 "an image to be rotated by 90 degrees, or to be mirrored. To apply this "
 "information to an image, :py:meth:`~PIL.ImageOps.exif_transpose` can be "
 "used."
-msgstr ""
+msgstr "支持JPG和TIFF图像 :py:attr:`~PIL.Image.Image.info` 属性的一个共同因素是EXIF方向标记.  这是图像数据应如何导向的指令.  例如，它可以指示图像以90度旋转，或者被镜像.  若要将此信息以图像，:py:meth:`~PIL.ImageOps.exif_transpose` 都可以使用. "
 
 #: ../../handbook/concepts.rst:119 ../../handbook/tutorial.rst:280
 msgid "Filters"
-msgstr "过滤器"
+msgstr ""
 
 #: ../../handbook/concepts.rst:121
 msgid ""
 "For geometry operations that may map multiple input pixels to a single "
 "output pixel, the Python Imaging Library provides different resampling "
 "*filters*."
-msgstr ""
+msgstr "对于几何操作可以在多个输入像素映射到单个输出像素时，Python图像库提供了不同的重新采样 *filters*. "
 
 #: ../../handbook/concepts.rst:125 ../../handbook/concepts.rst:172
 msgid "``NEAREST``"
@@ -283,7 +283,7 @@ msgstr "``NEAREST``"
 msgid ""
 "Pick one nearest pixel from the input image. Ignore all other input "
 "pixels."
-msgstr "挑从输入图像的一个最近的像素。忽略其他所有输入像素。"
+msgstr "挑从输入图像的一个最近的像素. 忽略其他所有输入像素. "
 
 #: ../../handbook/concepts.rst:134 ../../handbook/concepts.rst:174
 msgid "``BOX``"
@@ -295,7 +295,7 @@ msgid ""
 "image with identical weights. For upscaling is equivalent of ``NEAREST``."
 " This filter can only be used with the :py:meth:`~PIL.Image.Image.resize`"
 " and :py:meth:`~PIL.Image.Image.thumbnail` methods."
-msgstr ""
+msgstr "源图像的每个像素有助于以相同的权重的目标图像的一个像素。 对于倍增相当于 ``NEAREST`` 的。 该过滤器只能与 :py:meth:`~PIL.Image.Image.resize` 和 :py:meth:`~PIL.Image.Image.thumbnail` 的方法使用。"
 
 #: ../../handbook/concepts.rst:140 ../../handbook/concepts.rst:176
 msgid "``BILINEAR``"
@@ -307,7 +307,7 @@ msgid ""
 " all pixels that may contribute to the output value. For other "
 "transformations linear interpolation over a 2x2 environment in the input "
 "image is used."
-msgstr ""
+msgstr "调整大小使用上可能有助于输出值的所有像素的线性内插计算输出像素值。 对于其他变换的线性内插在所述输入图像中的2×2的环境中使用。"
 
 #: ../../handbook/concepts.rst:148 ../../handbook/concepts.rst:178
 msgid "``HAMMING``"
@@ -319,7 +319,7 @@ msgid ""
 "local level like with ``BOX``. This filter can only be used with the "
 ":py:meth:`~PIL.Image.Image.resize` and "
 ":py:meth:`~PIL.Image.Image.thumbnail` methods."
-msgstr ""
+msgstr "产生更清晰的图像比``BILINEAR``，不会对当地一级位错像``BOX``。 该过滤器只能与 :py:meth:`~PIL.Image.Image.resize` 和 :py:meth:`~PIL.Image.Image.thumbnail` 的方法使用。"
 
 #: ../../handbook/concepts.rst:154 ../../handbook/concepts.rst:180
 msgid "``BICUBIC``"
@@ -331,7 +331,7 @@ msgid ""
 "all pixels that may contribute to the output value. For other "
 "transformations cubic interpolation over a 4x4 environment in the input "
 "image is used."
-msgstr ""
+msgstr "调整大小使用上可能有助于输出值的所有像素三次插值计算输出像素值。对于其他变换用于三次插值在输入图像中的4×4的环境。"
 
 #: ../../handbook/concepts.rst:163 ../../handbook/concepts.rst:182
 msgid "``LANCZOS``"
@@ -343,7 +343,7 @@ msgid ""
 "truncated sinc) on all pixels that may contribute to the output value. "
 "This filter can only be used with the :py:meth:`~PIL.Image.Image.resize` "
 "and :py:meth:`~PIL.Image.Image.thumbnail` methods."
-msgstr ""
+msgstr "对可能向输出值的所有像素使用高品质的Lanczos过滤器（截断的正弦）计算输出像素值。 该过滤器只能与 :py:meth:`~PIL.Image.Image.resize` 和 :py:meth:`~PIL.Image.Image.thumbnail` 的方法使用。"
 
 #: ../../handbook/concepts.rst:166
 msgid "Filters comparison table"
@@ -355,15 +355,15 @@ msgstr "过滤"
 
 #: ../../handbook/concepts.rst:169
 msgid "Downscaling quality"
-msgstr "Downscaling quality"
+msgstr "质量降尺度"
 
 #: ../../handbook/concepts.rst:169
 msgid "Upscaling quality"
-msgstr "Upscaling quality"
+msgstr "倍增质量"
 
 #: ../../handbook/concepts.rst:169
 msgid "Performance"
-msgstr "Performance"
+msgstr "性能"
 
 #: ../../handbook/concepts.rst:172
 msgid "⭐⭐⭐⭐⭐"
@@ -397,7 +397,7 @@ msgid ""
 "formats. Over 30 different file formats can be identified and read by the"
 " library. Write support is less extensive, but most common interchange "
 "and presentation formats are supported."
-msgstr ""
+msgstr "Python图像库支持多种光栅文件格式。超过30种不同的文件格式，可以识别和图书馆阅读。写支持是那么广泛，但最常见的交流和演示格式的支持。"
 
 #: ../../handbook/image-file-formats.rst:11
 msgid ""
@@ -405,7 +405,7 @@ msgid ""
 " contents, not their names, but the :py:meth:`~PIL.Image.Image.save` "
 "method looks at the name to determine which format to use, unless the "
 "format is given explicitly."
-msgstr ""
+msgstr "从他们的内容，而不是他们的名字 :py:meth:`~PIL.Image.Image.open` 功能识别的文件，但在名称 :py:meth:`~PIL.Image.Image.save` 方法看起来，以确定哪些格式的使用，除非格式是明确给出。"
 
 #: ../../handbook/image-file-formats.rst:17
 msgid "Fully supported formats"
@@ -436,7 +436,7 @@ msgstr ""
 msgid ""
 "The :py:meth:`~PIL.Image.Image.open` method sets the following "
 ":py:attr:`~PIL.Image.Image.info` properties:"
-msgstr "的：吡啶：甲基：`〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：`〜PIL.Image.Image.info`属性:"
+msgstr ":py:meth:`~PIL.Image.Image.open` 方法集执行以下操作 :py:attr:`~PIL.Image.Image.info` 属性:"
 
 #: ../../handbook/image-file-formats.rst:32
 #: ../../handbook/image-file-formats.rst:635
@@ -446,7 +446,7 @@ msgstr "**压缩**"
 
 #: ../../handbook/image-file-formats.rst:32
 msgid "Set to ``bmp_rle`` if the file is run-length encoded."
-msgstr "如果文件被运行长度编码设置为``bmp_rle``。"
+msgstr "如果文件被运行长度编码设置为``bmp_rle``. "
 
 #: ../../handbook/image-file-formats.rst:35
 msgid "DIB"
@@ -456,7 +456,7 @@ msgstr "DIB"
 msgid ""
 "Pillow reads and writes DIB files. DIB files are similar to BMP files, so"
 " see above for more information."
-msgstr "枕头读取和写入DIB的文件。 DIB文件类似于BMP文件，所以见上文的详细信息。"
+msgstr "Pillow 读取和写入DIB的文件.  DIB文件类似于BMP文件，所以见上文的详细信息. "
 
 #: ../../handbook/image-file-formats.rst:43
 msgid "EPS"
@@ -508,7 +508,7 @@ msgstr ""
 msgid ""
 "Note that GIF files are always read as grayscale (``L``) or palette mode "
 "(``P``) images."
-msgstr "需要注意的是GIF文件总是读出灰度（``L``）或调色板模式（``P``）图像。"
+msgstr "需要注意的是GIF文件总是读出灰度（``L``) 或调色板模式（``P``) 图像. "
 
 #: ../../handbook/image-file-formats.rst:81
 #: ../../handbook/image-file-formats.rst:834
@@ -517,7 +517,7 @@ msgstr "**background**"
 
 #: ../../handbook/image-file-formats.rst:81
 msgid "Default background color (a palette color index)."
-msgstr "默认的背景颜色（调色板颜色索引）。"
+msgstr "默认的背景颜色（调色板颜色索引) . "
 
 #: ../../handbook/image-file-formats.rst:85
 #: ../../handbook/image-file-formats.rst:169
@@ -534,7 +534,7 @@ msgstr "**透明度**"
 msgid ""
 "Transparency color index. This key is omitted if the image is not "
 "transparent."
-msgstr "透明色指数。如果图像是不透明的该键被省略。"
+msgstr "透明色指数. 如果图像是不透明的该键被省略. "
 
 #: ../../handbook/image-file-formats.rst:88
 msgid "**version**"
@@ -555,7 +555,7 @@ msgstr "**duration**"
 msgid ""
 "May not be present. The time to display the current frame of the GIF, in "
 "milliseconds."
-msgstr "可能不存在。的时间，以显示GIF的当前帧，以毫秒为单位。"
+msgstr "可能不存在. 的时间，以显示GIF的当前帧，以毫秒为单位. "
 
 #: ../../handbook/image-file-formats.rst:96
 #: ../../handbook/image-file-formats.rst:178
@@ -567,7 +567,7 @@ msgstr "**loop**"
 msgid ""
 "May not be present. The number of times the GIF should loop. 0 means that"
 " it will loop forever."
-msgstr "可能不存在。时代的GIF应该循环的数量。 0意味着它将永远循环下去。"
+msgstr "可能不存在. 时代的GIF应该循环的数量.  0意味着它将永远循环下去. "
 
 #: ../../handbook/image-file-formats.rst:99
 #: ../../handbook/image-file-formats.rst:181
@@ -577,7 +577,7 @@ msgstr "**comment**"
 
 #: ../../handbook/image-file-formats.rst:99
 msgid "May not be present. A comment about the image."
-msgstr "可能不存在。有关图像的注释。"
+msgstr "可能不存在. 有关图像的注释. "
 
 #: ../../handbook/image-file-formats.rst:102
 msgid "**extension**"
@@ -585,7 +585,7 @@ msgstr "**extension**"
 
 #: ../../handbook/image-file-formats.rst:102
 msgid "May not be present. Contains application specific information."
-msgstr "可能不存在。包含应用程序的具体信息。"
+msgstr "可能不存在. 包含应用程序的具体信息. "
 
 #: ../../handbook/image-file-formats.rst:105 ../../handbook/tutorial.rst:377
 msgid "Reading sequences"
@@ -603,7 +603,7 @@ msgstr ""
 msgid ""
 "``im.seek()`` raises an :py:exc:`EOFError` if you try to seek after the "
 "last frame."
-msgstr "``im.seek（）``引发：PY：EXC：`EOFError`如果你试图在最后一帧后寻求。"
+msgstr "``im.seek（) ``引发:PY:EXC:`EOFError`如果你试图在最后一帧后寻求. "
 
 #: ../../handbook/image-file-formats.rst:114
 msgid "Saving"
@@ -613,7 +613,7 @@ msgstr "Saving"
 msgid ""
 "When calling :py:meth:`~PIL.Image.Image.save` to write a GIF file, the "
 "following options are available::"
-msgstr "当调用：PY：甲基：`〜PIL.Image.Image.save`写一个GIF文件，下列选项可用::"
+msgstr "当调用:PY:甲基:`〜PIL.Image.Image.save`写一个GIF文件，下列选项可用::"
 
 #: ../../handbook/image-file-formats.rst:123
 #: ../../handbook/image-file-formats.rst:688
@@ -625,7 +625,7 @@ msgstr "**save_all**"
 msgid ""
 "If present and true, all frames of the image will be saved. If not, then "
 "only the first frame of a multiframe image will be saved."
-msgstr "如果存在，真实，图像的所有帧将被保存。如果没有，那么只有一个多帧图像的第一帧将被保存。"
+msgstr "如果存在，真实，图像的所有帧将被保存. 如果没有，那么只有一个多帧图像的第一帧将被保存. "
 
 #: ../../handbook/image-file-formats.rst:131
 #: ../../handbook/image-file-formats.rst:226
@@ -646,7 +646,7 @@ msgstr ""
 msgid ""
 "It is also supported for ICNS. If images are passed in of relevant sizes,"
 " they will be used instead of scaling down the main image."
-msgstr "它也支持ICNS。如果图像相关尺寸的通过，他们将被用来代替缩小主图像。"
+msgstr "它也支持ICNS. 如果图像相关尺寸的通过，他们将被用来代替缩小主图像. "
 
 #: ../../handbook/image-file-formats.rst:134
 msgid "**include_color_table**"
@@ -664,7 +664,7 @@ msgstr "**interlace**"
 msgid ""
 "Whether or not the image is interlaced. By default, it is, unless the "
 "image is less than 16 pixels in width or height."
-msgstr "无论图像交错。默认情况下，它是，除非图像的宽度或高度小于16个像素。"
+msgstr "无论图像交错. 默认情况下，它是，除非图像的宽度或高度小于16个像素. "
 
 #: ../../handbook/image-file-formats.rst:149
 msgid "**disposal**"
@@ -674,7 +674,7 @@ msgstr "**disposal**"
 msgid ""
 "Indicates the way in which the graphic is to be treated after being "
 "displayed."
-msgstr "指示其中图形是被显示之后，待处理的方式。"
+msgstr "指示其中图形是被显示之后，待处理的方式. "
 
 #: ../../handbook/image-file-formats.rst:143
 msgid "0 - No disposal specified."
@@ -696,7 +696,7 @@ msgstr "3 - Restore to previous content."
 msgid ""
 "Pass a single integer for a constant disposal, or a list or tuple to set "
 "the disposal for each frame separately."
-msgstr "通过对于恒定的处置的单一的整数，或列表或元组分别设定处置对于每个帧。"
+msgstr "通过对于恒定的处置的单一的整数，或列表或元组分别设定处置对于每个帧. "
 
 #: ../../handbook/image-file-formats.rst:156
 msgid "**palette**"
@@ -746,7 +746,7 @@ msgstr ""
 msgid ""
 "Integer number of times the GIF should loop. 0 means that it will loop "
 "forever. By default, the image will not loop."
-msgstr "整数次数的GIF应该循环。 0意味着它将永远循环下去。默认情况下，图像将无法循环。"
+msgstr "整数次数的GIF应该循环.  0意味着它将永远循环下去. 默认情况下，图像将无法循环. "
 
 #: ../../handbook/image-file-formats.rst:181
 msgid "A comment about the image."
@@ -816,7 +816,7 @@ msgstr "ICO"
 
 #: ../../handbook/image-file-formats.rst:231
 msgid "ICO is used to store icons on Windows. The largest available icon is read."
-msgstr "ICO用于在Windows应用商店图标。最大可用图标被读取。"
+msgstr "ICO用于在Windows应用商店图标. 最大可用图标被读取. "
 
 #: ../../handbook/image-file-formats.rst:233
 #: ../../handbook/image-file-formats.rst:302
@@ -849,7 +849,7 @@ msgstr ""
 
 #: ../../handbook/image-file-formats.rst:248
 msgid "IM is the only format that can store all internal Pillow formats."
-msgstr "IM是可以存储所有内部枕格式的唯一格式。"
+msgstr "IM是可以存储所有内部 Pillow 格式的唯一格式. "
 
 #: ../../handbook/image-file-formats.rst:251
 msgid "JPEG"
@@ -859,7 +859,7 @@ msgstr "JPEG"
 msgid ""
 "Pillow reads JPEG, JFIF, and Adobe JPEG files containing ``L``, ``RGB``, "
 "or ``CMYK`` data. It writes standard and progressive JFIF files."
-msgstr "枕头读取JPEG，JFIF和Adobe JPEG文件包含``L``，``RGB``，或``CMYK``数据。它写入标准和渐进JFIF文件。"
+msgstr "Pillow 读取JPEG，JFIF和Adobe JPEG文件包含``L``，``RGB``，或``CMYK``数据. 它写入标准和渐进JFIF文件. "
 
 #: ../../handbook/image-file-formats.rst:256
 msgid ""
@@ -882,7 +882,7 @@ msgstr "**jfif**"
 msgid ""
 "JFIF application marker found. If the file is not a JFIF file, this key "
 "is not present."
-msgstr "JFIF应用标记发现。如果文件不是一个JFIF文件，这个键不存在。"
+msgstr "JFIF应用标记发现. 如果文件不是一个JFIF文件，这个键不存在. "
 
 #: ../../handbook/image-file-formats.rst:268
 msgid "**jfif_version**"
@@ -2372,31 +2372,31 @@ msgstr "手册"
 
 #: ../../handbook/overview.rst:2
 msgid "Overview"
-msgstr "概观"
+msgstr "概述"
 
 #: ../../handbook/overview.rst:4
 msgid ""
 "The **Python Imaging Library** adds image processing capabilities to your"
 " Python interpreter."
-msgstr "**的Python图像库**增加了图像处理功能，您的Python解释器。"
+msgstr "**Python Imaging Library** 增加了图像处理功能，您的Python解释器. "
 
 #: ../../handbook/overview.rst:7
 msgid ""
 "This library provides extensive file format support, an efficient "
 "internal representation, and fairly powerful image processing "
 "capabilities."
-msgstr ""
+msgstr "该库提供了广泛的文件格式支持，一个高效的内部表示，以及相当强大的图像处理能力. "
 
 #: ../../handbook/overview.rst:10
 msgid ""
 "The core image library is designed for fast access to data stored in a "
 "few basic pixel formats. It should provide a solid foundation for a "
 "general image processing tool."
-msgstr ""
+msgstr "核心图像库是专为快速访问存储在几个基本的像素格式的数据. 它应该提供一个一般的图像处理工具了坚实的基础. "
 
 #: ../../handbook/overview.rst:14
 msgid "Let’s look at a few possible uses of this library."
-msgstr "让我们看看这个库的几个可能的用途。"
+msgstr "让我们看看这个库的几个可能的用途. "
 
 #: ../../handbook/overview.rst:17
 msgid "Image Archives"
@@ -2407,7 +2407,7 @@ msgid ""
 "The Python Imaging Library is ideal for image archival and batch "
 "processing applications. You can use the library to create thumbnails, "
 "convert between file formats, print images, etc."
-msgstr ""
+msgstr "Python图像库是理想的图像归档和批处理应用程序. 您可以使用库创建缩略图，文件格式，打印图像等之间转换"
 
 #: ../../handbook/overview.rst:23
 msgid ""
@@ -2433,7 +2433,7 @@ msgstr ""
 msgid ""
 "For debugging, there’s also a :py:meth:`~PIL.Image.Image.show` method "
 "which saves an image to disk, and calls an external display utility."
-msgstr "出于调试，还有一个：PY：甲基：`〜PIL.Image.Image.show`方法，其保存图像到磁盘，并且调用外部显示效用。"
+msgstr "出于调试，还有一个:PY:甲基:`〜PIL.Image.Image.show`方法，其保存图像到磁盘，并且调用外部显示效用. "
 
 #: ../../handbook/overview.rst:40
 msgid "Image Processing"
@@ -2450,7 +2450,7 @@ msgstr ""
 msgid ""
 "The library also supports image resizing, rotation and arbitrary affine "
 "transforms."
-msgstr "该库还支持图像缩放，旋转和任意仿射变换。"
+msgstr "该库还支持图像缩放，旋转和任意仿射变换. "
 
 #: ../../handbook/overview.rst:46
 msgid ""
@@ -2480,7 +2480,7 @@ msgstr ""
 msgid ""
 "To load an image from a file, use the :py:func:`~PIL.Image.open` function"
 " in the :py:mod:`~PIL.Image` module::"
-msgstr "从文件加载图像，可以使用：吡啶：FUNC：`在〜PIL.Image.open`功能：PY：MOD：`〜PIL.Image`模块::"
+msgstr "从文件加载图像，可以使用:吡啶:FUNC:`在〜PIL.Image.open`功能:PY:MOD:`〜PIL.Image`模块::"
 
 #: ../../handbook/tutorial.rst:18
 msgid ""
@@ -2502,7 +2502,7 @@ msgstr ""
 
 #: ../../handbook/tutorial.rst:32
 msgid "If the file cannot be opened, an :py:exc:`IOError` exception is raised."
-msgstr "如果该文件无法打开，一：PY：EXC：`IOError`异常。"
+msgstr "如果该文件无法打开，一:PY:EXC:`IOError`异常. "
 
 #: ../../handbook/tutorial.rst:34
 msgid ""
@@ -2524,7 +2524,7 @@ msgstr ""
 msgid ""
 "The following sections provide an overview of the different functions "
 "provided in this library."
-msgstr "以下各节提供的这个库中提供的不同功能的概述。"
+msgstr "以下各节提供的这个库中提供的不同功能的概述. "
 
 #: ../../handbook/tutorial.rst:51
 msgid "Reading and writing images"
@@ -2608,7 +2608,7 @@ msgstr ""
 
 #: ../../handbook/tutorial.rst:150
 msgid "The region could now be processed in a certain manner and pasted back."
-msgstr "该区域现在可以以一定的方式进行处理和粘贴回。"
+msgstr "该区域现在可以以一定的方式进行处理和粘贴回. "
 
 #: ../../handbook/tutorial.rst:153
 msgid "Processing a subrectangle, and pasting it back"
@@ -2703,7 +2703,7 @@ msgstr ""
 msgid ""
 "A more general form of image transformations can be carried out via the "
 ":py:meth:`~PIL.Image.Image.transform` method."
-msgstr "PY：图像变换的更一般的形式可通过进行甲基：`〜PIL.Image.Image.transform`方法。"
+msgstr "PY:图像变换的更一般的形式可通过进行甲基:`〜PIL.Image.Image.transform`方法. "
 
 #: ../../handbook/tutorial.rst:255
 msgid "Color transforms"
@@ -2735,7 +2735,7 @@ msgstr "图像增强"
 msgid ""
 "The Python Imaging Library provides a number of methods and modules that "
 "can be used to enhance images."
-msgstr "Python图像库提供了许多可用于增强图像的方法和模块。"
+msgstr "Python图像库提供了许多可用于增强图像的方法和模块. "
 
 #: ../../handbook/tutorial.rst:282
 msgid ""
@@ -2778,7 +2778,7 @@ msgstr "处理单个带"
 
 #: ../../handbook/tutorial.rst:336
 msgid "Note the syntax used to create the mask::"
-msgstr "注意：用于创建蒙语法::"
+msgstr "注意:用于创建蒙语法::"
 
 #: ../../handbook/tutorial.rst:340
 msgid ""
@@ -2804,7 +2804,7 @@ msgstr ""
 msgid ""
 "You can adjust contrast, brightness, color balance and sharpness in this "
 "way."
-msgstr "您可以调整这样的对比度，亮度，色彩平衡和清晰度。"
+msgstr "您可以调整这样的对比度，亮度，色彩平衡和清晰度. "
 
 #: ../../handbook/tutorial.rst:355
 msgid "Enhancing images"
@@ -2833,7 +2833,7 @@ msgstr ""
 msgid ""
 "As seen in this example, you’ll get an :py:exc:`EOFError` exception when "
 "the sequence ends."
-msgstr "如本例中看到的那样，你会得到一个：PY：EXC：`EOFError`例外序时结束。"
+msgstr "如本例中看到的那样，你会得到一个:PY:EXC:`EOFError`例外序时结束. "
 
 #: ../../handbook/tutorial.rst:396
 msgid ""
@@ -2853,7 +2853,7 @@ msgstr "Postscript打印"
 msgid ""
 "The Python Imaging Library includes functions to print images, text and "
 "graphics on Postscript printers. Here’s a simple example:"
-msgstr "Python图像库包括功能在PostScript打印机上打印图像，文字和图形。这里有一个简单的例子:"
+msgstr "Python图像库包括功能在PostScript打印机上打印图像，文字和图形. 这里有一个简单的例子:"
 
 #: ../../handbook/tutorial.rst:415
 msgid "Drawing Postscript"
@@ -2875,7 +2875,7 @@ msgstr ""
 msgid ""
 "If everything goes well, the result is an :py:class:`PIL.Image.Image` "
 "object. Otherwise, an :exc:`IOError` exception is raised."
-msgstr "如果一切顺利的话，结果是：PY：类：`PIL.Image.Image`对象。否则，一：EXC：`IOError`异常。"
+msgstr "如果一切顺利的话，结果是:PY:类:`PIL.Image.Image`对象. 否则，一:EXC:`IOError`异常. "
 
 #: ../../handbook/tutorial.rst:454
 msgid ""
@@ -2892,7 +2892,7 @@ msgstr "从打开的文件中读取"
 msgid ""
 "To read an image from string data, use the :py:class:`~StringIO.StringIO`"
 " class:"
-msgstr "读取从字符串数据的图像，可以使用：吡啶：类：`〜StringIO.StringIO`类:"
+msgstr "读取从字符串数据的图像，可以使用:吡啶:类:`〜StringIO.StringIO`类:"
 
 #: ../../handbook/tutorial.rst:471
 msgid "Reading from a string"
@@ -2938,7 +2938,7 @@ msgstr "阅读草稿模式"
 
 #: ../../handbook/tutorial.rst:510
 msgid "This is only available for JPEG and MPO files."
-msgstr "这仅适用于JPEG和MPO文件。"
+msgstr "这仅适用于JPEG和MPO文件. "
 
 #: ../../handbook/tutorial.rst:522
 msgid "This prints something like::"
@@ -2972,7 +2972,7 @@ msgstr ""
 
 #: ../../handbook/writing-your-own-file-decoder.rst:17
 msgid "Pillow decodes files in 2 stages:"
-msgstr "枕头解码两个阶段文件:"
+msgstr "Pillow 解码两个阶段文件:"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:19
 msgid ""
@@ -2987,7 +2987,7 @@ msgstr ""
 msgid ""
 "When the image data is requested, the ``ImageFile.load`` method is "
 "called, which sets up a decoder for each tile and feeds the data to it."
-msgstr "当请求的图象数据时，``ImageFile.load``方法被调用时，它建立了一个解码器，用于每个区块与数据馈送到它。"
+msgstr "当请求的图象数据时，``ImageFile.load`` 方法被调用时，它建立了一个解码器，用于每个区块与数据馈送到它. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:29
 msgid ""
@@ -3082,11 +3082,11 @@ msgstr "**region**"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:128
 msgid "A 4-tuple specifying where to store data in the image."
-msgstr "A 4元组指定，其中将数据存储在图像中。"
+msgstr "A 4元组指定，其中将数据存储在图像中. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:131
 msgid "Byte offset from the beginning of the file to image data."
-msgstr "字节从文件的图像数据的开始偏移。"
+msgstr "字节从文件的图像数据的开始偏移. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:136
 msgid "**parameters**"
@@ -3103,7 +3103,7 @@ msgstr ""
 msgid ""
 "Note that the :py:attr:`tile` attribute contains a list of tile "
 "descriptors, not just a single descriptor."
-msgstr "请注意，：PY：ATTR：`tile`属性包含瓦块描述符的列表，而不仅仅是一个描述符。"
+msgstr "请注意，:PY:ATTR:`tile`属性包含瓦块描述符的列表，而不仅仅是一个描述符. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:142
 msgid "Decoders"
@@ -3158,7 +3158,7 @@ msgstr "**orientation**"
 msgid ""
 "Whether the first line in the image is the top line on the screen (1), or"
 " the bottom line (-1). If omitted, the orientation defaults to 1."
-msgstr "是否在图像中的第一行是在屏幕（1）上的顶行或底行（-1）。如果省略，默认的方向为1。"
+msgstr "是否在图像中的第一行是在屏幕（1) 上的顶行或底行（-1) . 如果省略，默认的方向为1. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:177
 msgid ""
@@ -3567,7 +3567,7 @@ msgstr "编写自己的文件解码器使用C"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:315
 msgid "There are 3 stages in a file decoder's lifetime:"
-msgstr "有一个文件解码器的寿命3个阶段："
+msgstr "有一个文件解码器的寿命3个阶段:"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:317
 msgid ""
@@ -3581,7 +3581,7 @@ msgstr ""
 msgid ""
 "Decoding: The decoder's decode function is repeatedly called with chunks "
 "of image data."
-msgstr "解码：解码器的解码功能重复图像数据的块调用。"
+msgstr "解码:解码器的解码功能重复图像数据的块调用. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:325
 msgid ""
@@ -3618,7 +3618,7 @@ msgstr "**解码**"
 msgid ""
 "Function pointer to the decode function, which has access to ``im``, "
 "``state``, and the buffer of data to be added to the image."
-msgstr "函数指针解码功能，它可以访问``im``，``state``，和数据的缓冲器被添加到该图像。"
+msgstr "函数指针解码功能，它可以访问``im``，``state``，和数据的缓冲器被添加到该图像. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:348
 msgid "**cleanup**"
@@ -3626,7 +3626,7 @@ msgstr "**cleanup**"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:348
 msgid "Function pointer to the cleanup function, has access to ``state``."
-msgstr "函数指针的清理功能，可以访问``state``。"
+msgstr "函数指针的清理功能，可以访问``state``. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:351
 msgid "**im**"
@@ -3634,7 +3634,7 @@ msgstr "**im**"
 
 #: ../../handbook/writing-your-own-file-decoder.rst:351
 msgid "The target image, will be set by Pillow."
-msgstr "目标图像，将枕头设定。"
+msgstr "目标图像，将 Pillow 设定. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:356
 msgid "**state**"
@@ -3669,7 +3669,7 @@ msgstr "解码"
 msgid ""
 "The decode function is called with the target (core) image, the decoder "
 "state structure, and a buffer of data to be decoded."
-msgstr "解码功能被称为与目标（核心）图像，解码器状态的结构，并且将被解码的数据的缓冲。"
+msgstr "解码功能被称为与目标（核心) 图像，解码器状态的结构，并且将被解码的数据的缓冲. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:375
 msgid ""
@@ -3690,11 +3690,11 @@ msgstr ""
 
 #: ../../handbook/writing-your-own-file-decoder.rst:386
 msgid "If an error occurs, set ``state->errcode`` and return -1."
-msgstr "如果出现错误，集``国有> errcode``和返回-1。"
+msgstr "如果出现错误，集``国有> errcode``和返回-1. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:388
 msgid "Return -1 on success, without setting the errcode."
-msgstr "返回-1成功，无需设置ERRCODE。"
+msgstr "返回-1成功，无需设置ERRCODE. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:391
 msgid "Cleanup"
@@ -3726,15 +3726,15 @@ msgstr ""
 msgid ""
 "Setup: Pillow looks for the decoder in the registry, then instantiates "
 "the class."
-msgstr "设置：枕头会在注册表中的解码器，然后实例化的类。"
+msgstr "设置: Pillow 会在注册表中的解码器，然后实例化的类. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:413
 msgid ""
 "Decoding: The decoder instance's ``decode`` method is repeatedly called "
 "with a buffer of data to be interpreted."
-msgstr "解码：解码器实例的``decode``方法被反复调用的数据的缓冲器被解释。"
+msgstr "解码:解码器实例的``decode``方法被反复调用的数据的缓冲器被解释. "
 
 #: ../../handbook/writing-your-own-file-decoder.rst:416
 msgid "Cleanup: The decoder instance's ``cleanup`` method is called."
-msgstr "清理：解码器实例的``cleanup``方法被调用。"
+msgstr "清理:解码器实例的``cleanup``方法被调用. "
 

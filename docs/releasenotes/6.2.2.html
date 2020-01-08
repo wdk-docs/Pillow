@@ -93,10 +93,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.2.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security">安全</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
@@ -173,7 +173,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>6.2.2</li>
     
@@ -197,15 +197,14 @@
   <div class="section" id="id1">
 <h1>6.2.2<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="security">
-<h2>Security<a class="headerlink" href="#security" title="永久链接至标题">¶</a></h2>
-<p>This release addresses several security problems.</p>
+<h2>安全<a class="headerlink" href="#security" title="永久链接至标题">¶</a></h2>
+<p>此版本解决几个安全问题。</p>
 <p>CVE-2019-19911 is regarding FPX images. If an image reports that it has a large number
 of bands, a large amount of resources will be used when trying to process the
 image. This is fixed by limiting the number of bands to those usable by Pillow.</p>
 <p>Buffer overruns were found when processing an SGI (CVE-2020-5311), PCX (CVE-2020-5312)
 or FLI image (CVE-2020-5313). Checks have been added to prevent this.</p>
-<p>CVE-2020-5310: Overflow checks have been added when calculating the size of a memory
-block to be reallocated in the processing of a TIFF image.</p>
+<p>CVE-2020-5310: 当计算的存储器块的大小，以在一个TIFF图像的处理被重新分配溢出检查已被添加。</p>
 </div>
 </div>
 

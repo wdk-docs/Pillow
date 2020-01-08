@@ -93,14 +93,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.0.html">6.2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.1.0.html">6.1.0</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.0.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#backwards-incompatible-changes">Backwards Incompatible Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#backwards-incompatible-changes">向后兼容的改变</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#python-3-4-dropped">Python 3.4 dropped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#removed-deprecated-pil-olefileio">Removed deprecated PIL.OleFileIO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#removed-deprecated-imageops-functions">Removed deprecated ImageOps functions</a></li>
@@ -113,19 +113,19 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#api-additions">API Additions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#dib-file-format">DIB file format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dib-file-format">AFTER文件格式</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#image-quantize">Image.quantize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#new-language-parameter">New language parameter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-language-parameter">新的语言参数</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#added-exif-class">Added EXIF class</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#added-imageops-exif-transpose">Added ImageOps.exif_transpose</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#png-exif-data">PNG EXIF data</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#reading-new-dds-image-format">Reading new DDS image format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reading-tiff-with-old-style-jpeg-compression">Reading TIFF with old-style JPEG compression</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tiff-compression-codecs">TIFF compression codecs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#improved-support-for-transposing-i-16-images">Improved support for transposing I;16 images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-new-dds-image-format">阅读新的DDS图像格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-tiff-with-old-style-jpeg-compression">与老式的JPEG压缩TIFF阅读</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tiff-compression-codecs">TIFF压缩编解码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#improved-support-for-transposing-i-16-images">对于我换位改进支持; 16个图像</a></li>
 </ul>
 </li>
 </ul>
@@ -200,7 +200,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>6.0.0</li>
     
@@ -224,7 +224,7 @@
   <div class="section" id="id1">
 <h1>6.0.0<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="backwards-incompatible-changes">
-<h2>Backwards Incompatible Changes<a class="headerlink" href="#backwards-incompatible-changes" title="永久链接至标题">¶</a></h2>
+<h2>向后兼容的改变<a class="headerlink" href="#backwards-incompatible-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="python-3-4-dropped">
 <h3>Python 3.4 dropped<a class="headerlink" href="#python-3-4-dropped" title="永久链接至标题">¶</a></h3>
 <p>Python 3.4 is EOL since 2019-03-16 and no longer supported. We will not be creating
@@ -268,7 +268,7 @@ Pillow 6.x the last series to support Python 2.</p>
 a future version. Please upgrade to PyQt5 or PySide2.</p>
 </div>
 <div class="section" id="pil-imageplugin-version-attributes">
-<h4>PIL.*ImagePlugin.__version__ attributes<a class="headerlink" href="#pil-imageplugin-version-attributes" title="永久链接至标题">¶</a></h4>
+<h4>PIL.*ImagePlugin.__version__ 属性<a class="headerlink" href="#pil-imageplugin-version-attributes" title="永久链接至标题">¶</a></h4>
 <p>These version constants have been deprecated and will be removed in a future
 version.</p>
 <ul class="simple">
@@ -370,8 +370,8 @@ loaded, <code class="docutils literal notranslate"><span class="pre">Image.MIME[
 <div class="section" id="api-additions">
 <h2>API Additions<a class="headerlink" href="#api-additions" title="永久链接至标题">¶</a></h2>
 <div class="section" id="dib-file-format">
-<h3>DIB file format<a class="headerlink" href="#dib-file-format" title="永久链接至标题">¶</a></h3>
-<p>Pillow now supports reading and writing the Device Independent Bitmap file format.</p>
+<h3>AFTER文件格式<a class="headerlink" href="#dib-file-format" title="永久链接至标题">¶</a></h3>
+<p>枕头现在支持读取和写入的设备无关位图文件格式。</p>
 </div>
 <div class="section" id="image-quantize">
 <h3>Image.quantize<a class="headerlink" href="#image-quantize" title="永久链接至标题">¶</a></h3>
@@ -379,9 +379,8 @@ loaded, <code class="docutils literal notranslate"><span class="pre">Image.MIME[
 This parameter takes the same values used in <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.convert" title="PIL.Image.Image.convert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">convert()</span></code></a>.</p>
 </div>
 <div class="section" id="new-language-parameter">
-<h3>New language parameter<a class="headerlink" href="#new-language-parameter" title="永久链接至标题">¶</a></h3>
-<p>These text-rendering functions now accept a <code class="docutils literal notranslate"><span class="pre">language</span></code> parameter to request
-language-specific glyphs and ligatures from the font:</p>
+<h3>新的语言参数<a class="headerlink" href="#new-language-parameter" title="永久链接至标题">¶</a></h3>
+<p>这些文本渲染功能，现在接受了``language``参数从字体请求特定语言的字形和连字：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ImageDraw.ImageDraw.multiline_text()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ImageDraw.ImageDraw.multiline_textsize()</span></code></p></li>
@@ -401,8 +400,7 @@ dictionary. When saving JPEG, PNG or WEBP, the instance can be passed as an
 </div>
 <div class="section" id="added-imageops-exif-transpose">
 <h3>Added ImageOps.exif_transpose<a class="headerlink" href="#added-imageops-exif-transpose" title="永久链接至标题">¶</a></h3>
-<p><a class="reference internal" href="../reference/ImageOps.html#PIL.ImageOps.exif_transpose" title="PIL.ImageOps.exif_transpose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exif_transpose()</span></code></a> returns a copy of an image, transposed
-according to its EXIF Orientation tag.</p>
+<p><a class="reference internal" href="../reference/ImageOps.html#PIL.ImageOps.exif_transpose" title="PIL.ImageOps.exif_transpose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exif_transpose()</span></code></a> 返回图像的副本，根据其EXIF方向标签调换。</p>
 </div>
 <div class="section" id="png-exif-data">
 <h3>PNG EXIF data<a class="headerlink" href="#png-exif-data" title="永久链接至标题">¶</a></h3>
@@ -414,22 +412,20 @@ until <a class="reference internal" href="../reference/Image.html#PIL.Image.Imag
 <div class="section" id="other-changes">
 <h2>Other Changes<a class="headerlink" href="#other-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="reading-new-dds-image-format">
-<h3>Reading new DDS image format<a class="headerlink" href="#reading-new-dds-image-format" title="永久链接至标题">¶</a></h3>
-<p>Pillow can now read uncompressed RGB data from DDS images.</p>
+<h3>阅读新的DDS图像格式<a class="headerlink" href="#reading-new-dds-image-format" title="永久链接至标题">¶</a></h3>
+<p>枕头现在可以读取DDS图像无压缩RGB数据。</p>
 </div>
 <div class="section" id="reading-tiff-with-old-style-jpeg-compression">
-<h3>Reading TIFF with old-style JPEG compression<a class="headerlink" href="#reading-tiff-with-old-style-jpeg-compression" title="永久链接至标题">¶</a></h3>
-<p>Added support reading TIFF files with old-style JPEG compression through LibTIFF. All
-YCbCr TIFF images are now always read as RGB.</p>
+<h3>与老式的JPEG压缩TIFF阅读<a class="headerlink" href="#reading-tiff-with-old-style-jpeg-compression" title="永久链接至标题">¶</a></h3>
+<p>新增支持读取TIFF文件通过的libtiff旧式的JPEG压缩。现在所有的YCbCr的TIFF图像总是读出RGB。</p>
 </div>
 <div class="section" id="tiff-compression-codecs">
-<h3>TIFF compression codecs<a class="headerlink" href="#tiff-compression-codecs" title="永久链接至标题">¶</a></h3>
-<p>Support has been added for the LZMA, Zstd and WebP TIFF compression codecs.</p>
+<h3>TIFF压缩编解码<a class="headerlink" href="#tiff-compression-codecs" title="永久链接至标题">¶</a></h3>
+<p>支持已被添加为LZMA，Zstd和WebP的TIFF压缩编解码器。</p>
 </div>
 <div class="section" id="improved-support-for-transposing-i-16-images">
-<h3>Improved support for transposing I;16 images<a class="headerlink" href="#improved-support-for-transposing-i-16-images" title="永久链接至标题">¶</a></h3>
-<p>I;16, I;16L and I;16B are now supported image modes for all
-<a class="reference internal" href="../reference/Image.html#PIL.Image.Image.transpose" title="PIL.Image.Image.transpose"><code class="xref py py-meth docutils literal notranslate"><span class="pre">transpose()</span></code></a> operations.</p>
+<h3>对于我换位改进支持; 16个图像<a class="headerlink" href="#improved-support-for-transposing-i-16-images" title="永久链接至标题">¶</a></h3>
+<p>I;16, I;16L and I;16B 现在支持所有图像模式：PY：甲基：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.transpose`操作。</p>
 </div>
 </div>
 </div>

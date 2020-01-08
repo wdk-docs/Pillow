@@ -27,7 +27,7 @@ msgstr "弃用和清除"
 msgid ""
 "This page lists Pillow features that are deprecated, or have been removed"
 " in past major releases, and gives the alternatives to use instead."
-msgstr "这一点，已被弃用，或在过去主要版本已被删除，并给出了替代页面列出枕头的功能，而不是使用。"
+msgstr "这一点，已被弃用，或在过去主要版本已被删除，并给出了替代页面列出 Pillow 的功能，而不是使用。"
 
 #: ../../deprecations.rst:10
 msgid "Deprecated features"
@@ -133,7 +133,7 @@ msgstr "*删除7.0.0版本。*"
 msgid ""
 "Python 2.7 reached end-of-life on 2020-01-01. Pillow 6.x was the last "
 "series to support Python 2."
-msgstr "Python 2.7版在2020年1月1日达到了结束生命。枕头6.x的是最后一个系列，以支持Python 2里。"
+msgstr "Python 2.7版在2020年1月1日达到了结束生命。 Pillow 6.x的是最后一个系列，以支持Python 2里。"
 
 #: ../../deprecations.rst:50
 msgid "Image.__del__"

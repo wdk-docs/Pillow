@@ -25,7 +25,7 @@ msgstr "2.7.0"
 
 #: ../../releasenotes/2.7.0.rst:5
 msgid "Sane Plugin"
-msgstr "Sane Plugin"
+msgstr "萨插件"
 
 #: ../../releasenotes/2.7.0.rst:7
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 msgid ""
 "Starting from Pillow 2.7.0, a high quality convolutions-based algorithm "
 "is used for all of these three filters."
-msgstr "从枕头2.7.0开始，基于卷积高品质的算法用于这三个过滤器。"
+msgstr "从 Pillow 2.7.0开始，基于卷积高品质的算法用于这三个过滤器。"
 
 #: ../../releasenotes/2.7.0.rst:50
 msgid ""
@@ -1459,11 +1459,11 @@ msgstr "Pillow now can read 16-bit multichannel TIFF files including files with 
 msgid ""
 "Pillow now can read 16-bit signed integer single channel TIFF files. The "
 "image data is promoted to 32-bit for storage and processing."
-msgstr "Pillow now can read 16-bit signed integer single channel TIFF files. The image data is promoted to 32-bit for storage and processing."
+msgstr "枕头现在可以读取整数单通道TIFF文件的16位有符号。的图像数据被晋升为32位进行存储和处理。"
 
 #: ../../releasenotes/4.3.0.rst:105
 msgid "SGI Images"
-msgstr "SGI Images"
+msgstr "SGI图片"
 
 #: ../../releasenotes/4.3.0.rst:107
 msgid ""
@@ -1474,44 +1474,44 @@ msgstr ""
 
 #: ../../releasenotes/4.3.0.rst:111
 msgid "Pillow can now read RLE encoded SGI images in both 8 and 16-bit precision."
-msgstr "Pillow can now read RLE encoded SGI images in both 8 and 16-bit precision."
+msgstr "枕现在可以读取RLE在8位和16位精度编码SGI图像。"
 
 #: ../../releasenotes/4.3.0.rst:115
 msgid "Performance"
-msgstr "Performance"
+msgstr "性能"
 
 #: ../../releasenotes/4.3.0.rst:117
 msgid "This release contains several performance improvements:"
-msgstr "This release contains several performance improvements:"
+msgstr "本新闻稿中包含一些性能改进:"
 
 #: ../../releasenotes/4.3.0.rst:119
 msgid ""
 "Many memory bandwidth-bounded operations such as crop, image allocation, "
 "conversion, split into bands and merging from bands are up to 2x faster."
-msgstr "Many memory bandwidth-bounded operations such as crop, image allocation, conversion, split into bands and merging from bands are up to 2x faster."
+msgstr "许多存储器带宽有界的操作，如农作物，图像分配，转换，分割成带和从频带合并均达到2倍速度更快。"
 
 #: ../../releasenotes/4.3.0.rst:121
 msgid "Upscaling of multichannel images (such as RGB) is accelerated by 5-10%"
-msgstr "Upscaling of multichannel images (such as RGB) is accelerated by 5-10%"
+msgstr "多通道图像（例如，RGB）的升频是由5-10％加速"
 
 #: ../../releasenotes/4.3.0.rst:122
 msgid ""
 "JPEG loading is accelerated up to 15% and JPEG saving up to 20% when "
 "using a recent version of libjpeg-turbo."
-msgstr "JPEG loading is accelerated up to 15% and JPEG saving up to 20% when using a recent version of libjpeg-turbo."
+msgstr "JPEG加载加速到15％和JPEG使用的libjpeg最近涡轮增压的版本时，省电可达20％。"
 
 #: ../../releasenotes/4.3.0.rst:124
 #, python-format
 msgid ""
 "``Image.transpose`` has been accelerated 15% or more by using a cache "
 "friendly algorithm."
-msgstr "``Image.transpose`` has been accelerated 15% or more by using a cache friendly algorithm."
+msgstr "``Image.transpose`` 通过使用缓存友好算法有所加快15％以上。"
 
 #: ../../releasenotes/4.3.0.rst:126
 msgid ""
 "ImageFilters based on Kernel convolution are significantly faster due to "
 "the new MultibandFilter feature."
-msgstr "ImageFilters based on Kernel convolution are significantly faster due to the new MultibandFilter feature."
+msgstr "基于卷积核ImageFilters是显著更快由于新MultibandFilter功能。"
 
 #: ../../releasenotes/4.3.0.rst:128
 msgid ""
@@ -1539,7 +1539,7 @@ msgstr "5.0.0"
 #: ../../releasenotes/5.0.0.rst:5 ../../releasenotes/6.0.0.rst:5
 #: ../../releasenotes/7.0.0.rst:5
 msgid "Backwards Incompatible Changes"
-msgstr "Backwards Incompatible Changes"
+msgstr "向后兼容的改变"
 
 #: ../../releasenotes/5.0.0.rst:8
 msgid "Python 3.3 Dropped"
@@ -2216,7 +2216,7 @@ msgstr "Support for PyQt4 and PySide has been deprecated from ``ImageQt`` and wi
 
 #: ../../releasenotes/6.0.0.rst:59 ../../releasenotes/7.0.0.rst:18
 msgid "PIL.*ImagePlugin.__version__ attributes"
-msgstr "PIL.*ImagePlugin.__version__ attributes"
+msgstr "PIL.*ImagePlugin.__version__ 属性"
 
 #: ../../releasenotes/6.0.0.rst:61
 msgid ""
@@ -2472,13 +2472,13 @@ msgstr "The TGA, PCX and ICO formats also now have MIME types: \"image/x-tga\", 
 
 #: ../../releasenotes/6.0.0.rst:144
 msgid "DIB file format"
-msgstr "DIB file format"
+msgstr "AFTER文件格式"
 
 #: ../../releasenotes/6.0.0.rst:146
 msgid ""
 "Pillow now supports reading and writing the Device Independent Bitmap "
 "file format."
-msgstr "Pillow now supports reading and writing the Device Independent Bitmap file format."
+msgstr "枕头现在支持读取和写入的设备无关位图文件格式。"
 
 #: ../../releasenotes/6.0.0.rst:149
 msgid "Image.quantize"
@@ -2493,13 +2493,13 @@ msgstr ""
 
 #: ../../releasenotes/6.0.0.rst:155
 msgid "New language parameter"
-msgstr "New language parameter"
+msgstr "新的语言参数"
 
 #: ../../releasenotes/6.0.0.rst:157
 msgid ""
 "These text-rendering functions now accept a ``language`` parameter to "
 "request language-specific glyphs and ligatures from the font:"
-msgstr "These text-rendering functions now accept a ``language`` parameter to request language-specific glyphs and ligatures from the font:"
+msgstr "这些文本渲染功能，现在接受了``language``参数从字体请求特定语言的字形和连字："
 
 #: ../../releasenotes/6.0.0.rst:160
 msgid "``ImageDraw.ImageDraw.multiline_text()``"
@@ -2550,7 +2550,7 @@ msgstr "Added ImageOps.exif_transpose"
 msgid ""
 ":py:meth:`~PIL.ImageOps.exif_transpose` returns a copy of an image, "
 "transposed according to its EXIF Orientation tag."
-msgstr ":py:meth:`~PIL.ImageOps.exif_transpose` returns a copy of an image, transposed according to its EXIF Orientation tag."
+msgstr ":py:meth:`~PIL.ImageOps.exif_transpose` 返回图像的副本，根据其EXIF方向标签调换。"
 
 #: ../../releasenotes/6.0.0.rst:183
 msgid "PNG EXIF data"
@@ -2566,41 +2566,41 @@ msgstr ""
 
 #: ../../releasenotes/6.0.0.rst:193
 msgid "Reading new DDS image format"
-msgstr "Reading new DDS image format"
+msgstr "阅读新的DDS图像格式"
 
 #: ../../releasenotes/6.0.0.rst:195
 msgid "Pillow can now read uncompressed RGB data from DDS images."
-msgstr "Pillow can now read uncompressed RGB data from DDS images."
+msgstr "枕头现在可以读取DDS图像无压缩RGB数据。"
 
 #: ../../releasenotes/6.0.0.rst:198
 msgid "Reading TIFF with old-style JPEG compression"
-msgstr "Reading TIFF with old-style JPEG compression"
+msgstr "与老式的JPEG压缩TIFF阅读"
 
 #: ../../releasenotes/6.0.0.rst:200
 msgid ""
 "Added support reading TIFF files with old-style JPEG compression through "
 "LibTIFF. All YCbCr TIFF images are now always read as RGB."
-msgstr "Added support reading TIFF files with old-style JPEG compression through LibTIFF. All YCbCr TIFF images are now always read as RGB."
+msgstr "新增支持读取TIFF文件通过的libtiff旧式的JPEG压缩。现在所有的YCbCr的TIFF图像总是读出RGB。"
 
 #: ../../releasenotes/6.0.0.rst:204
 msgid "TIFF compression codecs"
-msgstr "TIFF compression codecs"
+msgstr "TIFF压缩编解码"
 
 #: ../../releasenotes/6.0.0.rst:206
 msgid ""
 "Support has been added for the LZMA, Zstd and WebP TIFF compression "
 "codecs."
-msgstr "Support has been added for the LZMA, Zstd and WebP TIFF compression codecs."
+msgstr "支持已被添加为LZMA，Zstd和WebP的TIFF压缩编解码器。"
 
 #: ../../releasenotes/6.0.0.rst:209
 msgid "Improved support for transposing I;16 images"
-msgstr "Improved support for transposing I;16 images"
+msgstr "对于我换位改进支持; 16个图像"
 
 #: ../../releasenotes/6.0.0.rst:211
 msgid ""
 "I;16, I;16L and I;16B are now supported image modes for all "
 ":py:meth:`~PIL.Image.Image.transpose` operations."
-msgstr "I;16, I;16L and I;16B are now supported image modes for all :py:meth:`~PIL.Image.Image.transpose` operations."
+msgstr "I;16, I;16L and I;16B 现在支持所有图像模式：PY：甲基：`〜PIL.Image.Image.transpose`操作。"
 
 #: ../../releasenotes/6.1.0.rst:2
 msgid "6.1.0"
@@ -2665,7 +2665,7 @@ msgstr ""
 
 #: ../../releasenotes/6.1.0.rst:57
 msgid "Variation fonts"
-msgstr "Variation fonts"
+msgstr "变异字体"
 
 #: ../../releasenotes/6.1.0.rst:59
 msgid ""
@@ -2688,11 +2688,11 @@ msgstr "ImageTk.getimage"
 msgid ""
 "This function is now supported. It returns the contents of an "
 "``ImageTk.PhotoImage`` as an RGBA ``Image.Image`` instance."
-msgstr "This function is now supported. It returns the contents of an ``ImageTk.PhotoImage`` as an RGBA ``Image.Image`` instance."
+msgstr "现在支持此功能。它返回一个``ImageTk.PhotoImage``作为RGBA``Image.Image``实例的内容。"
 
 #: ../../releasenotes/6.1.0.rst:78
 msgid "Image quality for JPEG compressed TIFF"
-msgstr "Image quality for JPEG compressed TIFF"
+msgstr "图像质量的JPEG压缩TIFF"
 
 #: ../../releasenotes/6.1.0.rst:80
 msgid ""
@@ -2703,55 +2703,55 @@ msgstr ""
 
 #: ../../releasenotes/6.1.0.rst:89
 msgid "Improve encoding of TIFF tags"
-msgstr "Improve encoding of TIFF tags"
+msgstr "提高TIFF标签的编码"
 
 #: ../../releasenotes/6.1.0.rst:91
 msgid ""
 "The TIFF encoder supports more types, especially arrays. This is required"
 " for the GeoTIFF format which encodes geospatial information."
-msgstr "The TIFF encoder supports more types, especially arrays. This is required for the GeoTIFF format which encodes geospatial information."
+msgstr "的TIFF编码器支持多种类型的，特别是阵列。这是所必需的的GeoTIFF格式编码的地理空间信息。"
 
 #: ../../releasenotes/6.1.0.rst:94
 msgid ""
 "Pass ``tagtype`` from v2 directory to libtiff encoder, instead of "
 "autodetecting type."
-msgstr "Pass ``tagtype`` from v2 directory to libtiff encoder, instead of autodetecting type."
+msgstr "通过``从V2目录tagtype``到的libtiff编码器，而不是自动探测类型。"
 
 #: ../../releasenotes/6.1.0.rst:95
 msgid ""
 "Use explicit types eg. ``uint32_t`` for ``TIFF_LONG`` to fix issues on "
 "platforms with 64-bit longs."
-msgstr "Use explicit types eg. ``uint32_t`` for ``TIFF_LONG`` to fix issues on platforms with 64-bit longs."
+msgstr "使用显式类型如。 ``uint32_t``为``TIFF_LONG``来修复问题与64位多头平台。"
 
 #: ../../releasenotes/6.1.0.rst:97
 msgid ""
 "Add support for multiple values (arrays). Requires type in v2 directory "
 "and values must be passed as a tuple."
-msgstr "Add support for multiple values (arrays). Requires type in v2 directory and values must be passed as a tuple."
+msgstr "添加多个值（数组）的支持。需要键入V2目录和价值观必须作为一个元组进行传递。"
 
 #: ../../releasenotes/6.1.0.rst:99
 msgid "Add support for signed types eg. ``TIFFTypes.TIFF_SIGNED_SHORT``."
-msgstr "Add support for signed types eg. ``TIFFTypes.TIFF_SIGNED_SHORT``."
+msgstr "添加符号类型如支持。 ``TIFFTypes.TIFF_SIGNED_SHORT``。"
 
 #: ../../releasenotes/6.1.0.rst:102
 msgid "Respect PKG_CONFIG environment variable when building"
-msgstr "Respect PKG_CONFIG environment variable when building"
+msgstr "建设时必须尊重PKG_CONFIG环境变量"
 
 #: ../../releasenotes/6.1.0.rst:104
 msgid ""
 "This variable is commonly used by other build systems and using it can "
 "help with cross-compiling. Falls back to ``pkg-config`` as before."
-msgstr "This variable is commonly used by other build systems and using it can help with cross-compiling. Falls back to ``pkg-config`` as before."
+msgstr "这个变量是常用的其他构建系统，使用它可与交叉编译帮助。回落到``PKG-config``如前。"
 
 #: ../../releasenotes/6.1.0.rst:108
 msgid "Top-to-bottom complex text rendering"
-msgstr "Top-to-bottom complex text rendering"
+msgstr "顶至底的复杂文本渲染"
 
 #: ../../releasenotes/6.1.0.rst:110
 msgid ""
 "Drawing text in the 'ttb' direction with ``ImageFont`` has been "
 "significantly improved and requires Raqm 0.7 or greater."
-msgstr "Drawing text in the 'ttb' direction with ``ImageFont`` has been significantly improved and requires Raqm 0.7 or greater."
+msgstr "用`图中的“TTB”方向文本`ImageFont``已显著提高，并且需要Raqm 0.7或更大。"
 
 #: ../../releasenotes/6.2.0.rst:2
 msgid "6.2.0"
@@ -2759,7 +2759,7 @@ msgstr "6.2.0"
 
 #: ../../releasenotes/6.2.0.rst:8
 msgid "Text stroking"
-msgstr "Text stroking"
+msgstr "文字行程"
 
 #: ../../releasenotes/6.2.0.rst:10
 msgid ""
@@ -2771,21 +2771,21 @@ msgstr ""
 
 #: ../../releasenotes/6.2.0.rst:31
 msgid "For example,"
-msgstr "For example,"
+msgstr "例如，"
 
 #: ../../releasenotes/6.2.0.rst:43
 msgid "creates the following image:"
-msgstr "creates the following image:"
+msgstr "创建以下图片:"
 
 #: ../../releasenotes/6.2.0.rst:48
 msgid "ImageGrab on multi-monitor Windows"
-msgstr "ImageGrab on multi-monitor Windows"
+msgstr "在多显示器的Windows映像严重"
 
 #: ../../releasenotes/6.2.0.rst:50
 msgid ""
 "An ``all_screens`` argument has been added to ``ImageGrab.grab``. If "
 "``True``, all monitors will be included in the created image."
-msgstr "An ``all_screens`` argument has been added to ``ImageGrab.grab``. If ``True``, all monitors will be included in the created image."
+msgstr "一个``all_screens``的说法已经被添加到``ImageGrab.grab``。如果``True``，那么所有的监视器将被列入创建的映像中。"
 
 #: ../../releasenotes/6.2.0.rst:57
 msgid "Image.getexif"
@@ -2795,7 +2795,7 @@ msgstr "Image.getexif"
 msgid ""
 "To allow for lazy loading of Exif data, ``Image.getexif()`` now returns a"
 " shared instance of ``Image.Exif``."
-msgstr "To allow for lazy loading of Exif data, ``Image.getexif()`` now returns a shared instance of ``Image.Exif``."
+msgstr "为了允许的Exif数据的延迟加载，``Image.getexif（）``现在返回``Image.Exif``的共享实例。"
 
 #: ../../releasenotes/6.2.0.rst:66
 msgid "Image.frombuffer"
@@ -2810,7 +2810,7 @@ msgstr ""
 
 #: ../../releasenotes/6.2.0.rst:73 ../../releasenotes/6.2.2.rst:5
 msgid "Security"
-msgstr "Security"
+msgstr "安全"
 
 #: ../../releasenotes/6.2.0.rst:75
 msgid ""
@@ -2838,17 +2838,17 @@ msgstr ""
 
 #: ../../releasenotes/6.2.0.rst:88
 msgid "Decompression bomb checks have been added to GIF and ICO formats."
-msgstr "Decompression bomb checks have been added to GIF and ICO formats."
+msgstr "减压炸弹检查已被添加到GIF和ICO格式。"
 
 #: ../../releasenotes/6.2.0.rst:90
 msgid ""
 "An error is now raised if a TIFF dimension is a string, rather than "
 "trying to perform operations on it."
-msgstr "An error is now raised if a TIFF dimension is a string, rather than trying to perform operations on it."
+msgstr "如果TIFF尺寸是一个字符串，而不是试图在其上执行操作，现在提出了一个错误。"
 
 #: ../../releasenotes/6.2.0.rst:97
 msgid "Removed bdist_wininst .exe installers"
-msgstr "Removed bdist_wininst .exe installers"
+msgstr "删除bdist_wininst .exe文件安装程序"
 
 #: ../../releasenotes/6.2.0.rst:99
 msgid ""
@@ -2859,7 +2859,7 @@ msgstr ""
 
 #: ../../releasenotes/6.2.0.rst:104
 msgid "Flags for libwebp in wheels"
-msgstr "Flags for libwebp in wheels"
+msgstr "标志在车轮libwebp"
 
 #: ../../releasenotes/6.2.0.rst:106
 msgid ""
@@ -2882,11 +2882,11 @@ msgstr ""
 
 #: ../../releasenotes/6.2.1.rst:24
 msgid "Support added for Python 3.8"
-msgstr "Support added for Python 3.8"
+msgstr "增加支持的Python 3.8"
 
 #: ../../releasenotes/6.2.1.rst:26
 msgid "Pillow 6.2.1 supports Python 3.8."
-msgstr "Pillow 6.2.1 supports Python 3.8."
+msgstr "枕头6.2.1支持Python 3.8。"
 
 #: ../../releasenotes/6.2.2.rst:2
 msgid "6.2.2"
@@ -2894,7 +2894,7 @@ msgstr "6.2.2"
 
 #: ../../releasenotes/6.2.2.rst:7
 msgid "This release addresses several security problems."
-msgstr "This release addresses several security problems."
+msgstr "此版本解决几个安全问题。"
 
 #: ../../releasenotes/6.2.2.rst:9
 msgid ""
@@ -2915,7 +2915,7 @@ msgstr ""
 msgid ""
 "CVE-2020-5310: Overflow checks have been added when calculating the size "
 "of a memory block to be reallocated in the processing of a TIFF image."
-msgstr "CVE-2020-5310: Overflow checks have been added when calculating the size of a memory block to be reallocated in the processing of a TIFF image."
+msgstr "CVE-2020-5310: 当计算的存储器块的大小，以在一个TIFF图像的处理被重新分配溢出检查已被添加。"
 
 #: ../../releasenotes/7.0.0.rst:2
 msgid "7.0.0"
@@ -2925,35 +2925,35 @@ msgstr "7.0.0"
 msgid ""
 "Pillow has dropped support for Python 2.7, which reached end-of-life on "
 "2020-01-01."
-msgstr "Pillow has dropped support for Python 2.7, which reached end-of-life on 2020-01-01."
+msgstr "枕头已下降为Python 2.7，达到了结束生命的2020年1月1日的支持。"
 
 #: ../../releasenotes/7.0.0.rst:13
 msgid "PILLOW_VERSION constant"
-msgstr "PILLOW_VERSION constant"
+msgstr "PILLOW_VERSION不变"
 
 #: ../../releasenotes/7.0.0.rst:15
 msgid "``PILLOW_VERSION`` has been removed. Use ``__version__`` instead."
-msgstr "``PILLOW_VERSION`` has been removed. Use ``__version__`` instead."
+msgstr "``PILLOW_VERSION`` 已被删除。 采用 ``__version__`` 代替."
 
 #: ../../releasenotes/7.0.0.rst:20
 msgid ""
 "The version constants of individual plugins have been removed. Use "
 "``PIL.__version__`` instead."
-msgstr "The version constants of individual plugins have been removed. Use ``PIL.__version__`` instead."
+msgstr "各个插件的版本常数已被删除。使用 ``PIL.__version__`` 代替。"
 
 #: ../../releasenotes/7.0.0.rst:24
 msgid "Removed"
-msgstr "Removed"
+msgstr "删除"
 
 #: ../../releasenotes/7.0.0.rst:46
 msgid ""
 "Support for PyQt4 and PySide has been removed from ``ImageQt``. Please "
 "upgrade to PyQt5 or PySide2."
-msgstr "Support for PyQt4 and PySide has been removed from ``ImageQt``. Please upgrade to PyQt5 or PySide2."
+msgstr "对于PyQt4的和PySide支持已经从 ``ImageQt`` 删除。请升级到PyQt5或PySide2。"
 
 #: ../../releasenotes/7.0.0.rst:50
 msgid "Setting the size of TIFF images"
-msgstr "Setting the size of TIFF images"
+msgstr "设置TIFF图像的大小"
 
 #: ../../releasenotes/7.0.0.rst:52
 msgid ""
@@ -2963,7 +2963,7 @@ msgstr "Setting the size of a TIFF image directly (eg. ``im.size = (256, 256)``)
 
 #: ../../releasenotes/7.0.0.rst:56
 msgid "Default resampling filter"
-msgstr "Default resampling filter"
+msgstr "默认重采样滤波器"
 
 #: ../../releasenotes/7.0.0.rst:58
 msgid ""
@@ -2979,7 +2979,7 @@ msgstr ""
 
 #: ../../releasenotes/7.0.0.rst:67
 msgid "Image.draft() return value"
-msgstr "Image.draft() return value"
+msgstr "Image.draft() 返回值"
 
 #: ../../releasenotes/7.0.0.rst:69
 msgid ""
@@ -2996,7 +2996,7 @@ msgstr ""
 
 #: ../../releasenotes/7.0.0.rst:85
 msgid "Custom unidentified image error"
-msgstr "Custom unidentified image error"
+msgstr "自定义不明的图像错误"
 
 #: ../../releasenotes/7.0.0.rst:87
 msgid ""
@@ -3009,7 +3009,7 @@ msgstr ""
 msgid ""
 "New argument ``reducing_gap`` for Image.resize() and Image.thumbnail() "
 "methods"
-msgstr "New argument ``reducing_gap`` for Image.resize() and Image.thumbnail() methods"
+msgstr "新的参数``reducing_gap``为Image.resize（）和Image.thumbnail（）方法"
 
 #: ../../releasenotes/7.0.0.rst:93
 msgid ""
@@ -3024,7 +3024,7 @@ msgstr ""
 msgid ""
 "The default value for :py:meth:`~PIL.Image.Image.resize` is ``None``, "
 "which means that the optimization is turned off by default."
-msgstr "The default value for :py:meth:`~PIL.Image.Image.resize` is ``None``, which means that the optimization is turned off by default."
+msgstr "PY：：为默认值甲基：`〜PIL.Image.Image.resize`是``None``，这意味着优化默认关闭。"
 
 #: ../../releasenotes/7.0.0.rst:101
 msgid ""
@@ -3040,7 +3040,7 @@ msgstr ""
 
 #: ../../releasenotes/7.0.0.rst:110
 msgid "New Image.reduce() method"
-msgstr "New Image.reduce() method"
+msgstr "新Image.reduce（）方法"
 
 #: ../../releasenotes/7.0.0.rst:112
 msgid ""
@@ -3053,13 +3053,13 @@ msgstr ""
 
 #: ../../releasenotes/7.0.0.rst:118
 msgid "Loading WMF images at a given DPI"
-msgstr "Loading WMF images at a given DPI"
+msgstr "在给定的DPI加载WMF图像"
 
 #: ../../releasenotes/7.0.0.rst:120
 msgid ""
 "On Windows, Pillow can read WMF files, with a default DPI of 72. An image"
 " can now also be loaded at another resolution:"
-msgstr "On Windows, Pillow can read WMF files, with a default DPI of 72. An image can now also be loaded at another resolution:"
+msgstr "在Windows中，枕头可以阅读WMF文件，使用默认的72的图像的DPI现在也可以在另一项决议中加载："
 
 #: ../../releasenotes/7.0.0.rst:135
 msgid ""
@@ -3071,11 +3071,11 @@ msgstr ""
 
 #: ../../releasenotes/7.0.0.rst:139
 msgid "Previous method:"
-msgstr "Previous method:"
+msgstr "以前的方法:"
 
 #: ../../releasenotes/7.0.0.rst:154
 msgid "Better thumbnail geometry"
-msgstr "Better thumbnail geometry"
+msgstr "更好的缩略图几何"
 
 #: ../../releasenotes/7.0.0.rst:156
 msgid ""
@@ -3089,15 +3089,15 @@ msgstr ""
 msgid ""
 "When the image width or height is not divisible by 8 the last row and "
 "column in the image get the correct weight after JPEG DCT scaling."
-msgstr "When the image width or height is not divisible by 8 the last row and column in the image get the correct weight after JPEG DCT scaling."
+msgstr "当图像宽度或高度不能被8整除的图像中的最后行和列得到JPEG DCT缩放后的重量正确。"
 
 #: ../../releasenotes/index.rst:2
 msgid "Release Notes"
-msgstr "Release Notes"
+msgstr "发行说明"
 
 #: ../../releasenotes/index.rst:4
 msgid ""
 "Contributors please include release notes as needed or appropriate with "
 "your bug fixes, feature additions and tests."
-msgstr "Contributors please include release notes as needed or appropriate with your bug fixes, feature additions and tests."
+msgstr "请贡献者包括发行说明需要时或适当您的bug修复，功能的增加和测试。"
 

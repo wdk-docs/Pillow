@@ -90,7 +90,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">手册</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html">概观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">教程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts.html">概念</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="appendices.html">附录</a><ul class="current">
@@ -204,7 +204,7 @@ in the Python path with a name ending in
 <code class="file docutils literal notranslate"><span class="pre">ImagePlugin.py</span></code>.  You will need to import your
 image plugin manually.</p>
 </div>
-<p>枕头解码两个阶段文件:</p>
+<p>Pillow 解码两个阶段文件:</p>
 <ol class="arabic simple">
 <li><p>It loops over the available image plugins in the loaded order, and
 calls the plugin’s <code class="docutils literal notranslate"><span class="pre">accept</span></code> function with the first 16 bytes of
@@ -212,7 +212,7 @@ the file. If the <code class="docutils literal notranslate"><span class="pre">ac
 <code class="docutils literal notranslate"><span class="pre">_open</span></code> method is called to set up the image metadata and image
 tiles. The <code class="docutils literal notranslate"><span class="pre">_open</span></code> method is not for decoding the actual image
 data.</p></li>
-<li><p>当请求的图象数据时，<a href="#id1"><span class="problematic" id="id2">``</span></a>ImageFile.load``方法被调用时，它建立了一个解码器，用于每个区块与数据馈送到它。</p></li>
+<li><p>当请求的图象数据时，<code class="docutils literal notranslate"><span class="pre">ImageFile.load</span></code> 方法被调用时，它建立了一个解码器，用于每个区块与数据馈送到它.</p></li>
 </ol>
 <p>An image plug-in should contain a format handler derived from the
 <code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.ImageFile.ImageFile</span></code> base class. This class should
@@ -307,16 +307,16 @@ covering the full image.</p>
 uncompressed data, in a variety of pixel formats. For more information on
 this decoder, see the description below.</p>
 </dd>
-<dt><strong>region</strong></dt><dd><p>A 4元组指定，其中将数据存储在图像中。</p>
+<dt><strong>region</strong></dt><dd><p>A 4元组指定，其中将数据存储在图像中.</p>
 </dd>
-<dt><strong>offset</strong></dt><dd><p>字节从文件的图像数据的开始偏移。</p>
+<dt><strong>offset</strong></dt><dd><p>字节从文件的图像数据的开始偏移.</p>
 </dd>
 <dt><strong>parameters</strong></dt><dd><p>Parameters to the decoder. The contents of this field depends on the
 decoder specified by the first field in the tile descriptor tuple. If the
 decoder doesn’t need any parameters, use None for this field.</p>
 </dd>
 </dl>
-<p>请注意，：PY：ATTR：<a href="#id1"><span class="problematic" id="id2">`</span></a>tile`属性包含瓦块描述符的列表，而不仅仅是一个描述符。</p>
+<p>请注意，:PY:ATTR:<a href="#id1"><span class="problematic" id="id2">`</span></a>tile`属性包含瓦块描述符的列表，而不仅仅是一个描述符.</p>
 </div>
 </div>
 <div class="section" id="decoders">
@@ -347,7 +347,7 @@ table below.</p>
 image is assumed to be packed (no padding between lines). If omitted, the
 stride defaults to 0.</p>
 </dd>
-<dt><strong>orientation</strong></dt><dd><p>是否在图像中的第一行是在屏幕（1）上的顶行或底行（-1）。如果省略，默认的方向为1。</p>
+<dt><strong>orientation</strong></dt><dd><p>是否在图像中的第一行是在屏幕（1) 上的顶行或底行（-1) . 如果省略，默认的方向为1.</p>
 </dd>
 </dl>
 <p>The <strong>raw mode</strong> field is used to determine how the data should be unpacked to
@@ -533,20 +533,20 @@ end.</p>
 <dt><strong>sign</strong></dt><dd><p>If non-zero, bit fields are sign extended. If zero or omitted, bit fields
 are unsigned.</p>
 </dd>
-<dt><strong>orientation</strong></dt><dd><p>是否在图像中的第一行是在屏幕（1）上的顶行或底行（-1）。如果省略，默认的方向为1。</p>
+<dt><strong>orientation</strong></dt><dd><p>是否在图像中的第一行是在屏幕（1) 上的顶行或底行（-1) . 如果省略，默认的方向为1.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="section" id="writing-your-own-file-decoder-in-c">
 <span id="file-decoders"></span><h1>编写自己的文件解码器使用C<a class="headerlink" href="#writing-your-own-file-decoder-in-c" title="永久链接至标题">¶</a></h1>
-<p>有一个文件解码器的寿命3个阶段：</p>
+<p>有一个文件解码器的寿命3个阶段:</p>
 <ol class="arabic simple">
 <li><p>Setup: Pillow looks for a function in the decoder registry, falling
 back to a function named <code class="docutils literal notranslate"><span class="pre">[decodername]_decoder</span></code> on the internal
 core image object.  That function is called with the <code class="docutils literal notranslate"><span class="pre">args</span></code> tuple
 from the <code class="docutils literal notranslate"><span class="pre">tile</span></code> setup in the <code class="docutils literal notranslate"><span class="pre">_open</span></code> method.</p></li>
-<li><p>解码：解码器的解码功能重复图像数据的块调用。</p></li>
+<li><p>解码:解码器的解码功能重复图像数据的块调用.</p></li>
 <li><p>Cleanup: If the decoder has registered a cleanup function, it will
 be called at the end of the decoding process, even if there was an
 exception raised.</p></li>
@@ -562,11 +562,11 @@ function array.</p>
 very least, set the <code class="docutils literal notranslate"><span class="pre">decode</span></code> function pointer. The fields of
 interest in this object are:</p>
 <dl>
-<dt><strong>解码</strong></dt><dd><p>函数指针解码功能，它可以访问``im``，<code class="docutils literal notranslate"><span class="pre">state</span></code>，和数据的缓冲器被添加到该图像。</p>
+<dt><strong>解码</strong></dt><dd><p>函数指针解码功能，它可以访问``im``，<code class="docutils literal notranslate"><span class="pre">state</span></code>，和数据的缓冲器被添加到该图像.</p>
 </dd>
-<dt><strong>cleanup</strong></dt><dd><p>函数指针的清理功能，可以访问``state``。</p>
+<dt><strong>cleanup</strong></dt><dd><p>函数指针的清理功能，可以访问``state``.</p>
 </dd>
-<dt><strong>im</strong></dt><dd><p>目标图像，将枕头设定。</p>
+<dt><strong>im</strong></dt><dd><p>目标图像，将 Pillow 设定.</p>
 </dd>
 <dt><strong>state</strong></dt><dd><p>An ImagingCodecStateInstance, will be set by Pillow. The <strong>context</strong>
 member is an opaque struct that can be used by the decoder to store
@@ -586,7 +586,7 @@ warning is removed.</p>
 </div>
 <div class="section" id="decoding">
 <h2>解码<a class="headerlink" href="#decoding" title="永久链接至标题">¶</a></h2>
-<p>解码功能被称为与目标（核心）图像，解码器状态的结构，并且将被解码的数据的缓冲。</p>
+<p>解码功能被称为与目标（核心) 图像，解码器状态的结构，并且将被解码的数据的缓冲.</p>
 <p><strong>Experimental</strong> – If <code class="docutils literal notranslate"><span class="pre">pulls_fd</span></code> is set, then the decode function
 is called once, with an empty buffer. It is the decoder’s
 responsibility to decode the entire tile in that one call.  The rest of
@@ -596,8 +596,8 @@ out of the buffer and return the number of bytes consumed. The next
 call to the decoder will include the previous unconsumed tail. The
 decoder function will be called multiple times as the data is read
 from the file like object.</p>
-<p>如果出现错误，集``国有&gt; errcode``和返回-1。</p>
-<p>返回-1成功，无需设置ERRCODE。</p>
+<p>如果出现错误，集``国有&gt; errcode``和返回-1.</p>
+<p>返回-1成功，无需设置ERRCODE.</p>
 </div>
 <div class="section" id="cleanup">
 <h2>Cleanup<a class="headerlink" href="#cleanup" title="永久链接至标题">¶</a></h2>
@@ -616,9 +616,9 @@ decode method. File decoders should be registered using
 the file decoders, there are three stages in the lifetime of a
 Python-based file decoder:</p>
 <ol class="arabic simple">
-<li><p>设置：枕头会在注册表中的解码器，然后实例化的类。</p></li>
-<li><p>解码：解码器实例的``decode``方法被反复调用的数据的缓冲器被解释。</p></li>
-<li><p>清理：解码器实例的``cleanup``方法被调用。</p></li>
+<li><p>设置: Pillow 会在注册表中的解码器，然后实例化的类.</p></li>
+<li><p>解码:解码器实例的``decode``方法被反复调用的数据的缓冲器被解释.</p></li>
+<li><p>清理:解码器实例的``cleanup``方法被调用.</p></li>
 </ol>
 </div>
 

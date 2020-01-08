@@ -93,14 +93,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.2.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#api-additions">API Additions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#text-stroking">Text stroking</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#imagegrab-on-multi-monitor-windows">ImageGrab on multi-monitor Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-stroking">文字行程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imagegrab-on-multi-monitor-windows">在多显示器的Windows映像严重</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#api-changes">API Changes</a><ul>
@@ -108,10 +108,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#deprecations">Deprecations</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security">安全</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#removed-bdist-wininst-exe-installers">Removed bdist_wininst .exe installers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#flags-for-libwebp-in-wheels">Flags for libwebp in wheels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removed-bdist-wininst-exe-installers">删除bdist_wininst .exe文件安装程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flags-for-libwebp-in-wheels">标志在车轮libwebp</a></li>
 </ul>
 </li>
 </ul>
@@ -188,7 +188,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>6.2.0</li>
     
@@ -214,7 +214,7 @@
 <div class="section" id="api-additions">
 <h2>API Additions<a class="headerlink" href="#api-additions" title="永久链接至标题">¶</a></h2>
 <div class="section" id="text-stroking">
-<h3>Text stroking<a class="headerlink" href="#text-stroking" title="永久链接至标题">¶</a></h3>
+<h3>文字行程<a class="headerlink" href="#text-stroking" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">stroke_width</span></code> and <code class="docutils literal notranslate"><span class="pre">stroke_fill</span></code> arguments have been added to text drawing
 operations. They allow text to be outlined, setting the width of the stroke and
 and the color respectively. If not provided, <code class="docutils literal notranslate"><span class="pre">stroke_fill</span></code> will default to
@@ -234,7 +234,7 @@ the <code class="docutils literal notranslate"><span class="pre">fill</span></co
                     <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stroke_fill</span><span class="o">=</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For example,</p>
+<p>例如，</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
 
 <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">130</span><span class="p">))</span>
@@ -243,21 +243,19 @@ the <code class="docutils literal notranslate"><span class="pre">fill</span></co
 <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;#f00&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stroke_fill</span><span class="o">=</span><span class="s2">&quot;#0f0&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>creates the following image:</p>
+<p>创建以下图片:</p>
 <img alt="../_images/imagedraw_stroke_different.png" src="../_images/imagedraw_stroke_different.png" />
 </div>
 <div class="section" id="imagegrab-on-multi-monitor-windows">
-<h3>ImageGrab on multi-monitor Windows<a class="headerlink" href="#imagegrab-on-multi-monitor-windows" title="永久链接至标题">¶</a></h3>
-<p>An <code class="docutils literal notranslate"><span class="pre">all_screens</span></code> argument has been added to <code class="docutils literal notranslate"><span class="pre">ImageGrab.grab</span></code>. If <code class="docutils literal notranslate"><span class="pre">True</span></code>,
-all monitors will be included in the created image.</p>
+<h3>在多显示器的Windows映像严重<a class="headerlink" href="#imagegrab-on-multi-monitor-windows" title="永久链接至标题">¶</a></h3>
+<p>一个``all_screens``的说法已经被添加到``ImageGrab.grab``。如果``True``，那么所有的监视器将被列入创建的映像中。</p>
 </div>
 </div>
 <div class="section" id="api-changes">
 <h2>API Changes<a class="headerlink" href="#api-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="image-getexif">
 <h3>Image.getexif<a class="headerlink" href="#image-getexif" title="永久链接至标题">¶</a></h3>
-<p>To allow for lazy loading of Exif data, <code class="docutils literal notranslate"><span class="pre">Image.getexif()</span></code> now returns a
-shared instance of <code class="docutils literal notranslate"><span class="pre">Image.Exif</span></code>.</p>
+<p>为了允许的Exif数据的延迟加载，<a href="#id1"><span class="problematic" id="id2">``</span></a>Image.getexif（）``现在返回``Image.Exif``的共享实例。</p>
 </div>
 <div class="section" id="deprecations">
 <h3>Deprecations<a class="headerlink" href="#deprecations" title="永久链接至标题">¶</a></h3>
@@ -270,7 +268,7 @@ in Pillow 7.0.</p>
 </div>
 </div>
 <div class="section" id="security">
-<h2>Security<a class="headerlink" href="#security" title="永久链接至标题">¶</a></h2>
+<h2>安全<a class="headerlink" href="#security" title="永久链接至标题">¶</a></h2>
 <p>This release catches several buffer overruns, as well as addressing
 CVE-2019-16865. The CVE is regarding DOS problems, such as consuming large
 amounts of memory, or taking a large amount of time to process an image.</p>
@@ -281,20 +279,19 @@ the declared size of the extra data field, then it looked for the next layer by
 seeking backwards. This is now corrected by seeking to (the start of the layer
 + the size of the extra data field) instead of (the read parts of the layer +
 the rest of the layer).</p>
-<p>Decompression bomb checks have been added to GIF and ICO formats.</p>
-<p>An error is now raised if a TIFF dimension is a string, rather than trying to
-perform operations on it.</p>
+<p>减压炸弹检查已被添加到GIF和ICO格式。</p>
+<p>如果TIFF尺寸是一个字符串，而不是试图在其上执行操作，现在提出了一个错误。</p>
 </div>
 <div class="section" id="other-changes">
 <h2>Other Changes<a class="headerlink" href="#other-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="removed-bdist-wininst-exe-installers">
-<h3>Removed bdist_wininst .exe installers<a class="headerlink" href="#removed-bdist-wininst-exe-installers" title="永久链接至标题">¶</a></h3>
+<h3>删除bdist_wininst .exe文件安装程序<a class="headerlink" href="#removed-bdist-wininst-exe-installers" title="永久链接至标题">¶</a></h3>
 <p>.exe installers fell out of favour with PEP 527, and will be deprecated in
 Python 3.8. Pillow will no longer be distributing them. Wheels should be used
 instead.</p>
 </div>
 <div class="section" id="flags-for-libwebp-in-wheels">
-<h3>Flags for libwebp in wheels<a class="headerlink" href="#flags-for-libwebp-in-wheels" title="永久链接至标题">¶</a></h3>
+<h3>标志在车轮libwebp<a class="headerlink" href="#flags-for-libwebp-in-wheels" title="永久链接至标题">¶</a></h3>
 <p>When building libwebp for inclusion in wheels, Pillow now adds the -O3 and
 -DNDEBUG CFLAGS. These flags would be used by default if building libwebp
 without debugging, and using them fixes a significant decrease in speed when

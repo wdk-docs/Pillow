@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>File Handling in Pillow &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  <title>在枕头文件处理 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
   
 
   
@@ -117,16 +117,16 @@
 <li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugin reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">插件参考</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="internal_design.html">内部参考文件</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">File Handling in Pillow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#image-lifecycle">Image Lifecycle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#complications">Complications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#proposed-file-handling">Proposed File Handling</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">在枕头文件处理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#image-lifecycle">图片生命周期</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#complications">并发症</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proposed-file-handling">建议文件处理</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="limits.html">范围</a></li>
-<li class="toctree-l3"><a class="reference internal" href="block_allocator.html">Block Allocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="block_allocator.html">块分配器</a></li>
 </ul>
 </li>
 </ul>
@@ -184,7 +184,7 @@
         
           <li><a href="internal_design.html">内部参考文件</a> &raquo;</li>
         
-      <li>File Handling in Pillow</li>
+      <li>在枕头文件处理</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,7 +204,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="file-handling-in-pillow">
-<span id="file-handling"></span><h1>File Handling in Pillow<a class="headerlink" href="#file-handling-in-pillow" title="永久链接至标题">¶</a></h1>
+<span id="file-handling"></span><h1>在枕头文件处理<a class="headerlink" href="#file-handling-in-pillow" title="永久链接至标题">¶</a></h1>
 <p>When opening a file as an image, Pillow requires a filename, <code class="docutils literal notranslate"><span class="pre">pathlib.Path</span></code>
 object, or a file-like object. Pillow uses the filename or <code class="docutils literal notranslate"><span class="pre">Path</span></code> to open a
 file, so for the rest of this article, they will all be treated as a file-like
@@ -233,10 +233,9 @@ object.</p>
 file object opened by Pillow may also be closed by Pillow after the
 <code class="docutils literal notranslate"><span class="pre">Image.Image.load()</span></code> method is called, provided the associated image does not
 have multiple frames.</p>
-<p>Pillow cannot in general close and reopen a file, so any access to
-that file needs to be prior to the close.</p>
+<p>枕头一般不能关闭并重新打开一个文件，因此该文件需要的任何访问之前结束前。</p>
 <div class="section" id="image-lifecycle">
-<h2>Image Lifecycle<a class="headerlink" href="#image-lifecycle" title="永久链接至标题">¶</a></h2>
+<h2>图片生命周期<a class="headerlink" href="#image-lifecycle" title="永久链接至标题">¶</a></h2>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">Image.open()</span></code> Filenames and <code class="docutils literal notranslate"><span class="pre">Path</span></code> objects are opened as a file.
 Metadata is read from the open file. The file is left open for further usage.</p></li>
@@ -268,7 +267,7 @@ Pillow does not know if there are going to be any requests for additional
 data until the caller has explicitly closed the image.</p>
 </div>
 <div class="section" id="complications">
-<h2>Complications<a class="headerlink" href="#complications" title="永久链接至标题">¶</a></h2>
+<h2>并发症<a class="headerlink" href="#complications" title="永久链接至标题">¶</a></h2>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">TiffImagePlugin</span></code> has some code to pass the underlying file descriptor into
 libtiff (if working on an actual file). Since libtiff closes the file
@@ -287,11 +286,11 @@ descriptor internally, it is duplicated prior to passing it into libtiff.</p></l
 </ul>
 </div>
 <div class="section" id="proposed-file-handling">
-<h2>Proposed File Handling<a class="headerlink" href="#proposed-file-handling" title="永久链接至标题">¶</a></h2>
+<h2>建议文件处理<a class="headerlink" href="#proposed-file-handling" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Image.Image.load()</span></code> should close the image file, unless there are
 multiple frames.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.Image.seek()</span></code> should never close the image file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Image.Image.seek（）</span></code> 都不要关闭图像文件。</p></li>
 <li><p>Users of the library should use a context manager or call
 <code class="docutils literal notranslate"><span class="pre">Image.Image.close()</span></code> on any image opened with a filename or <code class="docutils literal notranslate"><span class="pre">Path</span></code>
 object to ensure that the underlying file is closed.</p></li>

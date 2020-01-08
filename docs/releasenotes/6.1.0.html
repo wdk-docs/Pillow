@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
@@ -107,15 +107,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#image-entropy">Image.entropy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#imagegrab-grab">ImageGrab.grab</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#imagesequence-all-frames">ImageSequence.all_frames</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variation-fonts">Variation fonts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variation-fonts">变异字体</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#imagetk-getimage">ImageTk.getimage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#image-quality-for-jpeg-compressed-tiff">Image quality for JPEG compressed TIFF</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#improve-encoding-of-tiff-tags">Improve encoding of TIFF tags</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#respect-pkg-config-environment-variable-when-building">Respect PKG_CONFIG environment variable when building</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#top-to-bottom-complex-text-rendering">Top-to-bottom complex text rendering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-quality-for-jpeg-compressed-tiff">图像质量的JPEG压缩TIFF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#improve-encoding-of-tiff-tags">提高TIFF标签的编码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#respect-pkg-config-environment-variable-when-building">建设时必须尊重PKG_CONFIG环境变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#top-to-bottom-complex-text-rendering">顶至底的复杂文本渲染</a></li>
 </ul>
 </li>
 </ul>
@@ -191,7 +191,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>6.1.0</li>
     
@@ -260,7 +260,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">ImageS
 could be used to return all frames from an image, each rotated 90 degrees.</p>
 </div>
 <div class="section" id="variation-fonts">
-<h3>Variation fonts<a class="headerlink" href="#variation-fonts" title="永久链接至标题">¶</a></h3>
+<h3>变异字体<a class="headerlink" href="#variation-fonts" title="永久链接至标题">¶</a></h3>
 <p>Variation fonts are now supported, allowing for different styles from the same font
 file. <code class="docutils literal notranslate"><span class="pre">ImageFont.FreeTypeFont</span></code> has four new methods,
 <a class="reference internal" href="../reference/ImageFont.html#PIL.ImageFont.FreeTypeFont.get_variation_names" title="PIL.ImageFont.FreeTypeFont.get_variation_names"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.ImageFont.FreeTypeFont.get_variation_names()</span></code></a> and
@@ -275,11 +275,10 @@ instead. An <code class="docutils literal notranslate"><span class="pre">IOError
 <h2>Other Changes<a class="headerlink" href="#other-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="imagetk-getimage">
 <h3>ImageTk.getimage<a class="headerlink" href="#imagetk-getimage" title="永久链接至标题">¶</a></h3>
-<p>This function is now supported. It returns the contents of an <code class="docutils literal notranslate"><span class="pre">ImageTk.PhotoImage</span></code> as
-an RGBA <code class="docutils literal notranslate"><span class="pre">Image.Image</span></code> instance.</p>
+<p>现在支持此功能。它返回一个``ImageTk.PhotoImage``作为RGBA``Image.Image``实例的内容。</p>
 </div>
 <div class="section" id="image-quality-for-jpeg-compressed-tiff">
-<h3>Image quality for JPEG compressed TIFF<a class="headerlink" href="#image-quality-for-jpeg-compressed-tiff" title="永久链接至标题">¶</a></h3>
+<h3>图像质量的JPEG压缩TIFF<a class="headerlink" href="#image-quality-for-jpeg-compressed-tiff" title="永久链接至标题">¶</a></h3>
 <p>The TIFF encoder accepts a <code class="docutils literal notranslate"><span class="pre">quality</span></code> parameter for <code class="docutils literal notranslate"><span class="pre">jpeg</span></code> compressed TIFF files. A
 value from 0 (worst) to 100 (best) controls the image quality, similar to the JPEG
 encoder. The default is 75. For example:</p>
@@ -288,27 +287,22 @@ encoder. The default is 75. For example:</p>
 </div>
 </div>
 <div class="section" id="improve-encoding-of-tiff-tags">
-<h3>Improve encoding of TIFF tags<a class="headerlink" href="#improve-encoding-of-tiff-tags" title="永久链接至标题">¶</a></h3>
-<p>The TIFF encoder supports more types, especially arrays. This is required for the
-GeoTIFF format which encodes geospatial information.</p>
+<h3>提高TIFF标签的编码<a class="headerlink" href="#improve-encoding-of-tiff-tags" title="永久链接至标题">¶</a></h3>
+<p>的TIFF编码器支持多种类型的，特别是阵列。这是所必需的的GeoTIFF格式编码的地理空间信息。</p>
 <ul class="simple">
-<li><p>Pass <code class="docutils literal notranslate"><span class="pre">tagtype</span></code> from v2 directory to libtiff encoder, instead of autodetecting type.</p></li>
-<li><p>Use explicit types eg. <code class="docutils literal notranslate"><span class="pre">uint32_t</span></code> for <code class="docutils literal notranslate"><span class="pre">TIFF_LONG</span></code> to fix issues on platforms with
-64-bit longs.</p></li>
-<li><p>Add support for multiple values (arrays). Requires type in v2 directory and values
-must be passed as a tuple.</p></li>
-<li><p>Add support for signed types eg. <code class="docutils literal notranslate"><span class="pre">TIFFTypes.TIFF_SIGNED_SHORT</span></code>.</p></li>
+<li><p>通过``从V2目录tagtype``到的libtiff编码器，而不是自动探测类型。</p></li>
+<li><p>使用显式类型如。 <a href="#id1"><span class="problematic" id="id2">``</span></a>uint32_t``为``TIFF_LONG``来修复问题与64位多头平台。</p></li>
+<li><p>添加多个值（数组）的支持。需要键入V2目录和价值观必须作为一个元组进行传递。</p></li>
+<li><p>添加符号类型如支持。 <code class="docutils literal notranslate"><span class="pre">TIFFTypes.TIFF_SIGNED_SHORT</span></code>。</p></li>
 </ul>
 </div>
 <div class="section" id="respect-pkg-config-environment-variable-when-building">
-<h3>Respect PKG_CONFIG environment variable when building<a class="headerlink" href="#respect-pkg-config-environment-variable-when-building" title="永久链接至标题">¶</a></h3>
-<p>This variable is commonly used by other build systems and using it can help with
-cross-compiling. Falls back to <code class="docutils literal notranslate"><span class="pre">pkg-config</span></code> as before.</p>
+<h3>建设时必须尊重PKG_CONFIG环境变量<a class="headerlink" href="#respect-pkg-config-environment-variable-when-building" title="永久链接至标题">¶</a></h3>
+<p>这个变量是常用的其他构建系统，使用它可与交叉编译帮助。回落到``PKG-config``如前。</p>
 </div>
 <div class="section" id="top-to-bottom-complex-text-rendering">
-<h3>Top-to-bottom complex text rendering<a class="headerlink" href="#top-to-bottom-complex-text-rendering" title="永久链接至标题">¶</a></h3>
-<p>Drawing text in the ‘ttb’ direction with <code class="docutils literal notranslate"><span class="pre">ImageFont</span></code> has been significantly improved
-and requires Raqm 0.7 or greater.</p>
+<h3>顶至底的复杂文本渲染<a class="headerlink" href="#top-to-bottom-complex-text-rendering" title="永久链接至标题">¶</a></h3>
+<p>用`图中的“TTB”方向文本`ImageFont``已显著提高，并且需要Raqm 0.7或更大。</p>
 </div>
 </div>
 </div>

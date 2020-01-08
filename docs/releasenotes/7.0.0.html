@@ -39,7 +39,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="6.2.2" href="6.2.2.html" />
-    <link rel="prev" title="Release Notes" href="index.html" /> 
+    <link rel="prev" title="发行说明" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,28 +93,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7.0.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#backwards-incompatible-changes">Backwards Incompatible Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#backwards-incompatible-changes">向后兼容的改变</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#python-2-7">Python 2.7</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pillow-version-constant">PILLOW_VERSION constant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pil-imageplugin-version-attributes">PIL.*ImagePlugin.__version__ attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pillow-version-constant">PILLOW_VERSION不变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pil-imageplugin-version-attributes">PIL.*ImagePlugin.__version__ 属性</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pyqt4-and-pyside">PyQt4 and PySide</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#setting-the-size-of-tiff-images">Setting the size of TIFF images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#default-resampling-filter">Default resampling filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#image-draft-return-value">Image.draft() return value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-the-size-of-tiff-images">设置TIFF图像的大小</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-resampling-filter">默认重采样滤波器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-draft-return-value">Image.draft() 返回值</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#api-additions">API Additions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#custom-unidentified-image-error">Custom unidentified image error</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#new-argument-reducing-gap-for-image-resize-and-image-thumbnail-methods">New argument <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code> for Image.resize() and Image.thumbnail() methods</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#new-image-reduce-method">New Image.reduce() method</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#loading-wmf-images-at-a-given-dpi">Loading WMF images at a given DPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-unidentified-image-error">自定义不明的图像错误</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-argument-reducing-gap-for-image-resize-and-image-thumbnail-methods">新的参数``reducing_gap``为Image.resize（）和Image.thumbnail（）方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#new-image-reduce-method">新Image.reduce（）方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-wmf-images-at-a-given-dpi">在给定的DPI加载WMF图像</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#image-del">Image.__del__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#better-thumbnail-geometry">Better thumbnail geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#better-thumbnail-geometry">更好的缩略图几何</a></li>
 </ul>
 </li>
 </ul>
@@ -194,7 +194,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>7.0.0</li>
     
@@ -218,19 +218,18 @@
   <div class="section" id="id1">
 <h1>7.0.0<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="backwards-incompatible-changes">
-<h2>Backwards Incompatible Changes<a class="headerlink" href="#backwards-incompatible-changes" title="永久链接至标题">¶</a></h2>
+<h2>向后兼容的改变<a class="headerlink" href="#backwards-incompatible-changes" title="永久链接至标题">¶</a></h2>
 <div class="section" id="python-2-7">
 <h3>Python 2.7<a class="headerlink" href="#python-2-7" title="永久链接至标题">¶</a></h3>
-<p>Pillow has dropped support for Python 2.7, which reached end-of-life on 2020-01-01.</p>
+<p>枕头已下降为Python 2.7，达到了结束生命的2020年1月1日的支持。</p>
 </div>
 <div class="section" id="pillow-version-constant">
-<h3>PILLOW_VERSION constant<a class="headerlink" href="#pillow-version-constant" title="永久链接至标题">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">PILLOW_VERSION</span></code> has been removed. Use <code class="docutils literal notranslate"><span class="pre">__version__</span></code> instead.</p>
+<h3>PILLOW_VERSION不变<a class="headerlink" href="#pillow-version-constant" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">PILLOW_VERSION</span></code> 已被删除。 采用 <code class="docutils literal notranslate"><span class="pre">__version__</span></code> 代替.</p>
 </div>
 <div class="section" id="pil-imageplugin-version-attributes">
-<h3>PIL.*ImagePlugin.__version__ attributes<a class="headerlink" href="#pil-imageplugin-version-attributes" title="永久链接至标题">¶</a></h3>
-<p>The version constants of individual plugins have been removed. Use <code class="docutils literal notranslate"><span class="pre">PIL.__version__</span></code>
-instead.</p>
+<h3>PIL.*ImagePlugin.__version__ 属性<a class="headerlink" href="#pil-imageplugin-version-attributes" title="永久链接至标题">¶</a></h3>
+<p>各个插件的版本常数已被删除。使用 <code class="docutils literal notranslate"><span class="pre">PIL.__version__</span></code> 代替。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 32%" />
@@ -238,9 +237,9 @@ instead.</p>
 <col style="width: 35%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Removed</p></th>
-<th class="head"><p>Removed</p></th>
-<th class="head"><p>Removed</p></th>
+<tr class="row-odd"><th class="head"><p>删除</p></th>
+<th class="head"><p>删除</p></th>
+<th class="head"><p>删除</p></th>
 </tr>
 </thead>
 <tbody>
@@ -299,26 +298,25 @@ instead.</p>
 <h3>PyQt4 and PySide<a class="headerlink" href="#pyqt4-and-pyside" title="永久链接至标题">¶</a></h3>
 <p>Qt 4 reached end-of-life on 2015-12-19. Its Python bindings are also EOL: PyQt4 since
 2018-08-31 and PySide since 2015-10-14.</p>
-<p>Support for PyQt4 and PySide has been removed from <code class="docutils literal notranslate"><span class="pre">ImageQt</span></code>. Please upgrade to PyQt5
-or PySide2.</p>
+<p>对于PyQt4的和PySide支持已经从 <code class="docutils literal notranslate"><span class="pre">ImageQt</span></code> 删除。请升级到PyQt5或PySide2。</p>
 </div>
 <div class="section" id="setting-the-size-of-tiff-images">
-<h3>Setting the size of TIFF images<a class="headerlink" href="#setting-the-size-of-tiff-images" title="永久链接至标题">¶</a></h3>
+<h3>设置TIFF图像的大小<a class="headerlink" href="#setting-the-size-of-tiff-images" title="永久链接至标题">¶</a></h3>
 <p>Setting the size of a TIFF image directly (eg. <code class="docutils literal notranslate"><span class="pre">im.size</span> <span class="pre">=</span> <span class="pre">(256,</span> <span class="pre">256)</span></code>) throws
 an error. Use <code class="docutils literal notranslate"><span class="pre">Image.resize</span></code> instead.</p>
 </div>
 <div class="section" id="default-resampling-filter">
-<h3>Default resampling filter<a class="headerlink" href="#default-resampling-filter" title="永久链接至标题">¶</a></h3>
+<h3>默认重采样滤波器<a class="headerlink" href="#default-resampling-filter" title="永久链接至标题">¶</a></h3>
 <p>The default resampling filter has been changed to the high-quality convolution
 <code class="docutils literal notranslate"><span class="pre">Image.BICUBIC</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Image.NEAREST</span></code>, for the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.resize" title="PIL.Image.Image.resize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resize()</span></code></a>
 method and the <a class="reference internal" href="../reference/ImageOps.html#PIL.ImageOps.pad" title="PIL.ImageOps.pad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pad()</span></code></a>, <a class="reference internal" href="../reference/ImageOps.html#PIL.ImageOps.scale" title="PIL.ImageOps.scale"><code class="xref py py-meth docutils literal notranslate"><span class="pre">scale()</span></code></a>
 and <a class="reference internal" href="../reference/ImageOps.html#PIL.ImageOps.fit" title="PIL.ImageOps.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a> functions.
 <code class="docutils literal notranslate"><span class="pre">Image.NEAREST</span></code> is still always used for images in “P” and “1” modes.
-See <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">过滤器</span></a> to learn the difference. In short,
+See <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">Filters</span></a> to learn the difference. In short,
 <code class="docutils literal notranslate"><span class="pre">Image.NEAREST</span></code> is a very fast filter, but simple and low-quality.</p>
 </div>
 <div class="section" id="image-draft-return-value">
-<h3>Image.draft() return value<a class="headerlink" href="#image-draft-return-value" title="永久链接至标题">¶</a></h3>
+<h3>Image.draft() 返回值<a class="headerlink" href="#image-draft-return-value" title="永久链接至标题">¶</a></h3>
 <p>If the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.draft" title="PIL.Image.Image.draft"><code class="xref py py-meth docutils literal notranslate"><span class="pre">draft()</span></code></a> method has no effect, it returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.
 If it does have an effect, then it previously returned the image itself.
 However, unlike other <a class="reference external" href="https://en.wikipedia.org/wiki/Method_chaining">chain methods</a>, <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.draft" title="PIL.Image.Image.draft"><code class="xref py py-meth docutils literal notranslate"><span class="pre">draft()</span></code></a> does not
@@ -332,18 +330,17 @@ bounds of resulting image. This may be useful in a subsequent
 <div class="section" id="api-additions">
 <h2>API Additions<a class="headerlink" href="#api-additions" title="永久链接至标题">¶</a></h2>
 <div class="section" id="custom-unidentified-image-error">
-<h3>Custom unidentified image error<a class="headerlink" href="#custom-unidentified-image-error" title="永久链接至标题">¶</a></h3>
+<h3>自定义不明的图像错误<a class="headerlink" href="#custom-unidentified-image-error" title="永久链接至标题">¶</a></h3>
 <p>Pillow will now throw a custom <code class="docutils literal notranslate"><span class="pre">UnidentifiedImageError</span></code> when an image cannot be
 identified. For backwards compatibility, this will inherit from <code class="docutils literal notranslate"><span class="pre">IOError</span></code>.</p>
 </div>
 <div class="section" id="new-argument-reducing-gap-for-image-resize-and-image-thumbnail-methods">
-<h3>New argument <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code> for Image.resize() and Image.thumbnail() methods<a class="headerlink" href="#new-argument-reducing-gap-for-image-resize-and-image-thumbnail-methods" title="永久链接至标题">¶</a></h3>
+<h3>新的参数``reducing_gap``为Image.resize（）和Image.thumbnail（）方法<a class="headerlink" href="#new-argument-reducing-gap-for-image-resize-and-image-thumbnail-methods" title="永久链接至标题">¶</a></h3>
 <p>Speeds up resizing by resizing the image in two steps. The bigger <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code>,
 the closer the result to the fair resampling. The smaller <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code>,
 the faster resizing. With <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code> greater or equal to 3.0,
 the result is indistinguishable from fair resampling.</p>
-<p>The default value for <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.resize" title="PIL.Image.Image.resize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resize()</span></code></a> is <code class="docutils literal notranslate"><span class="pre">None</span></code>,
-which means that the optimization is turned off by default.</p>
+<p>PY：：为默认值甲基：<cite>〜PIL.Image.Image.resize`是``None`</cite>，这意味着优化默认关闭。</p>
 <p>The default value for <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a> is 2.0,
 which is very close to fair resampling while still being faster in many cases.
 In addition, the same gap is applied when <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a>
@@ -353,16 +350,15 @@ in the new version provides equally high speed and high quality from any
 source (JPEG or arbitrary images).</p>
 </div>
 <div class="section" id="new-image-reduce-method">
-<h3>New Image.reduce() method<a class="headerlink" href="#new-image-reduce-method" title="永久链接至标题">¶</a></h3>
+<h3>新Image.reduce（）方法<a class="headerlink" href="#new-image-reduce-method" title="永久链接至标题">¶</a></h3>
 <p><code class="xref py py-meth docutils literal notranslate"><span class="pre">reduce()</span></code> is a highly efficient operation
 to reduce an image by integer times. Normally, it shouldn’t be used directly.
 Used internally by <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.resize" title="PIL.Image.Image.resize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resize()</span></code></a> and <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a>
 methods to speed up resize when a new argument <code class="docutils literal notranslate"><span class="pre">reducing_gap</span></code> is set.</p>
 </div>
 <div class="section" id="loading-wmf-images-at-a-given-dpi">
-<h3>Loading WMF images at a given DPI<a class="headerlink" href="#loading-wmf-images-at-a-given-dpi" title="永久链接至标题">¶</a></h3>
-<p>On Windows, Pillow can read WMF files, with a default DPI of 72. An image can
-now also be loaded at another resolution:</p>
+<h3>在给定的DPI加载WMF图像<a class="headerlink" href="#loading-wmf-images-at-a-given-dpi" title="永久链接至标题">¶</a></h3>
+<p>在Windows中，枕头可以阅读WMF文件，使用默认的72的图像的DPI现在也可以在另一项决议中加载：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;drawing.wmf&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">im</span><span class="p">:</span>
     <span class="n">im</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">144</span><span class="p">)</span>
@@ -377,7 +373,7 @@ now also be loaded at another resolution:</p>
 <p>Implicitly closing the image’s underlying file in <code class="docutils literal notranslate"><span class="pre">Image.__del__</span></code> has been removed.
 Use a context manager or call <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.close" title="PIL.Image.Image.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> instead to close
 the file in a deterministic way.</p>
-<p>Previous method:</p>
+<p>以前的方法:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;hopper.png&quot;</span><span class="p">)</span>
 <span class="n">im</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;out.jpg&quot;</span><span class="p">)</span>
 </pre></div>
@@ -389,12 +385,11 @@ the file in a deterministic way.</p>
 </div>
 </div>
 <div class="section" id="better-thumbnail-geometry">
-<h3>Better thumbnail geometry<a class="headerlink" href="#better-thumbnail-geometry" title="永久链接至标题">¶</a></h3>
+<h3>更好的缩略图几何<a class="headerlink" href="#better-thumbnail-geometry" title="永久链接至标题">¶</a></h3>
 <p>When calculating the new dimensions in <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.thumbnail" title="PIL.Image.Image.thumbnail"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thumbnail()</span></code></a>,
 round to the nearest integer, instead of always rounding down.
 This better preserves the original aspect ratio.</p>
-<p>When the image width or height is not divisible by 8 the last row and column
-in the image get the correct weight after JPEG DCT scaling.</p>
+<p>当图像宽度或高度不能被8整除的图像中的最后行和列得到JPEG DCT缩放后的重量正确。</p>
 </div>
 </div>
 </div>
@@ -410,7 +405,7 @@ in the image get the correct weight after JPEG DCT scaling.</p>
         <a href="6.2.2.html" class="btn btn-neutral float-right" title="6.2.2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="发行说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

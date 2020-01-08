@@ -92,19 +92,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">手册</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">参考</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Image</span></code> Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#open-rotate-and-display-an-image-using-the-default-viewer">Open, rotate, and display an image (using the default viewer)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-thumbnails">Create thumbnails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">例子</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#open-rotate-and-display-an-image-using-the-default-viewer">开，旋转，并显示图像（使用默认查看器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-thumbnails">创建缩略图</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">功能</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#image-processing">Image processing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#constructing-images">Constructing images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#registering-plugins">Registering plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#the-image-class">The Image Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-image-class">图像类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes">属性</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ImageChops.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageChops</span></code> (“Channel Operations”) Module</a></li>
@@ -132,7 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugin reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">插件参考</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internal_design.html">内部参考文件</a></li>
 </ul>
 </li>
@@ -213,9 +213,9 @@ used to represent a PIL image. The module also provides a number of factory
 functions, including functions to load images from files, and to create new
 images.</p>
 <div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<h2>例子<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
 <div class="section" id="open-rotate-and-display-an-image-using-the-default-viewer">
-<h3>Open, rotate, and display an image (using the default viewer)<a class="headerlink" href="#open-rotate-and-display-an-image-using-the-default-viewer" title="永久链接至标题">¶</a></h3>
+<h3>开，旋转，并显示图像（使用默认查看器）<a class="headerlink" href="#open-rotate-and-display-an-image-using-the-default-viewer" title="永久链接至标题">¶</a></h3>
 <p>The following script loads an image, rotates it 45 degrees, and displays it
 using an external viewer (usually xv on Unix, and the Paint program on
 Windows).</p>
@@ -226,7 +226,7 @@ Windows).</p>
 </div>
 </div>
 <div class="section" id="create-thumbnails">
-<h3>Create thumbnails<a class="headerlink" href="#create-thumbnails" title="永久链接至标题">¶</a></h3>
+<h3>创建缩略图<a class="headerlink" href="#create-thumbnails" title="永久链接至标题">¶</a></h3>
 <p>The following script creates nice thumbnails of all JPEG images in the
 current directory preserving aspect ratios with 128x128 max resolution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -244,16 +244,16 @@ current directory preserving aspect ratios with 128x128 max resolution.</p>
 </div>
 </div>
 <div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h2>
+<h2>功能<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="PIL.Image.open">
 <code class="descclassname">PIL.Image.</code><code class="descname">open</code><span class="sig-paren">(</span><em>fp</em>, <em>mode='r'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/Image.html#open"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.Image.open" title="永久链接至目标">¶</a></dt>
-<dd><p>Opens and identifies the given image file.</p>
+<dd><p>打开并确定给定的图像文件。</p>
 <p>This is a lazy operation; this function identifies the file, but
 the file remains open and the actual image data is not read from
 the file until you try to process the data (or call the
 <a class="reference internal" href="#PIL.Image.Image.load" title="PIL.Image.Image.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> method).  See
-<a class="reference internal" href="#PIL.Image.new" title="PIL.Image.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new()</span></code></a>. See <a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">File Handling in Pillow</span></a>.</p>
+<a class="reference internal" href="#PIL.Image.new" title="PIL.Image.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new()</span></code></a>. See <a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">在枕头文件处理</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -383,7 +383,7 @@ random components or other generators.</p>
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> – The mode to use for the output image. See:
-<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a>.</p></li>
 <li><p><strong>bands</strong> – A sequence containing one single-band image for
 each band in the output image.  All bands must have the
 same size.</p></li>
@@ -406,7 +406,7 @@ same size.</p></li>
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> – The mode to use for the new image. See:
-<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a>.</p></li>
 <li><p><strong>size</strong> – A 2-tuple, containing (width, height) in pixels.</p></li>
 <li><p><strong>color</strong> – What color to use for the image.  Default is black.
 If given, this should be a single integer or floating point value
@@ -445,7 +445,7 @@ and <a class="reference internal" href="#PIL.Image.frombuffer" title="PIL.Image.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>obj</strong> – Object with array interface</p></li>
 <li><p><strong>mode</strong> – Mode to use (will be determined from type if None)
-See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -473,7 +473,7 @@ it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mode</strong> – The image mode. See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+<li><p><strong>mode</strong> – The image mode. See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a>.</p></li>
 <li><p><strong>size</strong> – The image size.</p></li>
 <li><p><strong>data</strong> – A byte buffer containing raw data for the given mode.</p></li>
 <li><p><strong>decoder_name</strong> – What decoder to use.</p></li>
@@ -510,7 +510,7 @@ the full set of parameters.  See below for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mode</strong> – The image mode. See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+<li><p><strong>mode</strong> – The image mode. See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a>.</p></li>
 <li><p><strong>size</strong> – The image size.</p></li>
 <li><p><strong>data</strong> – A bytes or other buffer object containing raw
 data for the given mode.</p></li>
@@ -644,7 +644,7 @@ used in application code.</p>
 </div>
 </div>
 <div class="section" id="the-image-class">
-<h2>The Image Class<a class="headerlink" href="#the-image-class" title="永久链接至标题">¶</a></h2>
+<h2>图像类<a class="headerlink" href="#the-image-class" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="PIL.Image.Image">
 <em class="property">class </em><code class="descclassname">PIL.Image.</code><code class="descname">Image</code><a class="reference internal" href="../_modules/PIL/Image.html#Image"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.Image.Image" title="永久链接至目标">¶</a></dt>
@@ -670,7 +670,7 @@ onto this image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>im</strong> – image to composite over this one</p></li>
+<li><p><strong>im</strong> – 图像合成移到该一个</p></li>
 <li><p><strong>dest</strong> – Optional 2 tuple (left, top) specifying the upper
 left corner in this (destination) image.</p></li>
 <li><p><strong>source</strong> – Optional 2 (left, top) tuple for the upper left
@@ -679,7 +679,7 @@ bottom) for the bounds of the source rectangle</p></li>
 </ul>
 </dd>
 </dl>
-<p>Performance Note: Not currently implemented in-place in the core layer.</p>
+<p>性能注：目前不就地在核心层实现。</p>
 </dd></dl>
 
 <dl class="method">
@@ -692,8 +692,7 @@ and the palette can be represented without a palette.</p>
 <p>The current version supports all possible conversions between
 “L”, “RGB” and “CMYK.” The <strong>matrix</strong> argument only supports “L”
 and “RGB”.</p>
-<p>When translating a color image to greyscale (mode “L”),
-the library uses the ITU-R 601-2 luma transform:</p>
+<p>当翻译的彩色图像为灰度（型号“），所述库使用ITU-R 601-2亮度变换:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="mi">299</span><span class="o">/</span><span class="mi">1000</span> <span class="o">+</span> <span class="n">G</span> <span class="o">*</span> <span class="mi">587</span><span class="o">/</span><span class="mi">1000</span> <span class="o">+</span> <span class="n">B</span> <span class="o">*</span> <span class="mi">114</span><span class="o">/</span><span class="mi">1000</span>
 </pre></div>
 </div>
@@ -709,15 +708,14 @@ and <strong>dither</strong> and <strong>palette</strong> are ignored.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mode</strong> – The requested mode. See: <a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a>.</p></li>
+<li><p><strong>mode</strong> – 所请求的模式。请参阅：参考：<cite>概念modes</cite>。</p></li>
 <li><p><strong>matrix</strong> – An optional conversion matrix.  If given, this
 should be 4- or 12-tuple containing floating point values.</p></li>
 <li><p><strong>dither</strong> – Dithering method, used when converting from
 mode “RGB” to “P” or from “RGB” or “L” to “1”.
 Available methods are NONE or FLOYDSTEINBERG (default).
 Note that this is not used when <strong>matrix</strong> is supplied.</p></li>
-<li><p><strong>palette</strong> – Palette to use when converting from mode “RGB”
-to “P”.  Available palettes are WEB or ADAPTIVE.</p></li>
+<li><p><strong>palette</strong> – 调色板从模式“RGB ”转换到“P ”时使用。可用的调色板WEB或适应性。</p></li>
 <li><p><strong>colors</strong> – Number of colors to use for the ADAPTIVE palette.
 Defaults to 256.</p></li>
 </ul>
@@ -760,7 +758,7 @@ into an image, but still retain the original.</p>
 <code class="descclassname">Image.</code><code class="descname">crop</code><span class="sig-paren">(</span><em>box=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/Image.html#Image.crop"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.Image.Image.crop" title="永久链接至目标">¶</a></dt>
 <dd><p>Returns a rectangular region from this image. The box is a
 4-tuple defining the left, upper, right, and lower pixel
-coordinate. See <a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">坐标系</span></a>.</p>
+coordinate. See <a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a>.</p>
 <p>Note: Prior to Pillow 3.4.0, this was a lazy operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -868,7 +866,7 @@ image.</p>
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>The bounding box is returned as a 4-tuple defining the
 left, upper, right, and lower pixel coordinate. See
-<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">坐标系</span></a>. If the image is completely empty, this
+<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a>. If the image is completely empty, this
 method returns None.</p>
 </dd>
 </dl>
@@ -954,7 +952,7 @@ image has no palette.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>xy</strong> – The coordinate, given as (x, y). See
-<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">坐标系</span></a>.</p>
+<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a>.</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>The pixel value.  If the image is a multi-layer image,
@@ -1001,7 +999,7 @@ bi-level image (mode “1”) or a greyscale image (“L”).</p>
 <dd><p>Pastes another image into this image. The box argument is either
 a 2-tuple giving the upper left corner, a 4-tuple defining the
 left, upper, right, and lower pixel coordinate, or None (same as
-(0, 0)). See <a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">坐标系</span></a>. If a 4-tuple is given, the size
+(0, 0)). See <a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a>. If a 4-tuple is given, the size
 of the pasted image must match the size of the region.</p>
 <p>If the modes don’t match, the pasted image is converted to the mode of
 this image (see the <a class="reference internal" href="#PIL.Image.Image.convert" title="PIL.Image.Image.convert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">convert()</span></code></a> method for
@@ -1135,7 +1133,7 @@ module instead.</p>
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>xy</strong> – The pixel coordinate, given as (x, y). See
-<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">坐标系</span></a>.</p></li>
+<a class="reference internal" href="../handbook/concepts.html#coordinate-system"><span class="std std-ref">Coordinate System</span></a>.</p></li>
 <li><p><strong>value</strong> – The pixel value.</p></li>
 </ul>
 </dd>
@@ -1186,7 +1184,7 @@ one of <code class="xref py py-attr docutils literal notranslate"><span class="p
 Default filter is <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.BICUBIC</span></code>.
 If the image has mode “1” or “P”, it is
 always set to <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.NEAREST</span></code>.
-See: <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">过滤器</span></a>.</p></li>
+See: <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">Filters</span></a>.</p></li>
 <li><p><strong>box</strong> – An optional 4-tuple of floats providing
 the source image region to be scaled.
 The values must be within (0, 0, width, height) rectangle.
@@ -1256,7 +1254,7 @@ one of <code class="xref py py-attr docutils literal notranslate"><span class="p
 environment), or <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.BICUBIC</span></code>
 (cubic spline interpolation in a 4x4 environment).
 If omitted, or if the image has mode “1” or “P”, it is
-set to <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.NEAREST</span></code>. See <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">过滤器</span></a>.</p></li>
+set to <code class="xref py py-attr docutils literal notranslate"><span class="pre">PIL.Image.NEAREST</span></code>. See <a class="reference internal" href="../handbook/concepts.html#concept-filters"><span class="std std-ref">Filters</span></a>.</p></li>
 <li><p><strong>expand</strong> – Optional expansion flag.  If true, expands the output
 image to make it large enough to hold the entire rotated image.
 If false or omitted, make the output image the same size as the
@@ -1615,7 +1613,7 @@ accessed for the first time.</p>
 <p>If the file associated with the image was opened by Pillow, then this
 method will close it. The exception to this is if the image has
 multiple frames, in which case the file will be left open for seek
-operations. See <a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">File Handling in Pillow</span></a> for more information.</p>
+operations. See <a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">在枕头文件处理</span></a> for more information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>An image access object.</p>
@@ -1635,12 +1633,12 @@ The image data will be unusable afterward.</p>
 <p>This function is only required to close images that have not
 had their file read and closed by the
 <a class="reference internal" href="#PIL.Image.Image.load" title="PIL.Image.Image.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> method. See
-<a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">File Handling in Pillow</span></a> for more information.</p>
+<a class="reference internal" href="open_files.html#file-handling"><span class="std std-ref">在枕头文件处理</span></a> for more information.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="attributes">
-<h2>Attributes<a class="headerlink" href="#attributes" title="永久链接至标题">¶</a></h2>
+<h2>属性<a class="headerlink" href="#attributes" title="永久链接至标题">¶</a></h2>
 <p>Instances of the <a class="reference internal" href="#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> class have the following attributes:</p>
 <dl class="attribute">
 <dt id="PIL.Image.filename">
@@ -1673,7 +1671,7 @@ image), this attribute is set to <code class="docutils literal notranslate"><spa
 <code class="descclassname">PIL.Image.</code><code class="descname">mode</code><a class="headerlink" href="#PIL.Image.mode" title="永久链接至目标">¶</a></dt>
 <dd><p>Image mode. This is a string specifying the pixel format used by the image.
 Typical values are “1”, “L”, “RGB”, or “CMYK.” See
-<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">模式</span></a> for a full list.</p>
+<a class="reference internal" href="../handbook/concepts.html#concept-modes"><span class="std std-ref">Modes</span></a> for a full list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
@@ -1695,7 +1693,7 @@ Typical values are “1”, “L”, “RGB”, or “CMYK.” See
 <dl class="attribute">
 <dt id="PIL.Image.width">
 <code class="descclassname">PIL.Image.</code><code class="descname">width</code><a class="headerlink" href="#PIL.Image.width" title="永久链接至目标">¶</a></dt>
-<dd><p>Image width, in pixels.</p>
+<dd><p>图像宽度，以像素为单位。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="ImageMath.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -1706,7 +1704,7 @@ Typical values are “1”, “L”, “RGB”, or “CMYK.” See
 <dl class="attribute">
 <dt id="PIL.Image.height">
 <code class="descclassname">PIL.Image.</code><code class="descname">height</code><a class="headerlink" href="#PIL.Image.height" title="永久链接至目标">¶</a></dt>
-<dd><p>Image height, in pixels.</p>
+<dd><p>图像高度，以像素为单位。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="ImageMath.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -1737,7 +1735,7 @@ the file. See documentation for the various file handlers for details.</p>
 keys are not standardized, it’s not possible for a method to know if the
 operation affects the dictionary. If you need the information later on,
 keep a reference to the info dictionary returned from the open method.</p>
-<p>Unless noted elsewhere, this dictionary does not affect saving files.</p>
+<p>除非在其他地方指出，这本词典不会影响保存文件。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>

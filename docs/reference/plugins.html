@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plugin reference &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  <title>插件参考 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
   
 
   
@@ -117,7 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Plugin reference</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">插件参考</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#module-PIL.BmpImagePlugin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">BmpImagePlugin</span></code> Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-PIL.BufrStubImagePlugin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">BufrStubImagePlugin</span></code> Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-PIL.CurImagePlugin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">CurImagePlugin</span></code> Module</a></li>
@@ -215,7 +215,7 @@
         
           <li><a href="index.html">参考</a> &raquo;</li>
         
-      <li>Plugin reference</li>
+      <li>插件参考</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -235,14 +235,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="plugin-reference">
-<h1>Plugin reference<a class="headerlink" href="#plugin-reference" title="永久链接至标题">¶</a></h1>
+<h1>插件参考<a class="headerlink" href="#plugin-reference" title="永久链接至标题">¶</a></h1>
 <div class="section" id="module-PIL.BmpImagePlugin">
 <span id="bmpimageplugin-module"></span><h2><code class="xref py py-mod docutils literal notranslate"><span class="pre">BmpImagePlugin</span></code> Module<a class="headerlink" href="#module-PIL.BmpImagePlugin" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="PIL.BmpImagePlugin.BmpImageFile">
 <em class="property">class </em><code class="descclassname">PIL.BmpImagePlugin.</code><code class="descname">BmpImageFile</code><span class="sig-paren">(</span><em>fp=None</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/BmpImagePlugin.html#BmpImageFile"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.BmpImagePlugin.BmpImageFile" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">PIL.ImageFile.ImageFile</span></code></p>
-<p>Image plugin for the Windows Bitmap format (BMP)</p>
+<p>为Windows位图格式的图像插件（BMP）</p>
 <dl class="attribute">
 <dt id="PIL.BmpImagePlugin.BmpImageFile.BITFIELDS">
 <code class="descname">BITFIELDS</code><em class="property"> = 3</em><a class="headerlink" href="#PIL.BmpImagePlugin.BmpImageFile.BITFIELDS" title="永久链接至目标">¶</a></dt>
@@ -341,7 +341,7 @@
 <dd><p>Install application-specific BUFR image handler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>handler</strong> – Handler object.</p>
+<dd class="field-odd"><p><strong>handler</strong> – 处理对象。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -445,7 +445,7 @@ of the sequence.</p>
 <dl class="method">
 <dt id="PIL.EpsImagePlugin.EpsImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><em>scale=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/EpsImagePlugin.html#EpsImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.EpsImagePlugin.EpsImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 <dl class="method">
@@ -463,14 +463,14 @@ of the sequence.</p>
 <dl class="function">
 <dt id="PIL.EpsImagePlugin.Ghostscript">
 <code class="descclassname">PIL.EpsImagePlugin.</code><code class="descname">Ghostscript</code><span class="sig-paren">(</span><em>tile</em>, <em>size</em>, <em>fp</em>, <em>scale=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/EpsImagePlugin.html#Ghostscript"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.EpsImagePlugin.Ghostscript" title="永久链接至目标">¶</a></dt>
-<dd><p>Render an image using Ghostscript</p>
+<dd><p>呈现使用Ghostscript的图像</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="PIL.EpsImagePlugin.PSFile">
 <em class="property">class </em><code class="descclassname">PIL.EpsImagePlugin.</code><code class="descname">PSFile</code><span class="sig-paren">(</span><em>fp</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/EpsImagePlugin.html#PSFile"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.EpsImagePlugin.PSFile" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Wrapper for bytesio object that treats either CR or LF as end of line.</p>
+<p>包装器bytesio对象对待或者CR或LF作为行尾。</p>
 <dl class="method">
 <dt id="PIL.EpsImagePlugin.PSFile.readline">
 <code class="descname">readline</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/EpsImagePlugin.html#PSFile.readline"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.EpsImagePlugin.PSFile.readline" title="永久链接至目标">¶</a></dt>
@@ -510,10 +510,10 @@ of the sequence.</p>
 <dl class="function">
 <dt id="PIL.FitsStubImagePlugin.register_handler">
 <code class="descclassname">PIL.FitsStubImagePlugin.</code><code class="descname">register_handler</code><span class="sig-paren">(</span><em>handler</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/FitsStubImagePlugin.html#register_handler"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.FitsStubImagePlugin.register_handler" title="永久链接至目标">¶</a></dt>
-<dd><p>Install application-specific FITS image handler.</p>
+<dd><p>安装专用FITS图像处理程序。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>handler</strong> – Handler object.</p>
+<dd class="field-odd"><p><strong>handler</strong> – 处理对象。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -597,7 +597,7 @@ of the sequence.</p>
 <dl class="method">
 <dt id="PIL.FpxImagePlugin.FpxImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/FpxImagePlugin.html#FpxImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.FpxImagePlugin.FpxImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 </dd></dl>
@@ -622,7 +622,7 @@ of the sequence.</p>
 <dl class="method">
 <dt id="PIL.GbrImagePlugin.GbrImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/GbrImagePlugin.html#GbrImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.GbrImagePlugin.GbrImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 </dd></dl>
@@ -771,7 +771,7 @@ encoded image data.</p>
 <dd><p>Install application-specific GRIB image handler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>handler</strong> – Handler object.</p>
+<dd class="field-odd"><p><strong>handler</strong> – 处理对象。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -801,7 +801,7 @@ encoded image data.</p>
 <dd><p>Install application-specific HDF5 image handler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>handler</strong> – Handler object.</p>
+<dd class="field-odd"><p><strong>handler</strong> – 处理对象。</p>
 </dd>
 </dl>
 </dd></dl>
@@ -866,7 +866,7 @@ of sizes that the icns file has.</p>
 <dl class="method">
 <dt id="PIL.IcnsImagePlugin.IcnsImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/IcnsImagePlugin.html#IcnsImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.IcnsImagePlugin.IcnsImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 <dl class="method">
@@ -963,7 +963,7 @@ Windows Vista.</p>
 <dl class="method">
 <dt id="PIL.IcoImagePlugin.IcoImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/IcoImagePlugin.html#IcoImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.IcoImagePlugin.IcoImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 <dl class="method">
@@ -1091,7 +1091,7 @@ of the sequence.</p>
 <dl class="method">
 <dt id="PIL.IptcImagePlugin.IptcImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/IptcImagePlugin.html#IptcImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.IptcImagePlugin.IptcImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 </dd></dl>
@@ -1237,7 +1237,7 @@ so libjpeg can finish decoding</p>
 <dl class="method">
 <dt id="PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/Jpeg2KImagePlugin.html#Jpeg2KImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.Jpeg2KImagePlugin.Jpeg2KImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 </dd></dl>
@@ -2392,7 +2392,7 @@ manually.</p>
 <dl class="method">
 <dt id="PIL.TiffImagePlugin.TiffImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/TiffImagePlugin.html#TiffImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.TiffImagePlugin.TiffImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 <dl class="method">
@@ -2444,7 +2444,7 @@ manually.</p>
 <dl class="method">
 <dt id="PIL.WebPImagePlugin.WebPImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/WebPImagePlugin.html#WebPImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.WebPImagePlugin.WebPImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 <dl class="method">
@@ -2504,7 +2504,7 @@ of the sequence.</p>
 <dl class="method">
 <dt id="PIL.WmfImagePlugin.WmfStubImageFile.load">
 <code class="descname">load</code><span class="sig-paren">(</span><em>dpi=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/WmfImagePlugin.html#WmfStubImageFile.load"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.WmfImagePlugin.WmfStubImageFile.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Load image data based on tile list</p>
+<dd><p>基于平铺列表上加载图像数据</p>
 </dd></dl>
 
 </dd></dl>
@@ -2515,7 +2515,7 @@ of the sequence.</p>
 <dd><p>Install application-specific WMF image handler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>handler</strong> – Handler object.</p>
+<dd class="field-odd"><p><strong>handler</strong> – 处理对象。</p>
 </dd>
 </dl>
 </dd></dl>

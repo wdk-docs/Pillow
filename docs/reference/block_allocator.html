@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Block Allocator &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  <title>块分配器 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
   
 
   
@@ -117,12 +117,12 @@
 <li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugin reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">插件参考</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="internal_design.html">内部参考文件</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="open_files.html">File Handling in Pillow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open_files.html">在枕头文件处理</a></li>
 <li class="toctree-l3"><a class="reference internal" href="limits.html">范围</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Block Allocator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#previous-design">Previous Design</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">块分配器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#previous-design">以前的设计</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#new-design">New Design</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#memory-pools">Memory Pools</a></li>
 </ul>
@@ -184,7 +184,7 @@
         
           <li><a href="internal_design.html">内部参考文件</a> &raquo;</li>
         
-      <li>Block Allocator</li>
+      <li>块分配器</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,9 +204,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="block-allocator">
-<h1>Block Allocator<a class="headerlink" href="#block-allocator" title="永久链接至标题">¶</a></h1>
+<h1>块分配器<a class="headerlink" href="#block-allocator" title="永久链接至标题">¶</a></h1>
 <div class="section" id="previous-design">
-<h2>Previous Design<a class="headerlink" href="#previous-design" title="永久链接至标题">¶</a></h2>
+<h2>以前的设计<a class="headerlink" href="#previous-design" title="永久链接至标题">¶</a></h2>
 <p>Historically there have been two image allocators in Pillow:
 <code class="docutils literal notranslate"><span class="pre">ImagingAllocateBlock</span></code> and <code class="docutils literal notranslate"><span class="pre">ImagingAllocateArray</span></code>. The first works
 for images smaller than 16MB of data and allocates one large chunk of

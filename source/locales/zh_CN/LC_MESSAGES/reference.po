@@ -55,11 +55,11 @@ msgstr ""
 
 #: ../../reference/Image.rst:13
 msgid "Examples"
-msgstr "Examples"
+msgstr "例子"
 
 #: ../../reference/Image.rst:16
 msgid "Open, rotate, and display an image (using the default viewer)"
-msgstr "Open, rotate, and display an image (using the default viewer)"
+msgstr "开，旋转，并显示图像（使用默认查看器）"
 
 #: ../../reference/Image.rst:18
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../../reference/Image.rst:29
 msgid "Create thumbnails"
-msgstr "Create thumbnails"
+msgstr "创建缩略图"
 
 #: ../../reference/Image.rst:31
 msgid ""
@@ -82,11 +82,11 @@ msgstr "The following script creates nice thumbnails of all JPEG images in the c
 #: ../../reference/ImageColor.rst:47 ../../reference/ImageDraw.rst:106
 #: ../../reference/ImageFont.rst:40
 msgid "Functions"
-msgstr "Functions"
+msgstr "功能"
 
 #: PIL.Image.open:1 of
 msgid "Opens and identifies the given image file."
-msgstr "Opens and identifies the given image file."
+msgstr "打开并确定给定的图像文件。"
 
 #: PIL.Image.open:3 of
 msgid ""
@@ -619,7 +619,7 @@ msgstr "An extension used for this format."
 
 #: ../../reference/Image.rst:99
 msgid "The Image Class"
-msgstr "The Image Class"
+msgstr "图像类"
 
 #: PIL.Image.Image:1 of
 msgid ""
@@ -656,7 +656,7 @@ msgstr "'In-place' analog of Image.alpha_composite. Composites an image onto thi
 
 #: PIL.Image.Image.alpha_composite:4 of
 msgid "image to composite over this one"
-msgstr "image to composite over this one"
+msgstr "图像合成移到该一个"
 
 #: PIL.Image.Image.alpha_composite:5 of
 msgid ""
@@ -673,7 +673,7 @@ msgstr ""
 
 #: PIL.Image.Image.alpha_composite:11 of
 msgid "Performance Note: Not currently implemented in-place in the core layer."
-msgstr "Performance Note: Not currently implemented in-place in the core layer."
+msgstr "性能注：目前不就地在核心层实现。"
 
 #: PIL.Image.Image.convert:1 of
 msgid ""
@@ -694,7 +694,7 @@ msgstr ""
 msgid ""
 "When translating a color image to greyscale (mode \"L\"), the library "
 "uses the ITU-R 601-2 luma transform::"
-msgstr "When translating a color image to greyscale (mode \"L\"), the library uses the ITU-R 601-2 luma transform::"
+msgstr "当翻译的彩色图像为灰度（型号\“），所述库使用ITU-R 601-2亮度变换::"
 
 #: PIL.Image.Image.convert:15 of
 msgid ""
@@ -715,7 +715,7 @@ msgstr ""
 
 #: PIL.Image.Image.convert:26 of
 msgid "The requested mode. See: :ref:`concept-modes`."
-msgstr "The requested mode. See: :ref:`concept-modes`."
+msgstr "所请求的模式。请参阅：参考：`概念modes`。"
 
 #: PIL.Image.Image.convert:27 of
 msgid ""
@@ -734,7 +734,7 @@ msgstr ""
 msgid ""
 "Palette to use when converting from mode \"RGB\" to \"P\".  Available "
 "palettes are WEB or ADAPTIVE."
-msgstr "Palette to use when converting from mode \"RGB\" to \"P\".  Available palettes are WEB or ADAPTIVE."
+msgstr "调色板从模式\“RGB \”转换到\“P \”时使用。可用的调色板WEB或适应性。"
 
 #: PIL.Image.Image.convert:35 of
 msgid "Number of colors to use for the ADAPTIVE palette. Defaults to 256."
@@ -1710,7 +1710,7 @@ msgstr ""
 
 #: ../../reference/Image.rst:258
 msgid "Attributes"
-msgstr "Attributes"
+msgstr "属性"
 
 #: ../../reference/Image.rst:260
 msgid "Instances of the :py:class:`Image` class have the following attributes:"
@@ -1767,7 +1767,7 @@ msgstr "``(width, height)``"
 
 #: ../../reference/Image.rst:294
 msgid "Image width, in pixels."
-msgstr "Image width, in pixels."
+msgstr "图像宽度，以像素为单位。"
 
 #: ../../reference/Image.rst:296 ../../reference/Image.rst:302
 #: ../../reference/ImageCms.rst:80 ../../reference/ImageCms.rst:106
@@ -1777,7 +1777,7 @@ msgstr ":py:class:`int`"
 
 #: ../../reference/Image.rst:300
 msgid "Image height, in pixels."
-msgstr "Image height, in pixels."
+msgstr "图像高度，以像素为单位。"
 
 #: ../../reference/Image.rst:306
 msgid ""
@@ -1807,7 +1807,7 @@ msgstr ""
 
 #: ../../reference/Image.rst:323
 msgid "Unless noted elsewhere, this dictionary does not affect saving files."
-msgstr "Unless noted elsewhere, this dictionary does not affect saving files."
+msgstr "除非在其他地方指出，这本词典不会影响保存文件。"
 
 #: ../../reference/Image.rst:325
 msgid ":py:class:`dict`"
@@ -1833,7 +1833,7 @@ msgstr "For more pre-made operations, see :py:mod:`ImageOps`."
 msgid ""
 "At this time, most channel operations are only implemented for 8-bit "
 "images (e.g. “L” and “RGB”)."
-msgstr "At this time, most channel operations are only implemented for 8-bit images (e.g. “L” and “RGB”)."
+msgstr "此时，大部分的信道的操作仅8位图像（例如，“L”和“RGB”）来实现。"
 
 #: ../../reference/ImageChops.rst:20
 msgid ""
@@ -1854,23 +1854,23 @@ msgstr ""
 msgid ""
 "Add two images, without clipping the result. At least one of the images "
 "must have mode \"1\"."
-msgstr "Add two images, without clipping the result. At least one of the images must have mode \"1\"."
+msgstr "添加两个图像，而不会裁剪结果。至少一个图像必须有模式\“1 \”。"
 
 #: PIL.ImageChops.blend:1 of
 msgid ""
 "Blend images using constant transparency weight. Alias for "
 ":py:meth:`PIL.Image.Image.blend`."
-msgstr "Blend images using constant transparency weight. Alias for :py:meth:`PIL.Image.Image.blend`."
+msgstr "混合使用恒定透明度重量图像。别名：PY：甲基：`PIL.Image.Image.blend`。"
 
 #: PIL.ImageChops.composite:1 of
 msgid ""
 "Create composite using transparency mask. Alias for "
 ":py:meth:`PIL.Image.Image.composite`."
-msgstr "Create composite using transparency mask. Alias for :py:meth:`PIL.Image.Image.composite`."
+msgstr "创建复合使用透明面罩。别名：PY：甲基：`PIL.Image.Image.composite`。"
 
 #: PIL.ImageChops.constant:1 of
 msgid "Fill a channel with a given grey level."
-msgstr "Fill a channel with a given grey level."
+msgstr "填充具有给定灰阶值的信道。"
 
 #: PIL.ImageChops.darker:1 of
 msgid ""
@@ -1883,15 +1883,15 @@ msgstr ""
 msgid ""
 "Returns the absolute value of the pixel-by-pixel difference between the "
 "two images. At least one of the images must have mode \"1\"."
-msgstr "Returns the absolute value of the pixel-by-pixel difference between the two images. At least one of the images must have mode \"1\"."
+msgstr "返回两个图像之间的像素由像素的差的绝对值。至少一个图像必须有模式\“1 \”。"
 
 #: PIL.ImageChops.duplicate:1 of
 msgid "Copy a channel. Alias for :py:meth:`PIL.Image.Image.copy`."
-msgstr "Copy a channel. Alias for :py:meth:`PIL.Image.Image.copy`."
+msgstr "复制的通道。别名：PY：甲基：`PIL.Image.Image.copy`。"
 
 #: PIL.ImageChops.invert:1 of
 msgid "Invert an image (channel)."
-msgstr "Invert an image (channel)."
+msgstr "反转的图像（信道）。"
 
 #: PIL.ImageChops.lighter:1 of
 msgid ""
@@ -5493,7 +5493,7 @@ msgstr "The :py:mod:`ImageTk` module contains support to create and modify Tkint
 
 #: ../../reference/ImageTk.rst:10
 msgid "For examples, see the demo programs in the Scripts directory."
-msgstr "For examples, see the demo programs in the Scripts directory."
+msgstr "举例来说，看到在scripts目录中的演示程序。"
 
 #: PIL.ImageTk.BitmapImage:1 of
 msgid ""
@@ -5969,11 +5969,11 @@ msgstr "The ``TYPES`` dictionary maps the TIFF type short integer to a human rea
 
 #: ../../reference/block_allocator.rst:2
 msgid "Block Allocator"
-msgstr "Block Allocator"
+msgstr "块分配器"
 
 #: ../../reference/block_allocator.rst:5
 msgid "Previous Design"
-msgstr "Previous Design"
+msgstr "以前的设计"
 
 #: ../../reference/block_allocator.rst:7
 msgid ""
@@ -6055,7 +6055,7 @@ msgstr "范围"
 msgid ""
 "This page is documentation to the various fundamental size limits in the "
 "Pillow implementation."
-msgstr "本页面的文档在枕头落实各项基本的大小限制。"
+msgstr "本页面的文档在 Pillow 落实各项基本的大小限制。"
 
 #: ../../reference/limits.rst:8
 msgid "Internal Limits"
@@ -6124,7 +6124,7 @@ msgstr "Webp: 16383x16383 (underlying library size limit: https://developers.goo
 
 #: ../../reference/open_files.rst:4
 msgid "File Handling in Pillow"
-msgstr "File Handling in Pillow"
+msgstr "在枕头文件处理"
 
 #: ../../reference/open_files.rst:6
 msgid ""
@@ -6150,11 +6150,11 @@ msgstr ""
 msgid ""
 "Pillow cannot in general close and reopen a file, so any access to that "
 "file needs to be prior to the close."
-msgstr "Pillow cannot in general close and reopen a file, so any access to that file needs to be prior to the close."
+msgstr "枕头一般不能关闭并重新打开一个文件，因此该文件需要的任何访问之前结束前。"
 
 #: ../../reference/open_files.rst:40
 msgid "Image Lifecycle"
-msgstr "Image Lifecycle"
+msgstr "图片生命周期"
 
 #: ../../reference/open_files.rst:42
 msgid ""
@@ -6204,7 +6204,7 @@ msgstr ""
 
 #: ../../reference/open_files.rst:75
 msgid "Complications"
-msgstr "Complications"
+msgstr "并发症"
 
 #: ../../reference/open_files.rst:77
 msgid ""
@@ -6222,7 +6222,7 @@ msgstr "After a file has been closed, operations that require file access will f
 
 #: ../../reference/open_files.rst:93
 msgid "Proposed File Handling"
-msgstr "Proposed File Handling"
+msgstr "建议文件处理"
 
 #: ../../reference/open_files.rst:95
 msgid ""
@@ -6232,7 +6232,7 @@ msgstr "``Image.Image.load()`` should close the image file, unless there are mul
 
 #: ../../reference/open_files.rst:98
 msgid "``Image.Image.seek()`` should never close the image file."
-msgstr "``Image.Image.seek()`` should never close the image file."
+msgstr "``Image.Image.seek（）`` 都不要关闭图像文件。"
 
 #: ../../reference/open_files.rst:100
 msgid ""
@@ -6243,7 +6243,7 @@ msgstr ""
 
 #: ../../reference/plugins.rst:2
 msgid "Plugin reference"
-msgstr "Plugin reference"
+msgstr "插件参考"
 
 #: ../../reference/plugins.rst:5
 msgid ":mod:`BmpImagePlugin` Module"
@@ -6270,7 +6270,7 @@ msgstr "基类：:class:`PIL.ImageFile.ImageFile`"
 
 #: PIL.BmpImagePlugin.BmpImageFile:1 of
 msgid "Image plugin for the Windows Bitmap format (BMP)"
-msgstr "Image plugin for the Windows Bitmap format (BMP)"
+msgstr "为Windows位图格式的图像插件（BMP）"
 
 #: PIL.BmpImagePlugin.DibImageFile:1 PIL.CurImagePlugin.CurImageFile:1 of
 msgid "基类：:class:`PIL.BmpImagePlugin.BmpImageFile`"
@@ -6298,7 +6298,7 @@ msgstr "Install application-specific BUFR image handler."
 #: PIL.Hdf5StubImagePlugin.register_handler:3
 #: PIL.WmfImagePlugin.register_handler:3 of
 msgid "Handler object."
-msgstr "Handler object."
+msgstr "处理对象。"
 
 #: ../../reference/plugins.rst:21
 msgid ":mod:`CurImagePlugin` Module"
@@ -6331,15 +6331,15 @@ msgstr "EPS File Parser for the Python Imaging Library"
 #: PIL.WebPImagePlugin.WebPImageFile.load:1
 #: PIL.WmfImagePlugin.WmfStubImageFile.load:1 of
 msgid "Load image data based on tile list"
-msgstr "Load image data based on tile list"
+msgstr "基于平铺列表上加载图像数据"
 
 #: PIL.EpsImagePlugin.Ghostscript:1 of
 msgid "Render an image using Ghostscript"
-msgstr "Render an image using Ghostscript"
+msgstr "呈现使用Ghostscript的图像"
 
 #: PIL.EpsImagePlugin.PSFile:1 of
 msgid "Wrapper for bytesio object that treats either CR or LF as end of line."
-msgstr "Wrapper for bytesio object that treats either CR or LF as end of line."
+msgstr "包装器bytesio对象对待或者CR或LF作为行尾。"
 
 #: ../../reference/plugins.rst:45
 msgid ":mod:`FitsStubImagePlugin` Module"
@@ -6347,7 +6347,7 @@ msgstr ":mod:`FitsStubImagePlugin` Module"
 
 #: PIL.FitsStubImagePlugin.register_handler:1 of
 msgid "Install application-specific FITS image handler."
-msgstr "Install application-specific FITS image handler."
+msgstr "安装专用FITS图像处理程序。"
 
 #: ../../reference/plugins.rst:53
 msgid ":mod:`FliImagePlugin` Module"

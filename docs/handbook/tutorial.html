@@ -39,7 +39,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="概念" href="concepts.html" />
-    <link rel="prev" title="概观" href="overview.html" /> 
+    <link rel="prev" title="概述" href="overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,7 +90,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">手册</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html">概观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">概述</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">教程</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#using-the-image-class">使用Image类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reading-and-writing-images">读取和写入图像</a><ul>
@@ -116,7 +116,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#image-enhancement">图像增强</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#filters">过滤器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#point-operations">Point Operations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#enhancement">增强</a></li>
 </ul>
@@ -225,7 +225,7 @@
 <a class="reference internal" href="../reference/Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> class, defined in the module with the same name.
 You can create instances of this class in several ways; either by loading
 images from files, processing other images, or creating images from scratch.</p>
-<p>从文件加载图像，可以使用：吡啶：FUNC：<cite>在〜PIL.Image.open`功能：PY：MOD：</cite>〜PIL.Image`模块:</p>
+<p>从文件加载图像，可以使用:吡啶:FUNC:<cite>在〜PIL.Image.open`功能:PY:MOD:</cite>〜PIL.Image`模块:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;hopper.ppm&quot;</span><span class="p">)</span>
 </pre></div>
@@ -243,7 +243,7 @@ attribute is a 2-tuple containing width and height (in pixels). The
 bands in the image, and also the pixel type and depth. Common modes are “L”
 (luminance) for greyscale images, “RGB” for true color images, and “CMYK” for
 pre-press images.</p>
-<p>如果该文件无法打开，一：PY：EXC：<a href="#id1"><span class="problematic" id="id2">`</span></a>IOError`异常。</p>
+<p>如果该文件无法打开，一:PY:EXC:<a href="#id1"><span class="problematic" id="id2">`</span></a>IOError`异常.</p>
 <p>Once you have an instance of the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> class, you can use
 the methods defined by this class to process and manipulate the image. For
 example, let’s display the image we just loaded:</p>
@@ -258,7 +258,7 @@ to display the image. If you don’t have an appropriate utility installed,
 it won’t even work. When it does work though, it is very handy for
 debugging and tests.</p>
 </div>
-<p>以下各节提供的这个库中提供的不同功能的概述。</p>
+<p>以下各节提供的这个库中提供的不同功能的概述.</p>
 </div>
 <div class="section" id="reading-and-writing-images">
 <h2>读取和写入图像<a class="headerlink" href="#reading-and-writing-images" title="永久链接至标题">¶</a></h2>
@@ -347,7 +347,7 @@ use the <a class="reference internal" href="../reference/Image.html#PIL.Image.Im
 lower). The Python Imaging Library uses a coordinate system with (0, 0) in the
 upper left corner. Also note that coordinates refer to positions between the
 pixels, so the region in the above example is exactly 300x300 pixels.</p>
-<p>该区域现在可以以一定的方式进行处理和粘贴回。</p>
+<p>该区域现在可以以一定的方式进行处理和粘贴回.</p>
 </div>
 <div class="section" id="processing-a-subrectangle-and-pasting-it-back">
 <h3>处理子矩形，并将其粘贴回<a class="headerlink" href="#processing-a-subrectangle-and-pasting-it-back" title="永久链接至标题">¶</a></h3>
@@ -432,7 +432,7 @@ flip an image around its horizontal or vertical axis.</p>
 <p><code class="docutils literal notranslate"><span class="pre">transpose(ROTATE)</span></code> operations can also be performed identically with
 <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.rotate" title="PIL.Image.Image.rotate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rotate()</span></code></a> operations, provided the <code class="docutils literal notranslate"><span class="pre">expand</span></code> flag is
 true, to provide for the same changes to the image’s size.</p>
-<p>PY：图像变换的更一般的形式可通过进行甲基：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.transform`方法。</p>
+<p>PY:图像变换的更一般的形式可通过进行甲基:<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.transform`方法.</p>
 </div>
 </div>
 <div class="section" id="color-transforms">
@@ -453,9 +453,9 @@ intermediate image (typically an “RGB” image).</p>
 </div>
 <div class="section" id="image-enhancement">
 <h2>图像增强<a class="headerlink" href="#image-enhancement" title="永久链接至标题">¶</a></h2>
-<p>Python图像库提供了许多可用于增强图像的方法和模块。</p>
+<p>Python图像库提供了许多可用于增强图像的方法和模块.</p>
 <div class="section" id="filters">
-<h3>过滤器<a class="headerlink" href="#filters" title="永久链接至标题">¶</a></h3>
+<h3>Filters<a class="headerlink" href="#filters" title="永久链接至标题">¶</a></h3>
 <p>The <a class="reference internal" href="../reference/ImageFilter.html#module-PIL.ImageFilter" title="PIL.ImageFilter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageFilter</span></code></a> module contains a number of pre-defined
 enhancement filters that can be used with the
 <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.filter" title="PIL.Image.Image.filter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">filter()</span></code></a> method.</p>
@@ -503,7 +503,7 @@ image. You can also combine the <a class="reference internal" href="../reference
 <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>注意：用于创建蒙语法:</p>
+<p>注意:用于创建蒙语法:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">imout</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">expression</span> <span class="ow">and</span> <span class="mi">255</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -518,7 +518,7 @@ the second operand, and thus returns 0. Otherwise, it returns 255.</p>
 <p>For more advanced image enhancement, you can use the classes in the
 <a class="reference internal" href="../reference/ImageEnhance.html#module-PIL.ImageEnhance" title="PIL.ImageEnhance"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageEnhance</span></code></a> module. Once created from an image, an enhancement
 object can be used to quickly try out different settings.</p>
-<p>您可以调整这样的对比度，亮度，色彩平衡和清晰度。</p>
+<p>您可以调整这样的对比度，亮度，色彩平衡和清晰度.</p>
 <div class="section" id="enhancing-images">
 <h4>增强图像<a class="headerlink" href="#enhancing-images" title="永久链接至标题">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">ImageEnhance</span>
@@ -554,7 +554,7 @@ frames:</p>
         <span class="k">pass</span> <span class="c1"># end of sequence</span>
 </pre></div>
 </div>
-<p>如本例中看到的那样，你会得到一个：PY：EXC：<a href="#id1"><span class="problematic" id="id2">`</span></a>EOFError`例外序时结束。</p>
+<p>如本例中看到的那样，你会得到一个:PY:EXC:<a href="#id1"><span class="problematic" id="id2">`</span></a>EOFError`例外序时结束.</p>
 <p>下面的类可以让你在序列使用for语句循环:</p>
 </div>
 <div class="section" id="using-the-imagesequence-iterator-class">
@@ -568,7 +568,7 @@ frames:</p>
 </div>
 <div class="section" id="postscript-printing">
 <h2>Postscript打印<a class="headerlink" href="#postscript-printing" title="永久链接至标题">¶</a></h2>
-<p>Python图像库包括功能在PostScript打印机上打印图像，文字和图形。这里有一个简单的例子:</p>
+<p>Python图像库包括功能在PostScript打印机上打印图像，文字和图形. 这里有一个简单的例子:</p>
 <div class="section" id="drawing-postscript">
 <h3>绘图后记<a class="headerlink" href="#drawing-postscript" title="永久链接至标题">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
@@ -605,7 +605,7 @@ context manager:</p>
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>如果一切顺利的话，结果是：PY：类：<a href="#id1"><span class="problematic" id="id2">`</span></a>PIL.Image.Image`对象。否则，一：EXC：<a href="#id3"><span class="problematic" id="id4">`</span></a>IOError`异常。</p>
+<p>如果一切顺利的话，结果是:PY:类:<a href="#id1"><span class="problematic" id="id2">`</span></a>PIL.Image.Image`对象. 否则，一:EXC:<a href="#id3"><span class="problematic" id="id4">`</span></a>IOError`异常.</p>
 <p>You can use a file-like object instead of the filename. The object must
 implement <code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">seek()</span></code> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">tell()</span></code> methods, and be opened in binary mode.</p>
@@ -616,7 +616,7 @@ implement <code class="xref py py-meth docutils literal notranslate"><span class
     <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>读取从字符串数据的图像，可以使用：吡啶：类：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜StringIO.StringIO`类:</p>
+<p>读取从字符串数据的图像，可以使用:吡啶:类:<a href="#id1"><span class="problematic" id="id2">`</span></a>〜StringIO.StringIO`类:</p>
 </div>
 <div class="section" id="reading-from-a-string">
 <h3>从字符串读<a class="headerlink" href="#reading-from-a-string" title="永久链接至标题">¶</a></h3>
@@ -652,7 +652,7 @@ loaded image so it as closely as possible matches the given mode and size. This
 is done by reconfiguring the image decoder.</p>
 <div class="section" id="reading-in-draft-mode">
 <h3>阅读草稿模式<a class="headerlink" href="#reading-in-draft-mode" title="永久链接至标题">¶</a></h3>
-<p>这仅适用于JPEG和MPO文件。</p>
+<p>这仅适用于JPEG和MPO文件.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
 
 <span class="k">with</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">im</span><span class="p">:</span>
@@ -685,7 +685,7 @@ thumbnail method instead.</p>
         <a href="concepts.html" class="btn btn-neutral float-right" title="概念" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="overview.html" class="btn btn-neutral float-left" title="概观" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral float-left" title="概述" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

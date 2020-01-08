@@ -25,7 +25,7 @@ msgstr "移植"
 
 #: ../../porting.rst:4
 msgid "**Porting existing PIL-based code to Pillow**"
-msgstr "**移植现有的基于PIL代码到枕头**"
+msgstr "**移植现有的基于PIL代码到 Pillow**"
 
 #: ../../porting.rst:6
 msgid ""
@@ -33,7 +33,7 @@ msgid ""
 "Library. To run your existing PIL-compatible code with Pillow, it needs "
 "to be modified to import the ``Image`` module from the ``PIL`` namespace "
 "*instead* of the global namespace. Change this::"
-msgstr ""
+msgstr "Pillow是一个功能下拉更换为Python图像库. 要运行用Pillow现有PIL兼容的代码, 它需要进行修改, 以从 ``PIL`` 命名空间导入 ``Image`` 模块, *而不是* 的全局命名空间的. 更改此::"
 
 #: ../../porting.rst:13
 msgid "to this::"
@@ -43,7 +43,7 @@ msgstr "这::"
 msgid ""
 "The :py:mod:`_imaging` module has been moved. You can now import it like "
 "this::"
-msgstr "The :py:mod:`_imaging` module has been moved. You can now import it like this::"
+msgstr ":py:mod:`_imaging` 模块已被移动. 现在, 您可以导入像这样::"
 
 #: ../../porting.rst:21
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "automatically imports any file in the Python path with a name ending in "
 ":file:`ImagePlugin.py`. You will need to import your image plugin "
 "manually."
-msgstr ""
+msgstr "图片插件加载机构已经改变. Pillow不再自动导入任何文件中Python路径与结尾的名称 :file:`ImagePlugin.py`. 您将需要手动导入图像的插件. "
 
 #: ../../porting.rst:26
 msgid ""
@@ -59,5 +59,5 @@ msgid ""
 "any reason, including a version mismatch between the Python and extension"
 " code. Previously PIL allowed Python only code to run if the core "
 "extension was not available."
-msgstr ""
+msgstr "如果核心扩展无法加载以任何理由, Pillow将抛出一个异常, 包括Python和扩展代码之间的版本不匹配. 此前PIL允许的Python代码只运行如果核心扩展不可用. "
 

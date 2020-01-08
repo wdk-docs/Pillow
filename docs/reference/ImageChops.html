@@ -93,7 +93,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">参考</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Image.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Image</span></code> Module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageChops</span></code> (“Channel Operations”) Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">功能</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ImageColor.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageColor</span></code> Module</a></li>
@@ -120,7 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="PixelAccess.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelAccess</span></code> Class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PyAccess.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">PyAccess</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PIL.html">PIL Package (autodoc of remaining modules)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugin reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">插件参考</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internal_design.html">内部参考文件</a></li>
 </ul>
 </li>
@@ -201,10 +201,9 @@ operations, called channel operations (“chops”). These can be used for vario
 purposes, including special effects, image compositions, algorithmic painting,
 and more.</p>
 <p>For more pre-made operations, see <code class="xref py py-mod docutils literal notranslate"><span class="pre">ImageOps</span></code>.</p>
-<p>At this time, most channel operations are only implemented for 8-bit images
-(e.g. “L” and “RGB”).</p>
+<p>此时，大部分的信道的操作仅8位图像（例如，“L”和“RGB”）来实现。</p>
 <div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h2>
+<h2>功能<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h2>
 <p>Most channel operations take one or two image arguments and returns a new
 image. Unless otherwise noted, the result of a channel operation is always
 clipped to the range 0 to MAX (which is 255 for all modes supported by the
@@ -228,8 +227,7 @@ At least one of the images must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.add_modulo">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">add_modulo</code><span class="sig-paren">(</span><em>image1</em>, <em>image2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#add_modulo"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.add_modulo" title="永久链接至目标">¶</a></dt>
-<dd><p>Add two images, without clipping the result. At least one of the images
-must have mode “1”.</p>
+<dd><p>添加两个图像，而不会裁剪结果。至少一个图像必须有模式“1 ”。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="p">((</span><span class="n">image1</span> <span class="o">+</span> <span class="n">image2</span><span class="p">)</span> <span class="o">%</span> <span class="n">MAX</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -243,8 +241,7 @@ must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.blend">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">blend</code><span class="sig-paren">(</span><em>image1</em>, <em>image2</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#blend"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.blend" title="永久链接至目标">¶</a></dt>
-<dd><p>Blend images using constant transparency weight. Alias for
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.Image.Image.blend()</span></code>.</p>
+<dd><p>混合使用恒定透明度重量图像。别名：PY：甲基：<cite>PIL.Image.Image.blend</cite>。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a></p>
@@ -255,8 +252,7 @@ must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.composite">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">composite</code><span class="sig-paren">(</span><em>image1</em>, <em>image2</em>, <em>mask</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#composite"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.composite" title="永久链接至目标">¶</a></dt>
-<dd><p>Create composite using transparency mask. Alias for
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.Image.Image.composite()</span></code>.</p>
+<dd><p>创建复合使用透明面罩。别名：PY：甲基：<cite>PIL.Image.Image.composite</cite>。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a></p>
@@ -267,7 +263,7 @@ must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.constant">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">constant</code><span class="sig-paren">(</span><em>image</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#constant"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.constant" title="永久链接至目标">¶</a></dt>
-<dd><p>Fill a channel with a given grey level.</p>
+<dd><p>填充具有给定灰阶值的信道。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a></p>
@@ -293,8 +289,7 @@ the darker values. At least one of the images must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.difference">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">difference</code><span class="sig-paren">(</span><em>image1</em>, <em>image2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#difference"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.difference" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns the absolute value of the pixel-by-pixel difference between the two
-images. At least one of the images must have mode “1”.</p>
+<dd><p>返回两个图像之间的像素由像素的差的绝对值。至少一个图像必须有模式“1 ”。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">image1</span> <span class="o">-</span> <span class="n">image2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -308,7 +303,7 @@ images. At least one of the images must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.duplicate">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">duplicate</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#duplicate"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.duplicate" title="永久链接至目标">¶</a></dt>
-<dd><p>Copy a channel. Alias for <a class="reference internal" href="Image.html#PIL.Image.Image.copy" title="PIL.Image.Image.copy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PIL.Image.Image.copy()</span></code></a>.</p>
+<dd><p>复制的通道。别名：PY：甲基：<cite>PIL.Image.Image.copy</cite>。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><a class="reference internal" href="Image.html#PIL.Image.Image" title="PIL.Image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a></p>
@@ -319,7 +314,7 @@ images. At least one of the images must have mode “1”.</p>
 <dl class="function">
 <dt id="PIL.ImageChops.invert">
 <code class="descclassname">PIL.ImageChops.</code><code class="descname">invert</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PIL/ImageChops.html#invert"><span class="viewcode-link">[源代码]</span></a><a class="headerlink" href="#PIL.ImageChops.invert" title="永久链接至目标">¶</a></dt>
-<dd><p>Invert an image (channel).</p>
+<dd><p>反转的图像（信道）。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">MAX</span> <span class="o">-</span> <span class="n">image</span>
 </pre></div>
 </div>

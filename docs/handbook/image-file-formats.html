@@ -90,7 +90,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">手册</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html">概观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html">概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html">教程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="concepts.html">概念</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="appendices.html">附录</a><ul class="current">
@@ -184,14 +184,8 @@
             
   <div class="section" id="image-file-formats">
 <span id="id1"></span><h1><a class="toc-backref" href="#id3">图像文件格式</a><a class="headerlink" href="#image-file-formats" title="永久链接至标题">¶</a></h1>
-<p>The Python Imaging Library supports a wide variety of raster file formats.
-Over 30 different file formats can be identified and read by the library.
-Write support is less extensive, but most common interchange and presentation
-formats are supported.</p>
-<p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> function identifies files from their
-contents, not their names, but the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.save" title="PIL.Image.Image.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> method
-looks at the name to determine which format to use, unless the format is given
-explicitly.</p>
+<p>Python图像库支持多种光栅文件格式。超过30种不同的文件格式，可以识别和图书馆阅读。写支持是那么广泛，但最常见的交流和演示格式的支持。</p>
+<p>从他们的内容，而不是他们的名字 <code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 功能识别的文件，但在名称 <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.save" title="PIL.Image.Image.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> 方法看起来，以确定哪些格式的使用，除非格式是明确给出。</p>
 <div class="section" id="fully-supported-formats">
 <h2><a class="toc-backref" href="#id4">完全支持的格式</a><a class="headerlink" href="#fully-supported-formats" title="永久链接至标题">¶</a></h2>
 <div class="contents topic" id="id2">
@@ -290,15 +284,15 @@ explicitly.</p>
 <p>Pillow reads and writes Windows and OS/2 BMP files containing <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">L</span></code>, <code class="docutils literal notranslate"><span class="pre">P</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">RGB</span></code> data. 16-colour images are read as <code class="docutils literal notranslate"><span class="pre">P</span></code> images. Run-length encoding
 is not supported.</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
-<dt><strong>压缩</strong></dt><dd><p>如果文件被运行长度编码设置为``bmp_rle``。</p>
+<dt><strong>压缩</strong></dt><dd><p>如果文件被运行长度编码设置为``bmp_rle``.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="dib">
 <h3><a class="toc-backref" href="#id6">DIB</a><a class="headerlink" href="#dib" title="永久链接至标题">¶</a></h3>
-<p>枕头读取和写入DIB的文件。 DIB文件类似于BMP文件，所以见上文的详细信息。</p>
+<p>Pillow 读取和写入DIB的文件.  DIB文件类似于BMP文件，所以见上文的详细信息.</p>
 <blockquote>
 <div><div class="versionadded">
 <p><span class="versionmodified added">6.0.0 新版功能.</span></p>
@@ -335,22 +329,22 @@ relative position of the bounding box is maintained:</p>
 <p>Pillow reads GIF87a and GIF89a versions of the GIF file format. The library
 writes run-length encoded files in GIF87a by default, unless GIF89a features
 are used or GIF89a is already in use.</p>
-<p>需要注意的是GIF文件总是读出灰度（<code class="docutils literal notranslate"><span class="pre">L</span></code>）或调色板模式（<code class="docutils literal notranslate"><span class="pre">P</span></code>）图像。</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p>需要注意的是GIF文件总是读出灰度（<code class="docutils literal notranslate"><span class="pre">L</span></code>) 或调色板模式（<code class="docutils literal notranslate"><span class="pre">P</span></code>) 图像.</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
-<dt><strong>background</strong></dt><dd><p>默认的背景颜色（调色板颜色索引）。</p>
+<dt><strong>background</strong></dt><dd><p>默认的背景颜色（调色板颜色索引) .</p>
 </dd>
-<dt><strong>透明度</strong></dt><dd><p>透明色指数。如果图像是不透明的该键被省略。</p>
+<dt><strong>透明度</strong></dt><dd><p>透明色指数. 如果图像是不透明的该键被省略.</p>
 </dd>
 <dt><strong>version</strong></dt><dd><p>Version (either <code class="docutils literal notranslate"><span class="pre">GIF87a</span></code> or <code class="docutils literal notranslate"><span class="pre">GIF89a</span></code>).</p>
 </dd>
-<dt><strong>duration</strong></dt><dd><p>可能不存在。的时间，以显示GIF的当前帧，以毫秒为单位。</p>
+<dt><strong>duration</strong></dt><dd><p>可能不存在. 的时间，以显示GIF的当前帧，以毫秒为单位.</p>
 </dd>
-<dt><strong>loop</strong></dt><dd><p>可能不存在。时代的GIF应该循环的数量。 0意味着它将永远循环下去。</p>
+<dt><strong>loop</strong></dt><dd><p>可能不存在. 时代的GIF应该循环的数量.  0意味着它将永远循环下去.</p>
 </dd>
-<dt><strong>comment</strong></dt><dd><p>可能不存在。有关图像的注释。</p>
+<dt><strong>comment</strong></dt><dd><p>可能不存在. 有关图像的注释.</p>
 </dd>
-<dt><strong>extension</strong></dt><dd><p>可能不存在。包含应用程序的具体信息。</p>
+<dt><strong>extension</strong></dt><dd><p>可能不存在. 包含应用程序的具体信息.</p>
 </dd>
 </dl>
 <div class="section" id="reading-sequences">
@@ -358,27 +352,27 @@ are used or GIF89a is already in use.</p>
 <p>The GIF loader supports the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.seek" title="PIL.Image.Image.seek"><code class="xref py py-meth docutils literal notranslate"><span class="pre">seek()</span></code></a> and
 <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.tell" title="PIL.Image.Image.tell"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tell()</span></code></a> methods. You can combine these methods
 to seek to the next frame (<code class="docutils literal notranslate"><span class="pre">im.seek(im.tell()</span> <span class="pre">+</span> <span class="pre">1)</span></code>).</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>im.seek（）``引发：PY：EXC：<a href="#id3"><span class="problematic" id="id4">`</span></a>EOFError`如果你试图在最后一帧后寻求。</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>im.seek（) <a href="#id3"><span class="problematic" id="id4">``</span></a>引发:PY:EXC:<a href="#id5"><span class="problematic" id="id6">`</span></a>EOFError`如果你试图在最后一帧后寻求.</p>
 </div>
 <div class="section" id="saving">
 <h4><a class="toc-backref" href="#id10">Saving</a><a class="headerlink" href="#saving" title="永久链接至标题">¶</a></h4>
-<p>当调用：PY：甲基：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.save`写一个GIF文件，下列选项可用:</p>
+<p>当调用:PY:甲基:<a href="#id1"><span class="problematic" id="id2">`</span></a>〜PIL.Image.Image.save`写一个GIF文件，下列选项可用:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">im</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">save_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append_images</span><span class="o">=</span><span class="p">[</span><span class="n">im1</span><span class="p">,</span> <span class="n">im2</span><span class="p">,</span> <span class="o">...</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl>
-<dt><strong>save_all</strong></dt><dd><p>如果存在，真实，图像的所有帧将被保存。如果没有，那么只有一个多帧图像的第一帧将被保存。</p>
+<dt><strong>save_all</strong></dt><dd><p>如果存在，真实，图像的所有帧将被保存. 如果没有，那么只有一个多帧图像的第一帧将被保存.</p>
 </dd>
 <dt><strong>append_images</strong></dt><dd><p>A list of images to append as additional frames. Each of the
 images in the list can be single or multiframe images.
 This is currently supported for GIF, PDF, TIFF, and WebP.</p>
-<p>它也支持ICNS。如果图像相关尺寸的通过，他们将被用来代替缩小主图像。</p>
+<p>它也支持ICNS. 如果图像相关尺寸的通过，他们将被用来代替缩小主图像.</p>
 </dd>
 <dt><strong>include_color_table</strong></dt><dd><p>Whether or not to include local color table.</p>
 </dd>
-<dt><strong>interlace</strong></dt><dd><p>无论图像交错。默认情况下，它是，除非图像的宽度或高度小于16个像素。</p>
+<dt><strong>interlace</strong></dt><dd><p>无论图像交错. 默认情况下，它是，除非图像的宽度或高度小于16个像素.</p>
 </dd>
-<dt><strong>disposal</strong></dt><dd><p>指示其中图形是被显示之后，待处理的方式。</p>
+<dt><strong>disposal</strong></dt><dd><p>指示其中图形是被显示之后，待处理的方式.</p>
 <ul class="simple">
 <li><p>0 - No disposal specified.</p></li>
 <li><p>1 - Do not dispose.</p></li>
@@ -386,7 +380,7 @@ This is currently supported for GIF, PDF, TIFF, and WebP.</p>
 <li><p>3 - Restore to previous content.</p></li>
 </ul>
 <blockquote>
-<div><p>通过对于恒定的处置的单一的整数，或列表或元组分别设定处置对于每个帧。</p>
+<div><p>通过对于恒定的处置的单一的整数，或列表或元组分别设定处置对于每个帧.</p>
 </div></blockquote>
 </dd>
 <dt><strong>palette</strong></dt><dd><p>Use the specified palette for the saved image. The palette should
@@ -411,7 +405,7 @@ their <code class="xref py py-attr docutils literal notranslate"><span class="pr
 milliseconds. Pass a single integer for a constant duration, or a
 list or tuple to set the duration for each frame separately.</p>
 </dd>
-<dt><strong>loop</strong></dt><dd><p>整数次数的GIF应该循环。 0意味着它将永远循环下去。默认情况下，图像将无法循环。</p>
+<dt><strong>loop</strong></dt><dd><p>整数次数的GIF应该循环.  0意味着它将永远循环下去. 默认情况下，图像将无法循环.</p>
 </dd>
 <dt><strong>comment</strong></dt><dd><p>A comment about the image.</p>
 </dd>
@@ -466,7 +460,7 @@ the size of each image.</p>
 </div>
 <div class="section" id="ico">
 <h3><a class="toc-backref" href="#id13">ICO</a><a class="headerlink" href="#ico" title="永久链接至标题">¶</a></h3>
-<p>ICO用于在Windows应用商店图标。最大可用图标被读取。</p>
+<p>ICO用于在Windows应用商店图标. 最大可用图标被读取.</p>
 <p>The <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.save" title="PIL.Image.Image.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> method supports the following options:</p>
 <dl class="simple">
 <dt><strong>sizes</strong></dt><dd><p>A list of sizes including in this ico file; these are a 2-tuple,
@@ -481,18 +475,18 @@ size or 256 will be ignored.</p>
 <p>IM is a format used by LabEye and other applications based on the IFUNC image
 processing library. The library reads and writes most uncompressed interchange
 versions of this format.</p>
-<p>IM是可以存储所有内部枕格式的唯一格式。</p>
+<p>IM是可以存储所有内部 Pillow 格式的唯一格式.</p>
 </div>
 <div class="section" id="jpeg">
 <h3><a class="toc-backref" href="#id15">JPEG</a><a class="headerlink" href="#jpeg" title="永久链接至标题">¶</a></h3>
-<p>枕头读取JPEG，JFIF和Adobe JPEG文件包含``L``，<code class="docutils literal notranslate"><span class="pre">RGB</span></code>，或``CMYK``数据。它写入标准和渐进JFIF文件。</p>
+<p>Pillow 读取JPEG，JFIF和Adobe JPEG文件包含``L``，<code class="docutils literal notranslate"><span class="pre">RGB</span></code>，或``CMYK``数据. 它写入标准和渐进JFIF文件.</p>
 <p>Using the <a class="reference internal" href="../reference/Image.html#PIL.Image.Image.draft" title="PIL.Image.Image.draft"><code class="xref py py-meth docutils literal notranslate"><span class="pre">draft()</span></code></a> method, you can speed things up by
 converting <code class="docutils literal notranslate"><span class="pre">RGB</span></code> images to <code class="docutils literal notranslate"><span class="pre">L</span></code>, and resize images to 1/2, 1/4 or 1/8 of
 their original size while loading them.</p>
 <p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> method may set the following
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> properties if available:</p>
 <dl class="simple">
-<dt><strong>jfif</strong></dt><dd><p>JFIF应用标记发现。如果文件不是一个JFIF文件，这个键不存在。</p>
+<dt><strong>jfif</strong></dt><dd><p>JFIF应用标记发现. 如果文件不是一个JFIF文件，这个键不存在.</p>
 </dd>
 <dt><strong>jfif_version</strong></dt><dd><p>A tuple representing the jfif version, (major version, minor version).</p>
 </dd>
@@ -804,7 +798,7 @@ write compressed files. Prior to that release, Pillow had buggy
 support for reading Packbits, LZW and JPEG compressed TIFFs
 without using libtiff.</p>
 </div>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl>
 <dt><strong>压缩</strong></dt><dd><p>Compression mode.</p>
 <div class="versionadded">
@@ -853,7 +847,7 @@ numbers are returned as a tuple of <code class="docutils literal notranslate"><s
 within the image file. You can combine these methods to seek to the next frame
 (<code class="docutils literal notranslate"><span class="pre">im.seek(im.tell()</span> <span class="pre">+</span> <span class="pre">1)</span></code>). Frames are numbered from 0 to <code class="docutils literal notranslate"><span class="pre">im.num_frames</span> <span class="pre">-</span> <span class="pre">1</span></code>,
 and can be accessed in any order.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>im.seek（）``引发：PY：EXC：<a href="#id3"><span class="problematic" id="id4">`</span></a>EOFError`如果你试图在最后一帧后寻求。</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>im.seek（) <a href="#id3"><span class="problematic" id="id4">``</span></a>引发:PY:EXC:<a href="#id5"><span class="problematic" id="id6">`</span></a>EOFError`如果你试图在最后一帧后寻求.</p>
 </div>
 <div class="section" id="saving-tiff-images">
 <h4><a class="toc-backref" href="#id27">Saving Tiff Images</a><a class="headerlink" href="#saving-tiff-images" title="永久链接至标题">¶</a></h4>
@@ -1046,7 +1040,7 @@ supported, and only in <code class="docutils literal notranslate"><span class="p
 <div class="section" id="fli-flc">
 <h3><a class="toc-backref" href="#id36">FLI, FLC</a><a class="headerlink" href="#fli-flc" title="永久链接至标题">¶</a></h3>
 <p>Pillow reads Autodesk FLI and FLC animations.</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
 <dt><strong>duration</strong></dt><dd><p>The delay (in milliseconds) between each frame.</p>
 </dd>
@@ -1076,7 +1070,7 @@ per file, in the compressed and uncompressed formats.</p>
 <div class="section" id="gbr">
 <h3><a class="toc-backref" href="#id39">GBR</a><a class="headerlink" href="#gbr" title="永久链接至标题">¶</a></h3>
 <p>The GBR decoder reads GIMP brush files, version 1 and 2.</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
 <dt><strong>comment</strong></dt><dd><p>The brush name.</p>
 </dd>
@@ -1088,9 +1082,9 @@ per file, in the compressed and uncompressed formats.</p>
 <h3><a class="toc-backref" href="#id40">GD</a><a class="headerlink" href="#gd" title="永久链接至标题">¶</a></h3>
 <p>Pillow reads uncompressed GD2 files. Note that you must use
 <a class="reference internal" href="../PIL.html#PIL.GdImageFile.open" title="PIL.GdImageFile.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">PIL.GdImageFile.open()</span></code></a> to read such a file.</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
-<dt><strong>透明度</strong></dt><dd><p>透明色指数。如果图像是不透明的该键被省略。</p>
+<dt><strong>透明度</strong></dt><dd><p>透明色指数. 如果图像是不透明的该键被省略.</p>
 </dd>
 </dl>
 </div>
@@ -1183,9 +1177,9 @@ dpi. To load it at another resolution:</p>
 <div class="section" id="xpm">
 <h3><a class="toc-backref" href="#id51">XPM</a><a class="headerlink" href="#xpm" title="永久链接至标题">¶</a></h3>
 <p>Pillow reads X pixmap files (mode <code class="docutils literal notranslate"><span class="pre">P</span></code>) with 256 colors or less.</p>
-<p>的：吡啶：甲基：<cite>〜PIL.Image.Image.open`方法集执行以下操作：PY：ATTR：</cite>〜PIL.Image.Image.info`属性:</p>
+<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">open()</span></code> 方法集执行以下操作 <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> 属性:</p>
 <dl class="simple">
-<dt><strong>透明度</strong></dt><dd><p>透明色指数。如果图像是不透明的该键被省略。</p>
+<dt><strong>透明度</strong></dt><dd><p>透明色指数. 如果图像是不透明的该键被省略.</p>
 </dd>
 </dl>
 </div>

@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">发行说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="7.0.0.html">7.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.2.html">6.2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2.1.html">6.2.1</a></li>
@@ -123,8 +123,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#loading-16-bit-tiff-images">Loading 16-bit TIFF Images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sgi-images">SGI Images</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#performance">Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sgi-images">SGI图片</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#performance">性能</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cmyk-conversion">CMYK Conversion</a></li>
 </ul>
 </li>
@@ -193,7 +193,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Release Notes</a> &raquo;</li>
+          <li><a href="index.html">发行说明</a> &raquo;</li>
         
       <li>4.3.0</li>
     
@@ -299,31 +299,24 @@ require splitting of channels prior to filtering.</p>
 <p>Pillow now can read 16-bit multichannel TIFF files including files
 with alpha transparency. The image data is truncated to 8-bit
 precision.</p>
-<p>Pillow now can read 16-bit signed integer single channel TIFF
-files. The image data is promoted to 32-bit for storage and
-processing.</p>
+<p>枕头现在可以读取整数单通道TIFF文件的16位有符号。的图像数据被晋升为32位进行存储和处理。</p>
 </div>
 <div class="section" id="sgi-images">
-<h3>SGI Images<a class="headerlink" href="#sgi-images" title="永久链接至标题">¶</a></h3>
+<h3>SGI图片<a class="headerlink" href="#sgi-images" title="永久链接至标题">¶</a></h3>
 <p>Pillow can now read and write uncompressed 16-bit multichannel SGI
 images to and from RGB and RGBA formats. The image data is truncated
 to 8-bit precision.</p>
-<p>Pillow can now read RLE encoded SGI images in both 8 and 16-bit
-precision.</p>
+<p>枕现在可以读取RLE在8位和16位精度编码SGI图像。</p>
 </div>
 <div class="section" id="performance">
-<h3>Performance<a class="headerlink" href="#performance" title="永久链接至标题">¶</a></h3>
-<p>This release contains several performance improvements:</p>
+<h3>性能<a class="headerlink" href="#performance" title="永久链接至标题">¶</a></h3>
+<p>本新闻稿中包含一些性能改进:</p>
 <ul class="simple">
-<li><p>Many memory bandwidth-bounded operations such as crop, image allocation,
-conversion, split into bands and merging from bands are up to 2x faster.</p></li>
-<li><p>Upscaling of multichannel images (such as RGB) is accelerated by 5-10%</p></li>
-<li><p>JPEG loading is accelerated up to 15% and JPEG saving up to 20% when
-using a recent version of libjpeg-turbo.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.transpose</span></code> has been accelerated 15% or more by using a cache
-friendly algorithm.</p></li>
-<li><p>ImageFilters based on Kernel convolution are significantly faster
-due to the new MultibandFilter feature.</p></li>
+<li><p>许多存储器带宽有界的操作，如农作物，图像分配，转换，分割成带和从频带合并均达到2倍速度更快。</p></li>
+<li><p>多通道图像（例如，RGB）的升频是由5-10％加速</p></li>
+<li><p>JPEG加载加速到15％和JPEG使用的libjpeg最近涡轮增压的版本时，省电可达20％。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Image.transpose</span></code> 通过使用缓存友好算法有所加快15％以上。</p></li>
+<li><p>基于卷积核ImageFilters是显著更快由于新MultibandFilter功能。</p></li>
 <li><p>All memory allocation for images is now done in blocks, rather than
 falling back to an allocation for each scan line for images larger
 than the block size.</p></li>
