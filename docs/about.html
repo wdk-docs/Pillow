@@ -38,7 +38,7 @@
     <link rel="author" title="关于这些文档" href="#" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Release Notes" href="releasenotes/index.html" />
+    <link rel="next" title="发行说明" href="releasenotes/index.html" />
     <link rel="prev" title="移植" href="porting.html" /> 
 </head>
 
@@ -95,11 +95,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">关于</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#goals">目标</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#license">执照</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-a-fork">为什么叉子？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-about-pil">什么PIL？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-a-fork">为什么叉子?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-about-pil">什么PIL?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="releasenotes/index.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasenotes/index.html">发行说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deprecations.html">弃用和清除</a></li>
 </ul>
 
@@ -169,30 +169,29 @@
 <h1>关于<a class="headerlink" href="#about" title="永久链接至标题">¶</a></h1>
 <div class="section" id="goals">
 <h2>目标<a class="headerlink" href="#goals" title="永久链接至标题">¶</a></h2>
-<p>叉笔者的目标是培育和扶持，通过公益诉讼的积极发展：</p>
+<p>叉笔者的目标是培育和扶持, 通过公益诉讼的积极发展:</p>
 <ul class="simple">
-<li><p>通过`特拉维斯CI`_，<a href="#id1"><span class="problematic" id="id2">`</span></a>AppVeyor`_和`GitHub的Actions`_持续集成测试</p></li>
-<li><p>在`GitHub`_宣传开发活动</p></li>
-<li><p>定期发布到`Python包Index`_</p></li>
+<li><p>通过 <a class="reference external" href="https://travis-ci.org/python-pillow/Pillow">Travis CI</a>, <a class="reference external" href="https://ci.appveyor.com/project/Python-pillow/pillow">AppVeyor</a> 和 <a class="reference external" href="https://github.com/python-pillow/Pillow/actions">GitHub Actions</a> 持续集成测试</p></li>
+<li><p>在 <a class="reference external" href="https://github.com/python-pillow/Pillow">GitHub</a> 宣传开发活动</p></li>
+<li><p>定期发布到 <a class="reference external" href="https://pypi.org/project/Pillow/">Python Package Index</a></p></li>
 </ul>
 </div>
 <div class="section" id="license">
 <h2>执照<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h2>
-<p>Like PIL, Pillow is <a class="reference external" href="https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE">licensed under the open source PIL Software License</a></p>
+<p>像PIL, Pillow <a class="reference external" href="https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE">开源软件PIL许可协议进行许可</a></p>
 </div>
 <div class="section" id="why-a-fork">
-<h2>为什么叉子？<a class="headerlink" href="#why-a-fork" title="永久链接至标题">¶</a></h2>
-<p>PIL is not setuptools compatible. Please see <a class="reference external" href="https://mail.python.org/pipermail/image-sig/2010-August/006480.html">this Image-SIG post</a> for a more detailed explanation. Also, PIL’s current bi-yearly (or greater) release schedule is too infrequent to accommodate the large number and frequency of issues reported.</p>
+<h2>为什么叉子?<a class="headerlink" href="#why-a-fork" title="永久链接至标题">¶</a></h2>
+<p>PIL不兼容setuptools的.请参阅 <a class="reference external" href="https://mail.python.org/pipermail/image-sig/2010-August/006480.html">this Image-SIG post</a> 更详细的解释. 此外, PIL目前每两年(或更高版本)的发布计划是太疏, 以容纳数量众多, 而且问题频报.</p>
 </div>
 <div class="section" id="what-about-pil">
-<h2>什么PIL？<a class="headerlink" href="#what-about-pil" title="永久链接至标题">¶</a></h2>
+<h2>什么PIL?<a class="headerlink" href="#what-about-pil" title="永久链接至标题">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Prior to Pillow 2.0.0, very few image code changes were made. Pillow 2.0.0
-added Python 3 support and includes many bug fixes from many contributors.</p>
+<p>此前Pillow2.0.0, 很少有图像的代码进行了更改.Pillow2.0.0添加Python 3的支持, 包括来自许多贡献者许多bug修复.</p>
 </div>
-<p>As more time passes since the last PIL release (1.1.7 in 2009), the likelihood of a new PIL release decreases. However, we’ve yet to hear an official “PIL is dead” announcement. So if you still want to support PIL, please <a class="reference external" href="https://bitbucket.org/effbot/pil-2009-raclette/issues">report issues here first</a>, then <a class="reference external" href="https://github.com/python-pillow/Pillow/issues">open corresponding Pillow tickets here</a>.</p>
-<p>请提供给第一票一个链接，这样我们就可以跟踪这个问题（一个或多个）上游。</p>
+<p>由于自上次发布PIL(1.1.7 2009年), 时间越久, 新PIL释放的可能性减小. 但是, 我们还没有听到官方 “PIL死了” 公告. 所以, 如果你仍然想支持PIL, 请 <a class="reference external" href="https://bitbucket.org/effbot/pil-2009-raclette/issues">report issues here first</a>, 然后使用 <a class="reference external" href="https://github.com/python-pillow/Pillow/issues">open corresponding Pillow tickets here</a>.</p>
+<p>请提供给第一票一个链接, 这样我们就可以跟踪这个问题(一个或多个)上游.</p>
 </div>
 </div>
 
@@ -204,7 +203,7 @@ added Python 3 support and includes many bug fixes from many contributors.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="releasenotes/index.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="releasenotes/index.html" class="btn btn-neutral float-right" title="发行说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="porting.html" class="btn btn-neutral float-left" title="移植" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

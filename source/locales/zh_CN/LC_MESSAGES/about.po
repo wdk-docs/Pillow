@@ -31,21 +31,21 @@ msgstr "目标"
 msgid ""
 "The fork author's goal is to foster and support active development of PIL"
 " through:"
-msgstr "叉笔者的目标是培育和扶持，通过公益诉讼的积极发展："
+msgstr "叉笔者的目标是培育和扶持, 通过公益诉讼的积极发展:"
 
 #: ../../about.rst:9
 msgid ""
 "Continuous integration testing via `Travis CI`_, `AppVeyor`_ and `GitHub "
 "Actions`_"
-msgstr "通过`特拉维斯CI`_，`AppVeyor`_和`GitHub的Actions`_持续集成测试"
+msgstr "通过 `Travis CI`_, `AppVeyor`_ 和 `GitHub Actions`_ 持续集成测试"
 
 #: ../../about.rst:10
 msgid "Publicized development activity on `GitHub`_"
-msgstr "在`GitHub`_宣传开发活动"
+msgstr "在 `GitHub`_ 宣传开发活动"
 
 #: ../../about.rst:11
 msgid "Regular releases to the `Python Package Index`_"
-msgstr "定期发布到`Python包Index`_"
+msgstr "定期发布到 `Python Package Index`_ "
 
 #: ../../about.rst:20
 msgid "License"
@@ -55,11 +55,11 @@ msgstr "执照"
 msgid ""
 "Like PIL, Pillow is `licensed under the open source PIL Software License "
 "<https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_"
-msgstr "Like PIL, Pillow is `licensed under the open source PIL Software License <https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_"
+msgstr "像PIL, Pillow `开源软件PIL许可协议进行许可 <https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_"
 
 #: ../../about.rst:25
 msgid "Why a fork?"
-msgstr "为什么叉子？"
+msgstr "为什么叉子?"
 
 #: ../../about.rst:27
 msgid ""
@@ -67,18 +67,18 @@ msgid ""
 " more detailed explanation. Also, PIL's current bi-yearly (or greater) "
 "release schedule is too infrequent to accommodate the large number and "
 "frequency of issues reported."
-msgstr ""
+msgstr "PIL不兼容setuptools的.请参阅 `this Image-SIG post`_ 更详细的解释. 此外, PIL目前每两年(或更高版本)的发布计划是太疏, 以容纳数量众多, 而且问题频报."
 
 #: ../../about.rst:32
 msgid "What about PIL?"
-msgstr "什么PIL？"
+msgstr "什么PIL?"
 
 #: ../../about.rst:36
 msgid ""
 "Prior to Pillow 2.0.0, very few image code changes were made. Pillow "
 "2.0.0 added Python 3 support and includes many bug fixes from many "
 "contributors."
-msgstr ""
+msgstr "此前Pillow2.0.0, 很少有图像的代码进行了更改.Pillow2.0.0添加Python 3的支持, 包括来自许多贡献者许多bug修复."
 
 #: ../../about.rst:39
 msgid ""
@@ -87,11 +87,11 @@ msgid ""
 "official \"PIL is dead\" announcement. So if you still want to support "
 "PIL, please `report issues here first`_, then `open corresponding Pillow "
 "tickets here`_."
-msgstr ""
+msgstr "由于自上次发布PIL(1.1.7 2009年), 时间越久, 新PIL释放的可能性减小. 但是, 我们还没有听到官方 \"PIL死了\" 公告. 所以, 如果你仍然想支持PIL, 请 `report issues here first`_, 然后使用 `open corresponding Pillow tickets here`_."
 
 #: ../../about.rst:45
 msgid ""
 "Please provide a link to the first ticket so we can track the issue(s) "
 "upstream."
-msgstr "请提供给第一票一个链接，这样我们就可以跟踪这个问题（一个或多个）上游。"
+msgstr "请提供给第一票一个链接, 这样我们就可以跟踪这个问题(一个或多个)上游."
 
