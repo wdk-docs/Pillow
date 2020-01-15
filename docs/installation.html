@@ -122,6 +122,7 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">关于</a></li>
 <li class="toctree-l1"><a class="reference internal" href="releasenotes/index.html">发行说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deprecations.html">弃用和清除</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practice/index.html">实践</a></li>
 </ul>
 
             
@@ -192,15 +193,15 @@
 <h2>警告<a class="headerlink" href="#warnings" title="永久链接至标题">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Pillow 和 PIL 不能共存于同一环境。在安装 Pillow 之前，请卸载 PIL。</p>
+<p>Pillow 和 PIL 不能共存于同一环境. 在安装 Pillow 之前, 请卸载 PIL.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Pillow &gt; = 1.0 不再支持 “import Image”。请使用 “from PIL import Image” 来代替。</p>
+<p>Pillow &gt; = 1.0 不再支持 “import Image”. 请使用 “from PIL import Image” 来代替.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Pillow &gt; = 2.1.0不再支持 “import _imaging”。请使用 “from PIL.Image import core as _imaging” 来代替。</p>
+<p>Pillow &gt; = 2.1.0不再支持 “import _imaging”. 请使用 “from PIL.Image import core as _imaging” 来代替.</p>
 </div>
 </div>
 <div class="section" id="notes">
@@ -349,7 +350,7 @@
 <h2>基本安装<a class="headerlink" href="#basic-installation" title="永久链接至标题">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>下面的说明将与最常见的图像格式支持安装Pillow。 请参阅 <a class="reference internal" href="#external-libraries"><span class="std std-ref">外部库</span></a> 支持的外部库的完整列表。</p>
+<p>下面的说明将与最常见的图像格式支持安装Pillow.  请参阅 <a class="reference internal" href="#external-libraries"><span class="std std-ref">外部库</span></a> 支持的外部库的完整列表.</p>
 </div>
 <p>使用 <strong class="command">pip</strong> 安装 Pillow</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
@@ -358,7 +359,7 @@
 </div>
 <div class="section" id="windows-installation">
 <h3>Windows 安装<a class="headerlink" href="#windows-installation" title="永久链接至标题">¶</a></h3>
-<p>我们提供的编译支持Python的车轮，鸡蛋和可执行安装32位和64位版本的矩阵为Windows Pillow 二进制文件。 这些二进制文件都可选库包括除raqm和libimagequant:</p>
+<p>我们提供的编译支持Python的车轮, 鸡蛋和可执行安装32位和64位版本的矩阵为Windows Pillow 二进制文件.  这些二进制文件都可选库包括除raqm和libimagequant:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
 </pre></div>
@@ -366,7 +367,7 @@
 </div>
 <div class="section" id="macos-installation">
 <h3>MacOS 安装<a class="headerlink" href="#macos-installation" title="永久链接至标题">¶</a></h3>
-<p>我们适用于MacOS每个受支持版本的Python在车轮格式提供的二进制文件。 这些措施包括，除了libimagequant所有可选库的支持。Raqm支持需要libraqm，FriBiDi的，和的HarfBuzz单独安装:</p>
+<p>我们适用于MacOS每个受支持版本的Python在车轮格式提供的二进制文件.  这些措施包括, 除了libimagequant所有可选库的支持. Raqm支持需要libraqm, FriBiDi的, 和的HarfBuzz单独安装:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
 </pre></div>
@@ -374,16 +375,16 @@
 </div>
 <div class="section" id="linux-installation">
 <h3>Linux 安装<a class="headerlink" href="#linux-installation" title="永久链接至标题">¶</a></h3>
-<p>我们为每个支持Python版本的manylinux轮格式的二进制文件提供的Linux。 这些措施包括，除了libimagequant所有可选库的支持。Raqm支持需要libraqm，FriBiDi的，和的HarfBuzz单独安装:</p>
+<p>我们为每个支持Python版本的manylinux轮格式的二进制文件提供的Linux.  这些措施包括, 除了libimagequant所有可选库的支持. Raqm支持需要libraqm, FriBiDi的, 和的HarfBuzz单独安装:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
 </pre></div>
 </div>
-<p>大多数主要的Linux发行版，包括Fedora的，是Debian / Ubuntu的ArchLinux还包括Pillow在先前包含PIL例如包 <code class="docutils literal notranslate"><span class="pre">python-imaging</span></code>。</p>
+<p>大多数主要的Linux发行版, 包括Fedora的, 是Debian/Ubuntu的ArchLinux还包括Pillow在先前包含PIL例如包 <code class="docutils literal notranslate"><span class="pre">python-imaging</span></code>.</p>
 </div>
 <div class="section" id="freebsd-installation">
 <h3>FreeBSD 安装<a class="headerlink" href="#freebsd-installation" title="永久链接至标题">¶</a></h3>
-<p>Pillow在FreeBSD上可以通过官方Ports或Packages系统上安装：</p>
+<p>Pillow在FreeBSD上可以通过官方Ports或Packages系统上安装:</p>
 <p><strong>Ports</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">ports</span><span class="o">/</span><span class="n">graphics</span><span class="o">/</span><span class="n">py</span><span class="o">-</span><span class="n">pillow</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">install</span> <span class="n">clean</span>
 </pre></div>
@@ -394,7 +395,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>该 <a class="reference external" href="https://www.freshports.org/graphics/py-pillow/">Pillow FreeBSD port</a> 和包均通过 ports 团队所有支持的FreeBSD版本进行测试。</p>
+<p>该 <a class="reference external" href="https://www.freshports.org/graphics/py-pillow/">Pillow FreeBSD port</a> 和包均通过 ports 团队所有支持的FreeBSD版本进行测试.</p>
 </div>
 </div>
 </div>
@@ -405,70 +406,70 @@
 <span id="id1"></span><h3>外部库<a class="headerlink" href="#external-libraries" title="永久链接至标题">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>你 <strong>不需要安装所有支持的外部库</strong> 使用Pillow的基本特性。 <strong>Zlib</strong> 和 <strong>libjpeg</strong> 在默认情况下需要。</p>
+<p>你 <strong>不需要安装所有支持的外部库</strong> 使用Pillow的基本特性.  <strong>Zlib</strong> 和 <strong>libjpeg</strong> 在默认情况下需要.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>还有 Dockerfiles 在我们的 <a class="reference external" href="https://github.com/python-pillow/docker-images">Docker images repo</a> 安装依赖于某些操作系统。</p>
+<p>还有 Dockerfiles 在我们的 <a class="reference external" href="https://github.com/python-pillow/docker-images">Docker images repo</a> 安装依赖于某些操作系统.</p>
 </div>
 <p>许多 Pillow 的功能需要外部库:</p>
 <ul class="simple">
 <li><p><strong>libjpeg</strong> 提供JPEG功能.</p>
 <ul>
-<li><p>Pillow已经过测试的libjpeg版本 <strong>6B</strong>，<strong>8</strong>，<strong>9-9c</strong> 和的 libjpeg 涡轮增压 版本 <strong>8</strong>。</p></li>
-<li><p>用Pillow3.0.0开始，libjpeg的默认需要，但可以用 <code class="docutils literal notranslate"><span class="pre">--disable-jpeg</span></code> 标志禁止。</p></li>
+<li><p>Pillow已经过测试的libjpeg版本 <strong>6B</strong>, <strong>8</strong>, <strong>9-9c</strong> 和的 libjpeg 涡轮增压 版本 <strong>8</strong>.</p></li>
+<li><p>用Pillow3.0.0开始, libjpeg的默认需要, 但可以用 <code class="docutils literal notranslate"><span class="pre">--disable-jpeg</span></code> 标志禁止.</p></li>
 </ul>
 </li>
 <li><p><strong>zlib</strong> 提供访问压缩的PNG</p>
 <ul>
-<li><p>用Pillow3.0.0开始，zlib的默认需要，但可以用`` - 禁用zlib``标志禁止。</p></li>
+<li><p>用Pillow3.0.0开始, zlib的默认需要, 但可以用 <code class="docutils literal notranslate"><span class="pre">--disable-zlib</span></code> 标志禁止.</p></li>
 </ul>
 </li>
 <li><p><strong>libtiff</strong> 提供压缩的TIFF功能</p>
 <ul>
-<li><p>Pillow 已经利用libtiff版本测试** 3.x的**和** ** 4.0</p></li>
+<li><p>Pillow 已经利用libtiff版本测试的 <strong>3.x</strong> 和 <strong>4.0</strong></p></li>
 </ul>
 </li>
 <li><p><strong>libfreetype</strong> 提供的类型相关的服务</p></li>
 <li><p><strong>littlecms</strong> 提供色彩管理</p>
 <ul>
-<li><p>Pillow版本2.2.1及以下用途liblcms1，Pillow2.3.0及以上用途liblcms2。有** 1.19测试的**和** ** 2.7-2.9。</p></li>
+<li><p>Pillow版本2.2.1及以下使用liblcms1, Pillow2.3.0及以上使用liblcms2. 有 <strong>1.19</strong> 测试的和 <strong>2.7-2.9</strong>.</p></li>
 </ul>
 </li>
-<li><p><strong>libwebp</strong> 提供的WebP格式。</p>
+<li><p><strong>libwebp</strong> 提供的WebP格式.</p>
 <ul>
-<li><p>Pillow已经过测试与版本0.1.3 ** <a href="#id1"><span class="problematic" id="id2">**</span></a>，不读透明WebP档案。版本0.3.0 ** <a href="#id3"><span class="problematic" id="id4">**</span></a>及以上版本支持的透明度。</p></li>
+<li><p>Pillow已经过测试与版本 <strong>0.1.3</strong>, 不读透明WebP档案. 版本 <strong>0.3.0</strong> 及以上版本支持的透明度.</p></li>
 </ul>
 </li>
-<li><p><strong>tcl/tk</strong> 提供Tkinter的位图和照片图像的支持。</p></li>
-<li><p><strong>openjpeg</strong> 提供JPEG 2000的功能。</p>
+<li><p><strong>tcl/tk</strong> 提供Tkinter的位图和照片图像的支持.</p></li>
+<li><p><strong>openjpeg</strong> 提供JPEG 2000的功能.</p>
 <ul>
-<li><p>Pillow 已经与openjpeg ** ** 2.0.0，2.1.0 ** <a href="#id1"><span class="problematic" id="id2">**</span></a>和**测试2.3.1 <a href="#id3"><span class="problematic" id="id4">**</span></a>。</p></li>
-<li><p>Pillow不** <strong>不支持早期</strong> ** 1.5系列所附带的Debian杰西。</p></li>
+<li><p>Pillow 已经与openjpeg <strong>2.0.0</strong> , <strong>2.1.0</strong> 和 <strong>2.3.1</strong> 测试.</p></li>
+<li><p>Pillow不 <strong>不</strong> 支持早期 <strong>1.5</strong> 系列所附带的Debian杰西.</p></li>
 </ul>
 </li>
 <li><p><strong>libimagequant</strong> 提供了改进的颜色量化</p>
 <ul>
-<li><p>Pillow 已经与libimagequant测试** ** 2.6-2.12.6</p></li>
-<li><p>Libimagequant许可GPLv3的，这比Pillow许可证更为严格，因此与libimagequant支持，使我们不会被分发的二进制文件。</p></li>
+<li><p>Pillow 已经与 libimagequant 测试 <strong>2.6-2.12.6</strong></p></li>
+<li><p>Libimagequant许可GPLv3的, 这比Pillow许可证更为严格, 因此与libimagequant支持, 使我们不会被分发的二进制文件.</p></li>
 </ul>
 </li>
-<li><p><strong>libraqm</strong> 提供复杂的文本布局支持。</p>
+<li><p><strong>libraqm</strong> 提供复杂的文本布局支持.</p>
 <ul>
-<li><p>libraqm提供双向文本支持（使用FriBiDi的），整形（使用的HarfBuzz），以及适当的脚本分项。其结果是，Raqm可以支持Unicode的覆盖了大部分的书写系统。</p></li>
-<li><p>libraqm取决于以下库：FreeType的，的HarfBuzz，FriBiDi的，请务必在系统中安装libraqm如果不作为包之前安装它们。</p></li>
-<li><p>不支持将文本方向或字体特征而不libraqm。</p></li>
-<li><p>libraqm是动态加载在Pillow5.0.0及以上，所以支持可当安装所有的库。</p></li>
-<li><p>Windows的支持：Raqm不包括在预置的车轮</p></li>
+<li><p>libraqm提供双向文本支持(使用FriBiDi的), 整形(使用的HarfBuzz), 以及适当的脚本分项. 其结果是, Raqm可以支持Unicode的覆盖了大部分的书写系统.</p></li>
+<li><p>libraqm取决于以下库:FreeType的, 的HarfBuzz, FriBiDi的, 请务必在系统中安装libraqm如果不作为包之前安装它们.</p></li>
+<li><p>不支持将文本方向或字体特征而不libraqm.</p></li>
+<li><p>libraqm是动态加载在Pillow5.0.0及以上, 所以支持可当安装所有的库.</p></li>
+<li><p>Windows的支持:Raqm不包括在预置的车轮</p></li>
 </ul>
 </li>
 </ul>
-<p>一旦你已经安装的先决条件，运行:</p>
+<p>一旦你已经安装的先决条件, 运行:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pip</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Pillow</span>
 </pre></div>
 </div>
-<p>如果先决条件都安装在标准库的位置为您的机器（例如：文件：<cite>/ usr`或：文件：`的/ usr / local</cite>），应不需要任何附加配置。如果它们安装在一个非标准位置，你可能需要配置setuptools的通过编辑使用这些地点：文件：<cite>setup.py`或：文件：`setup.cfg</cite>，或者在命令行中加入环境变量:</p>
+<p>如果先决条件都安装在标准库的位置为您的机器(例如 <code class="file docutils literal notranslate"><span class="pre">/usr</span></code> 或 <code class="file docutils literal notranslate"><span class="pre">的/usr/local</span></code>), 应不需要任何附加配置. 如果它们安装在一个非标准位置, 你可能需要配置setuptools的通过编辑使用这些地点 <code class="file docutils literal notranslate"><span class="pre">setup.py</span></code> 或 <code class="file docutils literal notranslate"><span class="pre">setup.cfg</span></code>, 或者在命令行中加入环境变量:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-I/usr/pkg/include&quot;</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pillow</span>
 </pre></div>
 </div>
@@ -570,7 +571,7 @@ Windows build in the <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="section" id="building-on-linux">
 <h3>在Linux上构建<a class="headerlink" href="#building-on-linux" title="永久链接至标题">¶</a></h3>
-<p>如果您没有从源代码构建Python，请确保您已安装Python的开发库。</p>
+<p>如果您没有从源代码构建Python, 请确保您已安装Python的开发库.</p>
 <p>在Debian或者ubuntu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span>
 </pre></div>
@@ -579,7 +580,7 @@ Windows build in the <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span>
 </pre></div>
 </div>
-<p>在Fedora，该命令是:</p>
+<p>在Fedora, 该命令是:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">devel</span> <span class="n">redhat</span><span class="o">-</span><span class="n">rpm</span><span class="o">-</span><span class="n">config</span>
 </pre></div>
 </div>
@@ -589,40 +590,40 @@ Windows build in the <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p><code class="docutils literal notranslate"><span class="pre">redhat-rpm-config</span></code> 需要在Fedora 23，但不是早期版本。</p>
+<p><code class="docutils literal notranslate"><span class="pre">redhat-rpm-config</span></code> 需要在Fedora 23, 但不是早期版本.</p>
 </div>
-<p>前提条件是安装在Ubuntu的** 16.04 LTS与**:</p>
+<p>前提条件是安装在的与 <strong>Ubuntu 16.04 LTS</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libtiff5</span><span class="o">-</span><span class="n">dev</span> <span class="n">libjpeg8</span><span class="o">-</span><span class="n">dev</span> <span class="n">libopenjp2</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> \
     <span class="n">libfreetype6</span><span class="o">-</span><span class="n">dev</span> <span class="n">liblcms2</span><span class="o">-</span><span class="n">dev</span> <span class="n">libwebp</span><span class="o">-</span><span class="n">dev</span> <span class="n">tcl8</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">dev</span> <span class="n">tk8</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">tk</span> \
     <span class="n">libharfbuzz</span><span class="o">-</span><span class="n">dev</span> <span class="n">libfribidi</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
-<p>然后看``取决于/ install_raqm.sh``安装libraqm。</p>
-<p>先决条件安装在最近的RedHat ** ** ** <strong>的Centos或Fedora的**与</strong>:</p>
+<p>然后看 <code class="docutils literal notranslate"><span class="pre">depends/install_raqm.sh</span></code> 安装libraqm.</p>
+<p>先决条件安装在最近的 <strong>RedHat</strong> <strong>Centos</strong> 的或的 <strong>Fedora</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="n">libtiff</span><span class="o">-</span><span class="n">devel</span> <span class="n">libjpeg</span><span class="o">-</span><span class="n">devel</span> <span class="n">openjpeg2</span><span class="o">-</span><span class="n">devel</span> <span class="n">zlib</span><span class="o">-</span><span class="n">devel</span> \
     <span class="n">freetype</span><span class="o">-</span><span class="n">devel</span> <span class="n">lcms2</span><span class="o">-</span><span class="n">devel</span> <span class="n">libwebp</span><span class="o">-</span><span class="n">devel</span> <span class="n">tcl</span><span class="o">-</span><span class="n">devel</span> <span class="n">tk</span><span class="o">-</span><span class="n">devel</span> \
     <span class="n">harfbuzz</span><span class="o">-</span><span class="n">devel</span> <span class="n">fribidi</span><span class="o">-</span><span class="n">devel</span> <span class="n">libraqm</span><span class="o">-</span><span class="n">devel</span> <span class="n">libimagequant</span><span class="o">-</span><span class="n">devel</span>
 </pre></div>
 </div>
-<p>请注意，包管理器可能是百胜集团或地下城与勇士，取决于具体的分配。</p>
-<p>又见 <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s IN的测试基础设施回购（<a class="reference external" href="https://github.com/python-pillow/docker-images">https://github.com/python-pillow/docker-images</a>）为已知的工作对于其他测试发行版的安装过程。</p>
+<p>请注意, 包管理器可能是百胜集团或地下城与勇士, 取决于具体的分配.</p>
+<p>又见 <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s IN的测试基础设施回购(<a class="reference external" href="https://github.com/python-pillow/docker-images">https://github.com/python-pillow/docker-images</a>)为已知的工作对于其他测试发行版的安装过程.</p>
 </div>
 <div class="section" id="building-on-android">
 <h3>在Android上构建<a class="headerlink" href="#building-on-android" title="永久链接至标题">¶</a></h3>
-<p>基本的Android的支持已经增加了对Termux环境中编译。该依赖关系可以通过安装:</p>
+<p>基本的Android的支持已经增加了对Termux环境中编译. 该依赖关系可以通过安装:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkg</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python</span> <span class="n">ndk</span><span class="o">-</span><span class="n">sysroot</span> <span class="n">clang</span> <span class="n">make</span> \
     <span class="n">libjpeg</span><span class="o">-</span><span class="n">turbo</span>
 </pre></div>
 </div>
-<p>这一问题已经在Chrome操作系统的Termux应用程序中测试，在x86。</p>
+<p>这一问题已经在Chrome操作系统的Termux应用程序中测试, 在x86.</p>
 </div>
 </div>
 <div class="section" id="platform-support">
 <h2>平台支持<a class="headerlink" href="#platform-support" title="永久链接至标题">¶</a></h2>
-<p>对于枕头当前平台的支持。 二进制分发了自愿的基础上每个版本做出了贡献，但源应编译和运行到处平台支持上市。 在一般情况下，我们的目标是支持Linux，MacOS和Windows的所有当前版本。</p>
+<p>对于枕头当前平台的支持.  二进制分发了自愿的基础上每个版本做出了贡献, 但源应编译和运行到处平台支持上市.  在一般情况下, 我们的目标是支持Linux, MacOS和Windows的所有当前版本.</p>
 <div class="section" id="continuous-integration-targets">
 <h3>持续集成的目标<a class="headerlink" href="#continuous-integration-targets" title="永久链接至标题">¶</a></h3>
-<p>这些平台是建立和每一个变化测试。</p>
+<p>这些平台是建立和每一个变化测试.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 41%" />
@@ -709,10 +710,10 @@ Windows build in the <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="section" id="other-platforms">
 <h3>其他平台<a class="headerlink" href="#other-platforms" title="永久链接至标题">¶</a></h3>
-<p>这些平台已报告在工作中提到的版本。</p>
+<p>这些平台已报告在工作中提到的版本.</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>请投稿 Pillow 测试你的平台上，然后更新此文件并发送pull请求。</p>
+<p>请投稿 Pillow 测试你的平台上, 然后更新此文件并发送pull请求.</p>
 </div>
 <table class="docutils align-default">
 <colgroup>
@@ -858,7 +859,7 @@ PyPy5.3.1, PyPy3 v2.4.0</p></td>
 </div>
 <div class="section" id="old-versions">
 <h2>老版本<a class="headerlink" href="#old-versions" title="永久链接至标题">¶</a></h2>
-<p>您可以从 <a class="reference external" href="https://pypi.org/project/Pillow/#history">PyPI上发行历史</a> 和直接访问URL <a class="reference external" href="https://pypi.org/project/Pillow/1.0/">https://pypi.org/project/Pillow/1.0/</a> 下载旧版。</p>
+<p>您可以从 <a class="reference external" href="https://pypi.org/project/Pillow/#history">PyPI上发行历史</a> 和直接访问URL <a class="reference external" href="https://pypi.org/project/Pillow/1.0">https://pypi.org/project/Pillow/1.0</a>/下载旧版.</p>
 </div>
 </div>
 

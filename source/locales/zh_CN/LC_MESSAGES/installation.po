@@ -31,19 +31,19 @@ msgstr "警告"
 msgid ""
 "Pillow and PIL cannot co-exist in the same environment. Before installing"
 " Pillow, please uninstall PIL."
-msgstr "Pillow 和 PIL 不能共存于同一环境。在安装 Pillow 之前，请卸载 PIL。"
+msgstr "Pillow 和 PIL 不能共存于同一环境. 在安装 Pillow 之前, 请卸载 PIL. "
 
 #: ../../installation.rst:9
 msgid ""
 "Pillow >= 1.0 no longer supports \"import Image\". Please use \"from PIL "
 "import Image\" instead."
-msgstr "Pillow > = 1.0 不再支持 \"import Image\"。请使用 \"from PIL import Image\" 来代替。"
+msgstr "Pillow > = 1.0 不再支持 \"import Image\". 请使用 \"from PIL import Image\" 来代替. "
 
 #: ../../installation.rst:11
 msgid ""
 "Pillow >= 2.1.0 no longer supports \"import _imaging\". Please use \"from"
 " PIL.Image import core as _imaging\" instead."
-msgstr "Pillow > = 2.1.0不再支持 \"import _imaging\"。请使用 \"from PIL.Image import core as _imaging\" 来代替。"
+msgstr "Pillow > = 2.1.0不再支持 \"import _imaging\". 请使用 \"from PIL.Image import core as _imaging\" 来代替. "
 
 #: ../../installation.rst:14
 msgid "Notes"
@@ -149,7 +149,7 @@ msgid ""
 "The following instructions will install Pillow with support for most "
 "common image formats. See :ref:`external-libraries` for a full list of "
 "external libraries supported."
-msgstr "下面的说明将与最常见的图像格式支持安装Pillow。 请参阅 :ref:`external-libraries` 支持的外部库的完整列表。"
+msgstr "下面的说明将与最常见的图像格式支持安装Pillow.  请参阅 :ref:`external-libraries` 支持的外部库的完整列表. "
 
 #: ../../installation.rst:48
 msgid "Install Pillow with :command:`pip`::"
@@ -165,7 +165,7 @@ msgid ""
 "supported Pythons in both 32 and 64-bit versions in wheel, egg, and "
 "executable installers. These binaries have all of the optional libraries "
 "included except for raqm and libimagequant::"
-msgstr "我们提供的编译支持Python的车轮，鸡蛋和可执行安装32位和64位版本的矩阵为Windows Pillow 二进制文件。 这些二进制文件都可选库包括除raqm和libimagequant::"
+msgstr "我们提供的编译支持Python的车轮, 鸡蛋和可执行安装32位和64位版本的矩阵为Windows Pillow 二进制文件.  这些二进制文件都可选库包括除raqm和libimagequant::"
 
 #: ../../installation.rst:67
 msgid "macOS Installation"
@@ -177,7 +177,7 @@ msgid ""
 "in the wheel format. These include support for all optional libraries "
 "except libimagequant.  Raqm support requires libraqm, fribidi, and "
 "harfbuzz to be installed separately::"
-msgstr "我们适用于MacOS每个受支持版本的Python在车轮格式提供的二进制文件。 这些措施包括，除了libimagequant所有可选库的支持。Raqm支持需要libraqm，FriBiDi的，和的HarfBuzz单独安装::"
+msgstr "我们适用于MacOS每个受支持版本的Python在车轮格式提供的二进制文件.  这些措施包括, 除了libimagequant所有可选库的支持. Raqm支持需要libraqm, FriBiDi的, 和的HarfBuzz单独安装::"
 
 #: ../../installation.rst:78
 msgid "Linux Installation"
@@ -189,14 +189,14 @@ msgid ""
 "in the manylinux wheel format. These include support for all optional "
 "libraries except libimagequant. Raqm support requires libraqm, fribidi, "
 "and harfbuzz to be installed separately::"
-msgstr "我们为每个支持Python版本的manylinux轮格式的二进制文件提供的Linux。 这些措施包括，除了libimagequant所有可选库的支持。Raqm支持需要libraqm，FriBiDi的，和的HarfBuzz单独安装::"
+msgstr "我们为每个支持Python版本的manylinux轮格式的二进制文件提供的Linux.  这些措施包括, 除了libimagequant所有可选库的支持. Raqm支持需要libraqm, FriBiDi的, 和的HarfBuzz单独安装::"
 
 #: ../../installation.rst:88
 msgid ""
 "Most major Linux distributions, including Fedora, Debian/Ubuntu and "
 "ArchLinux also include Pillow in packages that previously contained PIL "
 "e.g. ``python-imaging``."
-msgstr "大多数主要的Linux发行版，包括Fedora的，是Debian / Ubuntu的ArchLinux还包括Pillow在先前包含PIL例如包 ``python-imaging``。"
+msgstr "大多数主要的Linux发行版, 包括Fedora的, 是Debian/Ubuntu的ArchLinux还包括Pillow在先前包含PIL例如包 ``python-imaging``. "
 
 #: ../../installation.rst:93
 msgid "FreeBSD Installation"
@@ -206,7 +206,7 @@ msgstr "FreeBSD 安装"
 msgid ""
 "Pillow can be installed on FreeBSD via the official Ports or Packages "
 "systems:"
-msgstr "Pillow在FreeBSD上可以通过官方Ports或Packages系统上安装："
+msgstr "Pillow在FreeBSD上可以通过官方Ports或Packages系统上安装:"
 
 #: ../../installation.rst:97
 msgid "**Ports**::"
@@ -221,7 +221,7 @@ msgid ""
 "The `Pillow FreeBSD port <https://www.freshports.org/graphics/py-"
 "pillow/>`_ and packages are tested by the ports team with all supported "
 "FreeBSD versions."
-msgstr "该 `Pillow FreeBSD port <https://www.freshports.org/graphics/py-pillow/>`_ 和包均通过 ports 团队所有支持的FreeBSD版本进行测试。"
+msgstr "该 `Pillow FreeBSD port <https://www.freshports.org/graphics/py-pillow/>`_ 和包均通过 ports 团队所有支持的FreeBSD版本进行测试. "
 
 #: ../../installation.rst:113
 msgid "Building From Source"
@@ -240,14 +240,14 @@ msgid ""
 "You **do not need to install all supported external libraries** to use "
 "Pillow's basic features. **Zlib** and **libjpeg** are required by "
 "default."
-msgstr "你 **不需要安装所有支持的外部库** 使用Pillow的基本特性。 **Zlib** 和 **libjpeg** 在默认情况下需要。"
+msgstr "你 **不需要安装所有支持的外部库** 使用Pillow的基本特性.  **Zlib** 和 **libjpeg** 在默认情况下需要. "
 
 #: ../../installation.rst:132
 msgid ""
 "There are Dockerfiles in our `Docker images repo <https://github.com"
 "/python-pillow/docker-images>`_ to install the dependencies for some "
 "operating systems."
-msgstr "还有 Dockerfiles 在我们的 `Docker images repo <https://github.com/python-pillow/docker-images>`_ 安装依赖于某些操作系统。"
+msgstr "还有 Dockerfiles 在我们的 `Docker images repo <https://github.com/python-pillow/docker-images>`_ 安装依赖于某些操作系统. "
 
 #: ../../installation.rst:136
 msgid "Many of Pillow's features require external libraries:"
@@ -261,13 +261,13 @@ msgstr "**libjpeg** 提供JPEG功能."
 msgid ""
 "Pillow has been tested with libjpeg versions **6b**, **8**, **9-9c** and "
 "libjpeg-turbo version **8**."
-msgstr "Pillow已经过测试的libjpeg版本 **6B**，**8**，**9-9c** 和的 libjpeg 涡轮增压 版本 **8**。"
+msgstr "Pillow已经过测试的libjpeg版本 **6B**, **8**, **9-9c** 和的 libjpeg 涡轮增压 版本 **8**. "
 
 #: ../../installation.rst:142
 msgid ""
 "Starting with Pillow 3.0.0, libjpeg is required by default, but may be "
 "disabled with the ``--disable-jpeg`` flag."
-msgstr "用Pillow3.0.0开始，libjpeg的默认需要，但可以用 ``--disable-jpeg`` 标志禁止。"
+msgstr "用Pillow3.0.0开始, libjpeg的默认需要, 但可以用 ``--disable-jpeg`` 标志禁止. "
 
 #: ../../installation.rst:145
 msgid "**zlib** provides access to compressed PNGs"
@@ -277,7 +277,7 @@ msgstr "**zlib** 提供访问压缩的PNG"
 msgid ""
 "Starting with Pillow 3.0.0, zlib is required by default, but may be "
 "disabled with the ``--disable-zlib`` flag."
-msgstr "用Pillow3.0.0开始，zlib的默认需要，但可以用`` - 禁用zlib``标志禁止。"
+msgstr "用Pillow3.0.0开始, zlib的默认需要, 但可以用 ``--disable-zlib`` 标志禁止. "
 
 #: ../../installation.rst:150
 msgid "**libtiff** provides compressed TIFF functionality"
@@ -285,7 +285,7 @@ msgstr "**libtiff** 提供压缩的TIFF功能"
 
 #: ../../installation.rst:152
 msgid "Pillow has been tested with libtiff versions **3.x** and **4.0**"
-msgstr "Pillow 已经利用libtiff版本测试** 3.x的**和** ** 4.0"
+msgstr "Pillow 已经利用libtiff版本测试的 **3.x** 和 **4.0**"
 
 #: ../../installation.rst:154
 msgid "**libfreetype** provides type related services"
@@ -299,36 +299,36 @@ msgstr "**littlecms** 提供色彩管理"
 msgid ""
 "Pillow version 2.2.1 and below uses liblcms1, Pillow 2.3.0 and above uses"
 " liblcms2. Tested with **1.19** and **2.7-2.9**."
-msgstr "Pillow版本2.2.1及以下用途liblcms1，Pillow2.3.0及以上用途liblcms2。有** 1.19测试的**和** ** 2.7-2.9。"
+msgstr "Pillow版本2.2.1及以下使用liblcms1, Pillow2.3.0及以上使用liblcms2. 有 **1.19** 测试的和 **2.7-2.9**. "
 
 #: ../../installation.rst:161
 msgid "**libwebp** provides the WebP format."
-msgstr "**libwebp** 提供的WebP格式。"
+msgstr "**libwebp** 提供的WebP格式. "
 
 #: ../../installation.rst:163
 msgid ""
 "Pillow has been tested with version **0.1.3**, which does not read "
 "transparent WebP files. Versions **0.3.0** and above support "
 "transparency."
-msgstr "Pillow已经过测试与版本0.1.3 ** **，不读透明WebP档案。版本0.3.0 ** **及以上版本支持的透明度。"
+msgstr "Pillow已经过测试与版本 **0.1.3**, 不读透明WebP档案. 版本 **0.3.0** 及以上版本支持的透明度. "
 
 #: ../../installation.rst:167
 msgid "**tcl/tk** provides support for tkinter bitmap and photo images."
-msgstr "**tcl/tk** 提供Tkinter的位图和照片图像的支持。"
+msgstr "**tcl/tk** 提供Tkinter的位图和照片图像的支持. "
 
 #: ../../installation.rst:169
 msgid "**openjpeg** provides JPEG 2000 functionality."
-msgstr "**openjpeg** 提供JPEG 2000的功能。"
+msgstr "**openjpeg** 提供JPEG 2000的功能. "
 
 #: ../../installation.rst:171
 msgid "Pillow has been tested with openjpeg **2.0.0**, **2.1.0** and **2.3.1**."
-msgstr "Pillow 已经与openjpeg ** ** 2.0.0，2.1.0 ** **和**测试2.3.1 **。"
+msgstr "Pillow 已经与openjpeg **2.0.0** , **2.1.0** 和 **2.3.1** 测试. "
 
 #: ../../installation.rst:172
 msgid ""
 "Pillow does **not** support the earlier **1.5** series which ships with "
 "Debian Jessie."
-msgstr "Pillow不** **不支持早期** ** 1.5系列所附带的Debian杰西。"
+msgstr "Pillow不 **不** 支持早期 **1.5** 系列所附带的Debian杰西. "
 
 #: ../../installation.rst:175
 msgid "**libimagequant** provides improved color quantization"
@@ -336,50 +336,50 @@ msgstr "**libimagequant** 提供了改进的颜色量化"
 
 #: ../../installation.rst:177
 msgid "Pillow has been tested with libimagequant **2.6-2.12.6**"
-msgstr "Pillow 已经与libimagequant测试** ** 2.6-2.12.6"
+msgstr "Pillow 已经与 libimagequant 测试 **2.6-2.12.6**"
 
 #: ../../installation.rst:178
 msgid ""
 "Libimagequant is licensed GPLv3, which is more restrictive than the "
 "Pillow license, therefore we will not be distributing binaries with "
 "libimagequant support enabled."
-msgstr "Libimagequant许可GPLv3的，这比Pillow许可证更为严格，因此与libimagequant支持，使我们不会被分发的二进制文件。"
+msgstr "Libimagequant许可GPLv3的, 这比Pillow许可证更为严格, 因此与libimagequant支持, 使我们不会被分发的二进制文件. "
 
 #: ../../installation.rst:182
 msgid "**libraqm** provides complex text layout support."
-msgstr "**libraqm** 提供复杂的文本布局支持。"
+msgstr "**libraqm** 提供复杂的文本布局支持. "
 
 #: ../../installation.rst:184
 msgid ""
 "libraqm provides bidirectional text support (using FriBiDi), shaping "
 "(using HarfBuzz), and proper script itemization. As a result, Raqm can "
 "support most writing systems covered by Unicode."
-msgstr "libraqm提供双向文本支持（使用FriBiDi的），整形（使用的HarfBuzz），以及适当的脚本分项。其结果是，Raqm可以支持Unicode的覆盖了大部分的书写系统。"
+msgstr "libraqm提供双向文本支持(使用FriBiDi的), 整形(使用的HarfBuzz), 以及适当的脚本分项. 其结果是, Raqm可以支持Unicode的覆盖了大部分的书写系统. "
 
 #: ../../installation.rst:187
 msgid ""
 "libraqm depends on the following libraries: FreeType, HarfBuzz, FriBiDi, "
 "make sure that you install them before installing libraqm if not "
 "available as package in your system."
-msgstr "libraqm取决于以下库：FreeType的，的HarfBuzz，FriBiDi的，请务必在系统中安装libraqm如果不作为包之前安装它们。"
+msgstr "libraqm取决于以下库:FreeType的, 的HarfBuzz, FriBiDi的, 请务必在系统中安装libraqm如果不作为包之前安装它们. "
 
 #: ../../installation.rst:190
 msgid "setting text direction or font features is not supported without libraqm."
-msgstr "不支持将文本方向或字体特征而不libraqm。"
+msgstr "不支持将文本方向或字体特征而不libraqm. "
 
 #: ../../installation.rst:192
 msgid ""
 "libraqm is dynamically loaded in Pillow 5.0.0 and above, so support is "
 "available if all the libraries are installed."
-msgstr "libraqm是动态加载在Pillow5.0.0及以上，所以支持可当安装所有的库。"
+msgstr "libraqm是动态加载在Pillow5.0.0及以上, 所以支持可当安装所有的库. "
 
 #: ../../installation.rst:194
 msgid "Windows support: Raqm is not included in prebuilt wheels"
-msgstr "Windows的支持：Raqm不包括在预置的车轮"
+msgstr "Windows的支持:Raqm不包括在预置的车轮"
 
 #: ../../installation.rst:196
 msgid "Once you have installed the prerequisites, run::"
-msgstr "一旦你已经安装的先决条件，运行::"
+msgstr "一旦你已经安装的先决条件, 运行::"
 
 #: ../../installation.rst:201
 msgid ""
@@ -389,7 +389,7 @@ msgid ""
 " location, you may need to configure setuptools to use those locations by"
 " editing :file:`setup.py` or :file:`setup.cfg`, or by adding environment "
 "variables on the command line::"
-msgstr "如果先决条件都安装在标准库的位置为您的机器（例如：文件：`/ usr`或：文件：`的/ usr / local`），应不需要任何附加配置。如果它们安装在一个非标准位置，你可能需要配置setuptools的通过编辑使用这些地点：文件：`setup.py`或：文件：`setup.cfg`，或者在命令行中加入环境变量::"
+msgstr "如果先决条件都安装在标准库的位置为您的机器(例如 :file:`/usr` 或 :file:`的/usr/local`), 应不需要任何附加配置. 如果它们安装在一个非标准位置, 你可能需要配置setuptools的通过编辑使用这些地点 :file:`setup.py` 或 :file:`setup.cfg`, 或者在命令行中加入环境变量::"
 
 #: ../../installation.rst:211
 msgid ""
@@ -528,7 +528,7 @@ msgstr "在Linux上构建"
 msgid ""
 "If you didn't build Python from source, make sure you have Python's "
 "development libraries installed."
-msgstr "如果您没有从源代码构建Python，请确保您已安装Python的开发库。"
+msgstr "如果您没有从源代码构建Python, 请确保您已安装Python的开发库. "
 
 #: ../../installation.rst:323
 msgid "In Debian or Ubuntu::"
@@ -536,38 +536,38 @@ msgstr "在Debian或者ubuntu::"
 
 #: ../../installation.rst:331
 msgid "In Fedora, the command is::"
-msgstr "在Fedora，该命令是::"
+msgstr "在Fedora, 该命令是::"
 
 #: ../../installation.rst:339
 msgid "``redhat-rpm-config`` is required on Fedora 23, but not earlier versions."
-msgstr "``redhat-rpm-config`` 需要在Fedora 23，但不是早期版本。"
+msgstr "``redhat-rpm-config`` 需要在Fedora 23, 但不是早期版本. "
 
 #: ../../installation.rst:341
 msgid "Prerequisites are installed on **Ubuntu 16.04 LTS** with::"
-msgstr "前提条件是安装在Ubuntu的** 16.04 LTS与**::"
+msgstr "前提条件是安装在的与 **Ubuntu 16.04 LTS**::"
 
 #: ../../installation.rst:347
 msgid "Then see ``depends/install_raqm.sh`` to install libraqm."
-msgstr "然后看``取决于/ install_raqm.sh``安装libraqm。"
+msgstr "然后看 ``depends/install_raqm.sh`` 安装libraqm. "
 
 #: ../../installation.rst:349
 msgid ""
 "Prerequisites are installed on recent **RedHat** **Centos** or **Fedora**"
 " with::"
-msgstr "先决条件安装在最近的RedHat ** ** ** **的Centos或Fedora的**与**::"
+msgstr "先决条件安装在最近的 **RedHat** **Centos** 的或的 **Fedora**::"
 
 #: ../../installation.rst:355
 msgid ""
 "Note that the package manager may be yum or dnf, depending on the exact "
 "distribution."
-msgstr "请注意，包管理器可能是百胜集团或地下城与勇士，取决于具体的分配。"
+msgstr "请注意, 包管理器可能是百胜集团或地下城与勇士, 取决于具体的分配. "
 
 #: ../../installation.rst:358
 msgid ""
 "See also the ``Dockerfile``\\s in the Test Infrastructure repo "
 "(https://github.com/python-pillow/docker-images) for a known working "
 "install process for other tested distros."
-msgstr "又见 ``Dockerfile``\\s IN的测试基础设施回购（https://github.com/python-pillow/docker-images）为已知的工作对于其他测试发行版的安装过程。"
+msgstr "又见 ``Dockerfile``\\s IN的测试基础设施回购(https://github.com/python-pillow/docker-images)为已知的工作对于其他测试发行版的安装过程. "
 
 #: ../../installation.rst:363
 msgid "Building on Android"
@@ -577,11 +577,11 @@ msgstr "在Android上构建"
 msgid ""
 "Basic Android support has been added for compilation within the Termux "
 "environment. The dependencies can be installed by::"
-msgstr "基本的Android的支持已经增加了对Termux环境中编译。该依赖关系可以通过安装::"
+msgstr "基本的Android的支持已经增加了对Termux环境中编译. 该依赖关系可以通过安装::"
 
 #: ../../installation.rst:371
 msgid "This has been tested within the Termux app on ChromeOS, on x86."
-msgstr "这一问题已经在Chrome操作系统的Termux应用程序中测试，在x86。"
+msgstr "这一问题已经在Chrome操作系统的Termux应用程序中测试, 在x86. "
 
 #: ../../installation.rst:375
 msgid "Platform Support"
@@ -593,7 +593,7 @@ msgid ""
 " for each release on a volunteer basis, but the source should compile and"
 " run everywhere platform support is listed. In general, we aim to support"
 " all current versions of Linux, macOS, and Windows."
-msgstr "对于枕头当前平台的支持。 二进制分发了自愿的基础上每个版本做出了贡献，但源应编译和运行到处平台支持上市。 在一般情况下，我们的目标是支持Linux，MacOS和Windows的所有当前版本。"
+msgstr "对于枕头当前平台的支持.  二进制分发了自愿的基础上每个版本做出了贡献, 但源应编译和运行到处平台支持上市.  在一般情况下, 我们的目标是支持Linux, MacOS和Windows的所有当前版本. "
 
 #: ../../installation.rst:384
 msgid "Continuous Integration Targets"
@@ -601,7 +601,7 @@ msgstr "持续集成的目标"
 
 #: ../../installation.rst:386
 msgid "These platforms are built and tested for every change."
-msgstr "这些平台是建立和每一个变化测试。"
+msgstr "这些平台是建立和每一个变化测试. "
 
 #: ../../installation.rst:389 ../../installation.rst:440
 msgid "**Operating system**"
@@ -748,13 +748,13 @@ msgstr "其他平台"
 
 #: ../../installation.rst:432
 msgid "These platforms have been reported to work at the versions mentioned."
-msgstr "这些平台已报告在工作中提到的版本。"
+msgstr "这些平台已报告在工作中提到的版本. "
 
 #: ../../installation.rst:436
 msgid ""
 "Contributors please test Pillow on your platform then update this "
 "document and send a pull request."
-msgstr "请投稿 Pillow 测试你的平台上，然后更新此文件并发送pull请求。"
+msgstr "请投稿 Pillow 测试你的平台上, 然后更新此文件并发送pull请求. "
 
 #: ../../installation.rst:440
 msgid "**Latest tested Pillow version**"
@@ -1006,5 +1006,5 @@ msgid ""
 "You can download old distributions from the `release history at PyPI "
 "<https://pypi.org/project/Pillow/#history>`_ and by direct URL access eg."
 " https://pypi.org/project/Pillow/1.0/."
-msgstr "您可以从 `PyPI上发行历史 <https://pypi.org/project/Pillow/#history>`_ 和直接访问URL https://pypi.org/project/Pillow/1.0/ 下载旧版。"
+msgstr "您可以从 `PyPI上发行历史 <https://pypi.org/project/Pillow/#history>`_ 和直接访问URL https://pypi.org/project/Pillow/1.0/下载旧版. "
 

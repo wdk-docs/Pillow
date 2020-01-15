@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>python使用PIL给图片添加文字生成海报 &mdash; Pillow (PIL Fork) 7.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/script.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="实践" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Pillow (PIL Fork)
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handbook/index.html">手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../porting.html">移植</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes/index.html">发行说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecations.html">弃用和清除</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">实践</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">python使用PIL给图片添加文字生成海报</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">前言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python">python生成图片海报</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1. 设计图片模板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2. 安装python库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2. 具体代码实现</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">执行结果</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pillow (PIL Fork)</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">实践</a> &raquo;</li>
+        
+      <li>python使用PIL给图片添加文字生成海报</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/practice/poster.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pythonpil">
+<h1>python使用PIL给图片添加文字生成海报<a class="headerlink" href="#pythonpil" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://www.jianshu.com/p/2698af6c5892">it书童</a></p>
+<div class="section" id="id1">
+<h2>前言<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>曾经，我也算半个所谓的文学青年。大学前两年大部分时间泡在图书馆看各种文学类的书。</p>
+<p>那时的我，对于未来有很多遐想：写小说、写时评、写诗歌… 总而言之，就是成为一个文字工作者</p>
+<p>现在我确实成为了一个文字工作者，只不过写的是代码…</p>
+<p>在某个月黑风高的晚上，看着满屏花花绿绿的代码，揉着酸涩的眼睛，打了一个长长的哈欠。突然进入了禅定时刻：</p>
+<p>“还记得年少时的梦吗？“</p>
+<p>我又开始想写作了，一个写了几年代码的老男人，在被生活粗暴地摁在地上摩擦几回后，突然触发了内心的柔软，想写些东西。</p>
+<p>要写些什么？如何写？在我看来，写作比写代码更难，详见 编程与写作</p>
+<p>那就先从最简单的每天更新一篇随笔开始吧，内容包括当天的阅读与思考。这种文章主要是让自己练习写作，类似于编程的刷题。</p>
+<p>干巴巴的随笔看起来没什么意思，需要有一张配图，对当天的阅读、写作进行概括性总结。这张图是统一的模板，只是内容不同，如果每张图都要用ps来处理，太繁琐了。作为一个以懒惰为美德的程序员，肯定是想着用程序自动生成图片。</p>
+</div>
+<div class="section" id="python">
+<h2>python生成图片海报<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. 设计图片模板<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<img alt="模板" src="https://upload-images.jianshu.io/upload_images/1864602-ad1e252aad73cfb7.png?imageMogr2/auto-orient/strip|imageView2/2/w/870/format/webp" />
+</div>
+<div class="section" id="id3">
+<h3>2. 安装python库<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>环境：python3</p>
+<p>安装Pillow库</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install Pillow
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>2. 具体代码实现<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>新建 <code class="docutils literal notranslate"><span class="pre">index.py</span></code></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding:utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># 安装库：pip install Pillow</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;001&#39;</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;日思录第001篇&#39;</span>
+<span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;中国史纲五十讲&#39;</span><span class="p">,</span> <span class="s1">&#39;再见拖延症&#39;</span><span class="p">,</span> <span class="s1">&#39;心流&#39;</span><span class="p">]</span>
+<span class="n">writes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;日思录第001篇&#39;</span><span class="p">,</span> <span class="s1">&#39;python给图片加文字&#39;</span><span class="p">]</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="s1">&#39;习惯在一个任务开始之前，先给自己设立一个看起来不太可能达到的完美标准，并因为这个标准而迟迟无法动手，那你可能也是一个完美主义者&#39;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">summary_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">summary</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">summary</span><span class="p">),</span> <span class="n">n</span><span class="p">)]</span>
+
+<span class="c1"># 图片名称</span>
+<span class="n">img</span> <span class="o">=</span> <span class="s1">&#39;./test.png&#39;</span>  <span class="c1"># 图片模板</span>
+<span class="n">new_img</span> <span class="o">=</span> <span class="s1">&#39;text.png&#39;</span>  <span class="c1"># 生成的图片</span>
+<span class="n">compress_img</span> <span class="o">=</span> <span class="s1">&#39;compress.png&#39;</span>  <span class="c1"># 压缩后的图片</span>
+
+<span class="c1"># 设置字体样式</span>
+<span class="n">font_type</span> <span class="o">=</span> <span class="s1">&#39;/System/Library/Fonts/STHeiti Light.ttc&#39;</span>
+<span class="n">font_medium_type</span> <span class="o">=</span> <span class="s1">&#39;/System/Library/Fonts/STHeiti Medium.ttc&#39;</span>
+<span class="n">header_font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_medium_type</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>
+<span class="n">title_font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_medium_type</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_type</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#000000&quot;</span>
+
+<span class="c1"># 打开图片</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">size</span>
+
+<span class="c1"># header头</span>
+<span class="n">header_x</span> <span class="o">=</span> <span class="mi">130</span>
+<span class="n">header_y</span> <span class="o">=</span> <span class="mi">690</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">header_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">header_y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">header</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">header_font</span><span class="p">)</span>
+
+<span class="c1"># 标题</span>
+<span class="n">title_x</span> <span class="o">=</span> <span class="n">header_x</span>
+<span class="n">title_y</span> <span class="o">=</span> <span class="n">header_y</span> <span class="o">-</span> <span class="mi">80</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">title_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">title_y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">title_font</span><span class="p">)</span>
+
+<span class="c1"># 当前时间</span>
+<span class="n">cur_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
+<span class="n">cur_time_x</span> <span class="o">=</span> <span class="mi">590</span>
+<span class="n">cur_time_y</span> <span class="o">=</span> <span class="n">title_y</span> <span class="o">-</span> <span class="mi">25</span>
+<span class="n">cur_time_font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">font_type</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">cur_time_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">cur_time_y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">cur_time</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">cur_time_font</span><span class="p">)</span>
+
+<span class="c1"># 阅读</span>
+<span class="n">book_x</span> <span class="o">=</span> <span class="n">title_x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">book_start_y</span> <span class="o">=</span> <span class="n">title_y</span> <span class="o">-</span> <span class="mi">190</span>
+<span class="n">book_y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">book_line</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">book</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">books</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">book_start_y</span> <span class="o">-</span> <span class="n">num</span> <span class="o">*</span> <span class="n">book_line</span>
+    <span class="n">book_num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">book_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">. </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">book_num</span><span class="p">,</span> <span class="n">book</span><span class="p">),</span> <span class="n">color</span><span class="p">,</span> <span class="n">font</span><span class="p">)</span>
+
+<span class="c1"># 写作</span>
+<span class="n">write_x</span> <span class="o">=</span> <span class="n">book_x</span>
+<span class="n">write_y</span> <span class="o">=</span> <span class="n">title_y</span> <span class="o">-</span> <span class="mi">450</span>
+<span class="n">write_line</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">write</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">writes</span><span class="p">):</span>
+    <span class="n">write_num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">write_y</span> <span class="o">-</span> <span class="n">num</span> <span class="o">*</span> <span class="n">write_line</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">write_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">. </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">write_num</span><span class="p">,</span> <span class="n">write</span><span class="p">),</span> <span class="n">color</span><span class="p">,</span> <span class="n">font</span><span class="p">)</span>
+
+<span class="c1"># 哲思</span>
+<span class="n">summary_x</span> <span class="o">=</span> <span class="n">book_x</span> <span class="o">+</span> <span class="mi">460</span>
+<span class="n">summary_y</span> <span class="o">=</span> <span class="n">book_start_y</span>
+<span class="n">summary_line</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">summary</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">summary_list</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">summary_y</span> <span class="o">-</span> <span class="n">num</span> <span class="o">*</span> <span class="n">summary_line</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">summary_x</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="n">y</span><span class="p">),</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">summary</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">font</span><span class="p">)</span>
+
+<span class="c1"># 生成图片</span>
+<span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">new_img</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">)</span>
+
+<span class="c1"># 压缩图片</span>
+<span class="n">sImg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">new_img</span><span class="p">)</span>
+<span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">sImg</span><span class="o">.</span><span class="n">size</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">dImg</span> <span class="o">=</span> <span class="n">sImg</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+<span class="n">dImg</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">compress_img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>执行结果<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>☁  python  python index.py
+</pre></div>
+</div>
+<img alt="结果" src="https://upload-images.jianshu.io/upload_images/1864602-cf2c10b009dbd541.png?imageMogr2/auto-orient/strip|imageView2/2/w/540/format/webp" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="实践" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 1995-2011 Fredrik Lundh, 2010-2020 Alex Clark and Contributors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

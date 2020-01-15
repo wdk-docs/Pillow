@@ -46,6 +46,7 @@ Pillow for enterprise is available via the Tidelift Subscription. `Learn more <h
    about.rst
    releasenotes/index.rst
    deprecations.rst
+   practice/index
 
 Indices and tables
 ==================

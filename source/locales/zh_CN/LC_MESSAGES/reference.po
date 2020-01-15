@@ -1887,7 +1887,7 @@ msgstr "返回两个图像之间的像素由像素的差的绝对值。至少一
 
 #: PIL.ImageChops.duplicate:1 of
 msgid "Copy a channel. Alias for :py:meth:`PIL.Image.Image.copy`."
-msgstr "复制的通道。别名：PY：甲基：`PIL.Image.Image.copy`。"
+msgstr "复制的通道。别名 :py:meth:`PIL.Image.Image.copy`。"
 
 #: PIL.ImageChops.invert:1 of
 msgid "Invert an image (channel)."
